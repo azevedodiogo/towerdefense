@@ -30,6 +30,7 @@ validaJogo j = verificaPortalNumero j &&
                verificaPosiTorre j &&
                verificaAlcanceTorre j &&
                verificaRajadaTorre j &&
+               verificaCicloTorre j &&
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
