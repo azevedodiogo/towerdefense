@@ -26,6 +26,7 @@ validaJogo j = verificaPortalNumero j &&
                verificaInimigosTerra j &&
                verificaInimigosSobreposicao j &&
                verificaVelocidadeInimigo j &&
+               verificaProjeteisAtivos j &&
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
