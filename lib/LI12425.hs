@@ -102,7 +102,7 @@ data Projetil = Projetil
     -- | Duração do efeito do projétil no inimigo.
     duracaoProjetil :: Duracao
   }
-  deriving (Show)
+  deriving (Eq, Show)
 
 -- | Direção de movimento de uma entidade no jogo.
 data Direcao
@@ -129,7 +129,7 @@ data Inimigo = Inimigo
     -- | Efeitos secundários ativos no inimigo.
     projeteisInimigo :: [Projetil]
   }
-  deriving (Show)
+  deriving (Eq, Show)
 
 -- | Onda de inimigos que saem de um portal.
 data Onda = Onda
@@ -142,7 +142,7 @@ data Onda = Onda
     -- | Tempo restante, em segundos, para a entrada da onda.
     entradaOnda :: Tempo
   }
-  deriving (Show)
+  deriving (Eq, Show)
 
 -- | Portal de entrada de inimigos no mapa.
 data Portal = Portal
@@ -151,7 +151,7 @@ data Portal = Portal
     -- | Ondas de inimigos que saem do portal.
     ondasPortal :: [Onda]
   }
-  deriving (Show)
+  deriving (Eq, Show)
 
 -- | Estado do jogo. Um jogo é composto pela base, vários portais, várias torres, um mapa, vários inimigos e a loja.
 data Jogo = Jogo
