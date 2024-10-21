@@ -415,3 +415,110 @@ verificaSemIncompativeis tipos = not (elem Fogo tipos && elem Resina tipos) && n
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
+-- TORRES 
+
+{- | a função `verificaPosiTorre` verifica se as torres estão sobre a relva, utilizando a função `verificaPosiTorre2`. 
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (2, 0) 25 3 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = mapa, inimigosJogo = [Inimigo (2,0) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (0, 0) 25 3 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = mapa, inimigosJogo = [Inimigo (1, 1) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
+ 
+>>> verificaProjetilAtivos jogo1
+True
+
+>>> verificaProjetilAtivos jogo2
+False
+
+-}
+
+verificaPosiTorre :: Jogo -> Bool
+verificaPosiTorre j = let mapa = mapaJogo j
+                      in all (verificaPosiTorre2 mapa) (torresJogo j)
+
+
+{- | a função `verificaPosiTorre2` verifica se a posição de uma torre está dentro dos limites do mapa e se está sobre relva. -}
+
+verificaPosiTorre2 :: Mapa -> Torre -> Bool
+verificaPosiTorre2 mapa torre = let (coluna, linha) = posicaoTorre torre
+                                    colunaNova = floor coluna
+                                    linhaNova = floor linha
+
+                                in linhaNova >= 0 && linhaNova < length mapa && colunaNova >= 0 && colunaNova < length (mapa !! linhaNova) && (mapa !! linhaNova) !! colunaNova == Relva
+
+
+
+{- | a função `verificaAlcanceTorre` verifica se o valor do alcance é maior que zero. 
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (2, 0) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = mapa, inimigosJogo = [Inimigo (2,0) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (0, 0) 25 3 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = mapa, inimigosJogo = [Inimigo (1, 1) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
+ 
+>>> verificaAlcanceTorre jogo1
+False
+
+>>> verificaAlcanceTorre jogo2
+True
+
+-}
+
+verificaAlcanceTorre :: Jogo -> Bool
+verificaAlcanceTorre j = all verificaAlcanceTorre2 (torresJogo j)
+
+    where verificaAlcanceTorre2 :: Torre -> Bool
+          verificaAlcanceTorre2 torre = alcanceTorre torre > 0
+
+
+
+{- | a função `verificaRajadaTorre` verifica se o valor da rajada é maior que zero (utiliza a mesma lógica que a `verificaAlcanceTorre`). -}
+
+verificaRajadaTorre :: Jogo -> Bool
+verificaRajadaTorre j = all verificaRajadaTorre2 (torresJogo j)
+
+    where verificaRajadaTorre2 :: Torre -> Bool
+          verificaRajadaTorre2 torre = rajadaTorre torre > 0
+
+
+{- | a função `verificaCicloTorre` verifica se o valor do ciclo é maior ou igual a zero (utiliza a mesma lógica que a `verificaAlcanceTorre`). -}
+
+verificaCicloTorre :: Jogo -> Bool
+verificaCicloTorre j = all verificaCicloTorre2 (torresJogo j)
+
+    where verificaCicloTorre2 :: Torre -> Bool
+          verificaCicloTorre2 torre = cicloTorre torre >= 0
+
+
+
+
+{- | a função `verificaNotSobreposicaoTorre` verifica se não há sobreposição entre torres. Devolve True se não houver.
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [Inimigo (2,0) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (2, 0) 25 3 3 2 0 (Projetil Fogo (Finita 7)), Torre (2, 0) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = mapa, inimigosJogo = [Inimigo (1, 1) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
+ 
+>>> verificaAlcanceTorre jogo1
+True
+
+>>> verificaAlcanceTorre jogo2
+False
+
+-}
+
+
+verificaNotSobreposicaoTorre :: Jogo -> Bool
+verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
+
+    where verificaTorres [] = True
+          verificaTorres (t:ts) = notElem (posicaoTorre t) (map posicaoTorre ts) && verificaTorres ts
+
+
+
