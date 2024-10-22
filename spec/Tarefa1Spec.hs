@@ -91,3 +91,7 @@ testaVerificaVelocidadeInimigo = "Teste 10" ~: True ~?= verificaVelocidadeInimig
 -- | Testa se a verificação de projéteis ativos nos inimigos está correta
 testaVerificaProjeteisAtivos :: Test
 testaVerificaProjeteisAtivos = "Teste 11" ~: True ~?= verificaProjeteisAtivos jogo01
+
+-- | Testa se a verificação da posição das torres está correta
+testaVerificaPosiTorre :: Test
+testaVerificaPosiTorre = "Teste 12" ~: True ~?= verificaPosiTorre jogo01
