@@ -79,3 +79,7 @@ testaVerificaOndaPortal = "Teste 7" ~: True ~?= verificaOndaPortal jogo01
 -- | Testa se a verificação de inimigos sobre terra está correta
 testaVerificaInimigosTerra :: Test
 testaVerificaInimigosTerra = "Teste 8" ~: True ~?= verificaInimigosTerra jogo01
+
+-- | Testa se a verificação de sobreposição de inimigos está correta
+testaVerificaInimigosSobreposicao :: Test
+testaVerificaInimigosSobreposicao = "Teste 9" ~: True ~?= verificaInimigosSobreposicao jogo01
