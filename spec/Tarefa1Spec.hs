@@ -51,3 +51,7 @@ jogo01 = Jogo
 -- | Testa se o tipo de terreno da posição (3, 2) no mapa é Relva
 testaTerrenoMapa :: Test
 testaTerrenoMapa = "Teste 1" ~: Relva ~?= (mapaJogo jogo01) !! 2 !! 3
+
+-- | Testa se o número de portais no jogo está correto
+testaPortaisJogo :: Test
+testaPortaisJogo = "Teste 2" ~: 1 ~?= length (portaisJogo jogo01)
