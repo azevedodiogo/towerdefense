@@ -33,3 +33,7 @@ inimigo06 = Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (2.0, 2.0) 0
 -- | Torre 1 para testes.
 torre01 :: Torre
 torre01 = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
+
+-- | Portal 1 para testes.
+portal01 :: Portal
+portal01 = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda01]}
