@@ -56,5 +56,90 @@ Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 75.0,
 
 atingeInimigo :: Torre -> Inimigo -> Inimigo
 atingeInimigo t i = i
-     {vidaInimigo = max 0 (vidaInimigo i - danoTorre t),                                -- o inimigo perde nível de vida conforme o dano da torre
-      projeteisInimigo = junçaoProjetil (projetilTorre t) (projeteisInimigo i)}         -- lista dos novos projeteis que atingiram o inimigo
+     {vidaInimigo = max 0 (vidaInimigo i - danoTorre t),                                -- O inimigo perde nível de vida conforme o dano da torre.
+      projeteisInimigo = junçaoProjetil (projetilTorre t) (projeteisInimigo i)}         -- Lista dos novos projeteis que atingiram o inimigo.
+
+
+
+{- | a função `junçaoProjetil` junta os projeteis com base no seu tipo, utilizando as funções `iguais` e `resolveConflito`. -}
+
+junçaoProjetil :: Projetil -> [Projetil] -> [Projetil]
+junçaoProjetil p [] = [p]
+junçaoProjetil pnovo lpantigos = iguais lpconflitoTransformada
+
+    where lpconflitoTransformada = resolveConflito pnovo lpantigos
+
+
+
+{- | a função `iguais` soma as suas duracoes, caso o tipo do projetil novo e um dos projeteis do inimigo sejam iguais. 
+
+=== Exemplos de Uso:
+
+* `projeteis` = [Projetil Gelo (Finita 3), Projetil Gelo (Finita 5), Projetil Resina Infinita]
+
+>>> iguais projeteis
+[Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 8.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
+
+-}
+
+iguais :: [Projetil] -> [Projetil]
+iguais [] = []
+iguais [p] = [p]
+iguais (pn:l:ls) | tipopn == tipol = pn {duracaoProjetil = somaduracao duracaopn duracaol} : ls
+                 | otherwise = l : iguais (pn:ls)
+
+        where duracaopn = duracaoProjetil pn
+              duracaol = duracaoProjetil l
+              tipopn = tipoProjetil pn
+              tipol = tipoProjetil l
+
+
+{- | a função `somaduracao` soma as duracoes de dois projeteis. -}
+
+somaduracao :: Duracao -> Duracao -> Duracao
+somaduracao Infinita _ = Infinita
+somaduracao _ Infinita = Infinita
+somaduracao (Finita a) (Finita b) = Finita (a+b)
+
+
+{- | a função `resolveConflito` resolve conflitos entre projéteis: Fogo e Gelo cancelam-se mutuamente, Fogo e Resina dobra a duração do fogo.
+
+=== Exemplos de Uso:
+
+* `projetil1` = Projetil Gelo (Finita 3)
+* `projetil2` = Projetil Resina Infinita
+* `projetil3` = Projetil Fogo (Finita 5) 
+
+>>> resolveConflito projetil3 [projetil1]
+[]
+>>> resolveConflito projetil3 [projetil2]
+[Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 10.0}]
+>>> resolveConflito projetil3 [projetil1, projetil2]
+[Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
+
+-}
+
+resolveConflito :: Projetil -> [Projetil] -> [Projetil]
+
+-- a lista de projeteis está vazia
+resolveConflito p [] = [p]
+
+-- a lista contem apenas um elemento
+resolveConflito pn [x]  | tipoProjetil pn == Fogo && tipoProjetil x == Resina = [pn {duracaoProjetil = Finita (tempo (duracaoProjetil pn)*2)}]
+                        | tipoProjetil pn == Resina && tipoProjetil x == Fogo = [x {duracaoProjetil = Finita (tempo (duracaoProjetil x)*2)}]
+                        | tipoProjetil pn == Gelo && tipoProjetil x == Fogo = []
+                        | tipoProjetil pn == Fogo && tipoProjetil x == Gelo = []
+                        | otherwise = pn : [x]
+
+-- a lista contem dois elementos (gelo e resina ou resina e gelo)
+resolveConflito pn [x,y]  | tipoProjetil pn == Fogo && tipoProjetil x == Gelo  = [y]
+                          | tipoProjetil pn == Fogo && tipoProjetil y == Gelo = [x]
+                          | otherwise = pn:[x,y]
+
+
+
+{-| a funçao `tempo` extrai o tempo de uma duracao. -}
+
+tempo :: Duracao -> Float
+tempo (Finita n) = n
+tempo _ = 0
