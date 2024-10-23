@@ -119,3 +119,30 @@ testaVerificaBaseTerra = "Teste 17" ~: True ~?= verificaBaseTerra jogo01
 -- | Testa se a verificação de sobreposição da base está correta
 testaVerificaBaseSobreposicao :: Test
 testaVerificaBaseSobreposicao = "Teste 18" ~: True ~?= verificaBaseSobreposicao jogo01
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- | Lista de testes da Tarefa 1
+testesTarefa1 :: Test
+testesTarefa1 =
+  TestLabel "Testes Tarefa 1" $
+    test
+      [ TestLabel "Teste 1" testaTerrenoMapa,
+        TestLabel "Teste 2" testaPortaisJogo,
+        TestLabel "Teste 3" testaValidaJogo,
+        TestLabel "Teste 4" testaVerificaPosiPortal,
+        TestLabel "Teste 5" testaVerificaCaminhoTerra,
+        TestLabel "Teste 6" testaVerificaPortalSobreposicao,
+        TestLabel "Teste 7" testaVerificaOndaPortal,
+        TestLabel "Teste 8" testaVerificaInimigosTerra,
+        TestLabel "Teste 9" testaVerificaInimigosSobreposicao,
+        TestLabel "Teste 10" testaVerificaVelocidadeInimigo,
+        TestLabel "Teste 11" testaVerificaProjeteisAtivos,
+        TestLabel "Teste 12" testaVerificaPosiTorre,
+        TestLabel "Teste 13" testaVerificaAlcanceTorre,
+        TestLabel "Teste 14" testaVerificaRajadaTorre,
+        TestLabel "Teste 15" testaVerificaCicloTorre,
+        TestLabel "Teste 16" testaVerificaNotSobreposicaoTorre,
+        TestLabel "Teste 17" testaVerificaBaseTerra,
+        TestLabel "Teste 18" testaVerificaBaseSobreposicao
+      ]
