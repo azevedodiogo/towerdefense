@@ -227,3 +227,125 @@ removeInimigo o = let i = inimigosOnda o
 ondaVazia :: Onda -> Bool
 ondaVazia o = length (inimigosOnda o) == 0
 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+{- | a função `terminouJogo` verifica se o jogador ganhou ou perdeu o jogo. 
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base1, portaisJogo = [portal1], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = loja, nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base2, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = loja, nivelJogo = Um}
+
+* `base1` = Base {vidaBase = 100, posicaoBase = (5.5, 2.5), creditosBase = 50}
+* `base2` = Base {vidaBase = 0, posicaoBase = (5.5, 2.5), creditosBase = 50}
+* `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> terminouJogo jogo1
+False
+
+>>> terminouJogo jogo2
+True
+
+-}
+
+terminouJogo :: Jogo -> Bool
+terminouJogo j = ganhouJogo j || perdeuJogo j
+
+
+{- | a função `perdeuJogo` verifica se o jogador perdeu o jogo. O jogador perde se a vida da base for menor ou igual a zero.
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base1, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+* `base1` = Base {vidaBase = 0, posicaoBase = (5.5, 2.5), creditosBase = 50}
+
+>>> perdeuJogo jogo1
+True
+
+-}
+
+perdeuJogo :: Jogo -> Bool
+perdeuJogo j = vidadaBase (baseJogo j) <= 0
+
+
+
+
+{- | a função `ganhouJogo` verifica se o jogador ganhou o jogo. O jogador vence se não houver mais inimigos no jogo e a vida da base for maior que zero.
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base2, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = loja, nivelJogo = Um}
+
+* `base1` = Base {vidaBase = 2, posicaoBase = (5.5, 2.5), creditosBase = 50}
+
+>>> ganhouJogo jogo1
+True
+
+-}
+
+ganhouJogo :: Jogo -> Bool
+ganhouJogo j = ausenciainimigos j && vidadaBase (baseJogo j) > 0
+
+
+
+{- | a função `vidadaBase` extrai a vida da base. -}
+
+vidadaBase :: Base -> Float
+vidadaBase = vidaBase
+
+
+
+
+{- | a função `ausenciainimigos` verifica a ausencia de inimigos ativos ou inativos. 
+
+=== Exemplo de Uso:
+
+* `jogoSemInimigos` = Jogo {baseJogo = base1, portaisJogo = [portal2], torresJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [],  nivelJogo = Um}
+* `jogoComInimigos` = Jogo {baseJogo = base1, portaisJogo = [portal1], torresJogo = [], mapaJogo = [], inimigosJogo = [inimigo1], lojaJogo = [],  nivelJogo = Um}
+
+* `base1` = Base {vidaBase = 100, posicaoBase = (5.5, 2.5), creditosBase = 50}
+* `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
+* `portal2` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = []} 
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> ausenciainimigos jogoSemInimigos
+True
+
+>>> ausenciainimigos jogoComInimigos
+False
+
+-}
+
+ausenciainimigos :: Jogo -> Bool
+ausenciainimigos j = null iemjogo && null iportais
+    where iemjogo = inimigosJogo j
+          iportais = filtrainimigos (portaisJogo j)
+
+
+
+{- | a função `filtrainimigos` extrai todos os inimigos de todos os portais. 
+
+=== Exemplos de Uso:
+
+* `portal1` = Portal {posicaoPortal = (2.0, 2.0), ondasPortal = [onda1, onda2]}
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+* `onda2` = Onda {inimigosOnda = [inimigo3], cicloOnda = 3, tempoOnda = 0, entradaOnda = 2}
+* `inimigo1` = Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (2.0, 2.0) 0
+* `inimigo2` = Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (2.0, 2.0) 0
+* `inimigo3` = Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (2.0, 2.0) 0
+
+>>> filtrainimigos [portal1]
+[Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0},
+ Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0},
+ Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0}]
+
+-}
+
+filtrainimigos :: [Portal] -> [Inimigo]
+filtrainimigos [] = []
+filtrainimigos (p:ps) = concat (map inimigosOnda (ondasPortal p)) ++ filtrainimigos ps
