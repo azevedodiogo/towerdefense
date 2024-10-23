@@ -29,3 +29,7 @@ inimigo05 = Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (2.0, 2.0) 0
 -- | Inimigo 6 para testes.
 inimigo06 :: Inimigo
 inimigo06 = Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (2.0, 2.0) 0
+
+-- | Torre 1 para testes.
+torre01 :: Torre
+torre01 = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
