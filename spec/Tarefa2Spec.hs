@@ -80,3 +80,7 @@ projetil02 = Projetil Resina Infinita
 -- | Projétil 3 para testes.
 projetil03 :: Projetil
 projetil03 = Projetil Fogo (Finita 5)
+
+-- | Jogo 1 para testes.
+jogo01 :: Jogo
+jogo01 = Jogo {baseJogo = base01, portaisJogo = [portal01], torresJogo = [], mapaJogo = mapa01, inimigosJogo = [], lojaJogo = loja01, nivelJogo = Um}
