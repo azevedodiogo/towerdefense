@@ -76,3 +76,7 @@ projetil01 = Projetil Gelo (Finita 3)
 -- | Projétil 2 para testes.
 projetil02 :: Projetil
 projetil02 = Projetil Resina Infinita
+
+-- | Projétil 3 para testes.
+projetil03 :: Projetil
+projetil03 = Projetil Fogo (Finita 5)
