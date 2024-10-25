@@ -169,3 +169,8 @@ testaResolveConflitoProjetil = "Teste 4" ~: [] ~?= resolveConflito projetil03 [p
 -- | Testa se a função ativa o inimigo.
 testaAtivaInimigo :: Test
 testaAtivaInimigo = "Teste 5" ~: (Portal {posicaoPortal = (0.5,0.5), ondasPortal = [Onda {inimigosOnda = [Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 3.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0}], cicloOnda = 5.0, tempoOnda = 5.0, entradaOnda = 0.0}]}, [Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 5.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0},Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}], posInicial = (0,0), tempoInimigo = 0.0}]) ~?= ativaInimigo portal01 [inimigo03]
+
+
+-- | Testa se a função pode lançar um projétil.
+testaPodeLançar :: Test
+testaPodeLançar = "Teste 6" ~: True ~?= podelançar onda01
