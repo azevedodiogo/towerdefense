@@ -150,6 +150,12 @@ mapa01 =
 testaInimigosAlcanceTorre :: Test
 testaInimigosAlcanceTorre = "Teste 1" ~: [Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (3.0,4.0), tempoInimigo = 0.0}, Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (7.0,5.0), tempoInimigo = 0.0}] ~?= inimigosNoAlcance torre01 listaInimigos01
 
+
 -- | Testa se a função atualiza o estado de um inimigo sempre que este é atingido por um projétil.
 testaAtingeInimigo :: Test
 testaAtingeInimigo = "Teste 2" ~: Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 75.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 12.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0} ~?= atingeInimigo torre01 inimigo01
+
+
+-- | Testa se a função junta os projéteis iguais.
+testaIguais :: Test
+testaIguais = "Teste 3" ~: [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 8.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}] ~?= iguais listaProjeteis01
