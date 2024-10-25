@@ -194,3 +194,24 @@ testaPerdeuJogo = "Teste 9" ~: True ~?= terminouJogo jogo03
 -- | Testa se a função filtra os inimigos.
 testaFiltraInimigos :: Test
 testaFiltraInimigos = "Teste 10" ~: [Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0}, Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0}, Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0}] ~?= filtrainimigos [portal02]
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- | Testes da Tarefa 2.
+testesTarefa2 :: Test
+testesTarefa2 =
+  TestLabel "Testes Tarefa 2" $
+    test
+      [ TestLabel "Teste 1" testaInimigosAlcanceTorre,
+        TestLabel "Teste 2" testaAtingeInimigo,
+        TestLabel "Teste 3" testaIguais,
+        TestLabel "Teste 4" testaResolveConflitoProjetil,
+        TestLabel "Teste 5" testaAtivaInimigo,
+        TestLabel "Teste 6" testaPodeLançar,
+        TestLabel "Teste 7" testaRemoveInimigo,
+        TestLabel "Teste 8" testaTerminouJogo,
+        TestLabel "Teste 9" testaPerdeuJogo,
+        TestLabel "Teste 10" testaFiltraInimigos
+      ]
