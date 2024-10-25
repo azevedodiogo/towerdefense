@@ -1,5 +1,7 @@
 # Tower Defense
 
+## PORTUGUESE
+
 Este repositório destina-se ao jogo de Tower Defense desenvolvido na unidade curricular “Laboratórios de Informática 1”.
 
 Este jogo de Tower Defense desafia o jogador a defender a base de ondas de inimigos, usando torres para neutralizá-los. O utilizador tem a possibilidade de escolher o nível de dificuldade do jogo que pretende jogar e, quando este termina o jogo com sucesso além de ser registado num sistema de proezas tal conquista o utilizador é desafiado a avançar para um nível seguinte.
@@ -27,7 +29,32 @@ Este documento apresenta todas as informações cruciais e necessárias para uma
 
 Made with ❤️ by Diogo Azevedo & Vera Almeida
 
-## Executável
+## ENGLISH
+
+This repository is intended for the Tower Defense game developed in the "Computer Labs 1" discipline. The game's objective is to defend the base from waves of enemies using towers to neutralize them. Players can choose the difficulty level of the game they want to play. If they complete the game successfully, they will be registered in a system of achievements and be challenged to advance to the next level.
+
+The game's initial interface is designed to be intuitive, featuring a well-organized arrangement of menus and options, with the prominent "Start" button directing the player to the level selection menu. On the right side of the screen, there are dedicated sections for achievements and feats, the game's rules and instructions, and the credits, which include a mention of the game's developers.
+
+The map constitutes one of the fundamental components of Tower Defense, manifesting as a grid comprising three distinct terrain types: land, water, and grass. In addition to the map, elements such as towers, bases, and portals are instrumental in shaping the game's structure. Turrets, positioned on the grassy terrain, automatically discharge projectiles that inflict damage or implement effects such as ice, immobilizing enemies, fire, inflicting continuous damage to the enemy, and resin, which impedes the enemy's speed. Of particular note are the projectiles' potential synergies, whereby the combination of projectiles can result in more potent effects than the mere summation of their individual effects.
+
+The antagonists follow predetermined trajectories, which means that they invariably move along predetermined paths, ensuring that they are heading towards the base.
+As the game progresses, the player will encounter a bar positioned above each enemy, thereby providing the user with a visual indication of their health status. In the event of being struck by a projectile, the bar undergoes a color change. As the game progresses, the player acquires credits through the elimination of enemies, which can then be utilized to purchase towers.
+The credits mentioned are constantly updated and remain visible during gameplay, as is the base's health.
+
+The portals within a Tower Defense serve as the entry points for enemies, who materialize and commence their journey toward the player's base. The generation of these waves is initiated through the deployment of portals, each constituting a group of enemies that are released at regular intervals. The functioning of the portals is essential to the game's pace, creating constant challenges that the player must face and overcome.
+
+During gameplay, the keyboard is employed for actions such as acquiring towers, restarting the game, and pausing the game.
+
+ 1. To initiate a pause in the game, the player must press the 'p' key, which is designated for the purpose of pausing the game.
+ 2. The player must first press the 'c' key (for "buy") to purchase a tower, at which point a yellow circle will appear in the top left corner. This circle indicates the proposed position for placing the tower. The player must then utilize the directional keys to maneuver the yellow circle across the map and select the desired location. To finalize the tower purchase, the player must press a number key corresponding to the desired tower. In the event that the player lacks the necessary credits to complete the transaction, the circle transitions from yellow to red, signifying that proceeding with the purchase is unfeasible.
+ 3. To restart the game and return to the beginning of the current level, the player must press the "r" key, which is designated as "restart."
+
+Within the game's structural framework, particularly with respect to the completion of levels, victory is attained when the player successfully eliminates all opponents, thereby ensuring the comprehensive defense of the base. Conversely, defeat is marked by the destruction of the base by enemy forces.
+This document presents all the crucial information necessary for an in-depth look at the game's dynamics and objectives, ensuring that the player has a solid foundation to make the most of the interactive experience.
+
+Made with ❤️ by Diogo Azevedo & Vera Almeida
+
+### Executável
 
 Pode compilar e executar o programa através dos comandos `build` e `run` do Cabal.
 
@@ -35,7 +62,7 @@ Pode compilar e executar o programa através dos comandos `build` e `run` do Cab
 cabal run --verbose=0
 ```
 
-## Interpretador
+### Interpretador
 
 Para abrir o interpretador do Haskell (GHCi) com o projeto carregado, utilize o comando `repl` do Cabal.
 
@@ -43,7 +70,7 @@ Para abrir o interpretador do Haskell (GHCi) com o projeto carregado, utilize o 
 cabal repl
 ```
 
-## Testes
+### Testes
 
 O projecto utiliza a biblioteca [HUnit](https://hackage.haskell.org/package/HUnit) para fazer testes unitários.
 
@@ -61,7 +88,7 @@ executável utilize o comando `cabal install doctest`.
 cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest --verbose=0
 ```
 
-## Documentação
+### Documentação
 
 A documentação do projeto pode ser gerada recorrendo ao [Haddock](https://haskell-haddock.readthedocs.io/).
 
