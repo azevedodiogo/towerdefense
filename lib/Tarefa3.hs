@@ -103,3 +103,7 @@ disparaTorre tempo torre inimigos
 
 
                           in (torre {tempoTorre = cicloTorre torre}, map snd lordenada)
+
+
+geraID :: [Inimigo] -> [(Int, Inimigo)]
+geraID = zip [0..]
