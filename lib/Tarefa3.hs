@@ -105,5 +105,22 @@ disparaTorre tempo torre inimigos
                           in (torre {tempoTorre = cicloTorre torre}, map snd lordenada)
 
 
+
+
+{- | a função `geraID` gera uma id para cada inimigo da lista. 
+
+Implementamos esta função porque os inimigos de uma onda inicialmente têm todos as mesmas características, logo se utilizassemos a 'elem' para retirar, da lista de inimigos, os inimigos que vão ser atingidos pela torre (iniRajada) iriamos ter uma lista no final com menos inimigos do que o suposto. 
+Assim, a nossa solução foi inventar uma identidade (atribuindo-lhes um número) para os inimigos, pelo que em vez de comprarmos o inimigo em si, comparamos apenas as suas identidades. 
+
+=== Exemplos de Uso:
+
+* `inimigos` = [Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0)] 0
+
+>>> geraID inimigos
+[(0,Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (3.0,4.0), tempoInimigo = 0.0}),
+ (1,Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (7.0,5.0), tempoInimigo = 0.0})]
+
+-}
+
 geraID :: [Inimigo] -> [(Int, Inimigo)]
 geraID = zip [0..]
