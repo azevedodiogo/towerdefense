@@ -202,18 +202,18 @@ atualizaOnda :: Tempo -> [Onda] -> [Onda]
 atualizaOnda _ [] = []
 atualizaOnda tempo (onda:rOndas)
 
-            -- atualiza a entrada da primeira onda, se ela estiver maior que zero
+            -- Atualiza a entrada da primeira onda, se ela estiver maior que zero.
             | entradaOnda onda > 0 = let ondaAtual = onda {entradaOnda = entradaOnda onda - tempo}
                                      in ondaAtual : rOndas
 
-            -- remove a onda, se não tiver mais inimigos
+            -- Remove a onda, se não tiver mais inimigos.
             | null (inimigosOnda onda) = atualizaOnda tempo rOndas
 
-            -- atualiza o tempo para o próximo inimigo, 
+            -- Atualiza o tempo para o próximo inimigo. 
             | tempoOnda onda > 0 = let ondaAtualizada = onda {tempoOnda = tempoOnda onda - tempo}
                                    in ondaAtualizada : rOndas
 
-             -- mantém a onda como está
+             -- Mantém a onda como está.
             | otherwise = onda : rOndas
 
 
@@ -256,3 +256,284 @@ atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, n
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- COMPORTAMENTO DOS INIMIGOS
+
+
+{- | a função `Caminho` devolve um caminho do portal à base. 
+
+=== Exemplos de Uso:
+
+* `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda]}
+* `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
+* `mapa` = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+
+>>> caminho (0, 0) (2, 2) mapa
+[(0,0),(0,1),(1,1),(2,1),(2,2)]
+
+-}
+
+caminho :: (Int, Int) -> (Int, Int) -> Mapa -> [(Int, Int)]
+caminho portal base mapa = auxCaminho portal [] base mapa
+
+
+{- | a função `auxCaminho` auxilia a função 'caminho', utilizando as funções `encontraVizinhos` e `removeVisitados` da Tarefa 1. -}
+
+auxCaminho :: (Int, Int) -> [(Int, Int)] -> (Int, Int) -> Mapa -> [(Int, Int)]
+auxCaminho posAtual visitados base mapa
+
+    -- Chegou à base
+    | posAtual == base = [posAtual]
+
+    -- Encontra a próxima posição do caminho e repete o processo até chegar à base.                                           
+    | otherwise = let vizinhos = encontraVizinhos posAtual mapa                                            -- Encontra os vizinhos válidos.
+                      naoVisitados = removeVisitados vizinhos visitados                                    -- Remove as posições já visitadas.          
+
+                  in posAtual : auxCaminho (head naoVisitados) (posAtual : visitados) base mapa            -- Gera o caminho. 
+
+
+
+{- | a função `direcaoToOeste` atualiza a direção do inimigo conforme a sua posição e o mapa, caso o portal esteja à direita da base. 
+
+=== Exemplos de Uso:
+
+>>> direcaoToOeste Norte (3, 2) [(3, 3), (4, 3)]
+Sul
+
+>>> direcaoToOeste Oeste (0.5, 1) [(0,1), (0,2)]
+Oeste
+
+-}
+
+direcaoToOeste :: Direcao -> Posicao -> [(Int, Int)] -> Direcao
+direcaoToOeste d pos p' = case d of
+
+    Norte -> if (z, y) `elem` p' then Norte
+             else if (z+1, w) `elem` p' then Este
+             else if (z-1, w) `elem` p' then Oeste
+             else Sul
+
+    Sul -> if (z, y+1) `elem` p' then Sul
+           else if (z+1, y) `elem` p' then Este
+           else if (z-1, y) `elem` p' then Oeste
+           else Norte
+
+    Este -> if (z+1, y) `elem` p' then Este
+            else if (z, y-1) `elem` p' then Norte
+            else if (z, y+1) `elem` p' then Sul
+            else Oeste
+
+    Oeste -> if (z-1, y) `elem` p' || (z-1, w) `elem` p' then Oeste
+             else if (z, y-1) `elem` p' then Norte
+             else if (z, y+1) `elem` p' then Sul
+             else Este
+
+    where (x,y) = (floor (fst pos), floor (snd pos))            -- Arredonda por defeito.
+          (z,w) = (ceiling (fst pos), ceiling (snd pos))        -- Arredonda por excesso.
+
+
+
+{- | a função `direcaoToEste` atualiza a direção do inimigo conforme a sua posição e o mapa, caso o portal esteja à esquerda da base. -}
+
+direcaoToEste :: Direcao -> Posicao -> [(Int, Int)] -> Direcao
+direcaoToEste d pos p' = case d of
+
+    Norte -> if (x, w-1) `elem` p' then Norte
+             else if (x+1, w) `elem` p' then Este
+             else if (x-1, w) `elem` p' then Oeste
+             else Sul
+
+    Sul -> if (x, y+1) `elem` p' then Sul
+           else if (x+1, y) `elem` p' then Este
+           else if (x-1, y) `elem` p' then Oeste
+           else Norte
+
+    Este -> if (x+1, w) `elem` p' || (x+1, y) `elem` p' then Este
+            else if (x, y-1) `elem` p' then Norte
+            else if (x, y+1) `elem` p' then Sul
+            else Oeste
+
+    Oeste -> if (x-1, y) `elem` p' then Oeste
+             else if (x, y-1) `elem` p' then Norte
+             else if (x, y+1) `elem` p' then Sul
+             else Este
+
+    where (x,y) = (floor (fst pos), floor (snd pos))
+          (z,w) = (ceiling (fst pos), ceiling (snd pos))
+
+
+{- | a função `atualizaPosicao` atualiza a posição do inimigo conforme a sua direcao e velocidade. 
+
+=== Exemplos de Uso:
+
+>>> atualizaPosicao [Projetil Resina Infinita] Norte (2.0, 3.0) 1.0 1.0
+(2.0, 2.3)
+
+>>> atualizaPosicao [] Este (1.0, 2.0) 2.0 1.5
+(4.0, 2.0)
+
+-}
+
+atualizaPosicao :: [Projetil] -> Direcao -> Posicao -> Tempo -> Float -> Posicao
+atualizaPosicao p d (x,y) t v = case d of
+    Norte -> if elem Resina tp then (x, y - v * t * 0.7) else (x, y - v * t)
+    Sul -> if elem Resina tp then (x, y + v * t * 0.7) else (x, y + v * t)
+    Este -> if elem Resina tp then (x + v * t * 0.7, y) else (x + v * t, y)
+    Oeste -> if elem Resina tp then (x - v * t * 0.7, y) else (x - v * t, y)
+
+    where tp = map tipoProjetil p 
+
+
+{- | a função `atualizaProjetil` atualiza o estado dos projéteis com base no tempo e na duração de cada um. 
+
+=== Exemplos de Uso:
+
+>>> atualizaProjetil 1.0 [Projetil Gelo (Finita 5.0), Projetil Resina Infinita]
+[Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 4.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
+
+-}
+
+atualizaProjetil :: Tempo -> [Projetil] -> [Projetil]
+atualizaProjetil _ [] = []
+atualizaProjetil t ((Projetil tipo duracao):ps) = case duracao of
+
+    Finita d -> if d > t then Projetil tipo (Finita (d-t)) : atualizaProjetil t ps
+                else atualizaProjetil t ps
+    Infinita -> Projetil tipo Infinita : atualizaProjetil t ps
+
+
+
+{- | a função `proxMovimento` devolve o proximo movimento do inimigo, isto é, a sua direção e posicao, utilizando as funçoes `atualizaPosicao` e `direcaoToEste` / `direcaoToOeste`. -}
+
+proxMovimento :: Tempo -> Mapa -> Posicao -> Posicao -> Inimigo -> Inimigo
+proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinheiro projeteis posi tempo) =
+
+    let caminhoPortalBase = caminho posPortalInt posBaseInt mapa                               -- Obtém o caminho do portal à base.
+        novaDirecao | isPortalesq = direcaoToEste direcao pos caminhoPortalBase
+                    | otherwise = direcaoToOeste direcao pos caminhoPortalBase                 -- Nova direção do Inimigo, utilizando a 'atualizaDirecao'.
+        novaPosicao = atualizaPosicao projeteis novaDirecao pos t velocidade                   -- Nova posicao do Inimigo, utilizando a 'atualizaPosicao' e a nova direção.        
+
+    in Inimigo novaPosicao novaDirecao vida velocidade dano dinheiro projeteis posi tempo
+
+                where posPortalInt = arredondaPosicao portal
+                      posBaseInt = arredondaPosicao base
+                      isPortalesq = fst posPortalInt < fst posBaseInt
+
+
+
+{- | a função `atualizaEstadoInimigo` atualiza o estado do inimigo (vida, direcao, posicao, velocidade, projeteis) utilizando as funçoes `proxMovimento` e `atualizaProjetil`. 
+
+
+=== Efeitos dos Projéteis:
+   
+1. **Gelo**: O inimigo fica parado durante o tempo em que está sob o efeito do gelo.
+2. **Fogo**: O inimigo perde 5 de vida por segundo enquanto está sob o efeito do fogo.
+3. **Resina**: O inimigo tem a velocidade reduzida 30% (até sair da lista de projeteisAtivos) -- efeito é produzido na `atualizaPosicao`.
+
+
+=== Exemplos de Uso:
+
+* `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
+* `mapa` = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+* `inimigo1` = Inimigo (0.5, 1.0) Este 100 1.0 5 25 [Projetil Resina Infinita, Projetil Gelo (Finita 2)] (0.5, 0.5) 0
+* `inimigo2` = Inimigo (0.5, 1.0) Sul 100 1.0 5 25 [Projetil Resina Infinita] (0.5, 0.5) 0
+
+>>> atualizaEstadoInimigo 0.5 mapa (2.2, 2.5) inimigo1
+Inimigo {posicaoInimigo = (0.5,1.0), direcaoInimigo = Este, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}, Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 1.5}], posInicial = (0.5,0.5), tempoInimigo = 0.0}
+
+>>> atualizaEstadoInimigo 0.5 mapa (2.2, 2.5) inimigo2
+Inimigo {posicaoInimigo = (0.85,1.0), direcaoInimigo = Este, vidaInimigo = 100.0, velocidadeInimigo = 0.8, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}], posInicial = (0.5,0.5), tempoInimigo = 0.0}
+
+-}
+
+atualizaEstadoInimigo :: Tempo -> Mapa -> Posicao -> Inimigo -> Inimigo
+atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidade dano dinheiro projeteis posPortal tempo) =
+
+    case projeteis of
+        -- O inimigo não tem projéteis.
+        [] -> proxMovimento t mapa posPortal basepos inimigo
+
+        -- Caso em que o projétil é o gelo.
+        [Projetil Gelo _] -> inimigo {projeteisInimigo = atualizaProjetil t projeteis} -- Fica parado devido ao gelo.
+
+        -- Caso em que o projétil é o fogo.
+        [Projetil Fogo _] -> let novaVida = vida - (5 * t) -- Perde 5 de vida por segundo devido ao fogo.
+                             in proxMovimento t mapa posPortal basepos inimigo {vidaInimigo = novaVida, projeteisInimigo = atualizaProjetil t projeteis}
+
+        -- Caso em que o projétil é a resina.
+        [Projetil Resina _] -> proxMovimento t mapa posPortal basepos inimigo {projeteisInimigo = atualizaProjetil t projeteis}
+
+        -- Caso em que os projéteis são o gelo e a resina.
+        ps -> inimigo {projeteisInimigo = atualizaProjetil t projeteis}
+
+
+
+{- | a função `removeInimigoHitBase` elimina os inimigos que atingiram a base. 
+
+=== Exemplos de Uso:
+
+* `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.2), creditosBase = 50}
+* `inimigos` = [Inimigo (2, 2) Este 100 1.0 5 25 [Projetil Resina Infinita] (0.5, 0.5) 0, Inimigo (0.5, 1.0) Sul 100 1.0 5 25 [Projetil Gelo (Finita 2)] (0.5, 0.5) 0]
+
+>>> removeInimigoHitBase base inimigos
+(Base {vidaBase = 75.0, posicaoBase = (2.2,2.2), creditosBase = 50},
+[Inimigo {posicaoInimigo = (0.5,1.0), direcaoInimigo = Sul, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 2.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0}])
+
+-}
+
+removeInimigoHitBase :: Base -> [Inimigo] -> (Base, [Inimigo])
+removeInimigoHitBase base [] = (base, [])
+removeInimigoHitBase b (i:is)
+
+    | sqrt ((x-x')^2 + (y-y')^2) <= 0.5 = removeInimigoHitBase b {vidaBase = vida - dano} is
+
+    | otherwise = let (b',is') = removeInimigoHitBase b is
+                  in (b', i:is')
+
+    where (x,y) = posicaoBase b
+          (x',y') = posicaoInimigo i
+          vida = vidaBase b
+          dano = ataqueInimigo i
+
+
+
+{- | a função `removeInimigosSemVida` elimina os inimigos que já não têm vida e adiciona o seu butim aos creditos da base. 
+
+=== Exemplos de Uso:
+
+* `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.2), creditosBase = 50}
+* `inimigos` = [Inimigo (2, 2) Este 0 1.0 5 25 [Projetil Resina Infinita] (0.5, 0.5) 0, Inimigo (0.5, 1.0) Sul 100 1.0 5 25 [Projetil Gelo (Finita 2)] (0.5, 0.5) 0]
+
+>>> removeInimigosSemVida inimigos 50
+([Inimigo {posicaoInimigo = (0.5,1.0), direcaoInimigo = Sul, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 2.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0}],75)
+
+-}
+
+removeInimigosSemVida :: [Inimigo] -> Creditos -> ([Inimigo], Creditos)
+removeInimigosSemVida [] c = ([], c)
+removeInimigosSemVida (i:is) c | vida <= 0 = removeInimigosSemVida is (c+dinheiro)
+                               | otherwise = let (is',c') = removeInimigosSemVida is c
+                                             in (i : is', c')
+
+        where vida = vidaInimigo i
+              dinheiro = butimInimigo i
+
+
+
+-- função principal
+
+{- | a função `atualizaInimigos` atualiza todos os inimigos em jogo, utilizando as funções `removeInimigosSemVida`, `removeInimigoHitBase` e `atualizaEstadoInimigo`. 
+
+Adicionamos um parâmetro (posicão inicial) no datatype do Inimigo. Essa posição corresponde à posição do portal que origina o inimigo,
+e serve para saber a que portal (dos vários que podem haver no jogo) corresponde o inimigo, para que este siga o caminho desse portal à base.
+
+-}
+
+atualizaInimigos :: Tempo -> Mapa -> Base -> [Inimigo] -> (Base, [Inimigo])
+atualizaInimigos tempo mapa base inimigos = (baseAtualizada, inimigosAtualizados)
+
+    where (inimigosVivos, creditosAtualizados) = removeInimigosSemVida inimigos (creditosBase base)
+          (baseAtualizada, inimigosAtingidos) = removeInimigoHitBase (Base (vidaBase base) (posicaoBase base) creditosAtualizados) inimigosVivos
+
+          inimigosAtualizados = map (atualizaEstadoInimigo tempo mapa (posicaoBase base)) inimigosAtingidos
