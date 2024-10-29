@@ -73,6 +73,12 @@ ondaAtualiza1 = Onda {inimigosOnda = [inimigo1Atualiza, inimigo2Atualiza], ciclo
 ondaAtualiza2 :: Onda
 ondaAtualiza2 = Onda {inimigosOnda = [], cicloOnda = 10, tempoOnda = 5, entradaOnda = 0}
 
+
+
 -- | Portal para teste da função atualizaPortal.
 portalAtualizaAtualiza :: Portal
 portalAtualizaAtualiza = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [ondaAtualizaAtualiza]}
+
+-- | Onda para teste da função atualizaPortal.
+ondaAtualizaAtualiza :: Onda
+ondaAtualizaAtualiza = Onda {inimigosOnda = [inimigoAtualizaAtualiza], cicloOnda = 10, tempoOnda = 0, entradaOnda = 0}
