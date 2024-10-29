@@ -29,3 +29,7 @@ inimigoAtualiza = Inimigo (1, 1) Norte 100 1.0 10 20 [] (0, 0) 0
 -- | Jogo para teste da função atualizaJogo.
 jogoAtualiza :: Jogo
 jogoAtualiza = Jogo baseAtualiza [portalAtualiza] [torreAtualiza] mapaAtualiza [inimigoAtualiza] [] Um
+
+-- | Torre para teste da função disparaTorre.
+torreDispara :: Torre
+torreDispara = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
