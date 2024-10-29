@@ -202,3 +202,24 @@ testeRemoveInimigosSemVida :: Test
 testeRemoveInimigosSemVida = "Teste 13" ~: ([Inimigo {posicaoInimigo = (0.5,1.0), direcaoInimigo = Sul, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 2.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0}],75) ~=? removeInimigosSemVida inimigosIniSemVida 50
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- | Testes da Tarefa 3.
+testesTarefa3 :: Test
+testesTarefa3 =
+  TestLabel "Testes Tarefa 3" $
+    test
+      [ TestLabel "Teste 1" testeAtualizaJogo,
+        TestLabel "Teste 2" testeDisparaTorre,
+        TestLabel "Teste 3" testeGeraID,
+        TestLabel "Teste 4" testeFiltraID,
+        TestLabel "Teste 5" testeAtualizaOnda,
+        TestLabel "Teste 6" testeAtualizaPortal,
+        TestLabel "Teste 7" testeCaminho,
+        TestLabel "Teste 8" testaDirecaoToOeste,
+        TestLabel "Teste 9" testeAtualizaPosicao,
+        TestLabel "Teste 10" testeAtualizaProjetil,
+        TestLabel "Teste 11" testeAtualizaEstadoInimigo,
+        TestLabel "Teste 12" testeHitBase,
+        TestLabel "Teste 13" testeRemoveInimigosSemVida
+      ]
