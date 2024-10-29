@@ -1,3 +1,14 @@
+{-|
+Module      : Tarefa2Spec
+Description : Testes da Tarefa 2
+Copyright   : Diogo Matos Azevedo <a109727@alunos.uminho.pt>
+              Vera da Silva Almeida <a110723@alunos.uminho.pt>
+
+
+Módulo para a realização dos testes da Tarefa 2 de LI1 em 2024/25.
+
+O objetivo deste ficheiro é validar as funções implementadas na Tarefa 2.
+-}
 module Tarefa2Spec (testesTarefa2) where
   
 import Tarefa2
