@@ -5,3 +5,11 @@ import Test.HUnit
 import Tarefa1Spec
 import Tarefa2Spec
 import Tarefa3Spec
+
+testSuite :: Test
+testSuite =
+  TestLabel "Spec Test Suit" $
+    test
+      [ "basic example test" ~: (2 :: Int) ~=? 1 + 1,
+        "another basic example" ~: True ~=? not False
+      ]
