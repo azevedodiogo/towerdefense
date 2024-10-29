@@ -90,3 +90,59 @@ inimigoAtualizaAtualiza = Inimigo (0.5, 0.5) Norte 100.0 1.0 10.0 20 [] (0.5, 0.
 -- | Inimigo para teste da função atualizaPortal.
 inimigosAtualizaAtualiza :: [Inimigo]
 inimigosAtualizaAtualiza = [Inimigo (2.5, 3.0) Oeste 100 4 30 23 [Projetil Gelo (Finita 4), Projetil Resina Infinita] (0.5, 0.5) 0]
+
+
+
+-- | Portal para teste da função caminho.
+portalCaminho :: Portal
+portalCaminho = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [ondaCaminho]}
+
+-- | Onda para teste da função caminho.
+ondaCaminho :: Onda
+ondaCaminho = Onda {inimigosOnda = [inimigoAtualizaAtualiza], cicloOnda = 10, tempoOnda = 5, entradaOnda = 0}
+
+-- | Inimigo para teste da função caminho.
+baseCaminho :: Base
+baseCaminho = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
+
+-- | Mapa para teste da função caminho.
+mapaCaminho :: Mapa
+mapaCaminho = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+
+
+
+-- | Base para teste da função atualizaEstadoInimigo.
+baseAtualizaEstadoInimigo :: Base
+baseAtualizaEstadoInimigo = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
+
+-- | Mapa para teste da função atualizaEstadoInimigo.
+mapaAtualizaEstadoInimigo :: Mapa
+mapaAtualizaEstadoInimigo = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+
+-- | Inimigo para teste da função atualizaEstadoInimigo.
+inimigo1AtualizaEstadoInimigo :: Inimigo
+inimigo1AtualizaEstadoInimigo = Inimigo (0.5, 1.0) Este 100.0 1.0 5.0 25 [Projetil Resina Infinita, Projetil Gelo (Finita 2)] (0.5, 0.5) 0
+
+-- | Inimigo para teste da função atualizaEstadoInimigo.
+inimigo2AtualizaEstadoInimigo :: Inimigo
+inimigo2AtualizaEstadoInimigo = Inimigo (0.5, 1.0) Sul 100.0 1.0 5.0 25 [Projetil Resina Infinita] (0.5, 0.5) 0
+
+
+
+-- | Base para teste da função removeInimigoHitBase.
+baseHitBase :: Base
+baseHitBase = Base {vidaBase = 80.0, posicaoBase = (2.2, 2.2), creditosBase = 50}
+
+-- | Lista de inimigos para teste da função removeInimigoHitBase.
+inimigosHitBase :: [Inimigo]
+inimigosHitBase = [Inimigo (2, 2) Este 100 1.0 5 25 [Projetil Resina Infinita] (0.5, 0.5) 0, Inimigo (0.5, 1.0) Sul 100 1.0 5 25 [Projetil Gelo (Finita 2)] (0.5, 0.5) 0]
+
+
+
+-- | Lista de inimigos para teste da função removeInimigosSemVida.
+baseIniSemVida :: Base
+baseIniSemVida = Base {vidaBase = 100, posicaoBase = (2.2, 2.2), creditosBase = 50}
+
+-- | Lista de inimigos para teste da função removeInimigosSemVida.
+inimigosIniSemVida :: [Inimigo]
+inimigosIniSemVida = [Inimigo (2, 2) Este 0 1.0 5 25 [Projetil Resina Infinita] (0.5, 0.5) 0, Inimigo (0.5, 1.0) Sul 100 1.0 5 25 [Projetil Gelo (Finita 2)] (0.5, 0.5) 0]
