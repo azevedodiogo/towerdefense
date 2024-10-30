@@ -104,20 +104,32 @@ aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  =
         limites = ([translate (x-29) y $ color castanhoEscuro $ rectangleSolid 2 67 | terraDireita]) ++
                   ([translate x (y + 29) $ color castanhoEscuro $ rectangleSolid 67 2 | terraCima])
 
--- | Desenha uma célula de terra 
+-- | Desenha uma célula de terra.
 
 terraCelula :: Float -> Float -> (Bool, Bool, Bool, Bool) -> (Bool, Bool) -> Picture
 terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerdaDireita) = pictures (sombras ++ [centro] ++ [ponte])
 
-  where centro = translate x y $ color corTerra $ rectangleSolid 60 60   -- terra
+  where centro = translate x y $ color corTerra $ rectangleSolid 60 60   -- Terra
 
-        -- as sombras só são criadas se s... for True
+        -- As sombras só são criadas se s... for True.
         sombras = concat [  [translate x (y + 30) $ color castanhoEscuro $ rectangleSolid 60 7 | sCima],
                             [translate x (y - 30) $ color castanhoEscuro $ rectangleSolid 60 4 | sBaixo],
                             [translate (x + 30) y $ color castanhoEscuro $ rectangleSolid 4 60 | sDireita],
                             [translate (x - 30) y $ color castanhoEscuro $ rectangleSolid 7 60 | sEsquerda] ]
 
-        -- ponte quando a terra está rodeada por água (em cima e em baixo ou à esquerda e à direita)
+        -- Ponte quando a terra está rodeada por água (em cima e em baixo ou à esquerda e à direita).
         ponte | aguaCimaBaixo = ponteDeMadeiraV x y
               | aguaEsquerdaDireita = ponteDeMadeiraH x y
               | otherwise = Blank
+
+-- | Desenha uma célula com base no tipo de terreno.
+
+desenhaCelula :: Mapa -> Terreno -> Int -> Int -> Picture
+desenhaCelula mapa tipo x y 
+  | tipo == Terra = terraCelula posX posY (sombra mapa x y) (terraComAgua mapa x y)
+  | tipo == Agua = aguaCelula posX posY (sombra mapa x y) (aguaComTerra mapa x y)
+  | otherwise = Blank
+
+  where
+    posX = fromIntegral x * 60
+    posY = fromIntegral (-y) * 60  -- o y é negativo, pois as celúlas são desenhadas para baixo e o referencial no gloss tem a origem no centro da tela
