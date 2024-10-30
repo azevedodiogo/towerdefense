@@ -76,3 +76,13 @@ aguaComTerra mapa x y = (terraCima, terraEsquerda)
   where
     terraCima = y > 0 && (mapa !! (y - 1) !! x == Terra)
     terraEsquerda = x > 0 && (mapa !! y !! (x - 1) == Terra)
+
+-- | Verifica se a célula deve ter sombra nas bordas (cima, baixo, esquerda, direita).
+
+sombra :: Mapa -> Int -> Int -> (Bool, Bool, Bool, Bool)
+sombra mapa x y = (sombraCima mapa x y, sombraBaixo mapa x y, sombraEsquerda mapa x y, sombraDireita mapa x y)
+
+  where sombraCima mapa x y = y > 0 && (mapa !! (y - 1) !! x == Relva)
+        sombraBaixo mapa x y = y < length mapa - 1 && (mapa !! (y + 1) !! x == Relva)
+        sombraEsquerda mapa x y = x > 0 && (mapa !! y !! (x - 1) == Relva)
+        sombraDireita mapa x y = x < length (mapa !! y) - 1 && (mapa !! y !! (x + 1) == Relva)
