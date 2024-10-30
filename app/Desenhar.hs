@@ -144,3 +144,9 @@ desenhaMapa mapa = translate (-910) 450 $
 -------------------------------------------------------------------------------------------------------------------------------------
 
 -- PORTAL E BASE
+
+-- | Desenha o portal com a porta no lado esquerdo (com terra do lado direito).
+
+portalesq :: Posicao -> Picture -> Picture
+portalesq (x, y) = translate (30 + x*60 - 910)      -- 60: medida de cada célula // -910: valor da translação do mapa // 30: valor, a meu ver, mais correto para ficar harmonioso.
+                             (40 - y*60 + 450)      -- 60: medida de cada célula // 450: valor da translação do mapa // 40: valor, a meu ver, mais correto para ficar harmonioso.
