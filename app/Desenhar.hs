@@ -43,3 +43,15 @@ ponteDeMadeiraH x y = pictures (ponte ++ agua)
           agua = [ translate x (y + 18.75) $ color corAgua $ rectangleSolid 60 7.5,       -- Tábua 1
                    translate x y $ color corAgua $ rectangleSolid 60 7.5,                 -- Tábua 2
                    translate x (y - 18.75) $ color corAgua $ rectangleSolid 60 7.5  ]     -- Tábua 3
+
+-- | Desenha uma ponte de madeira vertical.
+
+ponteDeMadeiraV :: Float -> Float -> Picture
+ponteDeMadeiraV x y = pictures (ponte ++ agua)
+
+    where ponte = [translate x y $ color castanhoEscuro $ rectangleSolid 60 66]
+
+          -- Acrescenta a água para dar o efeito de tábuas de madeira.
+          agua = [ translate (x - 18.75) y $ color corAgua $ rectangleSolid 7.5 60,       -- Tábua 1
+                   translate x y $ color corAgua $ rectangleSolid 7.5 60,                 -- Tábua 2
+                   translate (x + 18.75) y $ color corAgua $ rectangleSolid 7.5 60  ]     -- Tábua 3
