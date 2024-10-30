@@ -103,3 +103,21 @@ aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  =
         -- Limites (borda) se houver terra no lado esquerdo ou acima
         limites = ([translate (x-29) y $ color castanhoEscuro $ rectangleSolid 2 67 | terraDireita]) ++
                   ([translate x (y + 29) $ color castanhoEscuro $ rectangleSolid 67 2 | terraCima])
+
+-- | Desenha uma célula de terra 
+
+terraCelula :: Float -> Float -> (Bool, Bool, Bool, Bool) -> (Bool, Bool) -> Picture
+terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerdaDireita) = pictures (sombras ++ [centro] ++ [ponte])
+
+  where centro = translate x y $ color corTerra $ rectangleSolid 60 60   -- terra
+
+        -- as sombras só são criadas se s... for True
+        sombras = concat [  [translate x (y + 30) $ color castanhoEscuro $ rectangleSolid 60 7 | sCima],
+                            [translate x (y - 30) $ color castanhoEscuro $ rectangleSolid 60 4 | sBaixo],
+                            [translate (x + 30) y $ color castanhoEscuro $ rectangleSolid 4 60 | sDireita],
+                            [translate (x - 30) y $ color castanhoEscuro $ rectangleSolid 7 60 | sEsquerda] ]
+
+        -- ponte quando a terra está rodeada por água (em cima e em baixo ou à esquerda e à direita)
+        ponte | aguaCimaBaixo = ponteDeMadeiraV x y
+              | aguaEsquerdaDireita = ponteDeMadeiraH x y
+              | otherwise = Blank
