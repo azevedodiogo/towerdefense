@@ -317,3 +317,8 @@ vida :: Jogo -> Picture
 vida j = pictures $ map (\(x, y) -> translate x y $ scale 0.25 0.25 $ color black $ text ("Vida: " ++ show (vidaBase (baseJogo j))))
          [(705, -450), (705, -449), (706, -449)]         -- Para a letra ficar mais grossa.
 
+-- | Exibe no ecrã os creditos da base.
+
+creditosLoja :: Jogo -> Picture
+creditosLoja j = pictures $ map (\(x, y) -> translate x y $ scale 0.25 0.25 $ color black $ text ("Creditos: " ++ show (creditosBase (baseJogo j))))
+             [(390, -450), (390, -449), (391, -449)]       -- Para a letra ficar mais grossa.
