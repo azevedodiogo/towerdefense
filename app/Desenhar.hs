@@ -346,7 +346,7 @@ desenhaReferencia c (x, y) = case c of
             vermelho = makeColor (165/255) (38/255) (38/255) 1.0
 
 
--- | Desenha a torre que o jogador comprou, tendo em conta o número (1,2,3 respetivamente)
+-- | Desenha a torre que o jogador comprou, tendo em conta o número (1,2,3 respetivamente).
 
 desenhaTorres ::[Picture] -> [Torre] -> Picture
 desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
@@ -364,7 +364,188 @@ desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
 
     | Torre (x, y) danoTorre _ _ _ _ projetilTorre <- torres ]
 
--- 912 em vez de 910 e 473 em vez de 450 para ficar mais ajustado ao mapa
+--------------------------------------------------------------------------------------------------------------------------------------
+
+-- INIMIGOS
+
+-- | Verifica se o inimigo tem gelo.
+
+temGelo :: Inimigo -> Bool
+temGelo ini = let tpProjeteis = map tipoProjetil (projeteisInimigo ini)
+              in elem Gelo tpProjeteis
+
+-- | Verifica se o inimigo tem resina.
+
+temResina :: Inimigo -> Bool
+temResina ini = let tpProjeteis = map tipoProjetil (projeteisInimigo ini)
+                in elem Resina tpProjeteis
+
+
+-- | Calcula o índice das imagens com base no tempo, na velocidade e nos projéteis.
+
+calculaIndice :: Inimigo -> [Picture] -> Int
+calculaIndice ini imgs  | temGelo ini = 1                                                                           -- Se o inimigo tem gelo, exibe uma imagem fixa.
+                        | temResina ini = floor (tempoInimigo ini * 4 * velocidadeInimigo ini * 0.7) `mod` 4        -- Se o inimigo tem resina, as imgs são mais lentas a mudar.
+                        | otherwise =  floor (tempoInimigo ini * 4 * velocidadeInimigo ini) `mod` 4                 -- Caso contrário, a animação é de acordo com a velocidade.
+
+
+-- | Calcula a posição no mapa do inimigo.
+
+calculaPos :: Inimigo -> Posicao
+calculaPos ini = (x * 60 - 910, -(y * 60) + 470)
+
+      where (x,y) = posicaoInimigo ini
+
+
+-- | Desenha o inimigo para virado para este.
+
+iniEste :: Inimigo -> [Picture] -> Picture
+iniEste ini imgs = translate x' y' $ scale 1.05 1.05 (imgsEste !! calculaIndice ini imgsEste)
+
+      where imgsEste = take 4 imgs
+            (x', y') = calculaPos ini
+
+
+-- | Desenha o inimigo para virado para oeste.
+
+iniOeste :: Inimigo -> [Picture] -> Picture
+iniOeste ini imgs = translate x' y' $ scale 1.05 1.05 (imgsOeste !! calculaIndice ini imgsOeste)
+
+      where imgsOeste = take 4 (drop 4 imgs)
+            (x', y') = calculaPos ini
+            
+
+-- | Desenha o inimigo para virado para norte.
+
+iniNorte :: Inimigo -> [Picture] -> Picture
+iniNorte ini imgs = translate x' y' $ scale 1.05 1.05 (imgsNorte !! calculaIndice ini imgsNorte)
+
+      where imgsNorte = take 4 (drop 8 imgs)
+            (x', y') = calculaPos ini
+            
+
+-- | Desenha o inimigo para virado para sul.
+
+iniSul :: Inimigo -> [Picture] -> Picture
+iniSul ini imgs = translate x' y' $ scale 1.05 1.05 (imgsSul !! calculaIndice ini imgsSul)
+
+      where imgsSul = drop 12 imgs
+            (x', y') = calculaPos ini
+            
+            
+-- | Desenha o inimigo com base na sua direção.
+
+desenhaCorpoIni :: Inimigo -> [Picture] -> Picture
+desenhaCorpoIni ini imgs = case direcaoInimigo ini of
+    Norte -> iniNorte ini imgs
+    Sul   -> iniSul ini imgs
+    Este  -> iniEste ini imgs
+    Oeste -> iniOeste ini imgs
+
+
+-- | Determina a cor da vida com base nos projéteis
+
+determinaCor :: [Projetil] -> Color
+determinaCor projeteis
+
+    | Gelo `elem` tiposProjetil = blue                      -- Cor azul para gelo.
+    | Resina `elem` tiposProjetil = castanhoEscuro          -- Cor castanha para resina.
+    | Fogo `elem` tiposProjetil = red                       -- Cor vermelha para fogo.
+    | otherwise = makeColor 1.0 0.75 0.8 1.0                -- Cor rosa claro se não há projeteis.
+
+    where tiposProjetil = map tipoProjetil projeteis
+
+
+-- | Desenha uma barra que representa a vida do inimigo.
+
+desenhaVida :: Inimigo -> Picture
+desenhaVida ini = translate x y $ color (determinaCor projeteis) $ rectangleSolid vidaAtual alturaBarra
+
+    where alturaBarra = 3
+          vidaAtual = vidaInimigo ini
+          projeteis = projeteisInimigo ini
+          pos = posicaoInimigo ini
+          (x,y) = (fst pos * 60 - 910, - (snd pos * 60) + 515)
+
+
+-- | Desenha o inimigo com a respetiva vida.
+
+desenhaInimigo :: Inimigo -> [Picture] -> Picture
+desenhaInimigo ini imgs = pictures [desenhaCorpoIni ini imgs, desenhaVida ini]
+
+
+-- | Desenha todos os inimigos em jogo.
+
+desenhaInimigos :: [Inimigo] -> [Picture] -> Picture
+desenhaInimigos inimigos imgs = pictures $ map (`desenhaInimigo` imgs) inimigos
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- | Desenha o Jogo.
+
+desenhaJogo :: Imagens -> ImmutableTowers -> Picture
+desenhaJogo imgs it = case it of
+
+      MenuPrincipal pz -> scale 1 0.95 (menuInicial imgs)
+
+      RegrasJogo pz -> translate 0 (-2) $ scale 1.05 1 (regras imgs)
+
+      Creditos pz -> scale 1 0.95 (creditos imgs)
+
+      SelecaoNiveis pz -> scale 1 0.95 (niveis imgs)
+
+      Pausa jogo pz -> scale 1 0.95 (pausa imgs)
+
+      Proezas pz -> desenhaProezas pz (proezas imgs)
+
+      JogoRun jogo refePos b pz -> desenhaJogoAux imgs jogo refePos b
+
+      Vitoria jogo pz -> scale 1 0.95 (vitoria imgs)
+
+      Derrota jogo pz -> scale 1 0.95 (derrota imgs)
+
+
+
+
+-- | Função auxiliar para desenhar as Proezas.
+
+desenhaProezas :: [Proezas] -> [Picture] -> Picture
+desenhaProezas proezas imagensProezas
+
+      | elem Nivel1Concluido proezas && elem Nivel2Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 7        -- Todos os níveis concluídos.
+      | elem Nivel2Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 6                                        -- Níveis 2 e 3 concluídos.
+      | elem Nivel1Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 5                                        -- Níveis 1 e 3 concluídos.
+      | elem Nivel1Concluido proezas && elem Nivel2Concluido proezas = imgsProezas !! 4                                        -- Níveis 1 e 2 concluídos.
+      | elem Nivel3Concluido proezas = imgsProezas !! 3                                                                        -- Apenas nível 3 concluído.
+      | elem Nivel2Concluido proezas = imgsProezas !! 2                                                                        -- Apenas nível 2 concluído.
+      | elem Nivel1Concluido proezas = imgsProezas !! 1                                                                        -- Apenas nível 1 concluído
+      | otherwise = imgsProezas !! 0
+
+
+    where imgsProezas = map (scale 1 0.94) imagensProezas
+
+
+
+-- | Função auxiliar para desenhar o jogoRun.
+
+desenhaJogoAux :: Imagens -> Jogo -> PosRef -> Compra -> Picture
+desenhaJogoAux imgs jogo pos compra =
+
+  pictures [ fundoRelva 21 16 (relva imgs),                                   -- Fundo relva.
+             desenhaMapa (mapaJogo jogo),                                     -- Resto do mapa.
+             desenhaPortaleBase jogo portaldirimg portalesqimg baseimg,       -- Portais e base.
+             fundoLoja,                                                       -- Fundo loja.
+             torresLoja jogo torresImgs,                                      -- Torres para a loja.
+             vida jogo,                                                       -- Vida.
+             creditosLoja jogo,                                               -- Créditos.
+             desenhaReferencia compra pos,                                    -- Referência.
+             desenhaInimigos (inimigosJogo jogo) iniImgs,                     -- Inimigos em jogo.
+             desenhaTorres torresImgs (torresJogo jogo)  ]                    -- Torres para o mapa.
+
+
+    where torresImgs = torres imgs
+          (portaldirimg, portalesqimg) = portais imgs
+          baseimg = base imgs
+          iniImgs = inimigos imgs
