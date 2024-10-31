@@ -276,3 +276,10 @@ tresina1 :: Picture -> Picture
 tresina1 t = pictures  [ color white $ translate 460 (-280) $ rectangleSolid 150 170,                   -- Retângulo branco.
                         color black $ translate 460 (-280) $ rectangleWire 150 170,                     -- Limite preto.
                         translate 460 (-277) t ]                                                        -- Torre resina (imagem).
+
+-- | Desenha a torre de resina2 para a loja
+
+tresina2 :: Picture -> Picture
+tresina2 t = pictures  [ color white $ translate 800 (-280) $ rectangleSolid 150 170,                   -- Retângulo branco.
+                        color black $ translate 800 (-280) $ rectangleWire 150 170,                     -- Limite preto.
+                        translate 800 (-277) t ]                                                        -- Torre resina (imagem).
