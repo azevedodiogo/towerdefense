@@ -344,3 +344,27 @@ desenhaReferencia c (x, y) = case c of
       where newx = fromIntegral x * 60 - 910
             newy = fromIntegral (-y) * 60 + 450
             vermelho = makeColor (165/255) (38/255) (38/255) 1.0
+
+
+-- | Desenha a torre que o jogador comprou, tendo em conta o número (1,2,3 respetivamente)
+
+desenhaTorres ::[Picture] -> [Torre] -> Picture
+desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
+
+
+      [ case projetilTorre of
+                              Projetil {tipoProjetil = Fogo} -> if danoTorre == 10 then translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tf1
+                                                                else translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tf2
+
+                              Projetil {tipoProjetil = Gelo} -> if danoTorre == 12 then translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tg1
+                                                                else translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tg2
+
+                              Projetil {tipoProjetil = Resina} -> if danoTorre == 8 then translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tr1
+                                                                  else translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tr2
+
+    | Torre (x, y) danoTorre _ _ _ _ projetilTorre <- torres ]
+
+-- 912 em vez de 910 e 473 em vez de 450 para ficar mais ajustado ao mapa
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
