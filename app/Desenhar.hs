@@ -245,3 +245,10 @@ tfogoinfo cor = pictures
         pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Fogo")  [(590, 140), (590, 139), (591, 139)],
         translate 435 70 $ scale 0.18 0.18 $ color black $ text "150$",
         translate 775 70 $ scale 0.18 0.18 $ color cor $ text "250$" ]
+
+-- | Desenha a torre de gelo1 para a loja.
+
+tgelo1 :: Picture -> Picture
+tgelo1 t = pictures  [ color white $ translate 460 (-50) $ rectangleSolid 150 170,                    -- Retângulo branco.
+                      color black $ translate 460 (-50) $ rectangleWire 150 170,                      -- Limite preto.
+                      translate 460 (-47) t ]                                                         -- Torre gelo (imagem).
