@@ -44,3 +44,8 @@ fundoRelva largura altura img = translate (-910) 450 $
 
 
 -- | Desenha uma ponte de madeira horizontal
+
+ponteDeMadeiraH :: Float -> Float -> Picture
+ponteDeMadeiraH x y = pictures (ponte ++ agua)
+
+    where ponte = [translate x y $ color castanhoEscuro $ rectangleSolid 66 66]
