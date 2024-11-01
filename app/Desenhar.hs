@@ -78,3 +78,7 @@ terraComAgua mapa x y = (aguaCimaBaixo, aguaEsquerdaDireita)
   where
     aguaCimaBaixo = (y > 0 && (mapa !! (y - 1) !! x == Agua)) && (y < length mapa - 1 && (mapa !! (y + 1) !! x == Agua))
     aguaEsquerdaDireita = (x > 0 && (mapa !! y !! (x - 1) == Agua)) && (x < length (mapa !! y) - 1 && (mapa !! y !! (x + 1) == Agua))
+
+
+-- | Verifica se a célula de água tem terra por cima ou à sua esquerda 
+--   esta função é apenas para criar um limite castanho escuro
