@@ -82,3 +82,8 @@ terraComAgua mapa x y = (aguaCimaBaixo, aguaEsquerdaDireita)
 
 -- | Verifica se a célula de água tem terra por cima ou à sua esquerda 
 --   esta função é apenas para criar um limite castanho escuro
+
+aguaComTerra :: Mapa -> Int -> Int -> (Bool, Bool)
+aguaComTerra mapa x y = (terraCima, terraEsquerda)
+  where
+    terraCima = y > 0 && (mapa !! (y - 1) !! x == Terra)
