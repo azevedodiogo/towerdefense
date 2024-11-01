@@ -1,5 +1,7 @@
 # Tower Defense
 
+> 18/20
+
 ## Português
 
 Este repositório destina-se ao jogo de Tower Defense desenvolvido na unidade curricular “Laboratórios de Informática 1”.
