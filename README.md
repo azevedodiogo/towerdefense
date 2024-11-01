@@ -27,7 +27,7 @@ Durante o jogo, o jogador utilizará o teclado para executar ações como a aqui
 No contexto da estrutura do jogo, particularmente no que diz respeito à conclusão do nível, a vitória é obtida quando o jogador consegue eliminar todos os adversários, assegurando a defesa integral da base. Por sua vez, a derrota ocorre com a destruição da base pelas forças inimigas.
 Este documento apresenta todas as informações cruciais e necessárias para uma visão aprofundada da dinâmica e dos objetivos do jogo, garantindo que o jogador disponha de uma base sólida para tirar o máximo partido da experiência interativa.
 
-Made with ❤️ by Diogo Azevedo & Vera da Silva Almeida
+Made with ❤️ by Diogo Azevedo & Vera Almeida
 
 ## English
 
