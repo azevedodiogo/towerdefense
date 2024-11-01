@@ -22,3 +22,8 @@ corTerra = makeColor (169 / 255) (122 / 255) (61 / 255) 1.0
 -- | Cor da Água
 corAgua :: Color
 corAgua = makeColor (98/255) (189/255) (203/255) 1.0
+
+--(141/255) (222/255) (235/255) 1.0
+
+-- | Cor para a sombra da terra
+castanhoEscuro :: Color
