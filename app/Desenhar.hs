@@ -91,3 +91,6 @@ aguaComTerra mapa x y = (terraCima, terraEsquerda)
 
 
 -- | Verifica se a célula deve ter sombra nas bordas (cima, baixo, esquerda, direita)
+
+sombra :: Mapa -> Int -> Int -> (Bool, Bool, Bool, Bool)
+sombra mapa x y = (sombraCima mapa x y, sombraBaixo mapa x y, sombraEsquerda mapa x y, sombraDireita mapa x y)
