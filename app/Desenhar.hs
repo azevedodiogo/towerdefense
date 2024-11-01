@@ -87,3 +87,7 @@ aguaComTerra :: Mapa -> Int -> Int -> (Bool, Bool)
 aguaComTerra mapa x y = (terraCima, terraEsquerda)
   where
     terraCima = y > 0 && (mapa !! (y - 1) !! x == Terra)
+    terraEsquerda = x > 0 && (mapa !! y !! (x - 1) == Terra)
+
+
+-- | Verifica se a célula deve ter sombra nas bordas (cima, baixo, esquerda, direita)
