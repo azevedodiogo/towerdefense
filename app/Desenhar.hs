@@ -103,3 +103,8 @@ sombra mapa x y = (sombraCima mapa x y, sombraBaixo mapa x y, sombraEsquerda map
 
 
 -- | Desenha uma célula de água
+
+aguaCelula :: Float -> Float -> (Bool, Bool, Bool, Bool) -> (Bool, Bool) -> Picture
+aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  = pictures (sombras ++ [centro] ++ limites)
+
+  where centro = translate x y $ color corAgua $ rectangleSolid 60 60   -- agua 
