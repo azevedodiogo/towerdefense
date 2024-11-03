@@ -112,3 +112,8 @@ aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  =
         -- as sombras só são criadas se s... for True
         sombras = concat [  [translate x (y + 30) $ color verdeEscuro $ rectangleSolid 60 6 | sCima],
                             [translate x (y - 30) $ color verdeEscuro $ rectangleSolid 60 4 | sBaixo],
+                            [translate (x + 30) y $ color verdeEscuro $ rectangleSolid 4 60 | sDireita],
+                            [translate (x - 30) y $ color verdeEscuro $ rectangleSolid 6 60 | sEsquerda] ]
+
+        -- Limites (borda) se houver terra no lado esquerdo ou acima
+        limites = ([translate (x-29) y $ color castanhoEscuro $ rectangleSolid 2 67 | terraDireita]) ++
