@@ -117,3 +117,7 @@ aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  =
 
         -- Limites (borda) se houver terra no lado esquerdo ou acima
         limites = ([translate (x-29) y $ color castanhoEscuro $ rectangleSolid 2 67 | terraDireita]) ++
+                  ([translate x (y + 29) $ color castanhoEscuro $ rectangleSolid 67 2 | terraCima])
+
+
+-- | Desenha uma célula de terra 
