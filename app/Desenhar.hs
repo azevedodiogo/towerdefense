@@ -248,3 +248,8 @@ desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais 
 
 
 -- | Desenha o fundo da loja
+
+fundoLoja :: Picture
+fundoLoja = pictures
+            [ color black $ translate 645 0 $ rectangleSolid 610 960,                  -- limite preto
+              color (greyN 0.7) $ translate 645 0 $ rectangleSolid 600 950,            -- retangulo cinzento
