@@ -142,3 +142,7 @@ terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerd
 -- | Desenha uma célula com base no tipo de terreno
 
 desenhaCelula :: Mapa -> Terreno -> Int -> Int -> Picture
+desenhaCelula mapa tipo x y 
+  | tipo == Terra = terraCelula posX posY (sombra mapa x y) (terraComAgua mapa x y)
+  | tipo == Agua = aguaCelula posX posY (sombra mapa x y) (aguaComTerra mapa x y)
+  | otherwise = Blank
