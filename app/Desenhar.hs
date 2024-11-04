@@ -134,3 +134,6 @@ terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerd
                             [translate (x - 30) y $ color castanhoEscuro $ rectangleSolid 7 60 | sEsquerda] ]
 
         -- ponte quando a terra está rodeada por água (em cima e em baixo ou à esquerda e à direita)
+        ponte | aguaCimaBaixo = ponteDeMadeiraV x y
+              | aguaEsquerdaDireita = ponteDeMadeiraH x y
+              | otherwise = Blank
