@@ -243,3 +243,8 @@ desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais 
 
 --------------------------------------------------------------------------------------------------------------------------------
 
+
+-- LOJA
+
+
+-- | Desenha o fundo da loja
