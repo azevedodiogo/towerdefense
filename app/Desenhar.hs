@@ -163,3 +163,8 @@ desenhaMapa mapa = translate (-910) 450 $
 
 
 -- PORTAL E BASE
+
+
+-- | Desenha o portal com a porta no lado esquerdo (com terra do lado direito)
+
+portalesq :: Posicao -> Picture -> Picture
