@@ -206,3 +206,6 @@ desenhaPortal portal base pDirImg pEsqImg   | fst posPortal < fst posBase = port
 
     where posPortal = posicaoPortal portal
           posBase = posicaoBase base
+
+
+-- | Desenha todos os portais do jogo
