@@ -239,3 +239,7 @@ desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais 
                            - 
                            -
                 portal - - -   -}
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
