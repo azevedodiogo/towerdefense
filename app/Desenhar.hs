@@ -202,3 +202,7 @@ basedir (x, y) = translate (10 + x*60 - 910)        -- 60: medida de cada célul
 
 desenhaPortal :: Portal -> Base -> Picture -> Picture -> Picture
 desenhaPortal portal base pDirImg pEsqImg   | fst posPortal < fst posBase = portaldir posPortal (scale 0.8 0.8 pDirImg)
+                                            | otherwise = portalesq posPortal (scale 0.8 0.8 pEsqImg)
+
+    where posPortal = posicaoPortal portal
+          posBase = posicaoBase base
