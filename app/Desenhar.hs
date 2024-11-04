@@ -196,3 +196,9 @@ basedir (x, y) = translate (10 + x*60 - 910)        -- 60: medida de cada célul
 -- nota: para as bordas estes valores não são adequados
 --       para a uma base com terra em cima ou em baixo e um portal com terra em baixo, os valores também não são os mais adequados 
 
+
+
+-- | Desenha um portal do jogo
+
+desenhaPortal :: Portal -> Base -> Picture -> Picture -> Picture
+desenhaPortal portal base pDirImg pEsqImg   | fst posPortal < fst posBase = portaldir posPortal (scale 0.8 0.8 pDirImg)
