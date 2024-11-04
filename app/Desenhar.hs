@@ -219,3 +219,6 @@ desenhaPortais portais base pDirImg pEsqImg = pictures $ map (\portal -> desenha
 desenhaBase :: Jogo -> Picture -> Picture
 desenhaBase jogo baseImg    | fst posBase < fst posPortal = baseesq posBase (scale 0.7 0.7 baseImg)   -- Base à esquerda
                             | otherwise = basedir posBase (scale 0.7 0.7 baseImg)                     -- Base à direita
+
+    where posBase = posicaoBase (baseJogo jogo)
+          posPortal = posicaoPortal (head (portaisJogo jogo))
