@@ -227,3 +227,7 @@ desenhaBase jogo baseImg    | fst posBase < fst posPortal = baseesq posBase (sca
 -- | Combina as funções desenhaBase e desenhaPortais
 
 desenhaPortaleBase :: Jogo -> Picture -> Picture -> Picture -> Picture
+desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais base pDirImg pEsqImg, desenhaBase j baseImg]
+
+      where portais = portaisJogo j
+            base = baseJogo j
