@@ -345,3 +345,8 @@ bloqueado :: Picture -> Posicao -> Picture
 bloqueado block (x,y) = pictures [ color white $ translate x y $ rectangleSolid 150 170,               -- retangulo branco                     
                                   color black $ translate x y $ rectangleWire 150 170,                -- limite preto                          
                                   translate x (y+3) block ]                                               -- cadeado (imagem)
+
+-- | Junta as torres
+
+torresLoja :: Jogo -> [Picture] -> Picture
+torresLoja jogo [tf1, tg1, tr1, tf2, tg2, tr2, block]
