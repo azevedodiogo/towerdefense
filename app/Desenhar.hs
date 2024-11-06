@@ -278,3 +278,7 @@ tfogo2 t = pictures  [ color white $ translate 800 180 $ rectangleSolid 150 170,
 
 tfogoinfo :: Color -> Picture
 tfogoinfo cor = pictures
+      [ pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Torres")  [(580, 220), (580, 219), (581, 219)],
+        pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "de")  [(605, 180), (605, 179), (606, 179)],
+        pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Fogo")  [(590, 140), (590, 139), (591, 139)],
+        translate 435 70 $ scale 0.18 0.18 $ color black $ text "150$",
