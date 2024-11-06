@@ -294,3 +294,8 @@ tgelo1 t = pictures  [ color white $ translate 460 (-50) $ rectangleSolid 150 17
 
 
 -- | Desenha a torre de gelo2 para a loja                                                                               
+
+tgelo2 :: Picture -> Picture
+tgelo2 t = pictures  [ color white $ translate 800 (-50) $ rectangleSolid 150 170,                    -- retangulo branco                     
+                      color black $ translate 800 (-50) $ rectangleWire 150 170,                      -- limite preto                          
+                      translate 800 (-47) t ]                                                         -- torre gelo (imagem)    
