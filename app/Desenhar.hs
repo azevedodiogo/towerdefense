@@ -273,3 +273,8 @@ tfogo2 :: Picture -> Picture
 tfogo2 t = pictures  [ color white $ translate 800 180 $ rectangleSolid 150 170,                      -- retangulo branco                     
                       color black $ translate 800 180 $ rectangleWire 150 170,                        -- limite preto                          
                       translate 800 183 t ]                                                           -- torre fogo2 (imagem)    
+
+-- | Desenha informacoes das torres de fogo para a loja
+
+tfogoinfo :: Color -> Picture
+tfogoinfo cor = pictures
