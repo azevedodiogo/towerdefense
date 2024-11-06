@@ -316,3 +316,8 @@ tgeloinfo cor = pictures
 
 tresina1 :: Picture -> Picture
 tresina1 t = pictures  [ color white $ translate 460 (-280) $ rectangleSolid 150 170,                   -- retangulo branco                     
+                        color black $ translate 460 (-280) $ rectangleWire 150 170,                     -- limite preto                          
+                        translate 460 (-277) t ]                                                        -- torre resina (imagem)    
+
+
+-- | Desenha a torre de resina2 para a loja
