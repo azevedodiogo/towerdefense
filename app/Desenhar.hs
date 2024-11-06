@@ -286,3 +286,8 @@ tfogoinfo cor = pictures
 
 
 -- | Desenha a torre de gelo1 para a loja
+
+tgelo1 :: Picture -> Picture
+tgelo1 t = pictures  [ color white $ translate 460 (-50) $ rectangleSolid 150 170,                    -- retangulo branco                     
+                      color black $ translate 460 (-50) $ rectangleWire 150 170,                      -- limite preto                          
+                      translate 460 (-47) t ]                                                         -- torre gelo (imagem)    
