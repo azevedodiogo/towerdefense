@@ -257,3 +257,7 @@ fundoLoja = pictures
               pictures $ map (\(dx, dy) -> translate dx dy $ scale 1 1 $ color black $ text "LOJA")                     -- para a letra ficar mais grossa
               [ (480, 330), (480, 331), (480, 329), (481, 331), (481, 329), (481, 330), (479, 331), (479, 329),         -- desenha várias vezes mudando ligeiramente a pos do texto
                 (479, 330), (480, 332), (480, 328), (482, 330), (482, 332), (482, 328), (478, 330), (478, 332), (478, 328) ] ]
+
+
+
+-- | Desenha a torre de fogo1 para a loja
