@@ -431,3 +431,6 @@ temGelo ini = let tpProjeteis = map tipoProjetil (projeteisInimigo ini)
 -- | Verifica se o inimigo tem resina
 
 temResina :: Inimigo -> Bool
+temResina ini = let tpProjeteis = map tipoProjetil (projeteisInimigo ini)
+                in elem Resina tpProjeteis
+
