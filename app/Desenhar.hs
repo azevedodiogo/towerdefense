@@ -495,3 +495,6 @@ desenhaCorpoIni ini imgs = case direcaoInimigo ini of
     Sul   -> iniSul ini imgs
     Este  -> iniEste ini imgs
     Oeste -> iniOeste ini imgs
+
+
+-- | Determina a cor da vida com base nos projéteis
