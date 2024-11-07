@@ -486,3 +486,8 @@ iniSul ini imgs = translate x' y' $ scale 1.05 1.05 (imgsSul !! calculaIndice in
       where imgsSul = drop 12 imgs
             (x', y') = calculaPos ini
             
+            
+-- | Desenha o inimigo com base na sua direção
+
+desenhaCorpoIni :: Inimigo -> [Picture] -> Picture
+desenhaCorpoIni ini imgs = case direcaoInimigo ini of
