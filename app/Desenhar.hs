@@ -376,3 +376,6 @@ creditosLoja j = pictures $ map (\(x, y) -> translate x y $ scale 0.25 0.25 $ co
 
 
 -- TORRES (para o mapa)
+
+
+-- a referencia, é um circulo amarelo e serve para o jogador escolher o sítio onde irá colocar a torre.
