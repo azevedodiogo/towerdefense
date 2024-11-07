@@ -413,3 +413,8 @@ desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
                                                                   else translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tr2
 
     | Torre (x, y) danoTorre _ _ _ _ projetilTorre <- torres ]
+
+-- 912 em vez de 910 e 473 em vez de 450 para ficar mais ajustado ao mapa
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
