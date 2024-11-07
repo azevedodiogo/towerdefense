@@ -464,3 +464,7 @@ iniEste ini imgs = translate x' y' $ scale 1.05 1.05 (imgsEste !! calculaIndice 
 
 iniOeste :: Inimigo -> [Picture] -> Picture
 iniOeste ini imgs = translate x' y' $ scale 1.05 1.05 (imgsOeste !! calculaIndice ini imgsOeste)
+
+      where imgsOeste = take 4 (drop 4 imgs)
+            (x', y') = calculaPos ini
+            
