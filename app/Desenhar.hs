@@ -410,3 +410,6 @@ desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
                                                                 else translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tg2
 
                               Projetil {tipoProjetil = Resina} -> if danoTorre == 8 then translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tr1
+                                                                  else translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tr2
+
+    | Torre (x, y) danoTorre _ _ _ _ projetilTorre <- torres ]
