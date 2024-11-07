@@ -389,3 +389,7 @@ desenhaReferencia c (x, y) = case c of
       QuerComprar -> translate newx newy (color yellow (circleSolid 10))            -- QuerComprar - significa que o jogador carregou na tecla 'c' (ref. fica amarela)
       NaoQuerComprar -> translate newx newy (color verdeEscuro (circleSolid 10))    -- NaoQuerComprar - significa que o jogador não quer comprar (ref. desaparece)
       NaoTemDinheiro -> translate newx newy (color vermelho (circleSolid 10))       -- NaoTemDinheiro - significa que o jogador não tem dinheiro para comprar a torre (ref. fica vermelha)
+
+      where newx = fromIntegral x * 60 - 910
+            newy = fromIntegral (-y) * 60 + 450
+            vermelho = makeColor (165/255) (38/255) (38/255) 1.0
