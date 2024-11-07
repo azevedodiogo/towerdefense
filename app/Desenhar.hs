@@ -371,3 +371,8 @@ creditosLoja :: Jogo -> Picture
 creditosLoja j = pictures $ map (\(x, y) -> translate x y $ scale 0.25 0.25 $ color black $ text ("Creditos: " ++ show (creditosBase (baseJogo j))))
              [(390, -450), (390, -449), (391, -449)]       -- para a letra ficar mais grossa
 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- TORRES (para o mapa)
