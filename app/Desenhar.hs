@@ -393,3 +393,7 @@ desenhaReferencia c (x, y) = case c of
       where newx = fromIntegral x * 60 - 910
             newy = fromIntegral (-y) * 60 + 450
             vermelho = makeColor (165/255) (38/255) (38/255) 1.0
+
+
+
+-- | Desenha a torre que o jogador comprou, tendo em conta o número (1,2,3 respetivamente)
