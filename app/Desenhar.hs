@@ -511,3 +511,8 @@ determinaCor projeteis
 
 
 -- | Desenha uma barra que representa a vida do inimigo
+
+desenhaVida :: Inimigo -> Picture
+desenhaVida ini = translate x y $ color (determinaCor projeteis) $ rectangleSolid vidaAtual alturaBarra
+
+    where alturaBarra = 3
