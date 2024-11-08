@@ -520,3 +520,8 @@ desenhaVida ini = translate x y $ color (determinaCor projeteis) $ rectangleSoli
           projeteis = projeteisInimigo ini
           pos = posicaoInimigo ini
           (x,y) = (fst pos * 60 - 910, - (snd pos * 60) + 515)
+
+
+-- | Desenha o inimigo com a respetiva vida
+
+desenhaInimigo :: Inimigo -> [Picture] -> Picture
