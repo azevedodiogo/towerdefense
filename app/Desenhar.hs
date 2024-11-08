@@ -529,3 +529,6 @@ desenhaInimigo ini imgs = pictures [desenhaCorpoIni ini imgs, desenhaVida ini]
 
 
 -- | Desenha todos os inimigos em jogo
+
+desenhaInimigos :: [Inimigo] -> [Picture] -> Picture
+desenhaInimigos inimigos imgs = pictures $ map (`desenhaInimigo` imgs) inimigos
