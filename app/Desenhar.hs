@@ -532,3 +532,7 @@ desenhaInimigo ini imgs = pictures [desenhaCorpoIni ini imgs, desenhaVida ini]
 
 desenhaInimigos :: [Inimigo] -> [Picture] -> Picture
 desenhaInimigos inimigos imgs = pictures $ map (`desenhaInimigo` imgs) inimigos
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
