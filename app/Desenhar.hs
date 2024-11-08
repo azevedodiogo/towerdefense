@@ -545,3 +545,7 @@ desenhaJogo imgs it = case it of
       MenuPrincipal pz -> scale 1 0.95 (menuInicial imgs)
 
       RegrasJogo pz -> translate 0 (-2) $ scale 1.05 1 (regras imgs)
+
+      Creditos pz -> scale 1 0.95 (creditos imgs)
+
+      SelecaoNiveis pz -> scale 1 0.95 (niveis imgs)
