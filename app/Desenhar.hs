@@ -562,3 +562,8 @@ desenhaJogo imgs it = case it of
 
 
 
+
+-- | Função auxiliar para desenhar as Proezas
+
+desenhaProezas :: [Proezas] -> [Picture] -> Picture
+desenhaProezas proezas imagensProezas
