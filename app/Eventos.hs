@@ -19,3 +19,6 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (MenuPrincipal pz)
                                                                                  | x >= 850 && x <= 930 && y >= 377 && y <= 483 = Proezas pz
                                                                                  | sairMenu (x,y) = undefined -- Obriga o jogo a fechar, uma vez que 'crasha' o jogo.
                                                                                  | otherwise = MenuPrincipal pz
+
+
+-- Instruções: Reage ao clique do botão esquerdo do rato, redirecionando para o MenuPrincipal
