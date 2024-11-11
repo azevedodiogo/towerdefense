@@ -583,3 +583,8 @@ desenhaProezas proezas imagensProezas
 
 
 -- | Função auxiliar para desenhar o jogoRun
+
+desenhaJogoAux :: Imagens -> Jogo -> PosRef -> Compra -> Picture
+desenhaJogoAux imgs jogo pos compra =
+
+  pictures [ fundoRelva 21 16 (relva imgs),                                   -- fundo relva
