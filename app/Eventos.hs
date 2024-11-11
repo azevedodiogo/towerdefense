@@ -44,3 +44,8 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Proezas pz) | x >
 reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (SelecaoNiveis pz) | x >= -445 && x <= -215 && y >= -90 && y <= 140 = JogoRun nivelUm (-1000,1000) NaoQuerComprar pz
                                                                                  | x >= -110 && x <= 120 && y >= -90 && y <= 140 = JogoRun nivelDois (-1000,1000) NaoQuerComprar pz
                                                                                  | x >= 230 && x <= 460 && y >= -90 && y <= 140 = JogoRun nivelTres (-1000,1000) NaoQuerComprar pz
+                                                                                 | x >= -90 && x <= 90 && y >= -210 && y <= -140 = MenuPrincipal pz
+                                                                                 | otherwise = SelecaoNiveis pz
+
+
+-- Pausa: Reage ao clique do botão esquerdo do rato, redirecionando para um dos seguinte estados do jogo: MenuPrincipal, JogoRun do nível 
