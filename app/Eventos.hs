@@ -15,3 +15,7 @@ reageEventos :: Event -> ImmutableTowers -> ImmutableTowers
 
 reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (MenuPrincipal pz) | x >= -130 && x <= 130 && y >= -60 && y <= 40 = SelecaoNiveis pz
                                                                                  | x >= 840 && x <= 930 && y >= 135 && y <= 215 = Creditos pz
+                                                                                 | x >= 820 && x <= 940 && y >= 280 && y <= 340 = RegrasJogo pz
+                                                                                 | x >= 850 && x <= 930 && y >= 377 && y <= 483 = Proezas pz
+                                                                                 | sairMenu (x,y) = undefined -- Obriga o jogo a fechar, uma vez que 'crasha' o jogo.
+                                                                                 | otherwise = MenuPrincipal pz
