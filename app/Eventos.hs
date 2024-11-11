@@ -74,3 +74,8 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Vitoria jogo pz) 
 -- JogoRun
 
 -- Clicar na tecla 'P' implica o desejo de o jogador querer pausar o jogo.
+
+reageEventos (EventKey (Char 'p') Down _ _) (JogoRun jogo p b pz) = Pausa jogo pz
+
+
+-- Clicar na tecla 'R' implica o desejo de o jogador querer reiniciar o jogo.
