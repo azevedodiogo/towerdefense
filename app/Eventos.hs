@@ -49,3 +49,7 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (SelecaoNiveis pz)
 
 
 -- Pausa: Reage ao clique do botão esquerdo do rato, redirecionando para um dos seguinte estados do jogo: MenuPrincipal, JogoRun do nível 
+
+reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Pausa jogo pz) | x >= -93 && x <= 93 && y >= -70 && y <= 0 = MenuPrincipal pz
+                                                                              | x >= -93 && x <= 93 && y >= 29 && y <= 159 = JogoRun jogo (-1000,1000) NaoQuerComprar pz
+                                                                              | sairPausa (x,y) = undefined -- Obriga o jogo a fechar, uma vez que 'crasha' o jogo.
