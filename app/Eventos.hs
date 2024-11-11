@@ -116,3 +116,8 @@ reageEventos (EventKey (SpecialKey KeyRight) Down _ _) (JogoRun jogo pos compra 
 
 
 -- Coloca uma torre na posição escolhida, caso o jogador tenha dinheiro suficiente.
+
+-- Desenha uma torre de fogo quando a tecla '1' é pressionada
+
+reageEventos (EventKey (Char '1') Down _ _) (JogoRun jogo (x,y) compra pz) = let torrePos = (fromIntegral x, fromIntegral y)
+                                                                                 jogoAtualizado = adicionaTorre jogo 1 torrePos
