@@ -87,3 +87,6 @@ reageEventos (EventKey (Char 'r') Down _ _) (JogoRun jogo p b pz) = JogoRun nive
 
 
 -- Clicar na tecla 'C' implica o desejo de o jogador querer comprar uma torre.
+
+reageEventos (EventKey (Char 'c') Down _ _) (JogoRun jogo pos bool pz) = JogoRun jogo (fstPosRelva jogo) QuerComprar pz
+
