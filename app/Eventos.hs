@@ -36,3 +36,7 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Creditos pz) | x 
 -- Proezas: Reage ao clique do botão esquerdo do rato, redirecionando para o MenuPrincipal
 
 reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Proezas pz) | x >= -60 && x <= 120 && y >= -428 && y <= -352 = MenuPrincipal pz
+                                                                           | otherwise = Proezas pz
+
+
+-- Seleção de Niveis: Reage ao clique do botão esquerdo do rato, redirecionando para um dos seguinte estados do jogo: NivelUm, NivelDois, NivelTres ou MenuPrincipal
