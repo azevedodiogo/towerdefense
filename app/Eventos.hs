@@ -22,3 +22,7 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (MenuPrincipal pz)
 
 
 -- Instruções: Reage ao clique do botão esquerdo do rato, redirecionando para o MenuPrincipal
+
+reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (RegrasJogo pz) | x >= -105 && x <= 91 && y >= -421 && y <= -347 = MenuPrincipal pz
+                                                                              | otherwise = RegrasJogo pz
+
