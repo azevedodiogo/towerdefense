@@ -185,3 +185,8 @@ fstPosRelva j = head (posicoesRelva (mapaJogo j))
 
 posicoesRelva :: Mapa -> [(Int, Int)]
 posicoesRelva mapa = [ (x, y) | (y, linha) <- zip [0..] mapa, (x, celula) <- zip [0..] linha, celula == Relva ]
+
+
+-- | Devolve as posicoes das torres no mapa
+
+posicoesTorres :: Jogo -> [Posicao]
