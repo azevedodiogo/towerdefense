@@ -164,3 +164,6 @@ reageEventos (EventKey (Char '6') Down _ _) (JogoRun jogo (x,y) compra pz) = let
 
                                                                              in if podeComprar jogo 6 then JogoRun jogoAtualizado (1000,1000) NaoQuerComprar pz
                                                                                 else JogoRun jogo (x,y) NaoTemDinheiro pz
+
+
+reageEventos _ it = it
