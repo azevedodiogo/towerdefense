@@ -126,3 +126,6 @@ reageEventos (EventKey (Char '1') Down _ _) (JogoRun jogo (x,y) compra pz) = let
                                                                                 else JogoRun jogo (x,y) NaoTemDinheiro pz
 
 -- Desenha uma torre de gelo quando a tecla '2' é pressionada
+
+reageEventos (EventKey (Char '2') Down _ _) (JogoRun jogo (x,y) compra pz) = let torrePos = (fromIntegral x, fromIntegral y)
+                                                                                 jogoAtualizado = adicionaTorre jogo 2 torrePos
