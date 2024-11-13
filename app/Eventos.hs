@@ -218,3 +218,9 @@ calculaNovaPosicao (x,y) (dx, dy) postorres mapa
 
 adicionaTorre :: Jogo -> Int -> Posicao -> Jogo
 adicionaTorre jogo indice pos = jogo {torresJogo = novasTorres, baseJogo = novaBase}
+
+    where base = baseJogo jogo
+          nivel = nivelJogo jogo
+
+          loja = case nivel of Um   -> lojaJogo jogo
+                               Dois -> lojaJogo jogo
