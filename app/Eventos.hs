@@ -261,3 +261,8 @@ sairPausa (x, y) = ((x+912)^2 + (y-462)^2) <= 30^2
 dentroRestart :: (Float, Float) -> Bool
 dentroRestart (x, y) = (x^2 + y^2) <= 95^2
 
+
+-- | Verifica se o clique está dentro do botao 'next level'
+
+dentroNextLevel :: (Float, Float) -> Bool
+dentroNextLevel (x, y) = ((x-5)^2 + y^2) <= 90^2
