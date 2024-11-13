@@ -228,3 +228,7 @@ adicionaTorre jogo indice pos = jogo {torresJogo = novasTorres, baseJogo = novaB
 
           (custo, torre) = loja !! (indice - 1)
           novasTorres = (torre {posicaoTorre = pos}) : torresJogo jogo
+          novaBase = base {creditosBase = creditosBase base - custo}
+
+
+-- | Verifica se o jogador tem dinheiro para comprar uma torre
