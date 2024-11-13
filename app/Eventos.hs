@@ -232,3 +232,8 @@ adicionaTorre jogo indice pos = jogo {torresJogo = novasTorres, baseJogo = novaB
 
 
 -- | Verifica se o jogador tem dinheiro para comprar uma torre
+
+podeComprar :: Jogo -> Int -> Bool
+podeComprar jogo indice = dinheiro >= custo
+
+    where dinheiro = creditosBase (baseJogo jogo)
