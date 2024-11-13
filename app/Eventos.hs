@@ -211,3 +211,7 @@ calculaNovaPosicao (x,y) (dx, dy) postorres mapa
       where novaPos = (x + dx, y + dy)                                                              -- (dx, dy) é o deslocamento, neste caso 1 unidade
             posValidas = posicoesRelva mapa
             posTorresInt = map (\(z, w) -> (floor z, floor w)) postorres
+
+
+
+-- | Adiciona uma torre e atualiza o dinheiro do jogador
