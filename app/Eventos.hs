@@ -248,3 +248,9 @@ podeComprar jogo indice = dinheiro >= custo
 
 sairMenu :: (Float, Float) -> Bool
 sairMenu (x, y) = ((x+900)^2 + (y-454)^2) <= 35^2
+
+
+-- | Verifica se o clique está dentro do botao 'sair' na img da Pausa
+
+sairPausa :: (Float, Float) -> Bool
+sairPausa (x, y) = ((x+912)^2 + (y-462)^2) <= 30^2
