@@ -215,3 +215,6 @@ calculaNovaPosicao (x,y) (dx, dy) postorres mapa
 
 
 -- | Adiciona uma torre e atualiza o dinheiro do jogador
+
+adicionaTorre :: Jogo -> Int -> Posicao -> Jogo
+adicionaTorre jogo indice pos = jogo {torresJogo = novasTorres, baseJogo = novaBase}
