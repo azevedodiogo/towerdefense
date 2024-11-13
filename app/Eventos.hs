@@ -245,3 +245,6 @@ podeComprar jogo indice = dinheiro >= custo
 
 
 -- | Verifica se o clique está dentro do botao 'sair' na img do MenuPrincipal
+
+sairMenu :: (Float, Float) -> Bool
+sairMenu (x, y) = ((x+900)^2 + (y-454)^2) <= 35^2
