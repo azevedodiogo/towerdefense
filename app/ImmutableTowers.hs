@@ -18,3 +18,8 @@ data ImmutableTowers = MenuPrincipal [Proezas]
                       
 
 -- | data Imagens (agrupa as imgs que serão utilizadas no jogo)
+
+data Imagens = Imagens { 
+                    relva :: Picture,
+                    menuInicial :: Picture,                                                         -- Imagem do menu inicial
+                    regras      :: Picture,                                                         -- Imagem das instruções para o jogo
