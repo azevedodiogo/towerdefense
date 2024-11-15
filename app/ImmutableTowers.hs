@@ -35,3 +35,7 @@ data Imagens = Imagens {
                     inimigos    :: [Picture]  
                      }
 
+
+
+-- | Posição da referência que irá servir para comprar as torres
+type PosRef = (Int, Int) 
