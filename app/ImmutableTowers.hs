@@ -62,3 +62,7 @@ nivelUm = Jogo {baseJogo = base01, portaisJogo = [portal01], torresJogo = [], ma
 
 mapa01 :: Mapa
 mapa01 =
+   [  [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, t, t, t, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, t, r, r, r],
+      [r, r, r, t, t, t, t, t, r, r, r, r, r, r, r, r, r, t, r, r, r],
