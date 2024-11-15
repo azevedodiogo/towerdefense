@@ -56,3 +56,9 @@ data Proezas = Nivel1Concluido | Nivel2Concluido | Nivel3Concluido  deriving (Sh
 nivelUm :: Jogo
 nivelUm = Jogo {baseJogo = base01, portaisJogo = [portal01], torresJogo = [], mapaJogo = mapa01, inimigosJogo = [], lojaJogo = loja01, nivelJogo = Um}
 
+
+
+-- | Mapa01  (21 largura / 16 altura)
+
+mapa01 :: Mapa
+mapa01 =
