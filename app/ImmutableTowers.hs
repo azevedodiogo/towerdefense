@@ -39,3 +39,8 @@ data Imagens = Imagens {
 
 -- | Posição da referência que irá servir para comprar as torres
 type PosRef = (Int, Int) 
+
+-- | Indica se o jogador quer ou não comprar, e se tem ou não dinheiro
+data Compra = QuerComprar | NaoQuerComprar | NaoTemDinheiro 
+
+-- | Indica aquilo que o jogador já conquistou
