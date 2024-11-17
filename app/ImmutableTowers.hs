@@ -109,3 +109,7 @@ iniOnda01 =
     Inimigo (1,14) Este 20 0.8 10 10 [] (1,14) 0,
     Inimigo (1,14) Este 20 0.8 10 10 [] (1,14) 0,
     Inimigo (1,14) Este 20 0.8 10 10 [] (1,14) 0,
+    Inimigo (1,14) Este 20 0.8 10 10 [] (1,14) 0 ]
+
+
+-- | segunda onda (portal01): inimigos tem 30 de vida, 1.0 de velocidade, 12 de dano
