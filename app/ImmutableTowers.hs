@@ -267,3 +267,7 @@ iniOnda05 :: [Inimigo]
 iniOnda05 = 
   -- pos, dir, vida, v, dano, creditos, projeteis, posi, tempo
   [ Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
+    Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
+    Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
+    Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
+    Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
