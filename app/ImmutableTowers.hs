@@ -249,3 +249,8 @@ mapa02 =
       [r, r, r, r, r, r, r, r, r, r, t, t, t, t, t, t, r, r, r, r, r],
       [r, r, r, r, r, r, r, r, r, r, r, r, a, r, r, t, r, r, r, r, r],
       [r, r, r, r, r, r, r, r, r, r, r, r, a, r, r, t, t, t, t, t, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, a, r, r, r, r, r, r, r, r] ]
+
+    where t = Terra
+          a = Agua
+          r = Relva
