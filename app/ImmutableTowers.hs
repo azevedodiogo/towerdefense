@@ -258,3 +258,7 @@ mapa02 =
 
 -- | Base02
 base02 :: Base
+base02 = Base {vidaBase = 150, posicaoBase = (1,8), creditosBase = 400}
+
+
+-- | primeira onda (portal02): inimigos tem 30 de vida, 1.0 de velocidade, 10 de dano
