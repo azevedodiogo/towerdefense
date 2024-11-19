@@ -232,3 +232,8 @@ nivelDois = Jogo {baseJogo = base02, portaisJogo = [portal02, portal03], torresJ
  
 
 -- | Mapa (21 largura / 16 altura)
+mapa02 :: Mapa
+mapa02 =
+   [  [r, r, r, r, r, r, r, r, r, r, r, r, a, r, r, r, r, r, r, r, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, a, r, r, t, t, t, t, t, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, a, r, r, t, r, r, r, r, r],
