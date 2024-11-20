@@ -284,3 +284,7 @@ iniOnda05 =
 
 
 -- | segunda onda (portal02): inimigos tem 50 de vida, 1.0 de velocidade, 12 de dano
+
+iniOnda06 :: [Inimigo]                                  
+iniOnda06 = 
+  -- pos, dir, vida, v, dano, creditos, projeteis, posi, tempo
