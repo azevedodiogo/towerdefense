@@ -322,3 +322,6 @@ iniOnda07 =
     Inimigo (19,1) Oeste 70 1.2 15 12 [] (19,1) 0,
     Inimigo (19,1) Oeste 70 1.2 15 12 [] (19,1) 0,
     Inimigo (19,1) Oeste 70 1.2 15 12 [] (19,1) 0,
+    Inimigo (19,1) Oeste 70 1.2 15 12 [] (19,1) 0,
+    Inimigo (19,1) Oeste 70 1.2 15 12 [] (19,1) 0,
+    Inimigo (19,1) Oeste 70 1.2 15 12 [] (19,1) 0 ]
