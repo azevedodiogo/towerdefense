@@ -356,3 +356,8 @@ iniOnda09 =
   -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
   [ Inimigo (19,14) Oeste 50 1.0 12 10 [] (19,14) 0,
     Inimigo (19,14) Oeste 50 1.0 12 10 [] (19,14) 0,
+    Inimigo (19,14) Oeste 50 1.0 12 10 [] (19,14) 0,
+    Inimigo (19,14) Oeste 50 1.0 12 10 [] (19,14) 0,
+    Inimigo (19,14) Oeste 50 1.0 12 10 [] (19,14) 0,
+    Inimigo (19,14) Oeste 50 1.0 12 10 [] (19,14) 0,
+    Inimigo (19,14) Oeste 50 1.0 12 10 [] (19,14) 0,
