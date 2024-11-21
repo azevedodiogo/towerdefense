@@ -395,3 +395,7 @@ iniOnda10 =
 
 
 -- | Onda05
+onda05 :: Onda
+onda05 = Onda {inimigosOnda = iniOnda05, cicloOnda = 3, tempoOnda = 0, entradaOnda = 10}
+
+-- | Onda06
