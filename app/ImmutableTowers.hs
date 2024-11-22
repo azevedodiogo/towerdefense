@@ -450,3 +450,7 @@ nivelTres = Jogo {baseJogo = base03, portaisJogo = [portal04, portal05], torresJ
 
 -- | Mapa02 (21 largura / 16 altura)
 mapa03 :: Mapa
+mapa03 =
+   [  [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, t, t, t, t, r, r],
