@@ -425,3 +425,6 @@ portal02 = Portal {posicaoPortal = (19,1), ondasPortal = [onda05, onda06, onda07
 
 -- | Portal03
 portal03 :: Portal
+portal03 = Portal {posicaoPortal = (19,14), ondasPortal = [onda08, onda09, onda10]}
+
+
