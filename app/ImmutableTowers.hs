@@ -471,3 +471,8 @@ mapa03 =
     where t = Terra
           a = Agua
           r = Relva
+
+
+-- | Base03
+base03 :: Base
+base03 = Base {vidaBase = 150, posicaoBase = (18,2), creditosBase = 400}
