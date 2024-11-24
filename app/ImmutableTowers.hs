@@ -489,3 +489,7 @@ iniOnda11 =
     Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
     Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
     Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
+    Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
+    Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
+    Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0, 
+    Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
