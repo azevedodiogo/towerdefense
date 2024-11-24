@@ -479,3 +479,8 @@ base03 = Base {vidaBase = 150, posicaoBase = (18,2), creditosBase = 400}
 
 
 -- | primeira onda (portal04): inimigos tem 20 de vida, 0.8 de velocidade, 10 de dano
+
+iniOnda11 :: [Inimigo]                                  
+iniOnda11 = 
+  -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
+  [ Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
