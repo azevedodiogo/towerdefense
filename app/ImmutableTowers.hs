@@ -595,3 +595,8 @@ iniOnda16 =
   -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
   [ Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
     Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
+    Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
+    Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
+    Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
+    Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
+    Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
