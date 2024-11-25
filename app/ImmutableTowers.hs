@@ -506,3 +506,7 @@ iniOnda12 :: [Inimigo]
 iniOnda12 = 
   -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
   [ Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
