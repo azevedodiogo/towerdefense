@@ -510,3 +510,7 @@ iniOnda12 =
     Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
     Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
     Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0, 
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
