@@ -497,3 +497,7 @@ iniOnda11 =
     Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
     Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
     Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0,
+    Inimigo (1,3) Este 20 0.8 10 5 [] (1,3) 0 ]
+  
+
+-- | segunda onda (portal04): inimigos tem 40 de vida, 1.0 de velocidade, 15 de dano
