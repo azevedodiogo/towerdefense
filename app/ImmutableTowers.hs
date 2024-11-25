@@ -501,3 +501,8 @@ iniOnda11 =
   
 
 -- | segunda onda (portal04): inimigos tem 40 de vida, 1.0 de velocidade, 15 de dano
+
+iniOnda12 :: [Inimigo]                                 
+iniOnda12 = 
+  -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
+  [ Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
