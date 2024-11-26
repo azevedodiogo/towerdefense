@@ -23,3 +23,6 @@ carregarImagens = do
 
                 -- creditos
                 creditos <- loadBMP "imagens/creditos.bmp"
+
+                -- seleção dos níveis
+                niveis <- loadBMP "imagens/niveis.bmp"
