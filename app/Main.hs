@@ -44,3 +44,7 @@ carregarImagens = do
                 proeza12 <- loadBMP "imagens/proeza12.bmp"
                 proeza13 <- loadBMP "imagens/proeza13.bmp"
                 proeza23 <- loadBMP "imagens/proeza23.bmp"
+                proeza123 <- loadBMP "imagens/proeza123.bmp"
+
+
+                -- torres
