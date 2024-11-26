@@ -651,3 +651,7 @@ loja03 = [tFogo01, tGelo01, tResina01, tFogo02, tGelo02, tResina02]
 
 -- | Torre02 gelo
 tGelo02 :: (Creditos, Torre)
+tGelo02 = (240, Torre {posicaoTorre = (0, 0), danoTorre = 15, alcanceTorre = 3.5, rajadaTorre = 3, cicloTorre = 3, 
+                tempoTorre = 3, projetilTorre = Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 3}})
+
+-- | Torre02 resina
