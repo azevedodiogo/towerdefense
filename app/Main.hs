@@ -86,3 +86,7 @@ carregarImagens = do
                                 menuInicial
                                 regras
                                 creditos
+                                niveis
+                                pausa
+                                [proeza, proeza1, proeza2, proeza3, proeza12, proeza13, proeza23, proeza123]
+                                vitoria 
