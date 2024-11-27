@@ -48,3 +48,7 @@ carregarImagens = do
 
 
                 -- torres
+                tfogo1 <- loadBMP "imagens/tfogo1.bmp"
+                tgelo1 <- loadBMP "imagens/tgelo1.bmp"
+                tresina1 <- loadBMP "imagens/tresina1.bmp"
+                tfogo2 <- loadBMP "imagens/tfogo2.bmp"
