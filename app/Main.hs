@@ -61,3 +61,7 @@ carregarImagens = do
                 pesq <- loadBMP "imagens/portalesq.bmp"
 
                 -- base
+                base <- loadBMP "imagens/base.bmp"
+
+                -- inimigos
+                iniLdpa <- loadBMP "imagens/iniLdpa.bmp"
