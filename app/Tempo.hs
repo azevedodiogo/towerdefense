@@ -30,3 +30,8 @@ reageTempo t (Vitoria jogo pz) = Vitoria jogo (pz ++ pz')
 reageTempo _ it = it
 
 
+
+
+atualizaTempoInimigos :: Tempo -> [Inimigo] -> [Inimigo]
+atualizaTempoInimigos t = map (\ini -> ini {tempoInimigo = tempoInimigo ini + t})
+
