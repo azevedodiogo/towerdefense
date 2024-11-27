@@ -120,3 +120,7 @@ fr = 60
 -- | Função principal
 
 main :: IO ()
+main = do
+        
+        imagens <- carregarImagens
+        
