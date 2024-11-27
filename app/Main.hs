@@ -69,3 +69,7 @@ carregarImagens = do
                 iniLdpf <- loadBMP "imagens/iniLdpf.bmp"
                 iniLepa <- loadBMP "imagens/iniLepa.bmp"
                 iniLepp <- loadBMP "imagens/iniLepp.bmp"
+                iniLepf <- loadBMP "imagens/iniLepf.bmp"
+                iniUppa <- loadBMP "imagens/iniUppa.bmp"
+                iniUppp <- loadBMP "imagens/iniUppp.bmp"
+                iniUppf <- loadBMP "imagens/iniUppf.bmp"
