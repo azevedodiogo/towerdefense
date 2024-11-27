@@ -115,3 +115,8 @@ fundo = white
 fr :: Int
 fr = 60
 
+
+
+-- | Função principal
+
+main :: IO ()
