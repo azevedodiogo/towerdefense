@@ -82,3 +82,7 @@ carregarImagens = do
                 
 
                 return $ Imagens
+                                relva 
+                                menuInicial
+                                regras
+                                creditos
