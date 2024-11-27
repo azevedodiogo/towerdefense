@@ -78,3 +78,7 @@ carregarImagens = do
                 iniDownpf <- loadBMP "imagens/iniDownpf.bmp"
 
                 -- relva
+                relva <- loadBMP "imagens/relva9.bmp"
+                
+
+                return $ Imagens
