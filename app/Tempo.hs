@@ -18,3 +18,8 @@ reageTempo t (JogoRun jogo pos compra pz) | ganhouJogo jogo = Vitoria jogo pz
                                             
                                           where jogoAtualizado = atualizaJogo t (jogo {inimigosJogo = atualizaTempoInimigos t (inimigosJogo jogo)})
 
+
+reageTempo t (Derrota jogo pz) = Derrota jogo pz  
+ 
+reageTempo t (Vitoria jogo pz) = Vitoria jogo (pz ++ pz')
+    
