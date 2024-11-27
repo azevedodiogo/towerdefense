@@ -124,3 +124,7 @@ main = do
         
         imagens <- carregarImagens
         
+        play janela 
+             fundo 
+             fr 
+             (MenuPrincipal [])
