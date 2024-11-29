@@ -22,3 +22,8 @@ module LI12425 (
     geraAleatorios,
     NivelJogo(..),
     ) where
+
+import System.Random (mkStdGen, randoms)
+
+-- | Tipo de terrenno do mapa.
+data Terreno
