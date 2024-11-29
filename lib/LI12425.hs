@@ -55,3 +55,9 @@ data Base = Base
     creditosBase :: Creditos
   }
   deriving (Eq, Show)
+
+-- | Distância entre duas posições.
+type Distancia = Float
+
+-- | Tempo em segundos.
+type Tempo = Float
