@@ -52,3 +52,6 @@ data Base = Base
     -- | Posição da base no mapa. A base deve estar sobre um terreno de terra.
     posicaoBase :: Posicao,
     -- | Balanço de créditos do jogador.
+    creditosBase :: Creditos
+  }
+  deriving (Eq, Show)
