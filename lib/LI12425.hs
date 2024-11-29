@@ -31,3 +31,6 @@ data Terreno
     Relva
   | -- | A base e os portais constroem-se sobre caminhos de terra do mapa. Além disso, inimigos movem-se sobre estes terrenos.
     Terra
+  | -- | Água para efeito decorativo, mas onde não se pode construir, nem os inimigos se podem mover.
+    Agua
+  deriving (Eq, Show)
