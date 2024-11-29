@@ -14,3 +14,8 @@ module LI12425 (
     Creditos, Direcao(..), Distancia, Duracao(..), Posicao, Semente, Tempo,
     -- ** Mapas
     Mapa, Terreno(..),
+    -- ** Entidades
+    Base(..), Torre(..), Portal(..), Inimigo(..), TipoProjetil(..), Projetil(..),
+    -- ** Jogo
+    Jogo(..), Onda(..), Loja,
+    -- * Funções auxiliares
