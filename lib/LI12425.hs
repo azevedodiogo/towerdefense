@@ -34,3 +34,9 @@ data Terreno
   | -- | Água para efeito decorativo, mas onde não se pode construir, nem os inimigos se podem mover.
     Agua
   deriving (Eq, Show)
+
+-- | Mapa do jogo composto por uma matriz de terrenos.
+type Mapa = [[Terreno]]
+
+-- | Coordenada bilateral de uma entidade no jogo, representante do seu centro.
+-- O referencial tem origem no canto superior esquerdo, com eixos x e y positivos para a direita e para baixo, respectivamente.
