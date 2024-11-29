@@ -69,3 +69,7 @@ data Duracao
   | -- | Duração infinita
     Infinita
   deriving (Eq, Show, Ord)
+
+-- | Torre que dispara projéteis contra inimigos.
+data Torre = Torre
+  { -- | Posição da torre no mapa.
