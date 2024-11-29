@@ -65,3 +65,7 @@ type Tempo = Float
 -- | Representa uma duração em segundos
 data Duracao
   = -- | Duração em segundos
+    Finita Tempo
+  | -- | Duração infinita
+    Infinita
+  deriving (Eq, Show, Ord)
