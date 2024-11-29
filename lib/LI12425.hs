@@ -44,3 +44,7 @@ type Posicao = (Float, Float)
 
 -- | Moeda do jogo.
 type Creditos = Int
+
+-- | Base de operações do jogador.
+data Base = Base
+  { -- | Vida da base. Quando esta chega a zero, o jogador perde o jogo.
