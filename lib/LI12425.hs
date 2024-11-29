@@ -10,3 +10,7 @@ Tipos de dados e funções auxiliares para a realização do projeto de LI1 em 2
 -}
 module LI12425 (
     -- * Tipos de dados
+    -- ** Básicos
+    Creditos, Direcao(..), Distancia, Duracao(..), Posicao, Semente, Tempo,
+    -- ** Mapas
+    Mapa, Terreno(..),
