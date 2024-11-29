@@ -40,3 +40,7 @@ type Mapa = [[Terreno]]
 
 -- | Coordenada bilateral de uma entidade no jogo, representante do seu centro.
 -- O referencial tem origem no canto superior esquerdo, com eixos x e y positivos para a direita e para baixo, respectivamente.
+type Posicao = (Float, Float)
+
+-- | Moeda do jogo.
+type Creditos = Int
