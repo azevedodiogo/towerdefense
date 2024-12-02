@@ -78,3 +78,7 @@ data Torre = Torre
     danoTorre :: Float,
     -- | Alcance circular da torre.
     alcanceTorre :: Float,
+    -- | Número de máximo de inimigos simultaneamente atingidos por uma rajada de tiros.
+    rajadaTorre :: Int,
+    -- | Ciclo de tempo entre rajadas de tiros.
+    cicloTorre :: Tempo,
