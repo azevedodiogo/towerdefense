@@ -148,3 +148,8 @@ data Onda = Onda
     entradaOnda :: Tempo
   }
   deriving (Eq, Show)
+
+-- | Portal de entrada de inimigos no mapa.
+data Portal = Portal
+  { -- | Posição do portal no mapa. O portal deve estar sobre um terreno de terra.
+    posicaoPortal :: Posicao,
