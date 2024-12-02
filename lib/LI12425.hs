@@ -137,3 +137,7 @@ data Inimigo = Inimigo
   deriving (Eq, Show)
 
 -- | Onda de inimigos que saem de um portal.
+data Onda = Onda
+  { -- | Inimigos que compõem a onda.
+    inimigosOnda :: [Inimigo],
+    -- | Tempo em segundos entre a entrada de cada inimigo.
