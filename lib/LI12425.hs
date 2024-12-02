@@ -90,3 +90,7 @@ data Torre = Torre
   deriving (Eq, Show)
 
 -- | Loja de torres disponíveis para construir por uma quantidade de créditos.
+type Loja = [(Creditos, Torre)]
+
+-- | Tipo de projétil disparado por uma torre.
+data TipoProjetil = Fogo | Gelo | Resina
