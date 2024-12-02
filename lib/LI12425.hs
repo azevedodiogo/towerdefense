@@ -94,3 +94,8 @@ type Loja = [(Creditos, Torre)]
 
 -- | Tipo de projétil disparado por uma torre.
 data TipoProjetil = Fogo | Gelo | Resina
+  deriving (Eq, Show)
+
+-- | Projétil aplicado por uma torre.
+data Projetil = Projetil
+  { -- | Tipo de projétil.
