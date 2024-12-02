@@ -99,3 +99,7 @@ data TipoProjetil = Fogo | Gelo | Resina
 -- | Projétil aplicado por uma torre.
 data Projetil = Projetil
   { -- | Tipo de projétil.
+    tipoProjetil :: TipoProjetil,
+    -- | Duração do efeito do projétil no inimigo.
+    duracaoProjetil :: Duracao
+  }
