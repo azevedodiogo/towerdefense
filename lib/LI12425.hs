@@ -145,3 +145,6 @@ data Onda = Onda
     -- | Tempo restante, em segundos, para a entrada do próximo inimigo da onda.
     tempoOnda :: Tempo,
     -- | Tempo restante, em segundos, para a entrada da onda.
+    entradaOnda :: Tempo
+  }
+  deriving (Eq, Show)
