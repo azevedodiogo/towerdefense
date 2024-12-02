@@ -141,3 +141,7 @@ data Onda = Onda
   { -- | Inimigos que compõem a onda.
     inimigosOnda :: [Inimigo],
     -- | Tempo em segundos entre a entrada de cada inimigo.
+    cicloOnda :: Tempo,
+    -- | Tempo restante, em segundos, para a entrada do próximo inimigo da onda.
+    tempoOnda :: Tempo,
+    -- | Tempo restante, em segundos, para a entrada da onda.
