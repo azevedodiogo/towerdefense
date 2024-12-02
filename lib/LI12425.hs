@@ -128,3 +128,7 @@ data Inimigo = Inimigo
     -- | Créditos que o jogador recebe ao derrotar o inimigo.
     butimInimigo :: Creditos,
     -- | Efeitos secundários ativos no inimigo.
+    projeteisInimigo :: [Projetil],
+    -- | Posicao do portal
+    posInicial :: Posicao,
+    -- | Tempo (animação dos inimigos)
