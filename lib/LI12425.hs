@@ -170,3 +170,7 @@ data Jogo = Jogo
     mapaJogo :: Mapa,
     -- | Inimigos em movimento no mapa.
     inimigosJogo :: [Inimigo],
+    -- | Loja de torres disponíveis para construir.
+    lojaJogo :: Loja,
+    -- | Nível do jogo.
+    nivelJogo :: NivelJogo
