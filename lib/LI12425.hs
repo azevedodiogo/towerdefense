@@ -166,3 +166,7 @@ data Jogo = Jogo
     portaisJogo :: [Portal],
     -- | Torres construídas pelo jogador.
     torresJogo :: [Torre],
+    -- | Mapa retangular do jogo.
+    mapaJogo :: Mapa,
+    -- | Inimigos em movimento no mapa.
+    inimigosJogo :: [Inimigo],
