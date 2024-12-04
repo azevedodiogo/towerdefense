@@ -19,3 +19,7 @@ import Data.List
 validaJogo :: Jogo -> Bool
 validaJogo j = verificaPortalNumero j &&
               verificaPosiPortal j &&
+              verificaCaminhoTerra j &&
+              verificaPortalSobreposicao j &&
+              verificaOndaPortal j &&
+              verificaInimigosPorLancar j &&
