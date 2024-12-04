@@ -182,3 +182,7 @@ data NivelJogo = Um | Dois | Tres deriving (Eq, Show)
 
 -- | Valor inicial que determina a sequência de números pseudo-aleatórios.
 type Semente = Int
+
+{-| Função que gera uma lista de números aleatórios a partir de uma 'Semente'.
+
+== Exemplos
