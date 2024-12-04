@@ -174,3 +174,8 @@ data Jogo = Jogo
     lojaJogo :: Loja,
     -- | Nível do jogo.
     nivelJogo :: NivelJogo
+  }
+  deriving (Eq, Show)
+
+-- | Indica o nível do Jogo em que o jogador se encontra.
+data NivelJogo = Um | Dois | Tres deriving (Eq, Show)
