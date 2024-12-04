@@ -153,3 +153,7 @@ data Onda = Onda
 data Portal = Portal
   { -- | Posição do portal no mapa. O portal deve estar sobre um terreno de terra.
     posicaoPortal :: Posicao,
+    -- | Ondas de inimigos que saem do portal.
+    ondasPortal :: [Onda]
+  }
+  deriving (Eq, Show)
