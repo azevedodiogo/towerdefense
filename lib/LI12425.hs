@@ -179,3 +179,6 @@ data Jogo = Jogo
 
 -- | Indica o nível do Jogo em que o jogador se encontra.
 data NivelJogo = Um | Dois | Tres deriving (Eq, Show)
+
+-- | Valor inicial que determina a sequência de números pseudo-aleatórios.
+type Semente = Int
