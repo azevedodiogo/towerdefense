@@ -27,3 +27,8 @@ validaJogo j = verificaPortalNumero j &&
               verificaInimigosSobreposicao j &&
               verificaVelocidadeInimigo j &&
               verificaProjeteisAtivos j &&
+              verificaPosiTorre j &&
+              verificaAlcanceTorre j &&
+              verificaRajadaTorre j &&
+              verificaCicloTorre j &&
+              verificaNotSobreposicaoTorre j &&
