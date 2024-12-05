@@ -61,3 +61,7 @@ verificaPosiPortal2 :: Mapa -> Portal -> Bool
 verificaPosiPortal2 mapa portal = let (coluna, linha) = posicaoPortal portal
                                       colunaNova = floor coluna
                                       linhaNova = floor linha
+
+                                  in linhaNova >= 0 && linhaNova < length mapa && mapa !! linhaNova !! colunaNova == Terra
+
+
