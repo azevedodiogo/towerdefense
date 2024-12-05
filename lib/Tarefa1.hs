@@ -92,3 +92,7 @@ verificaCaminhoTerra jogo = let mapa = mapaJogo jogo
 {- | a função `arredondaPosicao` arredonda por defeito uma posicao para inteiros, utilizando o floor. -}
 
 arredondaPosicao :: Posicao -> (Int, Int)
+arredondaPosicao (x, y) = (floor x, floor y)
+
+
+{- | a função `existeCaminho` verifica se existe um caminho de terra entre os portais e a base. -}
