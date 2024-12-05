@@ -74,3 +74,7 @@ verificaPosiPortal2 mapa portal = let (coluna, linha) = posicaoPortal portal
 
 * `base` = Base {vidaBase = 0, posicaoBase = (5.3, 4.2), creditosBase = 50}
 * `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = []}
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
+ 
+>>> verificaCaminhoTerra jogo 
+True
