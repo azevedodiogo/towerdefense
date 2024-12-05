@@ -56,3 +56,8 @@ verificaPosiPortal j = let mapa = mapaJogo j
 
 
 {- | a função `verificaPosiPortal2` verifica se a posição de um Portal coincide com a posição de um terreno de Terra. -}
+
+verificaPosiPortal2 :: Mapa -> Portal -> Bool
+verificaPosiPortal2 mapa portal = let (coluna, linha) = posicaoPortal portal
+                                      colunaNova = floor coluna
+                                      linhaNova = floor linha
