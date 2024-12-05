@@ -96,3 +96,7 @@ arredondaPosicao (x, y) = (floor x, floor y)
 
 
 {- | a função `existeCaminho` verifica se existe um caminho de terra entre os portais e a base. -}
+
+existeCaminho :: [(Int, Int)] -> Mapa -> (Int, Int) -> Bool
+existeCaminho [] _ _ = False -- Se a lista de portais estiver vazia, não existe caminho.
+existeCaminho (portal:resto) mapa base = caminhoPortalBase portal base mapa || existeCaminho resto mapa base
