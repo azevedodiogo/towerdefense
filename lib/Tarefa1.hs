@@ -113,3 +113,6 @@ caminhoPortalBase portal = procuraCaminho [portal] []
 procuraCaminho :: [(Int, Int)] -> [(Int, Int)] -> (Int, Int) -> Mapa -> Bool
 procuraCaminho [] _ _ _ = False
 procuraCaminho (pos:resto) visitados base mapa | pos == base = True
+                                               | otherwise = let vizinhos = encontraVizinhos pos mapa                                   -- Encontra os vizinhos de uma determinada posição.
+                                                                 naoVisitados = removeVisitados vizinhos visitados                      -- Remove os vizinhos que já foram visitados.
+                                                             in procuraCaminho (resto ++ naoVisitados) (pos : visitados) base mapa      
