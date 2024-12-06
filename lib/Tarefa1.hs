@@ -146,3 +146,8 @@ filtraTerras ((x, y):resto) mapa | existeTerra (x, y) mapa = (x, y) : filtraTerr
 
 existeTerra :: (Int, Int) -> Mapa -> Bool
 existeTerra (x, y) mapa = x >= 0 && y >= 0 && y < length mapa && x < length (mapa !! y) && (mapa !! y !! x == Terra)
+
+
+{- | a função `removeVisitados` remove as posições já visitadas da lista de vizinhos. -}
+
+removeVisitados :: [(Int, Int)] -> [(Int, Int)] -> [(Int, Int)]
