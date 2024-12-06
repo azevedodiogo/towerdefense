@@ -130,3 +130,6 @@ procuraCaminho (pos:resto) visitados base mapa | pos == base = True
 -}
 
 encontraVizinhos :: (Int, Int) -> Mapa -> [(Int, Int)]
+encontraVizinhos (x, y) mapa = let vizinhos = [(x+1, y), (x-1, y), (x, y+1), (x, y-1)]
+                               in filtraTerras vizinhos mapa
+
