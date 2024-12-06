@@ -133,3 +133,9 @@ encontraVizinhos :: (Int, Int) -> Mapa -> [(Int, Int)]
 encontraVizinhos (x, y) mapa = let vizinhos = [(x+1, y), (x-1, y), (x, y+1), (x, y-1)]
                                in filtraTerras vizinhos mapa
 
+
+{- | a função `filtraTerras` filtra as posições que são de Terra. -}
+
+filtraTerras :: [(Int, Int)] -> Mapa -> [(Int, Int)]
+filtraTerras [] _ = []
+filtraTerras ((x, y):resto) mapa | existeTerra (x, y) mapa = (x, y) : filtraTerras resto mapa
