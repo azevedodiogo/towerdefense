@@ -194,3 +194,6 @@ False
 -}
 
 verificaOndaPortal :: Jogo -> Bool
+verificaOndaPortal j = all verificaOndaPortal2 portais
+
+    where portais = portaisJogo j
