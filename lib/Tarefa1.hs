@@ -190,3 +190,7 @@ True
 
 >>> verificaOndaPortal jogo2
 False
+
+-}
+
+verificaOndaPortal :: Jogo -> Bool
