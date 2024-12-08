@@ -220,3 +220,7 @@ verificaOndaPortal j = all verificaOndaPortal2 portais
 * `jogo1` = Jogo {baseJogo = base, portaisJogo = [portal1], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
 * `jogo2` = Jogo {baseJogo = base, portaisJogo = [portal2], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
 * `jogo3` = Jogo {baseJogo = base, portaisJogo = [portal3], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+* `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
+* `portal2` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda2]}
+* `portal3` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda3]}
