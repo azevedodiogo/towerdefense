@@ -227,3 +227,9 @@ verificaOndaPortal j = all verificaOndaPortal2 portais
 * `onda1` = Onda {inimigosOnda = [Inimigo (0.5, 0.5) Norte 100.0 1.0 10.0 20 [] (0.5, 0.5) 0], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
 * `onda2` = Onda {inimigosOnda = [Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (2.0, 2.0) 0], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
 * `onda3` = Onda {inimigosOnda = [Inimigo (0.5, 0.5) Norte (-100) 1.0 10.0 20 [] (0.5, 0.5) 0], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+
+>>> verificaInimigosPorLancar jogo1
+True
+
+>>> verificaInimigosPorLancar jogo2
