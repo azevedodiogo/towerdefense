@@ -241,3 +241,6 @@ False
 -}
 
 verificaInimigosPorLancar :: Jogo -> Bool
+verificaInimigosPorLancar j = let portais = portaisJogo j
+                              in all verificaPortal portais
+
