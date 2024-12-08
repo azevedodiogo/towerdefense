@@ -237,3 +237,7 @@ False
 
 >>> verificaInimigosPorLancar jogo3
 False
+
+-}
+
+verificaInimigosPorLancar :: Jogo -> Bool
