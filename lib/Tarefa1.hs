@@ -214,3 +214,9 @@ verificaOndaPortal j = all verificaOndaPortal2 portais
 {- | a função `verificaInimigosPorLancar` verifica se todos os inimigos por lançar têm a posição do respetivo portal, nível de vida positivo e lista de projéteis ativos vazia, 
      utilizando as funcoes `verificaPortal`, `verificaOnda` e `verificaInimigo`. 
 
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [portal1], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base, portaisJogo = [portal2], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+* `jogo3` = Jogo {baseJogo = base, portaisJogo = [portal3], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
