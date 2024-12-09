@@ -279,3 +279,8 @@ verificaInimigo posPortal inimigo = posicaoInimigo inimigo == posPortal && vidaI
  
 >>> verificaInimigosTerra jogo1
 False
+
+>>> verificaInimigosTerra jogo2
+True
+
+-}
