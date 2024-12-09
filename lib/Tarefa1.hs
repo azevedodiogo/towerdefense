@@ -291,3 +291,9 @@ verificaInimigosTerra j = let mapa = mapaJogo j
 
 
 {- | a função `verificaInimigosTerra2` verifica se a posição de um inimigo está sobre Terra. -}
+
+verificaInimigosTerra2 :: Mapa -> Inimigo -> Bool
+verificaInimigosTerra2 mapa inimigo = let (coluna, linha) = posicaoInimigo inimigo
+
+                                      in floor linha >= 0 && floor linha < length mapa && floor coluna >= 0 && floor coluna < length (mapa !! floor linha) && (mapa !! floor linha) !! floor coluna == Terra || 
+                                         ceiling linha >= 0 && ceiling linha < length mapa && floor coluna >= 0 && floor coluna < length (mapa !! ceiling linha) && (mapa !! ceiling linha) !! floor coluna == Terra ||
