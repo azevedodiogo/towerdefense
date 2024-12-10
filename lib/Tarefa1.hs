@@ -415,3 +415,9 @@ verificaSemDuplicados :: [TipoProjetil] -> Bool
 verificaSemDuplicados tipos = length tipos == length (nub tipos) -- 'nub' é uma função que faz parte da biblioteca 'Data.List' importada no ínicio que remove duplicados de uma lista.
 
 
+
+{- | a função `verificaSemIncompativeis` verifica se não há projéteis incompatíveis. 
+
+=== Exemplo de Uso:
+
+>>> verificaSemIncompativeis [Fogo, Gelo]       
