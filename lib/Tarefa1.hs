@@ -385,3 +385,9 @@ False
 
 verificaProjetilAtivos :: Inimigo -> Bool
 verificaProjetilAtivos inimigo = verificaProjetil (projeteisInimigo inimigo)
+
+
+{- | a função `verificaProjetil` verifica se se uma lista de projéteis está normalizada. -}
+
+verificaProjetil :: [Projetil] -> Bool
+verificaProjetil projeteis =  let tiposAtuais = map tipoProjetil projeteis
