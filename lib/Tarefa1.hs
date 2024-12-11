@@ -428,3 +428,8 @@ False
 
 >>> verificaSemIncompativeis [Gelo, Resina]   
 True 
+
+-}
+
+verificaSemIncompativeis :: [TipoProjetil] -> Bool
+verificaSemIncompativeis tipos = not (elem Fogo tipos && elem Resina tipos) && not (elem Fogo tipos && elem Gelo tipos)
