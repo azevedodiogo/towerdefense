@@ -454,3 +454,8 @@ True
 
 >>> verificaProjetilAtivos jogo2
 False
+
+-}
+
+verificaPosiTorre :: Jogo -> Bool
+verificaPosiTorre j = let mapa = mapaJogo j
