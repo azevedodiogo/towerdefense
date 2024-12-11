@@ -471,3 +471,8 @@ verificaPosiTorre2 mapa torre = let (coluna, linha) = posicaoTorre torre
 
                                 in linhaNova >= 0 && linhaNova < length mapa && colunaNova >= 0 && colunaNova < length (mapa !! linhaNova) && (mapa !! linhaNova) !! colunaNova == Relva
 
+
+
+{- | a função `verificaAlcanceTorre` verifica se o valor do alcance é maior que zero. 
+
+=== Exemplo de Uso:
