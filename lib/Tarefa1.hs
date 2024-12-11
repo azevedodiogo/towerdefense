@@ -468,3 +468,6 @@ verificaPosiTorre2 :: Mapa -> Torre -> Bool
 verificaPosiTorre2 mapa torre = let (coluna, linha) = posicaoTorre torre
                                     colunaNova = floor coluna
                                     linhaNova = floor linha
+
+                                in linhaNova >= 0 && linhaNova < length mapa && colunaNova >= 0 && colunaNova < length (mapa !! linhaNova) && (mapa !! linhaNova) !! colunaNova == Relva
+
