@@ -590,3 +590,9 @@ verificaBaseCredito j = verificaBaseCredito2 (baseJogo j)
 
 
 === Exemplos de Uso:
+
+* `jogo1` = Jogo {baseJogo = Base {posicaoBase = (3,3), vidaBase = 100, creditosBase = 50}, torresJogo = [Torre (2, 0) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], portaisJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = Base {posicaoBase = (3,3), vidaBase = 100, creditosBase = 50}, torresJogo = [Torre (3, 3) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], portaisJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+>>> verificaBaseSobreposicao jogo
+True
