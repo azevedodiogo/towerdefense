@@ -514,3 +514,8 @@ verificaCicloTorre j = all verificaCicloTorre2 (torresJogo j)
 
     where verificaCicloTorre2 :: Torre -> Bool
           verificaCicloTorre2 torre = cicloTorre torre >= 0
+
+
+
+
+{- | a função `verificaNotSobreposicaoTorre` verifica se não há sobreposição entre torres. Devolve True se não houver.
