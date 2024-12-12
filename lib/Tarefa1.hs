@@ -596,3 +596,6 @@ verificaBaseCredito j = verificaBaseCredito2 (baseJogo j)
 
 >>> verificaBaseSobreposicao jogo
 True
+
+>>> verificaBaseSobreposicao jogo
+False
