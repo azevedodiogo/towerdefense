@@ -556,3 +556,9 @@ verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
 
 * `jogo1` = Jogo {baseJogo = Base 100 (0.3, 0) 50, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
 * `jogo2` = Jogo {baseJogo = Base 100 (5.5, 0) 50, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
+ 
+
+>>> verificaBaseTerra jogo1
+True
