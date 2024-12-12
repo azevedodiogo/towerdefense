@@ -532,3 +532,6 @@ True
 
 >>> verificaAlcanceTorre jogo2
 False
+
+-}
+
