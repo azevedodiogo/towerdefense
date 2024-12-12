@@ -587,3 +587,6 @@ verificaBaseCredito j = verificaBaseCredito2 (baseJogo j)
 
 
 {- | a função `verificaBaseSobreposicao` verifica se a posição da base não está sobreposta a nenhum portal ou torre. 
+
+
+=== Exemplos de Uso:
