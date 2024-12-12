@@ -484,3 +484,8 @@ verificaPosiTorre2 mapa torre = let (coluna, linha) = posicaoTorre torre
  
 >>> verificaAlcanceTorre jogo1
 False
+
+>>> verificaAlcanceTorre jogo2
+True
+
+-}
