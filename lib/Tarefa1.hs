@@ -553,3 +553,6 @@ verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
 {- | a função `verificaBaseTerra` verifica se a base está posicionada em Terra. 
 
 === Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = Base 100 (0.3, 0) 50, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = Base 100 (5.5, 0) 50, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
