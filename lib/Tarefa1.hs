@@ -562,3 +562,6 @@ verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
 
 >>> verificaBaseTerra jogo1
 True
+
+>>> verificaBaseTerra jogo2
+False
