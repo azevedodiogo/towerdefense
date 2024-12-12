@@ -548,3 +548,8 @@ verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
 
 
 -- BASE
+
+
+{- | a função `verificaBaseTerra` verifica se a base está posicionada em Terra. 
+
+=== Exemplo de Uso:
