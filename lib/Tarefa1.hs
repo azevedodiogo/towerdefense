@@ -492,3 +492,7 @@ True
 
 verificaAlcanceTorre :: Jogo -> Bool
 verificaAlcanceTorre j = all verificaAlcanceTorre2 (torresJogo j)
+
+    where verificaAlcanceTorre2 :: Torre -> Bool
+          verificaAlcanceTorre2 torre = alcanceTorre torre > 0
+
