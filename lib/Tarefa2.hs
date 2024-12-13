@@ -36,3 +36,6 @@ inimigosNoAlcance :: Torre -> [Inimigo] -> [Inimigo]
 inimigosNoAlcance _ [] = []
 inimigosNoAlcance t (i:li) | dist (posicaoTorre t) (posicaoInimigo i) <= alcanceTorre t = i : inimigosNoAlcance t li
                            | otherwise = inimigosNoAlcance t li
+
+    where dist (x1,y1) (x2,y2) = sqrt $ (x1-x2)^2 + (y1-y2)^2
+
