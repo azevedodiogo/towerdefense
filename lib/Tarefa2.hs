@@ -10,3 +10,7 @@ Módulo para a realização da Tarefa 2 de LI1 em 2024/25.
 module Tarefa2 where
 
 import LI12425
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+{-| a função `inimigosNoAlcance` calcula os inimigos ao alcance de uma dada torre. 
