@@ -14,3 +14,7 @@ import LI12425
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 {-| a função `inimigosNoAlcance` calcula os inimigos ao alcance de uma dada torre. 
+
+=== Exemplo de Uso:
+
+* `torre` = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
