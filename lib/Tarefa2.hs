@@ -39,3 +39,8 @@ inimigosNoAlcance t (i:li) | dist (posicaoTorre t) (posicaoInimigo i) <= alcance
 
     where dist (x1,y1) (x2,y2) = sqrt $ (x1-x2)^2 + (y1-y2)^2
 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+{- | a função `atingeInimigo` atualiza o estado de um inimigo sempre que este é atingido por um projétil. 
