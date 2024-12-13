@@ -604,3 +604,7 @@ False
 
 verificaBaseSobreposicao :: Jogo -> Bool
 verificaBaseSobreposicao j = let basePos = posicaoBase (baseJogo j)
+                                 torres = map posicaoTorre (torresJogo j)
+                                 portais = map posicaoPortal (portaisJogo j)
+
+                             in not (elem basePos torres || elem basePos portais)
