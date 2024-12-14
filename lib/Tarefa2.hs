@@ -62,3 +62,7 @@ atingeInimigo t i = i
 
 
 {- | a função `junçaoProjetil` junta os projeteis com base no seu tipo, utilizando as funções `iguais` e `resolveConflito`. -}
+
+junçaoProjetil :: Projetil -> [Projetil] -> [Projetil]
+junçaoProjetil p [] = [p]
+junçaoProjetil pnovo lpantigos = iguais lpconflitoTransformada
