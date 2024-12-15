@@ -87,3 +87,8 @@ iguais [] = []
 iguais [p] = [p]
 iguais (pn:l:ls) | tipopn == tipol = pn {duracaoProjetil = somaduracao duracaopn duracaol} : ls
                  | otherwise = l : iguais (pn:ls)
+
+        where duracaopn = duracaoProjetil pn
+              duracaol = duracaoProjetil l
+              tipopn = tipoProjetil pn
+              tipol = tipoProjetil l
