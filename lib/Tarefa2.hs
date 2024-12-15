@@ -83,3 +83,7 @@ junçaoProjetil pnovo lpantigos = iguais lpconflitoTransformada
 -}
 
 iguais :: [Projetil] -> [Projetil]
+iguais [] = []
+iguais [p] = [p]
+iguais (pn:l:ls) | tipopn == tipol = pn {duracaoProjetil = somaduracao duracaopn duracaol} : ls
+                 | otherwise = l : iguais (pn:ls)
