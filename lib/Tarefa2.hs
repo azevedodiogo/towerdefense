@@ -92,3 +92,6 @@ iguais (pn:l:ls) | tipopn == tipol = pn {duracaoProjetil = somaduracao duracaopn
               duracaol = duracaoProjetil l
               tipopn = tipoProjetil pn
               tipol = tipoProjetil l
+
+
+{- | a função `somaduracao` soma as duracoes de dois projeteis. -}
