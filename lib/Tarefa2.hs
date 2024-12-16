@@ -182,3 +182,7 @@ ativaInimigo p li | length ondasp == 0 = (p,li)
 
 
 {- | a função `podelançar` verifica se a onda está ativa e se ainda tem inimigos para lançar. 
+
+=== Exemplos de Uso:
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
