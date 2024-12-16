@@ -156,3 +156,7 @@ tempo _ = 0
 * `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
 
 * `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+* `inimigo1` = Inimigo (3.0, 4.0) Norte 100 1 10 20 [Projetil Fogo (Finita 5)] (0,0) 0
+* `inimigo2` = Inimigo (7.0, 5.0) Sul 80 1 15 30 [Projetil Gelo (Finita 3)] (0,0) 0
+* `inimigo3` = Inimigo (10.0, 10.0) Este 50 1.5 20 40 [Projetil Resina Infinita] (0,0) 0
