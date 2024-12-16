@@ -204,3 +204,7 @@ podelançar o = entradaOnda o <= 0 && length (inimigosOnda o) > 0 && tempoOnda o
 {- | a função `removeInimigo` remove o primeiro inimigo da onda ativa. 
 
 === Exemplos de Uso:
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> removeInimigo onda1
