@@ -147,3 +147,8 @@ tempo _ = 0
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+
+{- | a função `ativaInimigo` coloca o próximo inimigo a ser lançado por um portal em jogo. 
+
+
+=== Exemplos de Uso:
