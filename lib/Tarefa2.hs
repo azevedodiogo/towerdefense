@@ -174,3 +174,7 @@ ativaInimigo p li | length ondasp == 0 = (p,li)
                   | otherwise = (p,li)
 
     where ondasp = ondasPortal p
+          primeiraonda = head ondasp
+          (proxi, novaonda) = removeInimigo primeiraonda
+          novasOndas = if ondaVazia novaonda then tail ondasp else novaonda : tail ondasp
+          novoportal = p {ondasPortal = novasOndas}
