@@ -186,3 +186,7 @@ ativaInimigo p li | length ondasp == 0 = (p,li)
 === Exemplos de Uso:
 
 * `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
+* `onda2` = Onda {inimigosOnda = [inimigo3], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> podelançar onda1
+True
