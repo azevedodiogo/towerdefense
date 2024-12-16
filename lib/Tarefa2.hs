@@ -130,3 +130,8 @@ resolveConflito pn [x]  | tipoProjetil pn == Fogo && tipoProjetil x == Resina = 
                         | tipoProjetil pn == Gelo && tipoProjetil x == Fogo = []
                         | tipoProjetil pn == Fogo && tipoProjetil x == Gelo = []
                         | otherwise = pn : [x]
+
+-- a lista contem dois elementos (gelo e resina ou resina e gelo)
+resolveConflito pn [x,y]  | tipoProjetil pn == Fogo && tipoProjetil x == Gelo  = [y]
+                          | tipoProjetil pn == Fogo && tipoProjetil y == Gelo = [x]
+                          | otherwise = pn:[x,y]
