@@ -139,3 +139,7 @@ resolveConflito pn [x,y]  | tipoProjetil pn == Fogo && tipoProjetil x == Gelo  =
 
 
 {-| a funçao `tempo` extrai o tempo de uma duracao. -}
+
+tempo :: Duracao -> Float
+tempo (Finita n) = n
+tempo _ = 0
