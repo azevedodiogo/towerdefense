@@ -212,3 +212,7 @@ podelançar o = entradaOnda o <= 0 && length (inimigosOnda o) > 0 && tempoOnda o
 Onda {inimigosOnda = [Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (2.0,2.0), tempoInimigo = 0.0}], cicloOnda = 5.0, tempoOnda = 5.0, entradaOnda = 1.0})
 
 -}
+
+removeInimigo :: Onda -> (Inimigo, Onda)
+removeInimigo o = let i = inimigosOnda o
+                      primeiroi = head i
