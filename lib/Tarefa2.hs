@@ -109,3 +109,7 @@ somaduracao (Finita a) (Finita b) = Finita (a+b)
 * `projetil1` = Projetil Gelo (Finita 3)
 * `projetil2` = Projetil Resina Infinita
 * `projetil3` = Projetil Fogo (Finita 5) 
+
+>>> resolveConflito projetil3 [projetil1]
+[]
+>>> resolveConflito projetil3 [projetil2]
