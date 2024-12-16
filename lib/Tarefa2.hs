@@ -195,3 +195,6 @@ True
 False
 
 -}
+
+podelançar :: Onda -> Bool
+podelançar o = entradaOnda o <= 0 && length (inimigosOnda o) > 0 && tempoOnda o <= 0
