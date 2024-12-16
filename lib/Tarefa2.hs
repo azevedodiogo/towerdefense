@@ -190,3 +190,8 @@ ativaInimigo p li | length ondasp == 0 = (p,li)
 
 >>> podelançar onda1
 True
+
+>>> podelançar onda2
+False
+
+-}
