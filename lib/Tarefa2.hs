@@ -118,3 +118,7 @@ somaduracao (Finita a) (Finita b) = Finita (a+b)
 [Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
 
 -}
+
+resolveConflito :: Projetil -> [Projetil] -> [Projetil]
+
+-- a lista de projeteis está vazia
