@@ -105,3 +105,7 @@ somaduracao (Finita a) (Finita b) = Finita (a+b)
 {- | a função `resolveConflito` resolve conflitos entre projéteis: Fogo e Gelo cancelam-se mutuamente, Fogo e Resina dobra a duração do fogo.
 
 === Exemplos de Uso:
+
+* `projetil1` = Projetil Gelo (Finita 3)
+* `projetil2` = Projetil Resina Infinita
+* `projetil3` = Projetil Fogo (Finita 5) 
