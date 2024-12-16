@@ -169,3 +169,8 @@ tempo _ = 0
 
 
 ativaInimigo :: Portal -> [Inimigo] -> (Portal, [Inimigo])
+ativaInimigo p li | length ondasp == 0 = (p,li)
+                  | podelançar primeiraonda = (novoportal, proxi:li)
+                  | otherwise = (p,li)
+
+    where ondasp = ondasPortal p
