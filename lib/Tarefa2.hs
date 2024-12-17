@@ -225,3 +225,7 @@ removeInimigo o = let i = inimigosOnda o
 {- | a função `ondaVazia` verifica se a onda está vazia, isto é se não tem inimigos. -} 
 
 ondaVazia :: Onda -> Bool
+ondaVazia o = length (inimigosOnda o) == 0
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
