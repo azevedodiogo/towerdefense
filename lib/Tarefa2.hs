@@ -311,3 +311,6 @@ vidadaBase = vidaBase
 * `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
 * `portal2` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = []} 
 * `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> ausenciainimigos jogoSemInimigos
+True
