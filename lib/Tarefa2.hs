@@ -264,3 +264,6 @@ terminouJogo j = ganhouJogo j || perdeuJogo j
 * `base1` = Base {vidaBase = 0, posicaoBase = (5.5, 2.5), creditosBase = 50}
 
 >>> perdeuJogo jogo1
+True
+
+-}
