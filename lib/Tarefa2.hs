@@ -271,3 +271,9 @@ True
 perdeuJogo :: Jogo -> Bool
 perdeuJogo j = vidadaBase (baseJogo j) <= 0
 
+
+
+
+{- | a função `ganhouJogo` verifica se o jogador ganhou o jogo. O jogador vence se não houver mais inimigos no jogo e a vida da base for maior que zero.
+
+=== Exemplo de Uso:
