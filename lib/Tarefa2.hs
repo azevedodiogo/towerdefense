@@ -301,3 +301,8 @@ vidadaBase = vidaBase
 
 
 {- | a função `ausenciainimigos` verifica a ausencia de inimigos ativos ou inativos. 
+
+=== Exemplo de Uso:
+
+* `jogoSemInimigos` = Jogo {baseJogo = base1, portaisJogo = [portal2], torresJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [],  nivelJogo = Um}
+* `jogoComInimigos` = Jogo {baseJogo = base1, portaisJogo = [portal1], torresJogo = [], mapaJogo = [], inimigosJogo = [inimigo1], lojaJogo = [],  nivelJogo = Um}
