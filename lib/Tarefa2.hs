@@ -234,3 +234,6 @@ ondaVazia o = length (inimigosOnda o) == 0
 {- | a função `terminouJogo` verifica se o jogador ganhou ou perdeu o jogo. 
 
 === Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base1, portaisJogo = [portal1], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = loja, nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base2, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = loja, nivelJogo = Um}
