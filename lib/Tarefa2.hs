@@ -297,3 +297,7 @@ ganhouJogo j = ausenciainimigos j && vidadaBase (baseJogo j) > 0
 vidadaBase :: Base -> Float
 vidadaBase = vidaBase
 
+
+
+
+{- | a função `ausenciainimigos` verifica a ausencia de inimigos ativos ou inativos. 
