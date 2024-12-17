@@ -306,3 +306,8 @@ vidadaBase = vidaBase
 
 * `jogoSemInimigos` = Jogo {baseJogo = base1, portaisJogo = [portal2], torresJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [],  nivelJogo = Um}
 * `jogoComInimigos` = Jogo {baseJogo = base1, portaisJogo = [portal1], torresJogo = [], mapaJogo = [], inimigosJogo = [inimigo1], lojaJogo = [],  nivelJogo = Um}
+
+* `base1` = Base {vidaBase = 100, posicaoBase = (5.5, 2.5), creditosBase = 50}
+* `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
+* `portal2` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = []} 
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
