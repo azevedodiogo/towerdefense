@@ -254,3 +254,7 @@ True
 terminouJogo :: Jogo -> Bool
 terminouJogo j = ganhouJogo j || perdeuJogo j
 
+
+{- | a função `perdeuJogo` verifica se o jogador perdeu o jogo. O jogador perde se a vida da base for menor ou igual a zero.
+
+=== Exemplo de Uso:
