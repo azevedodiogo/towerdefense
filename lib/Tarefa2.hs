@@ -281,3 +281,6 @@ perdeuJogo j = vidadaBase (baseJogo j) <= 0
 * `jogo1` = Jogo {baseJogo = base2, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = loja, nivelJogo = Um}
 
 * `base1` = Base {vidaBase = 2, posicaoBase = (5.5, 2.5), creditosBase = 50}
+
+>>> ganhouJogo jogo1
+True
