@@ -314,3 +314,8 @@ vidadaBase = vidaBase
 
 >>> ausenciainimigos jogoSemInimigos
 True
+
+>>> ausenciainimigos jogoComInimigos
+False
+
+-}
