@@ -220,3 +220,8 @@ removeInimigo o = let i = inimigosOnda o
                                           tempoOnda = cicloOnda o}
                   in (primeiroi, ondaAtualizada)
 
+
+
+{- | a função `ondaVazia` verifica se a onda está vazia, isto é se não tem inimigos. -} 
+
+ondaVazia :: Onda -> Bool
