@@ -319,3 +319,8 @@ True
 False
 
 -}
+
+ausenciainimigos :: Jogo -> Bool
+ausenciainimigos j = null iemjogo && null iportais
+    where iemjogo = inimigosJogo j
+          iportais = filtrainimigos (portaisJogo j)
