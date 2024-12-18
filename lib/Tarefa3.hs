@@ -23,3 +23,7 @@ import Data.List
 As atualizações são realizadas em três etapas principais:
    
 1. Atualização dos portais, adicionando novos inimigos ao jogo.
+2. Atualização dos inimigos (movimento, vida, posição, etc.) e da base (vida e créditos).
+3. Atualização das torres e dos seus efeitos sobre os inimigos.
+
+=== Exemplos de Uso:
