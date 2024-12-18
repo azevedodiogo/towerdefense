@@ -337,3 +337,7 @@ ausenciainimigos j = null iemjogo && null iportais
 * `onda2` = Onda {inimigosOnda = [inimigo3], cicloOnda = 3, tempoOnda = 0, entradaOnda = 2}
 * `inimigo1` = Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (2.0, 2.0) 0
 * `inimigo2` = Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (2.0, 2.0) 0
+* `inimigo3` = Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (2.0, 2.0) 0
+
+>>> filtrainimigos [portal1]
+[Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0},
