@@ -14,3 +14,8 @@ import Tarefa1
 import Tarefa2
 import LI12425
 import Data.List
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+{- | a função `atualizaJogo` simula a evolução de um jogo após um intervalo de tempo. 
