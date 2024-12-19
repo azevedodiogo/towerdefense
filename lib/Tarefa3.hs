@@ -88,3 +88,6 @@ disparaTorre tempo torre inimigos
 
             -- a torre ainda não pode disparar (cooldown)
             | tempoTorre torre > 0 = (torre {tempoTorre = max 0 (tempoTorre torre - tempo)}, inimigos)
+
+            -- sem inimigos no alcance
+            | null (inimigosNoAlcance torre inimigos) = (torre, inimigos)                       -- utiliza a funcao 'inimigosNoAlcance' da tarefa2
