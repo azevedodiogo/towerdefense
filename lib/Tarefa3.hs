@@ -100,3 +100,7 @@ disparaTorre tempo torre inimigos
                               iniRestantes = filtraInimigoID ini iniRajada                      -- retira os inimigos atingidos, ficando apenas os outros
                               lista = iniAtingidos ++ iniRestantes                              -- lista atualizada com todos os inimigos em jogo e respetivas ids
                               lordenada = sortBy (\(x, _) (y, _) -> compare x y) lista          -- lista por ordem
+
+
+                          in (torre {tempoTorre = cicloTorre torre}, map snd lordenada)
+
