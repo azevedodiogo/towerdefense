@@ -135,3 +135,6 @@ iniNoAlcanceID t ((id, ini):l) | dist (posicaoTorre t) (posicaoInimigo ini) <= a
                                | otherwise = iniNoAlcanceID t l
 
     where dist (x1,y1) (x2,y2) = sqrt $ (x1-x2)^2 + (y1-y2)^2
+
+
+{- | a função `atualizaInimigoID` faz o mesmo que a `atingeInimigo`, mas mantem id dos inimigos. -}
