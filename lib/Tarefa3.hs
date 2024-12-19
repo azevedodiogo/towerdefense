@@ -96,3 +96,7 @@ disparaTorre tempo torre inimigos
             | otherwise = let ini = geraID inimigos                                             -- lista dos inimigos com id
                               iniIDalcance = iniNoAlcanceID torre ini                           -- seleciona os inimigos que estão ao alcance da torre
                               iniRajada = take (rajadaTorre torre) iniIDalcance                 -- seleciona os inimigos que a torre consegue atacar de uma só vez
+                              iniAtingidos = atualizaInimigoID torre iniRajada                  -- atualiza os inimigos atingidos, utilizando a funcao 'atingeInimigo' da tarefa2 
+                              iniRestantes = filtraInimigoID ini iniRajada                      -- retira os inimigos atingidos, ficando apenas os outros
+                              lista = iniAtingidos ++ iniRestantes                              -- lista atualizada com todos os inimigos em jogo e respetivas ids
+                              lordenada = sortBy (\(x, _) (y, _) -> compare x y) lista          -- lista por ordem
