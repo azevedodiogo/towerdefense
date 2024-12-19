@@ -49,3 +49,7 @@ nivelJogo = Um }
 -}
 
 atualizaJogo :: Tempo -> Jogo -> Jogo
+atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
+
+    let (portaisAtualizados, novosInimigos) = atualizaPortais t portais inimigos
+        (baseAtualizada, inimigosAtualizados) = atualizaInimigos t mapa base novosInimigos
