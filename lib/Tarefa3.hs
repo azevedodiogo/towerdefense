@@ -104,3 +104,7 @@ disparaTorre tempo torre inimigos
 
                           in (torre {tempoTorre = cicloTorre torre}, map snd lordenada)
 
+
+
+
+{- | a função `geraID` gera uma id para cada inimigo da lista. 
