@@ -108,3 +108,8 @@ disparaTorre tempo torre inimigos
 
 
 {- | a função `geraID` gera uma id para cada inimigo da lista. 
+
+Implementamos esta função porque os inimigos de uma onda inicialmente têm todos as mesmas características, logo se utilizassemos a 'elem' para retirar, da lista de inimigos, os inimigos que vão ser atingidos pela torre (iniRajada) iriamos ter uma lista no final com menos inimigos do que o suposto. 
+Assim, a nossa solução foi inventar uma identidade (atribuindo-lhes um número) para os inimigos, pelo que em vez de comprarmos o inimigo em si, comparamos apenas as suas identidades. 
+
+=== Exemplos de Uso:
