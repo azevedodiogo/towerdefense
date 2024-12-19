@@ -61,3 +61,8 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
 
 ---------------------------------------------------------------------------------------------
 
+
+-- COMPORTAMENTO DAS TORRES
+
+
+{- | A função `disparaTorre` faz a torre disparar projeteis contra os inimigos detetados. Utiliza funções auxiliares como a `inimigosNoAlcance` e a `atingeInimigo` da Tarefa 2.
