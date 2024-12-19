@@ -32,3 +32,7 @@ As atualizações são realizadas em três etapas principais:
 * `portal` = Portal {posicaoPortal = (0, 0), ondasPortal = [Onda [] 5 0 0]}
 * `torre` = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
 * `mapa` = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+* `inimigo` = Inimigo (1, 1) Norte 100 1.0 10 20 [] (0, 0) 0
+* `jogo` = Jogo base [portal] [torre] mapa [inimigo] [] Um
+
+>>>
