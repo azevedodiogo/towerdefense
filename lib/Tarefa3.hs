@@ -159,3 +159,8 @@ atualizaInimigoID t = map (\(id, ini) -> (id, atingeInimigo t ini))
 [(2,Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (10.0,10.0), tempoInimigo = 0.0})]
 
 -}
+
+filtraInimigoID :: [(Int, Inimigo)] -> [(Int, Inimigo)] -> [(Int, Inimigo)]
+filtraInimigoID linicial latingidos = filter (\(id, _) -> id `notElem` map fst latingidos) linicial
+
+
