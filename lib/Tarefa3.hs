@@ -190,3 +190,7 @@ atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre 
 * `onda2` = Onda {inimigosOnda = [], cicloOnda = 10, tempoOnda = 5, entradaOnda = 0}
 
 >>> atualizaOnda 0.2 [onda1]
+[Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 10, tempoOnda = 4.8, entradaOnda = 0}]
+
+>>> atualizaOnda 0.2 [onda2]
+[]
