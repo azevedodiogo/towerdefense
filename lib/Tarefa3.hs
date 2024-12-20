@@ -152,3 +152,7 @@ atualizaInimigoID t = map (\(id, ini) -> (id, atingeInimigo t ini))
                      (1, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0),
                      (2, Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (10.0, 10.0) 0) ]
           
+* `listaInimigosAtingidos` = [(0, Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0),
+                              (1, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0) ]
+
+>>> filtraInimigoID listaInimigos listaInimigosAtingidos
