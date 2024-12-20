@@ -164,3 +164,7 @@ filtraInimigoID :: [(Int, Inimigo)] -> [(Int, Inimigo)] -> [(Int, Inimigo)]
 filtraInimigoID linicial latingidos = filter (\(id, _) -> id `notElem` map fst latingidos) linicial
 
 
+
+-- função principal
+
+{- | a função `atualizaTorres` faz o mesmo que a 'disparaTorre' mas para todas as torres em jogo. -}
