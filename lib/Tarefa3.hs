@@ -177,3 +177,7 @@ atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- COMPORTAMENTO DOS PORTAIS 
+
