@@ -156,3 +156,6 @@ atualizaInimigoID t = map (\(id, ini) -> (id, atingeInimigo t ini))
                               (1, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0) ]
 
 >>> filtraInimigoID listaInimigos listaInimigosAtingidos
+[(2,Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (10.0,10.0), tempoInimigo = 0.0})]
+
+-}
