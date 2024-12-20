@@ -168,3 +168,8 @@ filtraInimigoID linicial latingidos = filter (\(id, _) -> id `notElem` map fst l
 -- função principal
 
 {- | a função `atualizaTorres` faz o mesmo que a 'disparaTorre' mas para todas as torres em jogo. -}
+
+atualizaTorres :: Tempo -> [Torre] -> [Inimigo] -> ([Torre], [Inimigo])
+atualizaTorres _ [] inimigos = ([], inimigos)
+atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre tempo t inimigos
+                                           (novasTorres, ini) = atualizaTorres tempo ts iniAtual
