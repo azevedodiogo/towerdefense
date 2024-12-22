@@ -215,3 +215,7 @@ atualizaOnda tempo (onda:rOndas)
 
              -- mantém a onda como está
             | otherwise = onda : rOndas
+
+
+
+{- | a função `atualizaPortal` atualiza o portal e a lista de inimigos ativos, utilizando a função `ativaInimigo` da Tarefa 2. 
