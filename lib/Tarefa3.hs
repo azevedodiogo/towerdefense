@@ -225,3 +225,7 @@ atualizaOnda tempo (onda:rOndas)
 * `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda]}
 * `onda` = Onda {inimigosOnda = [inimigo], cicloOnda = 10, tempoOnda = 0, entradaOnda = 0}
 * `inimigo` = Inimigo (0.5, 0.5) Norte 100.0 1.0 10.0 20 [] (0.5, 0.5) 0
+* `inimigos` = [Inimigo (2.5, 3.0) Oeste 100 4 30 23 [Projetil Gelo (Finita 4), Projetil Resina Infinita] (0.5, 0.5) 0]
+
+>>> atualizaPortal 0.2 portal inimigos
+(Portal {posicaoPortal = (0.5,0.5), ondasPortal = []},
