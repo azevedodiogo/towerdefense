@@ -254,3 +254,8 @@ atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, n
 
                                                         in (portalAtualizado : portaisAtualizados, inimigosFinais)
 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- COMPORTAMENTO DOS INIMIGOS
