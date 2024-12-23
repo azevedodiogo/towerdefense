@@ -279,3 +279,9 @@ caminho portal base mapa = auxCaminho portal [] base mapa
 
 
 {- | a função `auxCaminho` auxilia a função 'caminho', utilizando as funções `encontraVizinhos` e `removeVisitados` da Tarefa 1. -}
+
+auxCaminho :: (Int, Int) -> [(Int, Int)] -> (Int, Int) -> Mapa -> [(Int, Int)]
+auxCaminho posAtual visitados base mapa
+
+     -- chegou à base
+    | posAtual == base = [posAtual]
