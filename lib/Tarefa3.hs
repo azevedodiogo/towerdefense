@@ -250,3 +250,7 @@ atualizaPortal tempo portal iniAtivos =
 atualizaPortais :: Tempo -> [Portal] -> [Inimigo] -> ([Portal], [Inimigo])
 atualizaPortais _ [] iniAtivos = ([], iniAtivos)
 atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, novosInimigos) = atualizaPortal tempo portal iniAtivos
+                                                            (portaisAtualizados, inimigosFinais) = atualizaPortais tempo restoPortais novosInimigos
+
+                                                        in (portalAtualizado : portaisAtualizados, inimigosFinais)
+
