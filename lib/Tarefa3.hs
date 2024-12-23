@@ -268,3 +268,6 @@ atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, n
 * `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda]}
 * `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
 * `mapa` = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+
+>>> caminho (0, 0) (2, 2) mapa
+[(0,0),(0,1),(1,1),(2,1),(2,2)]
