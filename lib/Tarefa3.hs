@@ -241,3 +241,8 @@ atualizaPortal tempo portal iniAtivos =
                     (novoPortal, novosInimigos) = ativaInimigo portalAtualizado iniAtivos   -- a 'ativaInimigo' é da Tarefa2
 
                 in (novoPortal, novosInimigos)
+
+
+-- função principal
+
+{- | a função `atualizaPortais` faz o mesmo que a `atualizaPortal`, mas para todos os portais do jogo. -}
