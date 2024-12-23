@@ -276,3 +276,6 @@ atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, n
 
 caminho :: (Int, Int) -> (Int, Int) -> Mapa -> [(Int, Int)]
 caminho portal base mapa = auxCaminho portal [] base mapa
+
+
+{- | a função `auxCaminho` auxilia a função 'caminho', utilizando as funções `encontraVizinhos` e `removeVisitados` da Tarefa 1. -}
