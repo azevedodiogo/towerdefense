@@ -238,3 +238,6 @@ atualizaPortal tempo portal iniAtivos =
 
                 let ondasAtual = atualizaOnda tempo (ondasPortal portal)
                     portalAtualizado = portal {ondasPortal = ondasAtual}
+                    (novoPortal, novosInimigos) = ativaInimigo portalAtualizado iniAtivos   -- a 'ativaInimigo' é da Tarefa2
+
+                in (novoPortal, novosInimigos)
