@@ -361,3 +361,8 @@ direcaoToEste d pos p' = case d of
 
     where (x,y) = (floor (fst pos), floor (snd pos))
           (z,w) = (ceiling (fst pos), ceiling (snd pos))
+
+
+{- | a função `atualizaPosicao` atualiza a posição do inimigo conforme a sua direcao e velocidade. 
+
+=== Exemplos de Uso:
