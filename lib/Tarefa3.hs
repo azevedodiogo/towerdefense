@@ -379,3 +379,7 @@ atualizaPosicao :: [Projetil] -> Direcao -> Posicao -> Tempo -> Float -> Posicao
 atualizaPosicao p d (x,y) t v = case d of
     Norte -> if elem Resina tp then (x, y - v * t * 0.7) else (x, y - v * t)
     Sul -> if elem Resina tp then (x, y + v * t * 0.7) else (x, y + v * t)
+    Este -> if elem Resina tp then (x + v * t * 0.7, y) else (x + v * t, y)
+    Oeste -> if elem Resina tp then (x - v * t * 0.7, y) else (x - v * t, y)
+
+    where tp = map tipoProjetil p 
