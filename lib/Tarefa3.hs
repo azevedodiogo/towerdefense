@@ -374,3 +374,8 @@ direcaoToEste d pos p' = case d of
 (4.0, 2.0)
 
 -}
+
+atualizaPosicao :: [Projetil] -> Direcao -> Posicao -> Tempo -> Float -> Posicao
+atualizaPosicao p d (x,y) t v = case d of
+    Norte -> if elem Resina tp then (x, y - v * t * 0.7) else (x, y - v * t)
+    Sul -> if elem Resina tp then (x, y + v * t * 0.7) else (x, y + v * t)
