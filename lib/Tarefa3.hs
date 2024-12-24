@@ -335,3 +335,8 @@ direcaoToOeste d pos p' = case d of
 
 
 {- | a função `direcaoToEste` atualiza a direção do inimigo conforme a sua posição e o mapa, caso o portal esteja à esquerda da base. -}
+
+direcaoToEste :: Direcao -> Posicao -> [(Int, Int)] -> Direcao
+direcaoToEste d pos p' = case d of
+
+    Norte -> if (x, w-1) `elem` p' then Norte
