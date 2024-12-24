@@ -413,3 +413,8 @@ proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinhe
         novaDirecao | isPortalesq = direcaoToEste direcao pos caminhoPortalBase
                     | otherwise = direcaoToOeste direcao pos caminhoPortalBase                 -- nova direção do Inimigo, utilizando a 'atualizaDirecao'
         novaPosicao = atualizaPosicao projeteis novaDirecao pos t velocidade                   -- nova posicao do Inimigo, utilizando a 'atualizaPosicao' e a nova direcao        
+
+    in Inimigo novaPosicao novaDirecao vida velocidade dano dinheiro projeteis posi tempo
+
+                where posPortalInt = arredondaPosicao portal
+                      posBaseInt = arredondaPosicao base
