@@ -405,3 +405,6 @@ atualizaProjetil t ((Projetil tipo duracao):ps) = case duracao of
 
 
 {- | a função `proxMovimento` devolve o proximo movimento do inimigo, isto é, a sua direção e posicao, utilizando as funçoes `atualizaPosicao` e `direcaoToEste` / `direcaoToOeste`. -}
+
+proxMovimento :: Tempo -> Mapa -> Posicao -> Posicao -> Inimigo -> Inimigo
+proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinheiro projeteis posi tempo) =
