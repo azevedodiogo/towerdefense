@@ -366,3 +366,6 @@ direcaoToEste d pos p' = case d of
 {- | a função `atualizaPosicao` atualiza a posição do inimigo conforme a sua direcao e velocidade. 
 
 === Exemplos de Uso:
+
+>>> atualizaPosicao [Projetil Resina Infinita] Norte (2.0, 3.0) 1.0 1.0
+(2.0, 2.3)
