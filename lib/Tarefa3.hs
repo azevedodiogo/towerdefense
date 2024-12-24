@@ -408,3 +408,8 @@ atualizaProjetil t ((Projetil tipo duracao):ps) = case duracao of
 
 proxMovimento :: Tempo -> Mapa -> Posicao -> Posicao -> Inimigo -> Inimigo
 proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinheiro projeteis posi tempo) =
+
+    let caminhoPortalBase = caminho posPortalInt posBaseInt mapa                               -- obtém o caminho do portal à base
+        novaDirecao | isPortalesq = direcaoToEste direcao pos caminhoPortalBase
+                    | otherwise = direcaoToOeste direcao pos caminhoPortalBase                 -- nova direção do Inimigo, utilizando a 'atualizaDirecao'
+        novaPosicao = atualizaPosicao projeteis novaDirecao pos t velocidade                   -- nova posicao do Inimigo, utilizando a 'atualizaPosicao' e a nova direcao        
