@@ -331,3 +331,7 @@ direcaoToOeste d pos p' = case d of
 
     where (x,y) = (floor (fst pos), floor (snd pos))            -- arredonda por defeito
           (z,w) = (ceiling (fst pos), ceiling (snd pos))        -- arredonda por excesso
+
+
+
+{- | a função `direcaoToEste` atualiza a direção do inimigo conforme a sua posição e o mapa, caso o portal esteja à esquerda da base. -}
