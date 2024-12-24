@@ -369,3 +369,8 @@ direcaoToEste d pos p' = case d of
 
 >>> atualizaPosicao [Projetil Resina Infinita] Norte (2.0, 3.0) 1.0 1.0
 (2.0, 2.3)
+
+>>> atualizaPosicao [] Este (1.0, 2.0) 2.0 1.5
+(4.0, 2.0)
+
+-}
