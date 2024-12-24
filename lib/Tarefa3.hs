@@ -396,3 +396,7 @@ atualizaPosicao p d (x,y) t v = case d of
 
 atualizaProjetil :: Tempo -> [Projetil] -> [Projetil]
 atualizaProjetil _ [] = []
+atualizaProjetil t ((Projetil tipo duracao):ps) = case duracao of
+
+    Finita d -> if d > t then Projetil tipo (Finita (d-t)) : atualizaProjetil t ps
+                else atualizaProjetil t ps
