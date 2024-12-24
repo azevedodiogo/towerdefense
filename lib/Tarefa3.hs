@@ -358,3 +358,6 @@ direcaoToEste d pos p' = case d of
              else if (x, y-1) `elem` p' then Norte
              else if (x, y+1) `elem` p' then Sul
              else Este
+
+    where (x,y) = (floor (fst pos), floor (snd pos))
+          (z,w) = (ceiling (fst pos), ceiling (snd pos))
