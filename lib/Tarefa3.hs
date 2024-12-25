@@ -485,3 +485,8 @@ atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidad
 removeInimigoHitBase :: Base -> [Inimigo] -> (Base, [Inimigo])
 removeInimigoHitBase base [] = (base, [])
 removeInimigoHitBase b (i:is)
+
+    | sqrt ((x-x')^2 + (y-y')^2) <= 0.5 = removeInimigoHitBase b {vidaBase = vida - dano} is
+
+    | otherwise = let (b',is') = removeInimigoHitBase b is
+                  in (b', i:is')
