@@ -490,3 +490,8 @@ removeInimigoHitBase b (i:is)
 
     | otherwise = let (b',is') = removeInimigoHitBase b is
                   in (b', i:is')
+
+    where (x,y) = posicaoBase b
+          (x',y') = posicaoInimigo i
+          vida = vidaBase b
+          dano = ataqueInimigo i
