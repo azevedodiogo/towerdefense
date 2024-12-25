@@ -443,3 +443,8 @@ proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinhe
 Inimigo {posicaoInimigo = (0.5,1.0), direcaoInimigo = Este, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}, Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 1.5}], posInicial = (0.5,0.5), tempoInimigo = 0.0}
 
 >>> atualizaEstadoInimigo 0.5 mapa (2.2, 2.5) inimigo2
+Inimigo {posicaoInimigo = (0.85,1.0), direcaoInimigo = Este, vidaInimigo = 100.0, velocidadeInimigo = 0.8, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}], posInicial = (0.5,0.5), tempoInimigo = 0.0}
+
+-}
+
+atualizaEstadoInimigo :: Tempo -> Mapa -> Posicao -> Inimigo -> Inimigo
