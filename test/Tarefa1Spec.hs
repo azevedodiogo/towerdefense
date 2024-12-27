@@ -18,3 +18,8 @@ torre01 = Torre
     tempoTorre = 1.5,
     projetilTorre = Projetil { tipoProjetil = Fogo, duracaoProjetil = Finita 3.0 }
   }
+
+-- | Inimigo 1 para testes.
+inimigo01 :: Inimigo
+inimigo01 = Inimigo
+  { posicaoInimigo = (1.0, 1.0),
