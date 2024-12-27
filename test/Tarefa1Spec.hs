@@ -36,3 +36,7 @@ inimigo01 = Inimigo
 -- | Base 1 para testes.
 base01 :: Base
 base01 = Base
+  { vidaBase = 100.0,
+    posicaoBase = (2.0, 0),
+    creditosBase = 100
+  }
