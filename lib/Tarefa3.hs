@@ -532,3 +532,8 @@ e serve para saber a que portal (dos vários que podem haver no jogo) correspond
 
 atualizaInimigos :: Tempo -> Mapa -> Base -> [Inimigo] -> (Base, [Inimigo])
 atualizaInimigos tempo mapa base inimigos = (baseAtualizada, inimigosAtualizados)
+
+    where (inimigosVivos, creditosAtualizados) = removeInimigosSemVida inimigos (creditosBase base)
+          (baseAtualizada, inimigosAtingidos) = removeInimigoHitBase (Base (vidaBase base) (posicaoBase base) creditosAtualizados) inimigosVivos
+
+          inimigosAtualizados = map (atualizaEstadoInimigo tempo mapa (posicaoBase base)) inimigosAtingidos
