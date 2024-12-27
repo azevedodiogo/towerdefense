@@ -515,3 +515,7 @@ removeInimigosSemVida [] c = ([], c)
 removeInimigosSemVida (i:is) c | vida <= 0 = removeInimigosSemVida is (c+dinheiro)
                                | otherwise = let (is',c') = removeInimigosSemVida is c
                                              in (i : is', c')
+
+        where vida = vidaInimigo i
+              dinheiro = butimInimigo i
+
