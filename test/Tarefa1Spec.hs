@@ -15,3 +15,6 @@ torre01 = Torre
     alcanceTorre = 5.0,
     rajadaTorre = 3,
     cicloTorre = 2.0,
+    tempoTorre = 1.5,
+    projetilTorre = Projetil { tipoProjetil = Fogo, duracaoProjetil = Finita 3.0 }
+  }
