@@ -45,3 +45,7 @@ base01 = Base
 onda01 :: Onda
 onda01 = Onda
   { inimigosOnda = [inimigo01],
+    cicloOnda = 3.0,
+    tempoOnda = 3.0,
+    entradaOnda = 5.0
+  }
