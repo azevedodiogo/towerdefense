@@ -495,3 +495,7 @@ removeInimigoHitBase b (i:is)
           (x',y') = posicaoInimigo i
           vida = vidaBase b
           dano = ataqueInimigo i
+
+
+
+{- | a função `removeInimigosSemVida` elimina os inimigos que já não têm vida e adiciona o seu butim aos creditos da base. 
