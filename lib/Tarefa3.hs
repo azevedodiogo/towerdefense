@@ -524,3 +524,8 @@ removeInimigosSemVida (i:is) c | vida <= 0 = removeInimigosSemVida is (c+dinheir
 -- função principal
 
 {- | a função `atualizaInimigos` atualiza todos os inimigos em jogo, utilizando as funções `removeInimigosSemVida`, `removeInimigoHitBase` e `atualizaEstadoInimigo`. 
+
+Adicionamos um parâmetro (posicão inicial) no datatype do Inimigo. Essa posição corresponde à posição do portal que origina o inimigo,
+e serve para saber a que portal (dos vários que podem haver no jogo) corresponde o inimigo, para que este siga o caminho desse portal à base.
+
+-}
