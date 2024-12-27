@@ -32,3 +32,7 @@ inimigo01 = Inimigo
     posInicial = (0.0, 0.0),
     tempoInimigo = 0.0
   }
+
+-- | Base 1 para testes.
+base01 :: Base
+base01 = Base
