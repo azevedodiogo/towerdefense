@@ -40,3 +40,8 @@ base01 = Base
     posicaoBase = (2.0, 0),
     creditosBase = 100
   }
+
+-- | Onda 1 para testes.
+onda01 :: Onda
+onda01 = Onda
+  { inimigosOnda = [inimigo01],
