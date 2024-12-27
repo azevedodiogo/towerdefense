@@ -49,3 +49,7 @@ onda01 = Onda
     tempoOnda = 3.0,
     entradaOnda = 5.0
   }
+
+-- | Portal 1 para testes.
+portal01 :: Portal
+portal01 = Portal
