@@ -66,3 +66,7 @@ mapa01 =
     [Relva, Relva, Relva, Terra, Terra],
     [Relva, Terra, Relva, Relva, Agua]
   ]
+
+-- | Loja 1 para testes.
+loja01 :: Loja
+loja01 = [(50, torre01), (30, torre01)]
