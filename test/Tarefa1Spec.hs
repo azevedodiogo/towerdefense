@@ -84,3 +84,7 @@ jogo01 = Jogo
   }
 
 ---------------------------------------------------------------------------------------------------------------------------------------
+
+-- | Testa se o tipo de terreno da posição (3, 2) no mapa é Relva
+testaTerrenoMapa :: Test
+testaTerrenoMapa = "Teste 1" ~: Relva ~?= (mapaJogo jogo01) !! 2 !! 3
