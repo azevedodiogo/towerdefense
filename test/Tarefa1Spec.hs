@@ -58,3 +58,7 @@ portal01 = Portal
   }
 
 -- | Mapa 1 para testes.
+mapa01 :: Mapa
+mapa01 = 
+  [ [Terra, Terra, Terra, Terra, Relva],
+    [Relva, Terra, Terra, Relva, Relva],
