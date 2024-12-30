@@ -161,3 +161,7 @@ testaVerificaBaseSobreposicao = "Teste 18" ~: True ~?= verificaBaseSobreposicao 
 
 -- | Lista de testes da Tarefa 1
 testesTarefa1 :: Test
+testesTarefa1 =
+  TestLabel "Testes Tarefa 1" $
+    test
+      [ TestLabel "Teste 1" testaTerrenoMapa,
