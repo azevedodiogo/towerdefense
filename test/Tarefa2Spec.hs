@@ -1,0 +1,4 @@
+module Tarefa2Spec (testesTarefa2) where
+  
+import Tarefa2
+import LI12425
