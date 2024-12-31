@@ -98,3 +98,7 @@ base01 :: Base
 base01 = Base {vidaBase = 100, posicaoBase = (5.5, 2.5), creditosBase = 50}
 
 -- | Base 2 para testes.
+base02 :: Base
+base02 = Base {vidaBase = 0, posicaoBase = (5.5, 2.5), creditosBase = 50}
+
+-- | Loja 1 para testes.
