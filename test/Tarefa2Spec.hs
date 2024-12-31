@@ -19,3 +19,8 @@ inimigo03 :: Inimigo
 inimigo03 = Inimigo (10.0, 10.0) Este 50 1.5 20 40 [Projetil Resina Infinita] (0,0) 0
 
 -- | Inimigo 4 para testes.
+inimigo04 :: Inimigo
+inimigo04 = Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (2.0, 2.0) 0
+
+-- | Inimigo 5 para testes.
+inimigo05 :: Inimigo
