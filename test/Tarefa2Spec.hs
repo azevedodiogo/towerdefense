@@ -49,3 +49,7 @@ onda01 = Onda {inimigosOnda = [inimigo01, inimigo02], cicloOnda = 5, tempoOnda =
 -- | Onda 2 para testes.
 onda02 :: Onda
 onda02 = Onda {inimigosOnda = [inimigo03], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+-- | Onda 4 para testes.
+onda04 :: Onda
+onda04 = Onda {inimigosOnda = [inimigo04, inimigo05], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
