@@ -124,3 +124,7 @@ tResina01 = (120, Torre {posicaoTorre = (0, 0), danoTorre = 8, alcanceTorre = 4,
 mapa01 :: Mapa
 mapa01 =
    [  [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, t, t, t, r],
+      [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, t, r, r, r],
+      [r, r, r, t, t, t, t, t, r, r, r, r, r, r, r, r, r, t, r, r, r],
+      [r, r, r, t, r, r, r, t, r, r, r, r, r, r, r, r, r, t, r, r, r],
