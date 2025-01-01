@@ -172,3 +172,6 @@ testaAtivaInimigo = "Teste 5" ~: (Portal {posicaoPortal = (0.5,0.5), ondasPortal
 
 
 -- | Testa se a função pode lançar um projétil.
+testaPodeLançar :: Test
+testaPodeLançar = "Teste 6" ~: True ~?= podelançar onda01
+
