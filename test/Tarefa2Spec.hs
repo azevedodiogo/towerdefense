@@ -133,3 +133,7 @@ mapa01 =
       [r, r, r, t, r, r, r, t, r, r, r, r, r, r, a, r, r, t, r, r, r],
       [r, r, r, t, r, r, r, t, r, r, r, r, t, t, t, t, t, t, r, r, r],
       [r, r, r, t, r, r, r, t, r, r, r, r, t, r, a, r, r, r, r, r, r],
+      [r, r, r, t, r, r, r, t, r, r, r, r, t, r, a, r, r, r, r, r, r],
+      [r, r, r, t, r, r, r, t, r, r, r, r, t, r, a, r, r, r, r, r, r],
+      [r, r, r, t, r, r, r, t, t, t, t, t, t, r, a, r, r, r, r, r, r],
+      [r, r, r, t, r, r, r, r, r, r, r, r, r, r, a, a, a, a, a, a, a],
