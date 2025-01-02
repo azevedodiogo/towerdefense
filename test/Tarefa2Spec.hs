@@ -207,3 +207,7 @@ testesTarefa2 =
       [ TestLabel "Teste 1" testaInimigosAlcanceTorre,
         TestLabel "Teste 2" testaAtingeInimigo,
         TestLabel "Teste 3" testaIguais,
+        TestLabel "Teste 4" testaResolveConflitoProjetil,
+        TestLabel "Teste 5" testaAtivaInimigo,
+        TestLabel "Teste 6" testaPodeLançar,
+        TestLabel "Teste 7" testaRemoveInimigo,
