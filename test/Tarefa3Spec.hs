@@ -62,3 +62,7 @@ inimigo1Atualiza :: Inimigo
 inimigo1Atualiza = Inimigo {posicaoInimigo = (1.3,1.0), direcaoInimigo = Este, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (0.0,0.0), tempoInimigo = 0.0}
 
 -- | Inimigo para teste da função atualizaOnda.
+inimigo2Atualiza :: Inimigo
+inimigo2Atualiza = Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (7.0,5.0), tempoInimigo = 0.0}
+
+-- | Onda para teste da função atualizaOnda.
