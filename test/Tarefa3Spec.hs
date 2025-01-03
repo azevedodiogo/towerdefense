@@ -100,3 +100,7 @@ portalCaminho = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [ondaCaminho]}
 -- | Onda para teste da função caminho.
 ondaCaminho :: Onda
 ondaCaminho = Onda {inimigosOnda = [inimigoAtualizaAtualiza], cicloOnda = 10, tempoOnda = 5, entradaOnda = 0}
+
+-- | Inimigo para teste da função caminho.
+baseCaminho :: Base
+baseCaminho = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
