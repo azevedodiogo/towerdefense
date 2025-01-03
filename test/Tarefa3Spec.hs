@@ -108,3 +108,9 @@ baseCaminho = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
 -- | Mapa para teste da função caminho.
 mapaCaminho :: Mapa
 mapaCaminho = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+
+
+
+-- | Base para teste da função atualizaEstadoInimigo.
+baseAtualizaEstadoInimigo :: Base
+baseAtualizaEstadoInimigo = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
