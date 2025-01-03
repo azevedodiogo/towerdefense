@@ -58,3 +58,7 @@ listaInimigosAtingidosFiltraID = [(0, Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20
 
 
 -- | Inimigo para teste da função atualizaOnda.
+inimigo1Atualiza :: Inimigo
+inimigo1Atualiza = Inimigo {posicaoInimigo = (1.3,1.0), direcaoInimigo = Este, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (0.0,0.0), tempoInimigo = 0.0}
+
+-- | Inimigo para teste da função atualizaOnda.
