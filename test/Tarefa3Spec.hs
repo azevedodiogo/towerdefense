@@ -91,3 +91,8 @@ inimigoAtualizaAtualiza = Inimigo (0.5, 0.5) Norte 100.0 1.0 10.0 20 [] (0.5, 0.
 inimigosAtualizaAtualiza :: [Inimigo]
 inimigosAtualizaAtualiza = [Inimigo (2.5, 3.0) Oeste 100 4 30 23 [Projetil Gelo (Finita 4), Projetil Resina Infinita] (0.5, 0.5) 0]
 
+
+
+-- | Portal para teste da função caminho.
+portalCaminho :: Portal
+portalCaminho = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [ondaCaminho]}
