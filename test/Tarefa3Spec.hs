@@ -71,3 +71,6 @@ ondaAtualiza1 = Onda {inimigosOnda = [inimigo1Atualiza, inimigo2Atualiza], ciclo
 
 -- | Onada para teste da função atualizaOnda.
 ondaAtualiza2 :: Onda
+ondaAtualiza2 = Onda {inimigosOnda = [], cicloOnda = 10, tempoOnda = 5, entradaOnda = 0}
+
+
