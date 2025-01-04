@@ -126,3 +126,8 @@ inimigo1AtualizaEstadoInimigo = Inimigo (0.5, 1.0) Este 100.0 1.0 5.0 25 [Projet
 -- | Inimigo para teste da função atualizaEstadoInimigo.
 inimigo2AtualizaEstadoInimigo :: Inimigo
 inimigo2AtualizaEstadoInimigo = Inimigo (0.5, 1.0) Sul 100.0 1.0 5.0 25 [Projetil Resina Infinita] (0.5, 0.5) 0
+
+
+
+-- | Base para teste da função removeInimigoHitBase.
+baseHitBase :: Base
