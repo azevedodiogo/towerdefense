@@ -138,3 +138,9 @@ inimigosHitBase :: [Inimigo]
 inimigosHitBase = [Inimigo (2, 2) Este 100 1.0 5 25 [Projetil Resina Infinita] (0.5, 0.5) 0, Inimigo (0.5, 1.0) Sul 100 1.0 5 25 [Projetil Gelo (Finita 2)] (0.5, 0.5) 0]
 
 
+
+-- | Lista de inimigos para teste da função removeInimigosSemVida.
+baseIniSemVida :: Base
+baseIniSemVida = Base {vidaBase = 100, posicaoBase = (2.2, 2.2), creditosBase = 50}
+
+-- | Lista de inimigos para teste da função removeInimigosSemVida.
