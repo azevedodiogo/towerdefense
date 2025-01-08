@@ -164,3 +164,9 @@ testeGeraID = "Teste 3" ~: [(0,Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimi
 -- | Teste da função filtraInimigoID.
 testeFiltraID :: Test
 testeFiltraID = "Teste 4" ~: [(2,Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (10.0,10.0), tempoInimigo = 0.0})] ~=? filtraInimigoID listaInimigosFiltraID listaInimigosAtingidosFiltraID
+
+-- | Teste da função atualizaOnda.
+testeAtualizaOnda :: Test
+testeAtualizaOnda = "Teste 5" ~: [Onda {inimigosOnda = [inimigo1Atualiza, inimigo2Atualiza], cicloOnda = 10, tempoOnda = 4.8, entradaOnda = 0}] ~=? atualizaOnda 0.2 [ondaAtualiza1]
+
+-- | Teste da função atualizaPortal.
