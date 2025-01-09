@@ -200,3 +200,6 @@ testeHitBase = "Teste 12" ~: (Base {vidaBase = 75.0, posicaoBase = (2.2,2.2), cr
 -- | Teste da função removeInimigosSemVida.
 testeRemoveInimigosSemVida :: Test
 testeRemoveInimigosSemVida = "Teste 13" ~: ([Inimigo {posicaoInimigo = (0.5,1.0), direcaoInimigo = Sul, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 5.0, butimInimigo = 25, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 2.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0}],75) ~=? removeInimigosSemVida inimigosIniSemVida 50
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
