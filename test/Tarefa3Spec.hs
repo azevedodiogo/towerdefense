@@ -203,3 +203,8 @@ testeRemoveInimigosSemVida = "Teste 13" ~: ([Inimigo {posicaoInimigo = (0.5,1.0)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+-- | Testes da Tarefa 3.
+testesTarefa3 :: Test
+testesTarefa3 =
+  TestLabel "Testes Tarefa 3" $
