@@ -221,3 +221,7 @@ testesTarefa3 =
         TestLabel "Teste 10" testeAtualizaProjetil,
         TestLabel "Teste 11" testeAtualizaEstadoInimigo,
         TestLabel "Teste 12" testeHitBase,
+        TestLabel "Teste 13" testeRemoveInimigosSemVida
+      ]
+
+
