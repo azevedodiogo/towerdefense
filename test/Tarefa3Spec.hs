@@ -213,3 +213,7 @@ testesTarefa3 =
         TestLabel "Teste 2" testeDisparaTorre,
         TestLabel "Teste 3" testeGeraID,
         TestLabel "Teste 4" testeFiltraID,
+        TestLabel "Teste 5" testeAtualizaOnda,
+        TestLabel "Teste 6" testeAtualizaPortal,
+        TestLabel "Teste 7" testeCaminho,
+        TestLabel "Teste 8" testaDirecaoToOeste,
