@@ -18,23 +18,23 @@ import Data.List
 
 validaJogo :: Jogo -> Bool
 validaJogo j = verificaPortalNumero j &&
-              verificaPosiPortal j &&
-              verificaCaminhoTerra j &&
-              verificaPortalSobreposicao j &&
-              verificaOndaPortal j &&
-              verificaInimigosPorLancar j &&
-              verificaInimigosTerra j &&
-              verificaInimigosSobreposicao j &&
-              verificaVelocidadeInimigo j &&
-              verificaProjeteisAtivos j &&
-              verificaPosiTorre j &&
-              verificaAlcanceTorre j &&
-              verificaRajadaTorre j &&
-              verificaCicloTorre j &&
-              verificaNotSobreposicaoTorre j &&
-              verificaBaseTerra j &&
-              verificaBaseCredito j &&
-              verificaBaseSobreposicao j
+               verificaPosiPortal j &&
+               verificaCaminhoTerra j &&
+               verificaPortalSobreposicao j &&
+               verificaOndaPortal j &&
+               verificaInimigosPorLancar j &&
+               verificaInimigosTerra j &&
+               verificaInimigosSobreposicao j &&
+               verificaVelocidadeInimigo j &&
+               verificaProjeteisAtivos j &&
+               verificaPosiTorre j &&
+               verificaAlcanceTorre j &&
+               verificaRajadaTorre j &&
+               verificaCicloTorre j &&
+               verificaNotSobreposicaoTorre j &&
+               verificaBaseTerra j &&
+               verificaBaseCredito j &&
+               verificaBaseSobreposicao j
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -198,10 +198,10 @@ verificaOndaPortal j = all verificaOndaPortal2 portais
 
     where portais = portaisJogo j
 
-          verificaOndaPortal2 portal = length (verificaOndasAtivas (ondasPortal portal)) <= 1       -- o número de ondas ativas de um portal tem de ser <= 1
+          verificaOndaPortal2 portal = length (verificaOndasAtivas (ondasPortal portal)) <= 1       -- O número de ondas ativas de um portal tem de ser <= 1.
 
           verificaOndasAtivasFiltro onda = entradaOnda onda <= 0
-          verificaOndasAtivas = filter verificaOndasAtivasFiltro                                    -- devolve uma lista com as ondas ativas de um portall
+          verificaOndasAtivas = filter verificaOndasAtivasFiltro                                    -- Devolve uma lista com as ondas ativas de um portal.
 
 
 
@@ -439,6 +439,7 @@ verificaSemIncompativeis tipos = not (elem Fogo tipos && elem Resina tipos) && n
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
+-- TORRES 
 
 {- | a função `verificaPosiTorre` verifica se as torres estão sobre a relva, utilizando a função `verificaPosiTorre2`. 
 
@@ -594,10 +595,10 @@ verificaBaseCredito j = verificaBaseCredito2 (baseJogo j)
 * `jogo1` = Jogo {baseJogo = Base {posicaoBase = (3,3), vidaBase = 100, creditosBase = 50}, torresJogo = [Torre (2, 0) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], portaisJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
 * `jogo2` = Jogo {baseJogo = Base {posicaoBase = (3,3), vidaBase = 100, creditosBase = 50}, torresJogo = [Torre (3, 3) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], portaisJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
 
->>> verificaBaseSobreposicao jogo
+>>> verificaBaseSobreposicao jogo1
 True
 
->>> verificaBaseSobreposicao jogo
+>>> verificaBaseSobreposicao jogo2
 False
 
 -}

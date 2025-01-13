@@ -129,9 +129,9 @@ data Inimigo = Inimigo
     butimInimigo :: Creditos,
     -- | Efeitos secundários ativos no inimigo.
     projeteisInimigo :: [Projetil],
-    -- | Posicao do portal
+    -- | Posição do portal.
     posInicial :: Posicao,
-    -- | Tempo (animação dos inimigos)
+    -- | Tempo (animação no movimento dos inimigos).
     tempoInimigo :: Float
   }
   deriving (Eq, Show)
