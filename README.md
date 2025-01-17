@@ -22,8 +22,9 @@ Para que estes inimigos surjam são lançadas pelos portais ondas, cada uma comp
 O funcionamento dos portais é essencial para o ritmo do jogo, criando desafios constantes que o jogador precisa de enfrentar e superar.
 
 Durante o jogo, o jogador utilizará o teclado para executar ações como a aquisição de torres, reinicialização do jogo e pausa.
+
 Para pausar o jogo, o jogador deve pressionar a tecla 'p'.
-Ao desejar adquirir uma torre, o jogador deve pressionar inicialmente a tecla 'c' (de "comprar"), momento em que um círculo amarelo é exibido no canto superior esquerdo. Esse círculo indica a posição proposta para a colocação da torre. O jogador deve utilizar as teclas direcionais para mover o círculo amarelo pelo mapa e escolher a localização desejada.
+Para adquirir uma torre, o jogador deve pressionar inicialmente a tecla 'c' (de "comprar"), momento em que um círculo amarelo é exibido no canto superior esquerdo. Esse círculo indica a posição proposta para a colocação da torre. O jogador deve utilizar as teclas direcionais para mover o círculo amarelo pelo mapa e escolher a localização desejada.
 Para concluir a compra de uma torre, o jogador deve pressionar uma das teclas numéricas, onde cada número corresponde a uma torre específica. Caso o jogador não possua créditos suficientes para a transação, o círculo mudará de amarelo para vermelho, indicando a impossibilidade de prosseguir com a compra.
 
 No contexto da estrutura do jogo, particularmente no que diz respeito à conclusão do nível, a vitória é obtida quando o jogador consegue eliminar todos os adversários, assegurando a defesa integral da base. Por sua vez, a derrota ocorre com a destruição da base pelas forças inimigas.
@@ -58,7 +59,7 @@ cabal test --enable-coverage
 
 Execute os exemplos da documentação como testes com a biblioteca
 [`doctest`](https://hackage.haskell.org/package/doctest). Para instalar o
-executavel utilize o comando `cabal install doctest`.
+executável utilize o comando `cabal install doctest`.
 
 ```bash
 cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest --verbose=0
