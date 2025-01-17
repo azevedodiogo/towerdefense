@@ -37,7 +37,7 @@ cabal run --verbose=0
 
 ## Interpretador
 
-Para abrir o interpretador do Haskell (GHCi) com o projeto carregado, utilize o comando `repl` do Cabal
+Para abrir o interpretador do Haskell (GHCi) com o projeto carregado, utilize o comando `repl` do Cabal.
 
 ```bash
 cabal repl
