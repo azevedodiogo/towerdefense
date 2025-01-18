@@ -19,7 +19,8 @@ module LI12425 (
     -- ** Jogo
     Jogo(..), Onda(..), Loja,
     -- * Funções auxiliares
-    geraAleatorios
+    geraAleatorios,
+    NivelJogo(..),
     ) where
 
 import System.Random (mkStdGen, randoms)
@@ -53,7 +54,7 @@ data Base = Base
     -- | Balanço de créditos do jogador.
     creditosBase :: Creditos
   }
-  deriving (Show)
+  deriving (Eq, Show)
 
 -- | Distância entre duas posições.
 type Distancia = Float
@@ -86,7 +87,7 @@ data Torre = Torre
     -- | Efeito secundário associado ao tipo de projétil da torre.
     projetilTorre :: Projetil
   }
-  deriving (Show)
+  deriving (Eq, Show)
 
 -- | Loja de torres disponíveis para construir por uma quantidade de créditos.
 type Loja = [(Creditos, Torre)]
@@ -127,7 +128,11 @@ data Inimigo = Inimigo
     -- | Créditos que o jogador recebe ao derrotar o inimigo.
     butimInimigo :: Creditos,
     -- | Efeitos secundários ativos no inimigo.
-    projeteisInimigo :: [Projetil]
+    projeteisInimigo :: [Projetil],
+    -- | Posição do portal.
+    posInicial :: Posicao,
+    -- | Tempo (animação no movimento dos inimigos).
+    tempoInimigo :: Float
   }
   deriving (Eq, Show)
 
@@ -166,9 +171,14 @@ data Jogo = Jogo
     -- | Inimigos em movimento no mapa.
     inimigosJogo :: [Inimigo],
     -- | Loja de torres disponíveis para construir.
-    lojaJogo :: Loja
+    lojaJogo :: Loja,
+    -- | Nível do jogo.
+    nivelJogo :: NivelJogo
   }
-  deriving (Show)
+  deriving (Eq, Show)
+
+-- | Indica o nível do Jogo em que o jogador se encontra.
+data NivelJogo = Um | Dois | Tres deriving (Eq, Show)
 
 -- | Valor inicial que determina a sequência de números pseudo-aleatórios.
 type Semente = Int
