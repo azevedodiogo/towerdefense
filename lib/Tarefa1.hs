@@ -522,3 +522,67 @@ verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
 
 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- BASE
+
+
+{- | a função `verificaBaseTerra` verifica se a base está posicionada em Terra. 
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = Base 100 (0.3, 0) 50, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = Base 100 (5.5, 0) 50, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
+ 
+
+>>> verificaBaseTerra jogo1
+True
+
+>>> verificaBaseTerra jogo2
+False
+
+-}
+
+
+verificaBaseTerra :: Jogo -> Bool
+verificaBaseTerra j = let colunaNova = floor (fst (posicaoBase (baseJogo j)))
+                          linhaNova = floor (snd (posicaoBase (baseJogo j)))
+                          mapa = mapaJogo j
+
+                      in ((linhaNova >= 0 && linhaNova < length mapa && colunaNova >= 0 && colunaNova < length (mapa !! linhaNova)) && ((mapa !! linhaNova) !! colunaNova == Terra))
+
+
+{- | a função `verificaBaseCredito` verifica se o credito da base é maior ou igual a 0 (utiliza a mesma lógica que a `verificaAlcanceTorre`, mas para a base). -}
+
+verificaBaseCredito :: Jogo -> Bool
+verificaBaseCredito j = verificaBaseCredito2 (baseJogo j)
+
+    where verificaBaseCredito2 base = creditosBase base >= 0
+
+
+
+{- | a função `verificaBaseSobreposicao` verifica se a posição da base não está sobreposta a nenhum portal ou torre. 
+
+
+=== Exemplos de Uso:
+
+* `jogo1` = Jogo {baseJogo = Base {posicaoBase = (3,3), vidaBase = 100, creditosBase = 50}, torresJogo = [Torre (2, 0) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], portaisJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = Base {posicaoBase = (3,3), vidaBase = 100, creditosBase = 50}, torresJogo = [Torre (3, 3) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], portaisJogo = [], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+>>> verificaBaseSobreposicao jogo1
+True
+
+>>> verificaBaseSobreposicao jogo2
+False
+
+-}
+
+verificaBaseSobreposicao :: Jogo -> Bool
+verificaBaseSobreposicao j = let basePos = posicaoBase (baseJogo j)
+                                 torres = map posicaoTorre (torresJogo j)
+                                 portais = map posicaoPortal (portaisJogo j)
+
+                             in not (elem basePos torres || elem basePos portais)
