@@ -20,6 +20,7 @@ validaJogo :: Jogo -> Bool
 validaJogo j = verificaPortalNumero j &&
                verificaPosiPortal j &&
                verificaCaminhoTerra j &&
+               verificaPortalSobreposicao j &&
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
