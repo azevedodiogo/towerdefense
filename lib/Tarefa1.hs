@@ -14,6 +14,12 @@ module Tarefa1 where
 import LI12425
 import Data.List
 
+{- | a função `validaJogo` verifica se um jogo é válido, ou seja, se cumpre com todos os requisitos, neste caso, se todas as funções desenvolvidas dão como resultado 'True'. -}
+
+validaJogo :: Jogo -> Bool
+validaJogo j = verificaPortalNumero j
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- PORTAIS 
