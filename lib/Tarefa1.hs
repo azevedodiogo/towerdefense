@@ -34,6 +34,7 @@ validaJogo j = verificaPortalNumero j &&
                verificaNotSobreposicaoTorre j &&
                verificaBaseTerra j &&
                verificaBaseCredito j &&
+               verificaBaseSobreposicao j
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
