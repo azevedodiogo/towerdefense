@@ -8,7 +8,7 @@ A interface inicial do jogo apresenta uma disposição apelativa de menus e opç
 
 O mapa é uma das bases do Tower Defense, sendo esta uma grelha constituída por três tipos de terrenos distintos, sendo eles a terra, a água e a relva. Além do mapa, elementos como torres, bases e portais são fundamentais para a estrutura do jogo.
 
-As torres, colocadas sobre a relva, disparam automaticamente projéteis que causam dano ou aplicam efeitos como gelo (imobilizando os inimigos), fogo (dano contínuo ao inimigo) e resina (reduz a velocidade do inimigo). É de salientar que os projéteis podem ter efeitos combinados, aos quais são designados por sinergias.
+As torres, colocadas sobre a relva, disparam automaticamente projéteis que causam dano ou aplicam efeitos como gelo (imobilizando os inimigos), fogo (dano contínuo ao inimigo) e resina (reduz a velocidade do inimigo). É de salientar que os projéteis podem ter efeitos combinados, os quais são designados por sinergias.
 
 Os inimigos seguem trajetórias definidas ou seja deslocam-se sempre sobre posições de terra, salvaguardando-se o facto de que este caminha para a base.
 Durante o jogo, o jogador deparar-se-á com uma barra, localizada em cima de cada inimigo, de modo a que o utilizador saiba a vida do mesmo. Quando este é atingido por um projétil, a barra fica com a cor do mesmo. No decorrer do jogo, o jogador compra torres com créditos ganhos ao eliminar inimigos.
