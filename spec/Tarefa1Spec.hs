@@ -111,3 +111,7 @@ testaVerificaCicloTorre = "Teste 15" ~: True ~?= verificaCicloTorre jogo01
 -- | Testa se a verificação de sobreposição de torres está correta
 testaVerificaNotSobreposicaoTorre :: Test
 testaVerificaNotSobreposicaoTorre = "Teste 16" ~: True ~?= verificaNotSobreposicaoTorre jogo01
+
+-- | Testa se a verificação de a base estar sobre terra está correta
+testaVerificaBaseTerra :: Test
+testaVerificaBaseTerra = "Teste 17" ~: True ~?= verificaBaseTerra jogo01
