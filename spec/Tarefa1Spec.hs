@@ -55,3 +55,7 @@ testaTerrenoMapa = "Teste 1" ~: Relva ~?= (mapaJogo jogo01) !! 2 !! 3
 -- | Testa se o número de portais no jogo está correto
 testaPortaisJogo :: Test
 testaPortaisJogo = "Teste 2" ~: 1 ~?= length (portaisJogo jogo01)
+
+-- | Teste que verifica a validação geral do jogo
+testaValidaJogo :: Test
+testaValidaJogo = "Teste 3" ~: False ~?= validaJogo jogo01
