@@ -59,3 +59,7 @@ testaPortaisJogo = "Teste 2" ~: 1 ~?= length (portaisJogo jogo01)
 -- | Teste que verifica a validação geral do jogo
 testaValidaJogo :: Test
 testaValidaJogo = "Teste 3" ~: False ~?= validaJogo jogo01
+
+-- | Testa se a verificação das posições dos portais está correta
+testaVerificaPosiPortal :: Test
+testaVerificaPosiPortal = "Teste 4" ~: True ~?= verificaPosiPortal jogo01
