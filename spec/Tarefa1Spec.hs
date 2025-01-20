@@ -83,3 +83,7 @@ testaVerificaInimigosTerra = "Teste 8" ~: True ~?= verificaInimigosTerra jogo01
 -- | Testa se a verificação de sobreposição de inimigos está correta
 testaVerificaInimigosSobreposicao :: Test
 testaVerificaInimigosSobreposicao = "Teste 9" ~: True ~?= verificaInimigosSobreposicao jogo01
+
+-- | Testa se a verificação de velocidade de inimigos está correta
+testaVerificaVelocidadeInimigo :: Test
+testaVerificaVelocidadeInimigo = "Teste 10" ~: True ~?= verificaVelocidadeInimigo jogo01
