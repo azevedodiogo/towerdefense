@@ -71,3 +71,7 @@ testaVerificaCaminhoTerra = "Teste 5" ~: True ~?= verificaCaminhoTerra jogo01
 -- | Testa se a verificação da sobreposição de portais está correta
 testaVerificaPortalSobreposicao :: Test
 testaVerificaPortalSobreposicao = "Teste 6" ~: True ~?= verificaPortalSobreposicao jogo01
+
+-- | Testa se a verificação do número de ondas ativas por portal está correta
+testaVerificaOndaPortal :: Test
+testaVerificaOndaPortal = "Teste 7" ~: True ~?= verificaOndaPortal jogo01
