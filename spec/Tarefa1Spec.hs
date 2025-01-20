@@ -45,3 +45,9 @@ loja01 = Loja
 jogo01 :: Jogo
 jogo01 = Jogo
     { baseJogo = base01, portaisJogo = [portal01], torresJogo = [torre01], mapaJogo = mapa01, inimigosJogo = [inimigo01], lojaJogo = loja01, nivelJogo = Um }
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- | Testa se o tipo de terreno da posição (3, 2) no mapa é Relva
+testaTerrenoMapa :: Test
+testaTerrenoMapa = "Teste 1" ~: Relva ~?= (mapaJogo jogo01) !! 2 !! 3
