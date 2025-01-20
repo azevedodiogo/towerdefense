@@ -95,3 +95,7 @@ testaVerificaProjeteisAtivos = "Teste 11" ~: True ~?= verificaProjeteisAtivos jo
 -- | Testa se a verificação da posição das torres está correta
 testaVerificaPosiTorre :: Test
 testaVerificaPosiTorre = "Teste 12" ~: True ~?= verificaPosiTorre jogo01
+
+-- | Testa se a verificação do alcance das torres está correta
+testaVerificaAlcanceTorre :: Test
+testaVerificaAlcanceTorre = "Teste 13" ~: True ~?= verificaAlcanceTorre jogo01
