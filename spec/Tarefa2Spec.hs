@@ -68,3 +68,7 @@ listaInimigos01 = [ Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0,
 -- | Lista de projéteis para testes.
 listaProjeteis01 :: [Projetil]
 listaProjeteis01 = [Projetil Gelo (Finita 3), Projetil Gelo (Finita 5), Projetil Resina Infinita]
+
+-- | Projétil 1 para testes.
+projetil01 :: Projetil
+projetil01 = Projetil Gelo (Finita 3)
