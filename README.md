@@ -31,7 +31,7 @@ Made with ❤️ by Diogo Azevedo & Vera Almeida
 
 ## English
 
-This repository is intended for the Tower Defense game developed in the "Computer Labs 1" discipline.
+This repository is intended for the Tower Defense game developed as part of the academic course ‘Software Labs 1’.
 
 The game's objective is to defend the base from waves of enemies using towers to neutralize them. Players can choose the difficulty level of the game they want to play. If they complete the game successfully, they will be registered in a system of achievements and be challenged to advance to the next level.
 
