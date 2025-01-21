@@ -198,10 +198,10 @@ verificaOndaPortal j = all verificaOndaPortal2 portais
 
     where portais = portaisJogo j
 
-          verificaOndaPortal2 portal = length (verificaOndasAtivas (ondasPortal portal)) <= 1       -- o número de ondas ativas de um portal tem de ser <= 1
+          verificaOndaPortal2 portal = length (verificaOndasAtivas (ondasPortal portal)) <= 1       -- O número de ondas ativas de um portal tem de ser <= 1.
 
           verificaOndasAtivasFiltro onda = entradaOnda onda <= 0
-          verificaOndasAtivas = filter verificaOndasAtivasFiltro                                    -- devolve uma lista com as ondas ativas de um portall
+          verificaOndasAtivas = filter verificaOndasAtivasFiltro                                    -- Devolve uma lista com as ondas ativas de um portal.
 
 
 
