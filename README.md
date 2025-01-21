@@ -106,15 +106,15 @@ cabal haddock
 
 ## Arquivo fotográfico do jogo - Photographic archive of the game
 
-[PT] O processo criativo por trás do jogo é uma jornada complexa que envolve a fusão de ideias inovadoras e detalhes minuciosos, com o objetivo de criar uma experiência imersiva e cativante para o utilizador. Desde o primeiro esboço até à versão final, cada componente do jogo é cuidadosamente pensado e desenvolvido para oferecer uma estética visual apelativa e uma experiência imersiva.
+[PT] O processo de criação de imagens para um jogo é uma tarefa complexa que envolve a combinação de ideias inovadoras e atenção aos detalhes. Desde os primeiros esboços até à versão final, cada elemento visual é pensado para proporcionar uma experiência imersiva ao jogador.
 
-Os detalhes são essenciais. Cada cor, sombra e textura é escolhida de forma a transmitir uma sensação única e a realçar a atmosfera que se quer criar.
-No final, o resultado é um jogo que vai além de uma simples combinação de gráficos e códigos. É uma experiência que imerge o jogador num mundo novo, onde cada detalhe é cuidadosamente concebido e pensado de modo a obter um produto final de excelência.
+A escolha das cores, sombras e texturas é feita com cuidado, de modo a criar a atmosfera desejada e a destacar cada aspeto do jogo.
+O objetivo é que o resultado final não seja apenas um conjunto de gráficos, mas uma experiência visual que envolva o jogador e o transporte para o mundo do jogo. Cada detalhe é trabalhado para garantir que o produto final seja de qualidade e ofereça uma experiência cativante.
 
-[EN] The creative process behind the game is a complex journey that involves the fusion of innovative ideas and minute details, with the aim of creating an immersive and captivating experience for the user. From the first sketch to the final version, each component of the game is carefully thought out and developed to offer an appealing visual aesthetic and an immersive experience.
+[EN] The process of creating images for a game is a complex task that involves the combination of innovative ideas and attention to detail. From the first sketches to the final version, each visual element is designed to provide an immersive experience to the player.
 
-The details are essential. Each color, shadow and texture is chosen in order to convey a unique sensation and enhance the atmosphere you want to create.
-In the end, the result is a game that goes beyond a simple combination of graphics and codes. It is an experience that immerges the player in a new world, where every detail is carefully designed and thought out in order to obtain a final product of excellence.
+The choice of colors, shadows and textures is done carefully, in order to create the desired atmosphere and highlight each aspect of the game.
+The goal is that the end result is not just a set of graphics, but a visual experience that involves the player and the transport to the game world. Every detail is worked on to ensure that the final product is of quality and offers a captivating experience.
 
 ### Menu Inicial - Home Menu
 [PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
