@@ -37,3 +37,7 @@ torre01 = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
 -- | Portal 1 para testes.
 portal01 :: Portal
 portal01 = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda01]}
+
+-- | Portal 2 para testes.
+portal02 :: Portal
+portal02 = Portal {posicaoPortal = (2.0, 2.0), ondasPortal = [onda04, onda05]}
