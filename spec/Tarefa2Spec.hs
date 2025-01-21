@@ -184,3 +184,8 @@ testaRemoveInimigo = "Teste 7" ~: (Inimigo {posicaoInimigo = (3.0,4.0), direcaoI
 -- | Testa se a função terminou o jogo.
 testaTerminouJogo :: Test
 testaTerminouJogo = "Teste 8" ~: False ~?= terminouJogo jogo01
+
+
+-- | Testa se o jogador perdeu o jogo.
+testaPerdeuJogo :: Test
+testaPerdeuJogo = "Teste 9" ~: True ~?= terminouJogo jogo03
