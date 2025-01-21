@@ -54,6 +54,8 @@ This document presents all the crucial information necessary for an in-depth loo
 
 Made with ❤️ by Diogo Azevedo & Vera Almeida
 
+## Comandos - Commands
+
 ### Executável - Executable
 
 [PT] Pode compilar e executar o programa através dos comandos `build` e `run` do Cabal.\
