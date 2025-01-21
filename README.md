@@ -104,17 +104,11 @@ cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest --verbose=0
 cabal haddock
 ```
 
-## Arquivo fotográfico do jogo - Photographic archive of the game
+## Imagens do Jogo - Game Images
 
-[PT] O processo de criação de imagens para um jogo é uma tarefa complexa que envolve a combinação de ideias inovadoras e atenção aos detalhes. Desde os primeiros esboços até à versão final, cada elemento visual é pensado para proporcionar uma experiência imersiva ao jogador.
+[PT] A criação de imagens para um jogo é um processo exigente que requer criatividade e precisão. Desde os primeiros esboços até à versão final, cada elemento é cuidadosamente desenvolvido para proporcionar uma melhor experiência ao utilizador.
 
-A escolha das cores, sombras e texturas é feita com cuidado, de modo a criar a atmosfera desejada e a destacar cada aspeto do jogo.
-O objetivo é que o resultado final não seja apenas um conjunto de gráficos, mas uma experiência visual que envolva o jogador e o transporte para o mundo do jogo. Cada detalhe é trabalhado para garantir que o produto final seja de qualidade e ofereça uma experiência cativante.
-
-[EN] The process of creating images for a game is a complex task that involves the combination of innovative ideas and attention to detail. From the first sketches to the final version, each visual element is designed to provide an immersive experience to the player.
-
-The choice of colors, shadows and textures is done carefully, in order to create the desired atmosphere and highlight each aspect of the game.
-The goal is that the end result is not just a set of graphics, but a visual experience that involves the player and the transport to the game world. Every detail is worked on to ensure that the final product is of quality and offers a captivating experience.
+[EN] Creating images for a game is a demanding process that requires creativity and precision. From the first sketches to the final version, each element is carefully developed to provide a better user experience.
 
 ### Menu Inicial - Home Menu
 [PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
