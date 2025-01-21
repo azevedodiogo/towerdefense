@@ -143,3 +143,87 @@ resolveConflito pn [x,y]  | tipoProjetil pn == Fogo && tipoProjetil x == Gelo  =
 tempo :: Duracao -> Float
 tempo (Finita n) = n
 tempo _ = 0
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+{- | a função `ativaInimigo` coloca o próximo inimigo a ser lançado por um portal em jogo. 
+
+
+=== Exemplos de Uso:
+
+* `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+* `inimigo1` = Inimigo (3.0, 4.0) Norte 100 1 10 20 [Projetil Fogo (Finita 5)] (0,0) 0
+* `inimigo2` = Inimigo (7.0, 5.0) Sul 80 1 15 30 [Projetil Gelo (Finita 3)] (0,0) 0
+* `inimigo3` = Inimigo (10.0, 10.0) Este 50 1.5 20 40 [Projetil Resina Infinita] (0,0) 0
+
+>>> ativaInimigo portal1 [inimigo3]
+(Portal {posicaoPortal = (0.5,0.5), ondasPortal = [Onda {inimigosOnda = [Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 3.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0}], cicloOnda = 5.0, tempoOnda = 5.0, entradaOnda = 0.0}]},
+[Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 5.0}], posInicial = (0.5,0.5), tempoInimigo = 0.0},Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}], posInicial = (0.5,0.5), tempoInimigo = 0.0}])
+
+-}
+
+
+ativaInimigo :: Portal -> [Inimigo] -> (Portal, [Inimigo])
+ativaInimigo p li | length ondasp == 0 = (p,li)
+                  | podelançar primeiraonda = (novoportal, proxi:li)
+                  | otherwise = (p,li)
+
+    where ondasp = ondasPortal p
+          primeiraonda = head ondasp
+          (proxi, novaonda) = removeInimigo primeiraonda
+          novasOndas = if ondaVazia novaonda then tail ondasp else novaonda : tail ondasp
+          novoportal = p {ondasPortal = novasOndas}
+
+
+
+{- | a função `podelançar` verifica se a onda está ativa e se ainda tem inimigos para lançar. 
+
+=== Exemplos de Uso:
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
+* `onda2` = Onda {inimigosOnda = [inimigo3], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> podelançar onda1
+True
+
+>>> podelançar onda2
+False
+
+-}
+
+podelançar :: Onda -> Bool
+podelançar o = entradaOnda o <= 0 && length (inimigosOnda o) > 0 && tempoOnda o <= 0
+
+
+
+{- | a função `removeInimigo` remove o primeiro inimigo da onda ativa. 
+
+=== Exemplos de Uso:
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> removeInimigo onda1
+(Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (2.0,2.0), tempoInimigo = 0.0},
+Onda {inimigosOnda = [Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (2.0,2.0), tempoInimigo = 0.0}], cicloOnda = 5.0, tempoOnda = 5.0, entradaOnda = 1.0})
+
+-}
+
+removeInimigo :: Onda -> (Inimigo, Onda)
+removeInimigo o = let i = inimigosOnda o
+                      primeiroi = head i
+                      ondaAtualizada = o {inimigosOnda = tail i,
+                                          tempoOnda = cicloOnda o}
+                  in (primeiroi, ondaAtualizada)
+
+
+
+{- | a função `ondaVazia` verifica se a onda está vazia, isto é se não tem inimigos. -} 
+
+ondaVazia :: Onda -> Bool
+ondaVazia o = length (inimigosOnda o) == 0
+
