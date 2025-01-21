@@ -57,3 +57,10 @@ onda03 = Onda {inimigosOnda = [inimigo04, inimigo05], cicloOnda = 5, tempoOnda =
 -- | Onda 4 para testes.
 onda04 :: Onda
 onda04 = Onda {inimigosOnda = [inimigo06], cicloOnda = 3, tempoOnda = 0, entradaOnda = 2}
+
+-- | Lista de inimigos para testes.
+listaInimigos01 :: [Inimigo]
+listaInimigos01 = [ Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0,
+                    Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0,
+                    Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (10.0, 10.0) 0
+                    ]
