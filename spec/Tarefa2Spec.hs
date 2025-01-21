@@ -92,3 +92,7 @@ jogo02 = Jogo {baseJogo = base02, portaisJogo = [], torresJogo = [], mapaJogo = 
 -- | Jogo 3 para testes.
 jogo03 :: Jogo
 jogo03 = Jogo {baseJogo = base02, portaisJogo = [], torresJogo = [], mapaJogo = mapa01, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+-- | Base 1 para testes.
+base01 :: Base
+base01 = Base {vidaBase = 100, posicaoBase = (5.5, 2.5), creditosBase = 50}
