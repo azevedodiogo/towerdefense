@@ -159,3 +159,8 @@ testaAtingeInimigo = "Teste 2" ~: Inimigo {posicaoInimigo = (3.0,4.0), direcaoIn
 -- | Testa se a função junta os projéteis iguais.
 testaIguais :: Test
 testaIguais = "Teste 3" ~: [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 8.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}] ~?= iguais listaProjeteis01
+
+
+-- | Testa se a função resolve conflitos entre projéteis.
+testaResolveConflitoProjetil :: Test
+testaResolveConflitoProjetil = "Teste 4" ~: [] ~?= resolveConflito projetil03 [projetil01]
