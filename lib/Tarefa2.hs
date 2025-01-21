@@ -40,3 +40,8 @@ inimigosNoAlcance t (i:li) | dist (posicaoTorre t) (posicaoInimigo i) <= alcance
     where dist (x1,y1) (x2,y2) = sqrt $ (x1-x2)^2 + (y1-y2)^2
 
 ---------------------------------------------------------------------------------------------------------------------------------------
+
+atingeInimigo :: Torre -> Inimigo -> Inimigo
+atingeInimigo t i = i
+     {vidaInimigo = max 0 (vidaInimigo i - danoTorre t),                                -- o inimigo perde nível de vida conforme o dano da torre
+      projeteisInimigo = junçaoProjetil (projetilTorre t) (projeteisInimigo i)}         -- lista dos novos projeteis que atingiram o inimigo
