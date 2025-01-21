@@ -72,3 +72,7 @@ listaProjeteis01 = [Projetil Gelo (Finita 3), Projetil Gelo (Finita 5), Projetil
 -- | Projétil 1 para testes.
 projetil01 :: Projetil
 projetil01 = Projetil Gelo (Finita 3)
+
+-- | Projétil 2 para testes.
+projetil02 :: Projetil
+projetil02 = Projetil Resina Infinita
