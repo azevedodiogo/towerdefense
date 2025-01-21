@@ -1,6 +1,6 @@
 # Tower Defense
 
-## Portuguese
+## Português
 
 Este repositório destina-se ao jogo de Tower Defense desenvolvido na unidade curricular “Laboratórios de Informática 1”.
 
@@ -31,7 +31,9 @@ Made with ❤️ by Diogo Azevedo & Vera Almeida
 
 ## English
 
-This repository is intended for the Tower Defense game developed in the "Computer Labs 1" discipline. The game's objective is to defend the base from waves of enemies using towers to neutralize them. Players can choose the difficulty level of the game they want to play. If they complete the game successfully, they will be registered in a system of achievements and be challenged to advance to the next level.
+This repository is intended for the Tower Defense game developed in the "Computer Labs 1" discipline.
+
+The game's objective is to defend the base from waves of enemies using towers to neutralize them. Players can choose the difficulty level of the game they want to play. If they complete the game successfully, they will be registered in a system of achievements and be challenged to advance to the next level.
 
 The game's initial interface is designed to be intuitive, featuring a well-organized arrangement of menus and options, with the prominent "Start" button directing the player to the level selection menu. On the right side of the screen, there are dedicated sections for achievements and feats, the game's rules and instructions, and the credits, which include a mention of the game's developers.
 
@@ -101,3 +103,54 @@ cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest --verbose=0
 ```bash
 cabal haddock
 ```
+
+## Galeria de Imagens do Jogo - Game Image Gallery
+
+### Menu Inicial - Home Menu
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
+[EN] Developed using technologies such as 'Canva'.
+
+![Captura de ecrã 2025-01-21, às 05 15 55](https://github.com/user-attachments/assets/4a113665-ad71-4d54-a498-e335be62406d)
+
+### Proezas - Achievements
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
+[EN] Developed using technologies such as 'Canva'.
+
+![Captura de ecrã 2025-01-21, às 05 16 23](https://github.com/user-attachments/assets/9a74a963-ab8f-42db-afb0-5049772a1111)
+
+### Regras - Rules
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
+[EN] Developed using technologies such as 'Canva'.
+
+![Captura de ecrã 2025-01-21, às 05 16 58](https://github.com/user-attachments/assets/11416ebf-b609-430a-ba49-783b63cec3ef)
+
+### Créditos - Credits
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
+[EN] Developed using technologies such as 'Canva'.
+
+![Captura de ecrã 2025-01-21, às 05 17 14](https://github.com/user-attachments/assets/6a15f843-4057-4828-a13c-fea929853a9f)
+
+### Seleção de Nível - Level Selection
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
+[EN] Developed using technologies such as 'Canva'.
+
+![Captura de ecrã 2025-01-21, às 05 17 33](https://github.com/user-attachments/assets/fb99ac66-e0a0-4e6f-bd47-5e3733b0a1fe)
+
+
+### Situação de Jogo 1 - Game Situation 1
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva' e tecnologia da própria biblioteca Gloss. \
+[EN] Developed using technologies such as 'Canva' and technology from the Gloss library itself.
+
+![Captura de ecrã 2025-01-21, às 05 17 56](https://github.com/user-attachments/assets/f0976ae2-4363-4fb9-b340-836666a1eba5)
+
+### Situação de Jogo 2 (com torres colocadas) - Game Situation 2 (with towers placed)
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva' e tecnologia da própria biblioteca Gloss. \
+[EN] Developed using technologies such as 'Canva' and technology from the Gloss library itself.
+
+![Captura de ecrã 2025-01-21, às 05 18 24](https://github.com/user-attachments/assets/fac59467-0b22-48a7-8536-b2ac630da042)
+
+### Ecrã de Pausa - Pause Screen
+[PT] Desenvolvido com recurso a tecnologias como o 'Canva'. \
+[EN] Developed using technologies such as 'Canva'.
+
+![Captura de ecrã 2025-01-21, às 05 18 42](https://github.com/user-attachments/assets/6a2da49b-9d84-4905-9c08-0ff08d7a2d62)
