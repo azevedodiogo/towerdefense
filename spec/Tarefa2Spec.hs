@@ -88,3 +88,7 @@ jogo01 = Jogo {baseJogo = base01, portaisJogo = [portal01], torresJogo = [], map
 -- | Jogo 2 para testes.
 jogo02 :: Jogo
 jogo02 = Jogo {baseJogo = base02, portaisJogo = [], torresJogo = [], mapaJogo = mapa01, inimigosJogo = [], lojaJogo = loja01, nivelJogo = Um}
+
+-- | Jogo 3 para testes.
+jogo03 :: Jogo
+jogo03 = Jogo {baseJogo = base02, portaisJogo = [], torresJogo = [], mapaJogo = mapa01, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
