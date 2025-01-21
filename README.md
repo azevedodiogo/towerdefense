@@ -1,6 +1,6 @@
 # Tower Defense
 
-## PORTUGUESE
+## Portuguese
 
 Este repositório destina-se ao jogo de Tower Defense desenvolvido na unidade curricular “Laboratórios de Informática 1”.
 
@@ -29,7 +29,7 @@ Este documento apresenta todas as informações cruciais e necessárias para uma
 
 Made with ❤️ by Diogo Azevedo & Vera Almeida
 
-## ENGLISH
+## English
 
 This repository is intended for the Tower Defense game developed in the "Computer Labs 1" discipline. The game's objective is to defend the base from waves of enemies using towers to neutralize them. Players can choose the difficulty level of the game they want to play. If they complete the game successfully, they will be registered in a system of achievements and be challenged to advance to the next level.
 
@@ -54,43 +54,47 @@ This document presents all the crucial information necessary for an in-depth loo
 
 Made with ❤️ by Diogo Azevedo & Vera Almeida
 
-### Executável
+### Executável - Executable
 
-Pode compilar e executar o programa através dos comandos `build` e `run` do Cabal.
+[PT] Pode compilar e executar o programa através dos comandos `build` e `run` do Cabal.\
+[EN] You can compile and run the program using Cabal's `build` and `run` commands.
 
 ```bash
 cabal run --verbose=0
 ```
 
-### Interpretador
+### Interpretador - Interpreter
 
-Para abrir o interpretador do Haskell (GHCi) com o projeto carregado, utilize o comando `repl` do Cabal.
+[PT] Para abrir o interpretador do Haskell (GHCi) com o projeto carregado, utilize o comando `repl` do Cabal.\
+[EN] To open the Haskell interpreter (GHCi) with the project loaded, use the Cabal `repl` command.
 
 ```bash
 cabal repl
 ```
 
-### Testes
+### Testes - Tests
 
-O projecto utiliza a biblioteca [HUnit](https://hackage.haskell.org/package/HUnit) para fazer testes unitários.
+[PT] O projecto utiliza a biblioteca [HUnit](https://hackage.haskell.org/package/HUnit) para fazer testes unitários.\
+[EN] The project uses the [HUnit](https://hackage.haskell.org/package/HUnit) library to perform unit testing.
 
-Execute os testes com o comando `test` do Cabal e utilize a flag `--enable-coverage` para gerar um relatório de cobertura de testes.
+[PT] Execute os testes com o comando `test` do Cabal e utilize a flag `--enable-coverage` para gerar um relatório de cobertura de testes.\
+[EN] Run the tests with the Cabal `test` command and use the `--enable-coverage` flag to generate a test coverage report.
 
 ```bash
 cabal test --enable-coverage
 ```
 
-Execute os exemplos da documentação como testes com a biblioteca
-[`doctest`](https://hackage.haskell.org/package/doctest). Para instalar o
-executável utilize o comando `cabal install doctest`.
+[PT] Execute os exemplos da documentação como testes com a biblioteca [`doctest`](https://hackage.haskell.org/package/doctest). Para instalar o executável utilize o comando `cabal install doctest`.\
+[EN] Run the documentation examples as tests against the library [`doctest`](https://hackage.haskell.org/package/doctest). To install the executable use the command `cabal install doctest`.
 
 ```bash
 cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest --verbose=0
 ```
 
-### Documentação
+### Documentação - Documentation
 
-A documentação do projeto pode ser gerada recorrendo ao [Haddock](https://haskell-haddock.readthedocs.io/).
+[PT] A documentação do projeto pode ser gerada recorrendo ao [Haddock](https://haskell-haddock.readthedocs.io/).\
+[EN] Project documentation can be generated using [Haddock](https://haskell-haddock.readthedocs.io/).
 
 ```bash
 cabal haddock
