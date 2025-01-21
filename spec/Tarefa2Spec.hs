@@ -84,3 +84,7 @@ projetil03 = Projetil Fogo (Finita 5)
 -- | Jogo 1 para testes.
 jogo01 :: Jogo
 jogo01 = Jogo {baseJogo = base01, portaisJogo = [portal01], torresJogo = [], mapaJogo = mapa01, inimigosJogo = [], lojaJogo = loja01, nivelJogo = Um}
+
+-- | Jogo 2 para testes.
+jogo02 :: Jogo
+jogo02 = Jogo {baseJogo = base02, portaisJogo = [], torresJogo = [], mapaJogo = mapa01, inimigosJogo = [], lojaJogo = loja01, nivelJogo = Um}
