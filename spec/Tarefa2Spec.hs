@@ -45,3 +45,7 @@ portal02 = Portal {posicaoPortal = (2.0, 2.0), ondasPortal = [onda04, onda05]}
 -- | Onda 1 para testes.
 onda01 :: Onda
 onda01 = Onda {inimigosOnda = [inimigo01, inimigo02], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
+
+-- | Onda 2 para testes.
+onda02 :: Onda
+onda02 = Onda {inimigosOnda = [inimigo03], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
