@@ -176,3 +176,83 @@ atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre 
                                        in (novaTorre : novasTorres, ini)
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- COMPORTAMENTO DOS PORTAIS 
+
+
+{- | a função `atualizaOnda` atualiza a primeira onda com inimigos. 
+
+=== Exemplos de Uso:
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 10, tempoOnda = 5, entradaOnda = 0}
+* `onda2` = Onda {inimigosOnda = [], cicloOnda = 10, tempoOnda = 5, entradaOnda = 0}
+
+>>> atualizaOnda 0.2 [onda1]
+[Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 10, tempoOnda = 4.8, entradaOnda = 0}]
+
+>>> atualizaOnda 0.2 [onda2]
+[]
+
+-}
+
+
+atualizaOnda :: Tempo -> [Onda] -> [Onda]
+atualizaOnda _ [] = []
+atualizaOnda tempo (onda:rOndas)
+
+            -- atualiza a entrada da primeira onda, se ela estiver maior que zero
+            | entradaOnda onda > 0 = let ondaAtual = onda {entradaOnda = entradaOnda onda - tempo}
+                                     in ondaAtual : rOndas
+
+            -- remove a onda, se não tiver mais inimigos
+            | null (inimigosOnda onda) = atualizaOnda tempo rOndas
+
+            -- atualiza o tempo para o próximo inimigo, 
+            | tempoOnda onda > 0 = let ondaAtualizada = onda {tempoOnda = tempoOnda onda - tempo}
+                                   in ondaAtualizada : rOndas
+
+             -- mantém a onda como está
+            | otherwise = onda : rOndas
+
+
+
+{- | a função `atualizaPortal` atualiza o portal e a lista de inimigos ativos, utilizando a função `ativaInimigo` da Tarefa 2. 
+
+=== Exemplos de Uso:
+
+* `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda]}
+* `onda` = Onda {inimigosOnda = [inimigo], cicloOnda = 10, tempoOnda = 0, entradaOnda = 0}
+* `inimigo` = Inimigo (0.5, 0.5) Norte 100.0 1.0 10.0 20 [] (0.5, 0.5) 0
+* `inimigos` = [Inimigo (2.5, 3.0) Oeste 100 4 30 23 [Projetil Gelo (Finita 4), Projetil Resina Infinita] (0.5, 0.5) 0]
+
+>>> atualizaPortal 0.2 portal inimigos
+(Portal {posicaoPortal = (0.5,0.5), ondasPortal = []},
+[Inimigo {posicaoInimigo = (0.5,0.5), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (0.5,0.5), tempoInimigo = 0.0},Inimigo {posicaoInimigo = (2.5,3.0), direcaoInimigo = Oeste, vidaInimigo = 100.0, velocidadeInimigo = 4.0, ataqueInimigo = 30.0, butimInimigo = 23, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 4.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}], posInicial = (0.5,0.5), tempoInimigo = 0.0}])
+
+-}
+
+atualizaPortal :: Tempo -> Portal -> [Inimigo] -> (Portal, [Inimigo])
+atualizaPortal tempo portal iniAtivos =
+
+                let ondasAtual = atualizaOnda tempo (ondasPortal portal)
+                    portalAtualizado = portal {ondasPortal = ondasAtual}
+                    (novoPortal, novosInimigos) = ativaInimigo portalAtualizado iniAtivos   -- a 'ativaInimigo' é da Tarefa2
+
+                in (novoPortal, novosInimigos)
+
+
+-- função principal
+
+{- | a função `atualizaPortais` faz o mesmo que a `atualizaPortal`, mas para todos os portais do jogo. -}
+
+atualizaPortais :: Tempo -> [Portal] -> [Inimigo] -> ([Portal], [Inimigo])
+atualizaPortais _ [] iniAtivos = ([], iniAtivos)
+atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, novosInimigos) = atualizaPortal tempo portal iniAtivos
+                                                            (portaisAtualizados, inimigosFinais) = atualizaPortais tempo restoPortais novosInimigos
+
+                                                        in (portalAtualizado : portaisAtualizados, inimigosFinais)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
