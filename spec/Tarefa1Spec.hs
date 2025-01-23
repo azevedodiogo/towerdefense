@@ -1,3 +1,14 @@
+{-|
+Module      : Tarefa1Spec
+Description : Testes da tarefa 1
+Copyright   : Diogo Matos Azevedo <a109727@alunos.uminho.pt>
+              Vera da Silva Almeida <a110723@alunos.uminho.pt>
+
+
+Módulo para a realização dos testes da Tarefa 1 de LI1 em 2024/25.
+
+O objetivo deste ficheiro é validar as funções implementadas na Tarefa 1.
+-}
 module Tarefa1Spec (testesTarefa1) where
 
 import Tarefa1
