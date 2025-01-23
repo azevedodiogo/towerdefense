@@ -57,3 +57,28 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
 
 
     in Jogo baseAtualizada portaisAtualizados torresAtualizadas mapa inimigosAtingidos loja n
+
+
+
+
+
+disparaTorre :: Tempo -> Torre -> [Inimigo] -> (Torre, [Inimigo])
+disparaTorre tempo torre inimigos
+
+            -- A torre ainda não pode disparar (cooldown).
+            | tempoTorre torre > 0 = (torre {tempoTorre = max 0 (tempoTorre torre - tempo)}, inimigos)
+
+            -- Sem inimigos no alcance.
+            | null (inimigosNoAlcance torre inimigos) = (torre, inimigos)                       -- Utiliza a funcao 'inimigosNoAlcance' da Tarefa2.
+
+            -- A torre pode disparar e tem inimigos no alcance.
+            | otherwise = let ini = geraID inimigos                                             -- Lista dos inimigos com ID.
+                              iniIDalcance = iniNoAlcanceID torre ini                           -- Seleciona os inimigos que estão ao alcance da torre.
+                              iniRajada = take (rajadaTorre torre) iniIDalcance                 -- Seleciona os inimigos que a torre consegue atacar de uma só vez.
+                              iniAtingidos = atualizaInimigoID torre iniRajada                  -- Atualiza os inimigos atingidos, utilizando a funcao 'atingeInimigo' da tarefa2.
+                              iniRestantes = filtraInimigoID ini iniRajada                      -- Retira os inimigos atingidos, ficando apenas os outros.
+                              lista = iniAtingidos ++ iniRestantes                              -- Lista atualizada com todos os inimigos em jogo e respetivas ids.
+                              lordenada = sortBy (\(x, _) (y, _) -> compare x y) lista          -- Lista por ordem.
+
+
+                          in (torre {tempoTorre = cicloTorre torre}, map snd lordenada)
