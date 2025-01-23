@@ -1,6 +1,6 @@
 {-|
 Module      : Tarefa1Spec
-Description : Testes da tarefa 1
+Description : Testes da Tarefa 1
 Copyright   : Diogo Matos Azevedo <a109727@alunos.uminho.pt>
               Vera da Silva Almeida <a110723@alunos.uminho.pt>
 
