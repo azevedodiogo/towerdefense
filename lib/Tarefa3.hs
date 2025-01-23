@@ -124,3 +124,55 @@ Assim, a nossa solução foi inventar uma identidade (atribuindo-lhes um número
 
 geraID :: [Inimigo] -> [(Int, Inimigo)]
 geraID = zip [0..]
+
+
+
+{- | a função `iniNoAlcanceID` faz o mesmo que a 'inimigosNoAlcance', mas atribuindo id aos inimigos. -}
+
+iniNoAlcanceID :: Torre -> [(Int, Inimigo)] -> [(Int, Inimigo)]
+iniNoAlcanceID _ [] = []
+iniNoAlcanceID t ((id, ini):l) | dist (posicaoTorre t) (posicaoInimigo ini) <= alcanceTorre t = (id,ini) : iniNoAlcanceID t l
+                               | otherwise = iniNoAlcanceID t l
+
+    where dist (x1,y1) (x2,y2) = sqrt $ (x1-x2)^2 + (y1-y2)^2
+
+
+{- | a função `atualizaInimigoID` faz o mesmo que a `atingeInimigo`, mas mantem id dos inimigos. -}
+
+atualizaInimigoID :: Torre -> [(Int, Inimigo)] -> [(Int, Inimigo)]
+atualizaInimigoID t = map (\(id, ini) -> (id, atingeInimigo t ini))
+
+
+
+{- | a função `filtraInimigoID` retira, da lista inicial, todos os inimigos que foram atingidos pela torre. 
+
+=== Exemplos de Uso:
+
+* `listaInimigos` = [(0, Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0),
+                     (1, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0),
+                     (2, Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (10.0, 10.0) 0) ]
+          
+* `listaInimigosAtingidos` = [(0, Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0),
+                              (1, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0) ]
+
+>>> filtraInimigoID listaInimigos listaInimigosAtingidos
+[(2,Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (10.0,10.0), tempoInimigo = 0.0})]
+
+-}
+
+filtraInimigoID :: [(Int, Inimigo)] -> [(Int, Inimigo)] -> [(Int, Inimigo)]
+filtraInimigoID linicial latingidos = filter (\(id, _) -> id `notElem` map fst latingidos) linicial
+
+
+
+-- função principal
+
+{- | a função `atualizaTorres` faz o mesmo que a 'disparaTorre' mas para todas as torres em jogo. -}
+
+atualizaTorres :: Tempo -> [Torre] -> [Inimigo] -> ([Torre], [Inimigo])
+atualizaTorres _ [] inimigos = ([], inimigos)
+atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre tempo t inimigos
+                                           (novasTorres, ini) = atualizaTorres tempo ts iniAtual
+                                       in (novaTorre : novasTorres, ini)
+
+
