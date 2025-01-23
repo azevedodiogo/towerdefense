@@ -59,8 +59,29 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
     in Jogo baseAtualizada portaisAtualizados torresAtualizadas mapa inimigosAtingidos loja n
 
 
+---------------------------------------------------------------------------------------------
 
 
+-- COMPORTAMENTO DAS TORRES
+
+
+{- | A função `disparaTorre` faz a torre disparar projeteis contra os inimigos detetados. Utiliza funções auxiliares como a `inimigosNoAlcance` e a `atingeInimigo` da Tarefa 2.
+
+=== Exemplos de Uso:
+
+* `torre` = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
+
+* `listaInimigos` = [
+            Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0,
+            Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0,
+            Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (10.0, 10.0) 0
+          ]
+
+>>> disparaTorre 0.2 torre1 listaInimigos
+(Torre {posicaoTorre = (5.0,5.0), danoTorre = 25.0, alcanceTorre = 3.0, rajadaTorre = 3, cicloTorre = 2.0, tempoTorre = 2.0, projetilTorre = Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 7.0}},
+[Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 75.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 7.0}, tempoInimigo = 0.0], posInicial = (3.0,4.0)},Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 55.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 7.0}], posInicial = (7.0,5.0), tempoInimigo = 0.0},Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (10.0,10.0), tempoInimigo = 0.0}])
+
+-}
 
 disparaTorre :: Tempo -> Torre -> [Inimigo] -> (Torre, [Inimigo])
 disparaTorre tempo torre inimigos
