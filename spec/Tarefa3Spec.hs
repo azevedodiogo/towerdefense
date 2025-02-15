@@ -21,3 +21,7 @@ torreAtualiza = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
 -- | Mapa para teste da função atualizaJogo.
 mapaAtualiza :: Mapa
 mapaAtualiza = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+
+-- | Inimigo para teste da função atualizaJogo.
+inimigoAtualiza :: Inimigo
+inimigoAtualiza = Inimigo (1, 1) Norte 100 1.0 10 20 [] (0, 0) 0
