@@ -33,3 +33,10 @@ jogoAtualiza = Jogo baseAtualiza [portalAtualiza] [torreAtualiza] mapaAtualiza [
 -- | Torre para teste da função disparaTorre.
 torreDispara :: Torre
 torreDispara = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
+
+-- | Lista de inimigos para teste da função disparaTorre.
+listaInimigosDispara :: [Inimigo]
+listaInimigosDispara = [Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0,
+                        Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0,
+                        Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (10.0, 10.0) 0
+                        ]
