@@ -44,3 +44,9 @@ listaInimigosDispara = [Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0)
 -- | Lista de inimigos para teste da função geraID.
 listaInimigosID :: [Inimigo]
 listaInimigosID = [Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0] 
+
+-- | Lista de inimigos para teste da função filtraInimigoID.
+listaInimigosFiltraID :: [(Int, Inimigo)]
+listaInimigosFiltraID = [(0, Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (3.0, 4.0) 0),
+                         (1, Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (7.0, 5.0) 0),
+                         (2, Inimigo (10.0, 10.0) Este 50.0 1.5 20.0 40 [] (10.0, 10.0) 0)]
