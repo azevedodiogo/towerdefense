@@ -32,6 +32,9 @@ fundoRelva :: Int -> Int -> Picture -> Picture
 fundoRelva largura altura img = translate (-910) 450 $
                                 pictures [translate (fromIntegral x * 60) (fromIntegral (-y) * 60) $ scale 0.1 0.1 img | x <- [0..(largura-1)], y <- [0..(altura-1)]]
 
+
+-- PONTES - As pontes são posições de terra no mapa, mas desenhadas com uma cor diferente para distinguir.
+
 -- | Desenha uma ponte de madeira horizontal.
 
 ponteDeMadeiraH :: Float -> Float -> Picture
