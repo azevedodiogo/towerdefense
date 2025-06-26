@@ -86,3 +86,20 @@ sombra mapa x y = (sombraCima mapa x y, sombraBaixo mapa x y, sombraEsquerda map
         sombraBaixo mapa x y = y < length mapa - 1 && (mapa !! (y + 1) !! x == Relva)
         sombraEsquerda mapa x y = x > 0 && (mapa !! y !! (x - 1) == Relva)
         sombraDireita mapa x y = x < length (mapa !! y) - 1 && (mapa !! y !! (x + 1) == Relva)
+
+-- | Desenha uma célula de água
+
+aguaCelula :: Float -> Float -> (Bool, Bool, Bool, Bool) -> (Bool, Bool) -> Picture
+aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  = pictures (sombras ++ [centro] ++ limites)
+
+  where centro = translate x y $ color corAgua $ rectangleSolid 60 60   -- agua 
+
+        -- as sombras só são criadas se s... for True
+        sombras = concat [  [translate x (y + 30) $ color verdeEscuro $ rectangleSolid 60 6 | sCima],
+                            [translate x (y - 30) $ color verdeEscuro $ rectangleSolid 60 4 | sBaixo],
+                            [translate (x + 30) y $ color verdeEscuro $ rectangleSolid 4 60 | sDireita],
+                            [translate (x - 30) y $ color verdeEscuro $ rectangleSolid 6 60 | sEsquerda] ]
+
+        -- Limites (borda) se houver terra no lado esquerdo ou acima
+        limites = ([translate (x-29) y $ color castanhoEscuro $ rectangleSolid 2 67 | terraDireita]) ++
+                  ([translate x (y + 29) $ color castanhoEscuro $ rectangleSolid 67 2 | terraCima])
