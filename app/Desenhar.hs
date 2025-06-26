@@ -58,3 +58,11 @@ ponteDeMadeiraV x y = pictures (ponte ++ agua)
           agua = [ translate (x - 18.75) y $ color corAgua $ rectangleSolid 7.5 60,       -- Tábua 1
                    translate x y $ color corAgua $ rectangleSolid 7.5 60,                 -- Tábua 2
                    translate (x + 18.75) y $ color corAgua $ rectangleSolid 7.5 60  ]     -- Tábua 3
+
+-- | Verifica se a célula de terra está rodeada por água (em cima e em baixo ou à esquerda e à direita)
+
+terraComAgua :: Mapa -> Int -> Int -> (Bool, Bool)
+terraComAgua mapa x y = (aguaCimaBaixo, aguaEsquerdaDireita)
+  where
+    aguaCimaBaixo = (y > 0 && (mapa !! (y - 1) !! x == Agua)) && (y < length mapa - 1 && (mapa !! (y + 1) !! x == Agua))
+    aguaEsquerdaDireita = (x > 0 && (mapa !! y !! (x - 1) == Agua)) && (x < length (mapa !! y) - 1 && (mapa !! y !! (x + 1) == Agua))
