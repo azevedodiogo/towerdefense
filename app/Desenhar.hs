@@ -152,8 +152,15 @@ portalesq (x, y) = translate (30 + x*60 - 910)      -- 60: medida de cada célul
                              (40 - y*60 + 450)      -- 60: medida de cada célula // 450: valor da translação do mapa // 40: valor, a meu ver, mais correto para ficar harmonioso.
 
 
--- | Desenha o portal com a porta no lado direito (com terra do lado esquerdo)
+-- | Desenha o portal com a porta no lado direito (com terra do lado esquerdo).
 
 portaldir :: Posicao -> Picture -> Picture
-portaldir (x, y) = translate (-30 + x*60 - 910)     -- 60: medida de cada célula // -910: valor da translação do mapa // -30: valor, a meu ver, mais correto para ficar harmonioso
-                             (40 - y*60 + 450)      -- 60: medida de cada célula // 450: valor da translação do mapa // 40: valor, a meu ver, mais correto para ficar harmonioso
+portaldir (x, y) = translate (-30 + x*60 - 910)     -- 60: medida de cada célula // -910: valor da translação do mapa // -30: valor, a meu ver, mais correto para ficar harmonioso.
+                             (40 - y*60 + 450)      -- 60: medida de cada célula // 450: valor da translação do mapa // 40: valor, a meu ver, mais correto para ficar harmonioso.
+
+
+-- | Desenha a base (com terra do lado direito).
+
+baseesq :: Posicao -> Picture -> Picture
+baseesq (x, y) = translate (-30 + x*60 - 910)       -- 60: medida de cada célula // -910: valor da translação do mapa // -30: valor, a meu ver, mais correto para ficar harmonioso.
+                           (- (y*60) + 450)         -- 60: medida de cada célula // 450: valor da translação do mapa .
