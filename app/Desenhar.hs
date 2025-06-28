@@ -172,7 +172,7 @@ basedir (x, y) = translate (10 + x*60 - 910)        -- 60: medida de cada célul
                            (- (y*60) + 450)         -- 60: medida de cada célula // 450: valor da translação do mapa.
 
 
--- | Desenha um portal do jogo
+-- | Desenha um portal do jogo.
 
 desenhaPortal :: Portal -> Base -> Picture -> Picture -> Picture
 desenhaPortal portal base pDirImg pEsqImg   | fst posPortal < fst posBase = portaldir posPortal (scale 0.8 0.8 pDirImg)
@@ -180,3 +180,9 @@ desenhaPortal portal base pDirImg pEsqImg   | fst posPortal < fst posBase = port
 
     where posPortal = posicaoPortal portal
           posBase = posicaoBase base
+
+
+-- | Desenha todos os portais do jogo.
+
+desenhaPortais :: [Portal] -> Base -> Picture -> Picture -> Picture
+desenhaPortais portais base pDirImg pEsqImg = pictures $ map (\portal -> desenhaPortal portal base pDirImg pEsqImg) portais
