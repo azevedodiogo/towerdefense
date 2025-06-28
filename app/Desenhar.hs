@@ -187,7 +187,8 @@ desenhaPortal portal base pDirImg pEsqImg   | fst posPortal < fst posBase = port
 desenhaPortais :: [Portal] -> Base -> Picture -> Picture -> Picture
 desenhaPortais portais base pDirImg pEsqImg = pictures $ map (\portal -> desenhaPortal portal base pDirImg pEsqImg) portais
 
--- | Desenha a base do jogo
+
+-- | Desenha a base do jogo.
 
 desenhaBase :: Jogo -> Picture -> Picture
 desenhaBase jogo baseImg    | fst posBase < fst posPortal = baseesq posBase (scale 0.7 0.7 baseImg)   -- Base à esquerda
@@ -195,3 +196,12 @@ desenhaBase jogo baseImg    | fst posBase < fst posPortal = baseesq posBase (sca
 
     where posBase = posicaoBase (baseJogo jogo)
           posPortal = posicaoPortal (head (portaisJogo jogo))
+
+
+-- | Combina as funções desenhaBase e desenhaPortais.
+
+desenhaPortaleBase :: Jogo -> Picture -> Picture -> Picture -> Picture
+desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais base pDirImg pEsqImg, desenhaBase j baseImg]
+
+      where portais = portaisJogo j
+            base = baseJogo j
