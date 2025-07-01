@@ -14,3 +14,7 @@ import LI12425
 
 
 -- CORES
+
+-- | Cor da Terra
+corTerra :: Color
+corTerra = makeColor (169 / 255) (122 / 255) (61 / 255) 1.0
