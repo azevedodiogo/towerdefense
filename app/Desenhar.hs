@@ -60,3 +60,9 @@ ponteDeMadeiraH x y = pictures (ponte ++ agua)
 
 ponteDeMadeiraV :: Float -> Float -> Picture
 ponteDeMadeiraV x y = pictures (ponte ++ agua)
+
+    where ponte = [translate x y $ color castanhoEscuro $ rectangleSolid 60 66]
+
+          -- acrescenta a agua para dar o efeito de tábuas de madeira 
+          agua = [ translate (x - 18.75) y $ color corAgua $ rectangleSolid 7.5 60,       -- tabua 1
+                   translate x y $ color corAgua $ rectangleSolid 7.5 60,                 -- tabua 2
