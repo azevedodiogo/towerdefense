@@ -57,3 +57,6 @@ ponteDeMadeiraH x y = pictures (ponte ++ agua)
 
 
 -- | Desenha uma ponte de madeira vertical
+
+ponteDeMadeiraV :: Float -> Float -> Picture
+ponteDeMadeiraV x y = pictures (ponte ++ agua)
