@@ -32,3 +32,7 @@ castanhoEscuro = makeColor (110 / 255) (80 / 255) (40 / 255) 1.0
 -- | Cor para a sombra da relva
 verdeEscuro :: Color
 verdeEscuro = makeColor (53/255) (121/255) (51/255) 1.0
+
+
+
+-- | Desenha o fundo de relva
