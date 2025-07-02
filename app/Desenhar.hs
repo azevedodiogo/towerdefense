@@ -49,3 +49,7 @@ ponteDeMadeiraH :: Float -> Float -> Picture
 ponteDeMadeiraH x y = pictures (ponte ++ agua)
 
     where ponte = [translate x y $ color castanhoEscuro $ rectangleSolid 66 66]
+
+          -- (3 retângulos com 15px cada e 7.5px de espaçamento)
+          agua = [ translate x (y + 18.75) $ color corAgua $ rectangleSolid 60 7.5,       -- tabua 1
+                   translate x y $ color corAgua $ rectangleSolid 60 7.5,                 -- tabua 2
