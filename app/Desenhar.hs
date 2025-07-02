@@ -66,3 +66,6 @@ ponteDeMadeiraV x y = pictures (ponte ++ agua)
           -- acrescenta a agua para dar o efeito de tábuas de madeira 
           agua = [ translate (x - 18.75) y $ color corAgua $ rectangleSolid 7.5 60,       -- tabua 1
                    translate x y $ color corAgua $ rectangleSolid 7.5 60,                 -- tabua 2
+                   translate (x + 18.75) y $ color corAgua $ rectangleSolid 7.5 60  ]     -- tabua 3
+
+-- nota: as pontes são posicoes de terra
