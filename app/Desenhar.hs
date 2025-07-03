@@ -99,3 +99,7 @@ sombra mapa x y = (sombraCima mapa x y, sombraBaixo mapa x y, sombraEsquerda map
         sombraBaixo mapa x y = y < length mapa - 1 && (mapa !! (y + 1) !! x == Relva)
         sombraEsquerda mapa x y = x > 0 && (mapa !! y !! (x - 1) == Relva)
         sombraDireita mapa x y = x < length (mapa !! y) - 1 && (mapa !! y !! (x + 1) == Relva)
+
+
+
+-- | Desenha uma célula de água
