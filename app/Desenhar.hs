@@ -69,3 +69,8 @@ ponteDeMadeiraV x y = pictures (ponte ++ agua)
                    translate (x + 18.75) y $ color corAgua $ rectangleSolid 7.5 60  ]     -- tabua 3
 
 -- nota: as pontes são posicoes de terra
+
+
+-- | Verifica se a célula de terra está rodeada por água (em cima e em baixo ou à esquerda e à direita)
+
+terraComAgua :: Mapa -> Int -> Int -> (Bool, Bool)
