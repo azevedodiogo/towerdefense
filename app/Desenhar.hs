@@ -129,3 +129,8 @@ terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerd
 
         -- as sombras só são criadas se s... for True
         sombras = concat [  [translate x (y + 30) $ color castanhoEscuro $ rectangleSolid 60 7 | sCima],
+                            [translate x (y - 30) $ color castanhoEscuro $ rectangleSolid 60 4 | sBaixo],
+                            [translate (x + 30) y $ color castanhoEscuro $ rectangleSolid 4 60 | sDireita],
+                            [translate (x - 30) y $ color castanhoEscuro $ rectangleSolid 7 60 | sEsquerda] ]
+
+        -- ponte quando a terra está rodeada por água (em cima e em baixo ou à esquerda e à direita)
