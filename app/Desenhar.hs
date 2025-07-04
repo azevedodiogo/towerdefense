@@ -137,3 +137,8 @@ terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerd
         ponte | aguaCimaBaixo = ponteDeMadeiraV x y
               | aguaEsquerdaDireita = ponteDeMadeiraH x y
               | otherwise = Blank
+
+
+-- | Desenha uma célula com base no tipo de terreno
+
+desenhaCelula :: Mapa -> Terreno -> Int -> Int -> Picture
