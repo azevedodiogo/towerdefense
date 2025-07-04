@@ -121,3 +121,6 @@ aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  =
 
 
 -- | Desenha uma célula de terra 
+
+terraCelula :: Float -> Float -> (Bool, Bool, Bool, Bool) -> (Bool, Bool) -> Picture
+terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerdaDireita) = pictures (sombras ++ [centro] ++ [ponte])
