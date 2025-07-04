@@ -124,3 +124,8 @@ aguaCelula x y (sCima, sBaixo, sEsquerda, sDireita) (terraCima, terraDireita)  =
 
 terraCelula :: Float -> Float -> (Bool, Bool, Bool, Bool) -> (Bool, Bool) -> Picture
 terraCelula x y (sCima, sBaixo, sEsquerda, sDireita) (aguaCimaBaixo, aguaEsquerdaDireita) = pictures (sombras ++ [centro] ++ [ponte])
+
+  where centro = translate x y $ color corTerra $ rectangleSolid 60 60   -- terra
+
+        -- as sombras só são criadas se s... for True
+        sombras = concat [  [translate x (y + 30) $ color castanhoEscuro $ rectangleSolid 60 7 | sCima],
