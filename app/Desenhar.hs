@@ -205,3 +205,19 @@ desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais 
 
       where portais = portaisJogo j
             base = baseJogo j
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+-- LOJA
+
+-- | Desenha o fundo da loja.
+
+fundoLoja :: Picture
+fundoLoja = pictures
+            [ color black $ translate 645 0 $ rectangleSolid 610 960,                  -- Limite preto.
+              color (greyN 0.7) $ translate 645 0 $ rectangleSolid 600 950,            -- Retângulo cinzento.
+
+              pictures $ map (\(dx, dy) -> translate dx dy $ scale 1 1 $ color black $ text "LOJA")                     -- para a letra ficar mais grossa
+              [ (480, 330), (480, 331), (480, 329), (481, 331), (481, 329), (481, 330), (479, 331), (479, 329),         -- desenha várias vezes mudando ligeiramente a pos do texto
+                (479, 330), (480, 332), (480, 328), (482, 330), (482, 332), (482, 328), (478, 330), (478, 332), (478, 328) ] ]
