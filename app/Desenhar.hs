@@ -158,3 +158,8 @@ desenhaMapa :: Mapa -> Picture
 desenhaMapa mapa = translate (-910) 450 $
                    pictures [desenhaCelula mapa celula x y | (y, linha) <- zip [0..] mapa, (x, celula) <- zip [0..] linha]
 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- PORTAL E BASE
