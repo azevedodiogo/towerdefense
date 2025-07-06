@@ -150,3 +150,8 @@ desenhaCelula mapa tipo x y
   where
     posX = fromIntegral x * 60
     posY = fromIntegral (-y) * 60  -- o y é negativo, pois as celúlas são desenhadas para baixo e o referencial no gloss tem a origem no centro da tela
+
+
+-- | Desenha o mapa inteiro
+
+desenhaMapa :: Mapa -> Picture
