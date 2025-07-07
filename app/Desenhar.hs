@@ -209,3 +209,7 @@ desenhaPortal portal base pDirImg pEsqImg   | fst posPortal < fst posBase = port
 
 
 -- | Desenha todos os portais do jogo
+
+desenhaPortais :: [Portal] -> Base -> Picture -> Picture -> Picture
+desenhaPortais portais base pDirImg pEsqImg = pictures $ map (\portal -> desenhaPortal portal base pDirImg pEsqImg) portais
+
