@@ -192,3 +192,7 @@ basedir :: Posicao -> Picture -> Picture
 basedir (x, y) = translate (10 + x*60 - 910)        -- 60: medida de cada célula // -910: valor da translação do mapa // 10: valor, a meu ver, mais correto para ficar harmonioso
                            (- (y*60) + 450)         -- 60: medida de cada célula // 450: valor da translação do mapa 
 
+
+-- nota: para as bordas estes valores não são adequados
+--       para a uma base com terra em cima ou em baixo e um portal com terra em baixo, os valores também não são os mais adequados 
+
