@@ -259,3 +259,13 @@ tgelo2 :: Picture -> Picture
 tgelo2 t = pictures  [ color white $ translate 800 (-50) $ rectangleSolid 150 170,                    -- Retângulo branco.
                       color black $ translate 800 (-50) $ rectangleWire 150 170,                      -- Limite preto.
                       translate 800 (-47) t ]                                                         -- Torre gelo (imagem).
+
+-- | Desenha informações das torres de gelo para a loja.
+
+tgeloinfo :: Color -> Picture
+tgeloinfo cor = pictures
+      [ pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Torres")  [(580, -10), (580, -9), (581, -9)],
+        pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "de")  [(605, -50), (605, -49), (606, -49)],
+        pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Gelo")  [(595, -90), (595, -89), (596, -89)],
+        translate 435 (-160) $ scale 0.18 0.18 $ color black $ text "140$",
+        translate 775 (-160) $ scale 0.18 0.18 $ color cor $ text "240$" ]
