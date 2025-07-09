@@ -299,4 +299,7 @@ tresinainfo cor = pictures
 bloqueado :: Picture -> Posicao -> Picture
 bloqueado block (x,y) = pictures [ color white $ translate x y $ rectangleSolid 150 170,               -- Retângulo branco.
                                   color black $ translate x y $ rectangleWire 150 170,                -- Limite preto.
-                                  translate x (y+3) block ]     
+                                  translate x (y+3) block ]                                         -- Cadeado (imagem).
+
+
+
