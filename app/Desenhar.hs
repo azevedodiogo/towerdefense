@@ -236,3 +236,6 @@ desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais 
 -- nota: se for um mapa deste tipo já não funciona
 
          {- base - - - - - -        
+                           - 
+                           -
+                portal - - -   -}
