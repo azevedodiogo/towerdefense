@@ -301,5 +301,15 @@ bloqueado block (x,y) = pictures [ color white $ translate x y $ rectangleSolid 
                                   color black $ translate x y $ rectangleWire 150 170,                -- Limite preto.
                                   translate x (y+3) block ]                                         -- Cadeado (imagem).
 
+-- | Junta as torres
+
+torresLoja :: Jogo -> [Picture] -> Picture
+torresLoja jogo [tf1, tg1, tr1, tf2, tg2, tr2, block]
+
+      | length (lojaJogo jogo) == 3 = pictures [tfogo1 tf1, tfogoinfo (greyN 0.7), tgelo1 tg1, tgeloinfo (greyN 0.7), tresina1 tr1, tresinainfo (greyN 0.7), bloqueado block (800, 180), bloqueado block (800, -50), bloqueado block (800, -280)]
+      | length (lojaJogo jogo) == 4 = pictures [tfogo1 tf1, tfogo2 tf2, tfogoinfo black, tgelo1 tg1, tgeloinfo (greyN 0.7), tresina1 tr1, tresinainfo (greyN 0.7), bloqueado block (800, -50), bloqueado block (800, -280)]
+      | length (lojaJogo jogo) == 6 = pictures [tfogo1 tf1, tfogo2 tf2, tfogoinfo black, tgelo1 tg1, tgelo2 tg2, tgeloinfo black, tresina1 tr1, tresina2 tr2, tresinainfo black]
+      | otherwise = Blank
+
 
 
