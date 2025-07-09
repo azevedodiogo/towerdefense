@@ -301,7 +301,7 @@ bloqueado block (x,y) = pictures [ color white $ translate x y $ rectangleSolid 
                                   color black $ translate x y $ rectangleWire 150 170,                -- Limite preto.
                                   translate x (y+3) block ]                                         -- Cadeado (imagem).
 
--- | Junta as torres
+-- | Junta as torres.
 
 torresLoja :: Jogo -> [Picture] -> Picture
 torresLoja jogo [tf1, tg1, tr1, tf2, tg2, tr2, block]
@@ -311,5 +311,10 @@ torresLoja jogo [tf1, tg1, tr1, tf2, tg2, tr2, block]
       | length (lojaJogo jogo) == 6 = pictures [tfogo1 tf1, tfogo2 tf2, tfogoinfo black, tgelo1 tg1, tgelo2 tg2, tgeloinfo black, tresina1 tr1, tresina2 tr2, tresinainfo black]
       | otherwise = Blank
 
+-- | Exibe no ecrã a vida da base (que é atualizada ao longo do tempo).
+
+vida :: Jogo -> Picture
+vida j = pictures $ map (\(x, y) -> translate x y $ scale 0.25 0.25 $ color black $ text ("Vida: " ++ show (vidaBase (baseJogo j))))
+         [(705, -450), (705, -449), (706, -449)]         -- Para a letra ficar mais grossa.
 
 
