@@ -269,3 +269,10 @@ tgeloinfo cor = pictures
         pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Gelo")  [(595, -90), (595, -89), (596, -89)],
         translate 435 (-160) $ scale 0.18 0.18 $ color black $ text "140$",
         translate 775 (-160) $ scale 0.18 0.18 $ color cor $ text "240$" ]
+
+-- | Desenha a torre de resina1 para a loja.
+
+tresina1 :: Picture -> Picture
+tresina1 t = pictures  [ color white $ translate 460 (-280) $ rectangleSolid 150 170,                   -- Retângulo branco.
+                        color black $ translate 460 (-280) $ rectangleWire 150 170,                     -- Limite preto.
+                        translate 460 (-277) t ]                                                        -- Torre resina (imagem).
