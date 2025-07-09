@@ -231,3 +231,8 @@ desenhaPortaleBase j pDirImg pEsqImg baseImg = pictures [desenhaPortais portais 
 
       where portais = portaisJogo j
             base = baseJogo j
+
+
+-- nota: se for um mapa deste tipo já não funciona
+
+         {- base - - - - - -        
