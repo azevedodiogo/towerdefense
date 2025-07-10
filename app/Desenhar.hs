@@ -265,3 +265,8 @@ fundoLoja = pictures
 tfogo1 :: Picture -> Picture
 tfogo1 t = pictures  [ color white $ translate 460 180 $ rectangleSolid 150 170,                      -- retangulo branco                     
                       color black $ translate 460 180 $ rectangleWire 150 170,                        -- limite preto                          
+                      translate 460 183 t ]                                                           -- torre fogo1 (imagem)    
+
+-- | Desenha a torre de fogo2 para a loja
+
+tfogo2 :: Picture -> Picture
