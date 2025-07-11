@@ -311,3 +311,8 @@ tgeloinfo cor = pictures
         translate 435 (-160) $ scale 0.18 0.18 $ color black $ text "140$",
         translate 775 (-160) $ scale 0.18 0.18 $ color cor $ text "240$" ]
 
+
+-- | Desenha a torre de resina1 para a loja
+
+tresina1 :: Picture -> Picture
+tresina1 t = pictures  [ color white $ translate 460 (-280) $ rectangleSolid 150 170,                   -- retangulo branco                     
