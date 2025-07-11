@@ -308,3 +308,6 @@ tgeloinfo cor = pictures
       [ pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Torres")  [(580, -10), (580, -9), (581, -9)],
         pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "de")  [(605, -50), (605, -49), (606, -49)],
         pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Gelo")  [(595, -90), (595, -89), (596, -89)],
+        translate 435 (-160) $ scale 0.18 0.18 $ color black $ text "140$",
+        translate 775 (-160) $ scale 0.18 0.18 $ color cor $ text "240$" ]
+
