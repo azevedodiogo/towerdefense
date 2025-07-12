@@ -355,3 +355,7 @@ torresLoja jogo [tf1, tg1, tr1, tf2, tg2, tr2, block]
       | length (lojaJogo jogo) == 4 = pictures [tfogo1 tf1, tfogo2 tf2, tfogoinfo black, tgelo1 tg1, tgeloinfo (greyN 0.7), tresina1 tr1, tresinainfo (greyN 0.7), bloqueado block (800, -50), bloqueado block (800, -280)]
       | length (lojaJogo jogo) == 6 = pictures [tfogo1 tf1, tfogo2 tf2, tfogoinfo black, tgelo1 tg1, tgelo2 tg2, tgeloinfo black, tresina1 tr1, tresina2 tr2, tresinainfo black]
       | otherwise = Blank
+
+
+
+-- | Exibe no ecrã a vida da base (que é atualizada ao longo do tempo)
