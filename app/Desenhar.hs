@@ -359,3 +359,7 @@ torresLoja jogo [tf1, tg1, tr1, tf2, tg2, tr2, block]
 
 
 -- | Exibe no ecrã a vida da base (que é atualizada ao longo do tempo)
+
+vida :: Jogo -> Picture
+vida j = pictures $ map (\(x, y) -> translate x y $ scale 0.25 0.25 $ color black $ text ("Vida: " ++ show (vidaBase (baseJogo j))))
+         [(705, -450), (705, -449), (706, -449)]         -- para a letra ficar mais grossa
