@@ -342,3 +342,6 @@ tresinainfo cor = pictures
 -- | Desenha um cadeado (para simbolizar que aquela torre ainda está bloqueada)
 
 bloqueado :: Picture -> Posicao -> Picture
+bloqueado block (x,y) = pictures [ color white $ translate x y $ rectangleSolid 150 170,               -- retangulo branco                     
+                                  color black $ translate x y $ rectangleWire 150 170,                -- limite preto                          
+                                  translate x (y+3) block ]                                               -- cadeado (imagem)
