@@ -333,3 +333,7 @@ tresina2 t = pictures  [ color white $ translate 800 (-280) $ rectangleSolid 150
 tresinainfo :: Color -> Picture
 tresinainfo cor = pictures
       [ pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Torres")  [(580, -240), (580, -239), (581, -239)],
+        pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "de")  [(605, -280), (605, -279), (606, -279)],
+        pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Resina")  [(579, -320), (579, -319), (580, -319)],
+        translate 435 (-390) $ scale 0.18 0.18 $ color black $ text "120$",
+        translate 775 (-390) $ scale 0.18 0.18 $ color cor $ text "220$" ]
