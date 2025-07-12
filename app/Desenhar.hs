@@ -329,3 +329,7 @@ tresina2 t = pictures  [ color white $ translate 800 (-280) $ rectangleSolid 150
 
 
 -- | Desenha informacoes das torres de resina para a loja
+
+tresinainfo :: Color -> Picture
+tresinainfo cor = pictures
+      [ pictures $ map (\(dx, dy) -> translate dx dy $ scale 0.25 0.25 $ color black $ text "Torres")  [(580, -240), (580, -239), (581, -239)],
