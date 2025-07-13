@@ -400,3 +400,8 @@ desenhaReferencia c (x, y) = case c of
 
 desenhaTorres ::[Picture] -> [Torre] -> Picture
 desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
+
+
+      [ case projetilTorre of
+                              Projetil {tipoProjetil = Fogo} -> if danoTorre == 10 then translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tf1
+                                                                else translate (x * 60 - 911) ((- y) * 60 + 473) $ scale 0.55 0.55 tf2
