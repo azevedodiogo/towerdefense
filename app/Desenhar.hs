@@ -397,3 +397,6 @@ desenhaReferencia c (x, y) = case c of
 
 
 -- | Desenha a torre que o jogador comprou, tendo em conta o número (1,2,3 respetivamente)
+
+desenhaTorres ::[Picture] -> [Torre] -> Picture
+desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
