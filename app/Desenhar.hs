@@ -379,3 +379,8 @@ creditosLoja j = pictures $ map (\(x, y) -> translate x y $ scale 0.25 0.25 $ co
 
 
 -- a referencia, é um circulo amarelo e serve para o jogador escolher o sítio onde irá colocar a torre.
+
+
+-- | Desenha ou não a referencia
+
+desenhaReferencia :: Compra -> (Int, Int) -> Picture
