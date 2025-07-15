@@ -440,3 +440,7 @@ temResina ini = let tpProjeteis = map tipoProjetil (projeteisInimigo ini)
 calculaIndice :: Inimigo -> [Picture] -> Int
 calculaIndice ini imgs  | temGelo ini = 1                                                                           -- Se o inimigo tem gelo, exibe uma imagem fixa 
                         | temResina ini = floor (tempoInimigo ini * 4 * velocidadeInimigo ini * 0.7) `mod` 4        -- Se o inimigo tem resina, as imgs são mais lentas a mudar
+                        | otherwise =  floor (tempoInimigo ini * 4 * velocidadeInimigo ini) `mod` 4                 -- Caso contrário, a animação é de acordo com a velocidade
+
+
+-- | Calcula a posicao no mapa do inimigo
