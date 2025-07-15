@@ -423,3 +423,7 @@ desenhaTorres [tf1, tg1, tr1, tf2, tg2, tr2, block] torres = pictures
 -- INIMIGOS
 
 -- | Verifica se o inimigo tem gelo
+
+temGelo :: Inimigo -> Bool
+temGelo ini = let tpProjeteis = map tipoProjetil (projeteisInimigo ini)
+              in elem Gelo tpProjeteis
