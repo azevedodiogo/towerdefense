@@ -447,3 +447,8 @@ calculaIndice ini imgs  | temGelo ini = 1                                       
 
 calculaPos :: Inimigo -> Posicao
 calculaPos ini = (x * 60 - 910, -(y * 60) + 470)
+
+      where (x,y) = posicaoInimigo ini
+
+
+-- | Desenha o inimigo para virado para este
