@@ -461,3 +461,6 @@ iniEste ini imgs = translate x' y' $ scale 1.05 1.05 (imgsEste !! calculaIndice 
 
 
 -- | Desenha o inimigo para virado para oeste
+
+iniOeste :: Inimigo -> [Picture] -> Picture
+iniOeste ini imgs = translate x' y' $ scale 1.05 1.05 (imgsOeste !! calculaIndice ini imgsOeste)
