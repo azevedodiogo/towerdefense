@@ -444,3 +444,6 @@ calculaIndice ini imgs  | temGelo ini = 1                                       
 
 
 -- | Calcula a posicao no mapa do inimigo
+
+calculaPos :: Inimigo -> Posicao
+calculaPos ini = (x * 60 - 910, -(y * 60) + 470)
