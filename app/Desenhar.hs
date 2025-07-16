@@ -452,3 +452,8 @@ calculaPos ini = (x * 60 - 910, -(y * 60) + 470)
 
 
 -- | Desenha o inimigo para virado para este
+
+iniEste :: Inimigo -> [Picture] -> Picture
+iniEste ini imgs = translate x' y' $ scale 1.05 1.05 (imgsEste !! calculaIndice ini imgsEste)
+
+      where imgsEste = take 4 imgs
