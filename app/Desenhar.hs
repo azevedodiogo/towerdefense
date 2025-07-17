@@ -491,3 +491,7 @@ iniSul ini imgs = translate x' y' $ scale 1.05 1.05 (imgsSul !! calculaIndice in
 
 desenhaCorpoIni :: Inimigo -> [Picture] -> Picture
 desenhaCorpoIni ini imgs = case direcaoInimigo ini of
+    Norte -> iniNorte ini imgs
+    Sul   -> iniSul ini imgs
+    Este  -> iniEste ini imgs
+    Oeste -> iniOeste ini imgs
