@@ -503,3 +503,8 @@ determinaCor :: [Projetil] -> Color
 determinaCor projeteis
 
     | Gelo `elem` tiposProjetil = blue                      -- Cor azul para gelo
+    | Resina `elem` tiposProjetil = castanhoEscuro          -- Cor castanha para resina
+    | Fogo `elem` tiposProjetil = red                       -- Cor vermelha para fogo
+    | otherwise = makeColor 1.0 0.75 0.8 1.0                -- Cor rosa claro se não há projeteis 
+
+    where tiposProjetil = map tipoProjetil projeteis
