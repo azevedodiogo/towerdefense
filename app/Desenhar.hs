@@ -508,3 +508,6 @@ determinaCor projeteis
     | otherwise = makeColor 1.0 0.75 0.8 1.0                -- Cor rosa claro se não há projeteis 
 
     where tiposProjetil = map tipoProjetil projeteis
+
+
+-- | Desenha uma barra que representa a vida do inimigo
