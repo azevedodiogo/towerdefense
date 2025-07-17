@@ -498,3 +498,8 @@ desenhaCorpoIni ini imgs = case direcaoInimigo ini of
 
 
 -- | Determina a cor da vida com base nos projéteis
+
+determinaCor :: [Projetil] -> Color
+determinaCor projeteis
+
+    | Gelo `elem` tiposProjetil = blue                      -- Cor azul para gelo
