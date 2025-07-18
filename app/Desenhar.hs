@@ -525,3 +525,7 @@ desenhaVida ini = translate x y $ color (determinaCor projeteis) $ rectangleSoli
 -- | Desenha o inimigo com a respetiva vida
 
 desenhaInimigo :: Inimigo -> [Picture] -> Picture
+desenhaInimigo ini imgs = pictures [desenhaCorpoIni ini imgs, desenhaVida ini]
+
+
+-- | Desenha todos os inimigos em jogo
