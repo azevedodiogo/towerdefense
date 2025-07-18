@@ -516,3 +516,7 @@ desenhaVida :: Inimigo -> Picture
 desenhaVida ini = translate x y $ color (determinaCor projeteis) $ rectangleSolid vidaAtual alturaBarra
 
     where alturaBarra = 3
+          vidaAtual = vidaInimigo ini
+          projeteis = projeteisInimigo ini
+          pos = posicaoInimigo ini
+          (x,y) = (fst pos * 60 - 910, - (snd pos * 60) + 515)
