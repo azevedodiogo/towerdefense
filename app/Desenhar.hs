@@ -541,3 +541,7 @@ desenhaInimigos inimigos imgs = pictures $ map (`desenhaInimigo` imgs) inimigos
 
 desenhaJogo :: Imagens -> ImmutableTowers -> Picture
 desenhaJogo imgs it = case it of
+
+      MenuPrincipal pz -> scale 1 0.95 (menuInicial imgs)
+
+      RegrasJogo pz -> translate 0 (-2) $ scale 1.05 1 (regras imgs)
