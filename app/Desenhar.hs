@@ -549,3 +549,7 @@ desenhaJogo imgs it = case it of
       Creditos pz -> scale 1 0.95 (creditos imgs)
 
       SelecaoNiveis pz -> scale 1 0.95 (niveis imgs)
+
+      Pausa jogo pz -> scale 1 0.95 (pausa imgs)
+
+      Proezas pz -> desenhaProezas pz (proezas imgs)
