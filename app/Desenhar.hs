@@ -536,3 +536,8 @@ desenhaInimigos inimigos imgs = pictures $ map (`desenhaInimigo` imgs) inimigos
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
+
+-- | Desenha o Jogo
+
+desenhaJogo :: Imagens -> ImmutableTowers -> Picture
+desenhaJogo imgs it = case it of
