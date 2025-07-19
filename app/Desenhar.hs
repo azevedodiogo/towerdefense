@@ -571,3 +571,8 @@ desenhaProezas proezas imagensProezas
       | elem Nivel1Concluido proezas && elem Nivel2Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 7        -- Todos os níveis concluídos
       | elem Nivel2Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 6                                        -- Níveis 2 e 3 concluídos
       | elem Nivel1Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 5                                        -- Níveis 1 e 3 concluídos
+      | elem Nivel1Concluido proezas && elem Nivel2Concluido proezas = imgsProezas !! 4                                        -- Níveis 1 e 2 concluídos
+      | elem Nivel3Concluido proezas = imgsProezas !! 3                                                                        -- Apenas nível 3 concluído
+      | elem Nivel2Concluido proezas = imgsProezas !! 2                                                                        -- Apenas nível 2 concluído
+      | elem Nivel1Concluido proezas = imgsProezas !! 1                                                                        -- Apenas nível 1 concluído
+      | otherwise = imgsProezas !! 0
