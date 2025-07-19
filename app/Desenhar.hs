@@ -553,3 +553,9 @@ desenhaJogo imgs it = case it of
       Pausa jogo pz -> scale 1 0.95 (pausa imgs)
 
       Proezas pz -> desenhaProezas pz (proezas imgs)
+
+      JogoRun jogo refePos b pz -> desenhaJogoAux imgs jogo refePos b
+
+      Vitoria jogo pz -> scale 1 0.95 (vitoria imgs)
+
+      Derrota jogo pz -> scale 1 0.95 (derrota imgs)
