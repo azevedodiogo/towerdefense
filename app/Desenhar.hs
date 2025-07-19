@@ -576,3 +576,6 @@ desenhaProezas proezas imagensProezas
       | elem Nivel2Concluido proezas = imgsProezas !! 2                                                                        -- Apenas nível 2 concluído
       | elem Nivel1Concluido proezas = imgsProezas !! 1                                                                        -- Apenas nível 1 concluído
       | otherwise = imgsProezas !! 0
+
+
+    where imgsProezas = map (scale 1 0.94) imagensProezas
