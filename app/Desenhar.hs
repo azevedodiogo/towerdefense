@@ -588,3 +588,8 @@ desenhaJogoAux :: Imagens -> Jogo -> PosRef -> Compra -> Picture
 desenhaJogoAux imgs jogo pos compra =
 
   pictures [ fundoRelva 21 16 (relva imgs),                                   -- fundo relva
+             desenhaMapa (mapaJogo jogo),                                     -- resto do mapa
+             desenhaPortaleBase jogo portaldirimg portalesqimg baseimg,       -- portais e base
+             fundoLoja,                                                       -- fundo loja
+             torresLoja jogo torresImgs,                                      -- torres para a loja
+             vida jogo,                                                       -- vida
