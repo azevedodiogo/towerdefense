@@ -567,3 +567,7 @@ desenhaJogo imgs it = case it of
 
 desenhaProezas :: [Proezas] -> [Picture] -> Picture
 desenhaProezas proezas imagensProezas
+
+      | elem Nivel1Concluido proezas && elem Nivel2Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 7        -- Todos os níveis concluídos
+      | elem Nivel2Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 6                                        -- Níveis 2 e 3 concluídos
+      | elem Nivel1Concluido proezas && elem Nivel3Concluido proezas = imgsProezas !! 5                                        -- Níveis 1 e 3 concluídos
