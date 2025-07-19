@@ -579,3 +579,7 @@ desenhaProezas proezas imagensProezas
 
 
     where imgsProezas = map (scale 1 0.94) imagensProezas
+
+
+
+-- | Função auxiliar para desenhar o jogoRun
