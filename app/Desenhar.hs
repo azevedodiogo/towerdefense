@@ -559,3 +559,6 @@ desenhaJogo imgs it = case it of
       Vitoria jogo pz -> scale 1 0.95 (vitoria imgs)
 
       Derrota jogo pz -> scale 1 0.95 (derrota imgs)
+
+
+
