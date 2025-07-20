@@ -593,3 +593,7 @@ desenhaJogoAux imgs jogo pos compra =
              fundoLoja,                                                       -- fundo loja
              torresLoja jogo torresImgs,                                      -- torres para a loja
              vida jogo,                                                       -- vida
+             creditosLoja jogo,                                               -- creditos
+             desenhaReferencia compra pos,                                    -- referência 
+             desenhaInimigos (inimigosJogo jogo) iniImgs,                     -- inimigos em jogo
+             desenhaTorres torresImgs (torresJogo jogo)  ]                    -- torres para o mapa
