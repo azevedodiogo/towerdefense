@@ -601,3 +601,7 @@ desenhaJogoAux imgs jogo pos compra =
 
     where torresImgs = torres imgs
           (portaldirimg, portalesqimg) = portais imgs
+          baseimg = base imgs
+          iniImgs = inimigos imgs
+
+
