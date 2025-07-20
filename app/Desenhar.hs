@@ -597,3 +597,7 @@ desenhaJogoAux imgs jogo pos compra =
              desenhaReferencia compra pos,                                    -- referência 
              desenhaInimigos (inimigosJogo jogo) iniImgs,                     -- inimigos em jogo
              desenhaTorres torresImgs (torresJogo jogo)  ]                    -- torres para o mapa
+
+
+    where torresImgs = torres imgs
+          (portaldirimg, portalesqimg) = portais imgs
