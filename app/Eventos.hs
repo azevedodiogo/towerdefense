@@ -31,3 +31,8 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (RegrasJogo pz) | 
 
 reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Creditos pz) | x >= -85 && x <= 85 && y >= -428 && y <= -364 = MenuPrincipal pz
                                                                             | otherwise = Creditos pz
+
+
+-- Proezas: Reage ao clique do botão esquerdo do rato, redirecionando para o MenuPrincipal
+
+reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Proezas pz) | x >= -60 && x <= 120 && y >= -428 && y <= -352 = MenuPrincipal pz
