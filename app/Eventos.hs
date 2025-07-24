@@ -69,3 +69,8 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Vitoria jogo pz) 
                                                                                 | dentroNextLevel (x, y) = JogoRun (proximoNivel (nivelJogo jogo)) (1000,1000) NaoQuerComprar pz
                                                                                 | otherwise = Vitoria jogo pz
 
+
+
+-- JogoRun
+
+-- Clicar na tecla 'P' implica o desejo de o jogador querer pausar o jogo.
