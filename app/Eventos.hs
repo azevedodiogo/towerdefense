@@ -66,3 +66,6 @@ reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Derrota jogo pz) 
 -- Vitoria: Reage ao clique do botão esquerdo do rato, redirecionando para o menu principal ou avançando para o próximo nível
 
 reageEventos (EventKey (MouseButton LeftButton) Down _ (x,y)) (Vitoria jogo pz) | x >= -107 && x <= 123 && y >= -220 && y <= -130 = MenuPrincipal pz
+                                                                                | dentroNextLevel (x, y) = JogoRun (proximoNivel (nivelJogo jogo)) (1000,1000) NaoQuerComprar pz
+                                                                                | otherwise = Vitoria jogo pz
+
