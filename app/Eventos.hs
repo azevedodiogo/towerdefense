@@ -79,3 +79,7 @@ reageEventos (EventKey (Char 'p') Down _ _) (JogoRun jogo p b pz) = Pausa jogo p
 
 
 -- Clicar na tecla 'R' implica o desejo de o jogador querer reiniciar o jogo.
+
+reageEventos (EventKey (Char 'r') Down _ _) (JogoRun jogo p b pz) = JogoRun nivel (1000,1000) NaoQuerComprar pz
+                                                                    where nivel = case nivelJogo jogo of  Um   -> nivelUm
+                                                                                                          Dois -> nivelDois
