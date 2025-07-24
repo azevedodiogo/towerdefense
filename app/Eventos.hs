@@ -90,3 +90,8 @@ reageEventos (EventKey (Char 'r') Down _ _) (JogoRun jogo p b pz) = JogoRun nive
 
 reageEventos (EventKey (Char 'c') Down _ _) (JogoRun jogo pos bool pz) = JogoRun jogo (fstPosRelva jogo) QuerComprar pz
 
+
+
+-- Move a referência para que o jogador possa escolher a posição da torre que vai comprar.
+
+-- Move a referência para cima 
