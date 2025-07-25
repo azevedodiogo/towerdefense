@@ -95,3 +95,8 @@ reageEventos (EventKey (Char 'c') Down _ _) (JogoRun jogo pos bool pz) = JogoRun
 -- Move a referência para que o jogador possa escolher a posição da torre que vai comprar.
 
 -- Move a referência para cima 
+
+reageEventos (EventKey (SpecialKey KeyUp) Down _ _) (JogoRun jogo pos compra pz) = let novaPos = calculaNovaPosicao pos (0, -1) (posicoesTorres jogo) (mapaJogo jogo)
+                                                                                   in JogoRun jogo novaPos QuerComprar pz
+
+-- Move a referência para baixo
