@@ -113,3 +113,6 @@ reageEventos (EventKey (SpecialKey KeyLeft) Down _ _) (JogoRun jogo pos compra p
 
 reageEventos (EventKey (SpecialKey KeyRight) Down _ _) (JogoRun jogo pos compra pz) = let novaPos = calculaNovaPosicao pos (1, 0) (posicoesTorres jogo) (mapaJogo jogo)
                                                                                       in JogoRun jogo novaPos QuerComprar pz
+
+
+-- Coloca uma torre na posição escolhida, caso o jogador tenha dinheiro suficiente.
