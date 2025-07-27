@@ -177,3 +177,6 @@ reageEventos _ it = it
 
 
 -- | Devolve a primeira pos de relva do mapa 
+
+fstPosRelva :: Jogo -> (Int, Int)
+fstPosRelva j = head (posicoesRelva (mapaJogo j))
