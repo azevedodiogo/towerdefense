@@ -194,3 +194,6 @@ posicoesTorres jogo = map posicaoTorre (torresJogo jogo)
 
 
 -- | Verifica se a posição (x, y) está dentro dos limites do mapa
+
+posicaoDentroDoMapa :: (Int, Int) -> Mapa -> Bool
+posicaoDentroDoMapa (x, y) mapa = y >= 0 && y < length mapa && x >= 0 && x < length (head mapa)
