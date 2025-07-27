@@ -190,3 +190,7 @@ posicoesRelva mapa = [ (x, y) | (y, linha) <- zip [0..] mapa, (x, celula) <- zip
 -- | Devolve as posicoes das torres no mapa
 
 posicoesTorres :: Jogo -> [Posicao]
+posicoesTorres jogo = map posicaoTorre (torresJogo jogo)
+
+
+-- | Verifica se a posição (x, y) está dentro dos limites do mapa
