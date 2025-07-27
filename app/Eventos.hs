@@ -197,3 +197,8 @@ posicoesTorres jogo = map posicaoTorre (torresJogo jogo)
 
 posicaoDentroDoMapa :: (Int, Int) -> Mapa -> Bool
 posicaoDentroDoMapa (x, y) mapa = y >= 0 && y < length mapa && x >= 0 && x < length (head mapa)
+
+
+-- | Calcula a próxima posição válida de Relva
+
+calculaNovaPosicao :: (Int, Int) -> (Int, Int) -> [Posicao] -> Mapa -> (Int, Int)
