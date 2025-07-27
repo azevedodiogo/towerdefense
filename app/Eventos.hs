@@ -202,3 +202,8 @@ posicaoDentroDoMapa (x, y) mapa = y >= 0 && y < length mapa && x >= 0 && x < len
 -- | Calcula a próxima posição válida de Relva
 
 calculaNovaPosicao :: (Int, Int) -> (Int, Int) -> [Posicao] -> Mapa -> (Int, Int)
+calculaNovaPosicao (x,y) (dx, dy) postorres mapa
+
+      | novaPos `elem` posValidas && novaPos `notElem` posTorresInt = novaPos                       -- a novaPos é de relva e não está sobreposta a nenhuma das torres
+      | posicaoDentroDoMapa novaPos mapa = calculaNovaPosicao novaPos (dx, dy) postorres mapa       -- a novaPos não é relva, logo volta a chamar a funcao
+      | otherwise = (x,y)                                                                           -- não há mais pos de relva na direção da seta pressionada
