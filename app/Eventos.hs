@@ -180,3 +180,8 @@ reageEventos _ it = it
 
 fstPosRelva :: Jogo -> (Int, Int)
 fstPosRelva j = head (posicoesRelva (mapaJogo j))
+
+-- | Encontra as posicoes de relva
+
+posicoesRelva :: Mapa -> [(Int, Int)]
+posicoesRelva mapa = [ (x, y) | (y, linha) <- zip [0..] mapa, (x, celula) <- zip [0..] linha, celula == Relva ]
