@@ -207,3 +207,7 @@ calculaNovaPosicao (x,y) (dx, dy) postorres mapa
       | novaPos `elem` posValidas && novaPos `notElem` posTorresInt = novaPos                       -- a novaPos é de relva e não está sobreposta a nenhuma das torres
       | posicaoDentroDoMapa novaPos mapa = calculaNovaPosicao novaPos (dx, dy) postorres mapa       -- a novaPos não é relva, logo volta a chamar a funcao
       | otherwise = (x,y)                                                                           -- não há mais pos de relva na direção da seta pressionada
+
+      where novaPos = (x + dx, y + dy)                                                              -- (dx, dy) é o deslocamento, neste caso 1 unidade
+            posValidas = posicoesRelva mapa
+            posTorresInt = map (\(z, w) -> (floor z, floor w)) postorres
