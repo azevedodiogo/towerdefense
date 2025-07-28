@@ -240,3 +240,8 @@ podeComprar jogo indice = dinheiro >= custo
           custo = if indice > length (lojaJogo jogo) || indice <= 0 then 1000000
                   else fst (lojaJogo jogo !! (indice - 1))
 
+
+
+
+
+-- | Verifica se o clique está dentro do botao 'sair' na img do MenuPrincipal
