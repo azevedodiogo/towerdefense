@@ -224,3 +224,7 @@ adicionaTorre jogo indice pos = jogo {torresJogo = novasTorres, baseJogo = novaB
 
           loja = case nivel of Um   -> lojaJogo jogo
                                Dois -> lojaJogo jogo
+                               Tres -> lojaJogo jogo
+
+          (custo, torre) = loja !! (indice - 1)
+          novasTorres = (torre {posicaoTorre = pos}) : torresJogo jogo
