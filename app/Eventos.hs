@@ -237,3 +237,6 @@ podeComprar :: Jogo -> Int -> Bool
 podeComprar jogo indice = dinheiro >= custo
 
     where dinheiro = creditosBase (baseJogo jogo)
+          custo = if indice > length (lojaJogo jogo) || indice <= 0 then 1000000
+                  else fst (lojaJogo jogo !! (indice - 1))
+
