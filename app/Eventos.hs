@@ -271,3 +271,6 @@ dentroNextLevel (x, y) = ((x-5)^2 + y^2) <= 90^2
 -- | Retorna o jogo inicial com base no nível do jogo atual
 
 reiniciarJogo :: NivelJogo -> Jogo
+reiniciarJogo Um = nivelUm
+reiniciarJogo Dois = nivelDois
+reiniciarJogo Tres = nivelTres
