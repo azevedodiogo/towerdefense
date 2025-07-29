@@ -279,3 +279,7 @@ reiniciarJogo Tres = nivelTres
 -- | Avança para o proximo nível (jogo)
 
 proximoNivel :: NivelJogo -> Jogo
+proximoNivel Um = nivelDois
+proximoNivel Dois = nivelTres
+proximoNivel Tres = nivelUm
+
