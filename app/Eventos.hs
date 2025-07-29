@@ -254,3 +254,6 @@ sairMenu (x, y) = ((x+900)^2 + (y-454)^2) <= 35^2
 
 sairPausa :: (Float, Float) -> Bool
 sairPausa (x, y) = ((x+912)^2 + (y-462)^2) <= 30^2
+
+
+-- | Verifica se o clique está dentro do botao 'restart' 
