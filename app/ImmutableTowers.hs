@@ -32,3 +32,6 @@ data Imagens = Imagens {
                     torres      :: [Picture],                                                       -- Torres: fogo, gelo, resina
                     portais     :: (Picture, Picture),                                              -- Portais: direita, esquerda
                     base        :: Picture,                                                         -- Base 
+                    inimigos    :: [Picture]  
+                     }
+
