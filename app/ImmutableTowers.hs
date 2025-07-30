@@ -15,3 +15,6 @@ data ImmutableTowers = MenuPrincipal [Proezas]
                       | JogoRun Jogo PosRef Compra [Proezas] 
                       | Vitoria Jogo [Proezas] 
                       | Derrota Jogo [Proezas] 
+                      
+
+-- | data Imagens (agrupa as imgs que serão utilizadas no jogo)
