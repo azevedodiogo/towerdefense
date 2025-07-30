@@ -23,3 +23,7 @@ data Imagens = Imagens {
                     relva :: Picture,
                     menuInicial :: Picture,                                                         -- Imagem do menu inicial
                     regras      :: Picture,                                                         -- Imagem das instruções para o jogo
+                    creditos    :: Picture,                                                         -- Imagem dos creditos
+                    niveis      :: Picture,                                                         -- Imagem para seleção dos níveis
+                    pausa       :: Picture,                                                         -- Imagem pausa
+                    proezas     :: [Picture],                                                       -- Proezas: 0, 1, 2, 3, 1 2, 1 3, 2 3, 1 2 3 
