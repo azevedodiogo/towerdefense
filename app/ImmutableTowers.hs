@@ -44,3 +44,8 @@ type PosRef = (Int, Int)
 data Compra = QuerComprar | NaoQuerComprar | NaoTemDinheiro 
 
 -- | Indica aquilo que o jogador já conquistou
+data Proezas = Nivel1Concluido | Nivel2Concluido | Nivel3Concluido  deriving (Show, Eq)
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
