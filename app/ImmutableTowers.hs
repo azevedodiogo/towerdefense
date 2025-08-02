@@ -82,3 +82,8 @@ mapa01 =
     where t = Terra
           a = Agua
           r = Relva
+
+
+-- | Base01
+base01 :: Base
+base01 = Base {vidaBase = 200, posicaoBase = (19,1), creditosBase = 200}
