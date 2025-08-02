@@ -87,3 +87,7 @@ mapa01 =
 -- | Base01
 base01 :: Base
 base01 = Base {vidaBase = 200, posicaoBase = (19,1), creditosBase = 200}
+
+
+
+-- | primeira onda (portal01): inimigos tem 20 de vida, 0.8 de velocidade, 10 de dano
