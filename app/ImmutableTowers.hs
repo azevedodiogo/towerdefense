@@ -138,3 +138,8 @@ iniOnda02 =
 
 iniOnda03 :: [Inimigo]                                  
 iniOnda03 = 
+  -- pos, dir, vida, v, dano, creditos, projeteis, posi, tempo
+  [ Inimigo (1,14) Este 40 1.0 15 15 [] (1,14) 0,
+    Inimigo (1,14) Este 40 1.0 15 15 [] (1,14) 0,
+    Inimigo (1,14) Este 40 1.0 15 15 [] (1,14) 0,
+    Inimigo (1,14) Este 40 1.0 15 15 [] (1,14) 0,
