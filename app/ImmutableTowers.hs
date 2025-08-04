@@ -133,3 +133,8 @@ iniOnda02 =
     Inimigo (1,14) Este 30 1.0 12 12 [] (1,14) 0,
     Inimigo (1,14) Este 30 1.0 12 12 [] (1,14) 0 ]
 
+
+-- | terceira onda (portal01): inimigos tem 40 de vida, 1.0 de velocidade, 12 de dano
+
+iniOnda03 :: [Inimigo]                                  
+iniOnda03 = 
