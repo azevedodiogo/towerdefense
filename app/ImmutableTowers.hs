@@ -155,3 +155,8 @@ iniOnda03 =
     Inimigo (1,14) Este 40 1.0 15 15 [] (1,14) 0, 
     Inimigo (1,14) Este 40 1.0 15 15 [] (1,14) 0 ]
 
+
+-- | quarta onda (portal01): inimigos tem 50 de vida, 1.2 de velocidade, 20 de dano
+
+iniOnda04 :: [Inimigo]                                  
+iniOnda04 = 
