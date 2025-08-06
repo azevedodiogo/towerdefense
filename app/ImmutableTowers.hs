@@ -203,3 +203,7 @@ portal01 = Portal {posicaoPortal = (1,14), ondasPortal = [onda01, onda02, onda03
 -- | Loja01
 loja01 :: Loja
 loja01 = [tFogo01, tGelo01, tResina01]
+
+
+-- | Torre01 fogo 
+tFogo01 :: (Creditos,Torre)
