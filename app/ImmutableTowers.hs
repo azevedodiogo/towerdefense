@@ -198,3 +198,8 @@ onda04 = Onda {inimigosOnda = iniOnda04, cicloOnda = 2.5, tempoOnda = 0, entrada
 -- | Portal01
 portal01 :: Portal
 portal01 = Portal {posicaoPortal = (1,14), ondasPortal = [onda01, onda02, onda03, onda04]}
+
+
+-- | Loja01
+loja01 :: Loja
+loja01 = [tFogo01, tGelo01, tResina01]
