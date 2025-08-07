@@ -254,3 +254,7 @@ mapa02 =
     where t = Terra
           a = Agua
           r = Relva
+
+
+-- | Base02
+base02 :: Base
