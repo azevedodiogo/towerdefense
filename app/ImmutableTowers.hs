@@ -228,3 +228,7 @@ tResina01 = (120, Torre {posicaoTorre = (0, 0), danoTorre = 8, alcanceTorre = 4,
 -- | NIVEL DOIS
 
 nivelDois :: Jogo
+nivelDois = Jogo {baseJogo = base02, portaisJogo = [portal02, portal03], torresJogo = [], mapaJogo = mapa02, inimigosJogo = [], lojaJogo = loja02, nivelJogo = Dois}
+ 
+
+-- | Mapa (21 largura / 16 altura)
