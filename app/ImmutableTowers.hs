@@ -279,3 +279,8 @@ iniOnda05 =
     Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
     Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
     Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
+    Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0,
+    Inimigo (19,1) Oeste 30 1.0 10 7 [] (19,1) 0 ]
+
+
+-- | segunda onda (portal02): inimigos tem 50 de vida, 1.0 de velocidade, 12 de dano
