@@ -301,3 +301,6 @@ iniOnda06 =
     Inimigo (19,1) Oeste 50 1.0 12 10 [] (19,1) 0,
     Inimigo (19,1) Oeste 50 1.0 12 10 [] (19,1) 0,
     Inimigo (19,1) Oeste 50 1.0 12 10 [] (19,1) 0,
+    Inimigo (19,1) Oeste 50 1.0 12 10 [] (19,1) 0,
+    Inimigo (19,1) Oeste 50 1.0 12 10 [] (19,1) 0 ]
+
