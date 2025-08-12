@@ -372,3 +372,9 @@ iniOnda09 =
 
 
 -- | terceira onda (portal03): inimigos tem 70 de vida, 1.2 de velocidade, 15 de dano
+
+iniOnda10 :: [Inimigo]                                  
+iniOnda10 = 
+  -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
+  [ Inimigo (19,14) Oeste 70 1.2 15 12 [] (19,14) 0,
+    Inimigo (19,14) Oeste 70 1.2 15 12 [] (19,14) 0,
