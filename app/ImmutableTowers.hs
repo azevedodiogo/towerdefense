@@ -416,3 +416,7 @@ onda09 = Onda {inimigosOnda = iniOnda09, cicloOnda = 3, tempoOnda = 0, entradaOn
 
 -- | Onda10
 onda10 :: Onda
+onda10 = Onda {inimigosOnda = iniOnda10, cicloOnda = 2.5, tempoOnda = 0, entradaOnda = 15}
+
+
+-- | Portal02
