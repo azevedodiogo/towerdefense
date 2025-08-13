@@ -408,3 +408,7 @@ onda07 = Onda {inimigosOnda = iniOnda07, cicloOnda = 2.5, tempoOnda = 0, entrada
 
 -- | Onda08
 onda08 :: Onda
+onda08 = Onda {inimigosOnda = iniOnda08, cicloOnda = 3, tempoOnda = 0, entradaOnda = 12}
+
+-- | Onda09
+onda09 :: Onda
