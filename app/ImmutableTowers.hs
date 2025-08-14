@@ -446,3 +446,7 @@ tFogo02 =  (250, Torre {posicaoTorre = (0, 0), danoTorre = 12, alcanceTorre = 3.
  
 nivelTres :: Jogo
 nivelTres = Jogo {baseJogo = base03, portaisJogo = [portal04, portal05], torresJogo = [], mapaJogo = mapa03, inimigosJogo = [], lojaJogo = loja03, nivelJogo = Tres}
+
+
+-- | Mapa02 (21 largura / 16 altura)
+mapa03 :: Mapa
