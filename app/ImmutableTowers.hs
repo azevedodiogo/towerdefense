@@ -548,3 +548,8 @@ iniOnda13 =
 
 iniOnda14 :: [Inimigo]                                  
 iniOnda14 = 
+  -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
+  [ Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
