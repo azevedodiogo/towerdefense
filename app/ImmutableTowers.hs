@@ -523,3 +523,7 @@ iniOnda12 =
 
 
 -- | terceira onda (portal04): inimigos tem 60 de vida, 1.2 de velocidade, 20 de dano
+
+iniOnda13 :: [Inimigo]                                 
+iniOnda13 = 
+  -- pos, dir, vida, v, dano, creditos, projeteis, vi, posi
