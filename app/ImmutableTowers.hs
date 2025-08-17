@@ -536,3 +536,7 @@ iniOnda13 =
     Inimigo (1,3) Este 60 1.2 20 10 [] (1,3) 0,
     Inimigo (1,3) Este 60 1.2 20 10 [] (1,3) 0,
     Inimigo (1,3) Este 60 1.2 20 10 [] (1,3) 0,
+    Inimigo (1,3) Este 60 1.2 20 10 [] (1,3) 0,
+    Inimigo (1,3) Este 60 1.2 20 10 [] (1,3) 0,
+    Inimigo (1,3) Este 60 1.2 20 10 [] (1,3) 0,
+    Inimigo (1,3) Este 60 1.2 20 10 [] (1,3) 0,
