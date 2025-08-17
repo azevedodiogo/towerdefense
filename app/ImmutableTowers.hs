@@ -519,3 +519,7 @@ iniOnda12 =
     Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
     Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
     Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0,
+    Inimigo (1,3) Este 40 1.0 15 5 [] (1,3) 0 ]
+
+
+-- | terceira onda (portal04): inimigos tem 60 de vida, 1.2 de velocidade, 20 de dano
