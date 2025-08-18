@@ -586,3 +586,8 @@ iniOnda15 =
     Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
     Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
     Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0 ]
+
+ 
+-- | terceira onda (portal05): inimigos tem 60 de vida, 1.2 de velocidade, 20 de dano
+
+iniOnda16 :: [Inimigo]                                  
