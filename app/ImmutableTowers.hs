@@ -574,3 +574,7 @@ iniOnda15 =
   [ Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
     Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
     Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 40 1.0 15 5 [] (1,9) 0,
