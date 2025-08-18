@@ -565,3 +565,8 @@ iniOnda14 =
     Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
     Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0 ]
 
+
+-- | segunda onda (portal05): inimigos tem 40 de vida, 1.0 de velocidade, 15 de dano
+
+iniOnda15 :: [Inimigo]                                  
+iniOnda15 = 
