@@ -557,3 +557,7 @@ iniOnda14 =
     Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
     Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
     Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
+    Inimigo (1,9) Sul 20 0.8 10 5 [] (1,9) 0,
