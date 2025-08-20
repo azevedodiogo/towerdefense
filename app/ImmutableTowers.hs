@@ -608,3 +608,8 @@ iniOnda16 =
     Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
     Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0,
     Inimigo (1,9) Sul 60 1.2 20 10 [] (1,9) 0 ]
+
+
+-- | Onda11
+onda11 :: Onda
+onda11 = Onda {inimigosOnda = iniOnda11, cicloOnda = 5, tempoOnda = 0, entradaOnda = 10}
