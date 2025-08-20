@@ -629,3 +629,7 @@ onda14 = Onda {inimigosOnda = iniOnda14, cicloOnda = 5, tempoOnda = 0, entradaOn
 -- | Onda15
 onda15 :: Onda
 onda15 = Onda {inimigosOnda = iniOnda15, cicloOnda = 5, tempoOnda = 0, entradaOnda = 14}
+
+-- | Onda16
+onda16 :: Onda
+onda16 = Onda {inimigosOnda = iniOnda16, cicloOnda = 4.5, tempoOnda = 0, entradaOnda = 10}
