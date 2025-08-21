@@ -655,3 +655,7 @@ tGelo02 = (240, Torre {posicaoTorre = (0, 0), danoTorre = 15, alcanceTorre = 3.5
                 tempoTorre = 3, projetilTorre = Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 3}})
 
 -- | Torre02 resina
+tResina02 :: (Creditos, Torre)
+tResina02 = (220, Torre {posicaoTorre = (0, 0), danoTorre = 10, alcanceTorre = 4.0, rajadaTorre = 3, cicloTorre = 3.5, 
+                  tempoTorre = 3, projetilTorre = Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}})
+
