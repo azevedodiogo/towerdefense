@@ -31,3 +31,7 @@ carregarImagens = do
                 pausa <- loadBMP "imagens/pausa.bmp"
 
                 -- vitoria
+                vitoria <- loadBMP "imagens/vitoria.bmp"
+
+                -- derrota
+                derrota <- loadBMP "imagens/derrota.bmp"
