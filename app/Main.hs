@@ -35,3 +35,8 @@ carregarImagens = do
 
                 -- derrota
                 derrota <- loadBMP "imagens/derrota.bmp"
+
+                -- proezas
+                proeza <- loadBMP "imagens/proeza.bmp"
+                proeza1 <- loadBMP "imagens/proeza1.bmp"
+                proeza2 <- loadBMP "imagens/proeza2.bmp"
