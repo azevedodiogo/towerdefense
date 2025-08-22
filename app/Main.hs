@@ -19,3 +19,7 @@ carregarImagens = do
                 menuInicial <- loadBMP "imagens/menuInicial.bmp"
 
                 -- regras
+                regras <- loadBMP "imagens/regras.bmp"
+
+                -- creditos
+                creditos <- loadBMP "imagens/creditos.bmp"
