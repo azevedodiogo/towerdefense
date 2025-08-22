@@ -14,3 +14,8 @@ import LI12425
 
 carregarImagens :: IO Imagens
 carregarImagens = do
+                    
+                -- menu inicial
+                menuInicial <- loadBMP "imagens/menuInicial.bmp"
+
+                -- regras
