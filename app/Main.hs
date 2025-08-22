@@ -26,3 +26,8 @@ carregarImagens = do
 
                 -- seleção dos níveis
                 niveis <- loadBMP "imagens/niveis.bmp"
+
+                -- pausa
+                pausa <- loadBMP "imagens/pausa.bmp"
+
+                -- vitoria
