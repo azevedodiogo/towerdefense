@@ -10,3 +10,7 @@ import LI12425
 
 
        
+-- | Responsável por carregar todas as imagens
+
+carregarImagens :: IO Imagens
+carregarImagens = do
