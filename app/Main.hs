@@ -52,3 +52,8 @@ carregarImagens = do
                 tgelo1 <- loadBMP "imagens/tgelo1.bmp"
                 tresina1 <- loadBMP "imagens/tresina1.bmp"
                 tfogo2 <- loadBMP "imagens/tfogo2.bmp"
+                tgelo2 <- loadBMP "imagens/tgelo2.bmp"
+                tresina2 <- loadBMP "imagens/tresina2.bmp"
+                block <- loadBMP "imagens/block.bmp"
+
+                -- portais
