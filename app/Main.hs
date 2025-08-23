@@ -65,3 +65,7 @@ carregarImagens = do
 
                 -- inimigos
                 iniLdpa <- loadBMP "imagens/iniLdpa.bmp"
+                iniLdpp <- loadBMP "imagens/iniLdpp.bmp"
+                iniLdpf <- loadBMP "imagens/iniLdpf.bmp"
+                iniLepa <- loadBMP "imagens/iniLepa.bmp"
+                iniLepp <- loadBMP "imagens/iniLepp.bmp"
