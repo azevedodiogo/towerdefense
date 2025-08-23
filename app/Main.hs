@@ -73,3 +73,8 @@ carregarImagens = do
                 iniUppa <- loadBMP "imagens/iniUppa.bmp"
                 iniUppp <- loadBMP "imagens/iniUppp.bmp"
                 iniUppf <- loadBMP "imagens/iniUppf.bmp"
+                iniDownpa <- loadBMP "imagens/iniDownpa.bmp"
+                iniDownpp <- loadBMP "imagens/iniDownpp.bmp"
+                iniDownpf <- loadBMP "imagens/iniDownpf.bmp"
+
+                -- relva
