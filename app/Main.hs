@@ -57,3 +57,7 @@ carregarImagens = do
                 block <- loadBMP "imagens/block.bmp"
 
                 -- portais
+                pdir <- loadBMP "imagens/portaldir.bmp"
+                pesq <- loadBMP "imagens/portalesq.bmp"
+
+                -- base
