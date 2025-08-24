@@ -102,3 +102,8 @@ carregarImagens = do
 
 janela :: Display
 janela = InWindow "Immutable Towers" (1920, 1080) (0, 0)
+
+
+-- | Define a cor de fundo da janela do jogo
+
+fundo :: Color
