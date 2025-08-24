@@ -95,3 +95,7 @@ carregarImagens = do
                                 (pdir, pesq) 
                                 base 
                                 [iniLdpa, iniLdpp, iniLdpf, iniLdpp, iniLepa, iniLepp, iniLepf, iniLepp, iniUppa, iniUppp, iniUppf, iniUppp, iniDownpa, iniDownpp, iniDownpf, iniDownpp]
+                              
+
+
+-- | Define as propriedades de tamanho e localização da janela do jogo
