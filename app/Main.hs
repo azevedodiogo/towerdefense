@@ -111,3 +111,7 @@ fundo = white
 
 
 -- | Define o número de frames por segundo, ou seja o número de vezes que o programa é atualizado por segundo
+
+fr :: Int
+fr = 60
+
