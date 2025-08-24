@@ -90,3 +90,8 @@ carregarImagens = do
                                 pausa
                                 [proeza, proeza1, proeza2, proeza3, proeza12, proeza13, proeza23, proeza123]
                                 vitoria 
+                                derrota
+                                [tfogo1, tgelo1, tresina1, tfogo2, tgelo2, tresina2, block] 
+                                (pdir, pesq) 
+                                base 
+                                [iniLdpa, iniLdpp, iniLdpf, iniLdpp, iniLepa, iniLepp, iniLepf, iniLepp, iniUppa, iniUppp, iniUppf, iniUppp, iniDownpa, iniDownpp, iniDownpf, iniDownpp]
