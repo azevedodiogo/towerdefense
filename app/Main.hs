@@ -99,3 +99,6 @@ carregarImagens = do
 
 
 -- | Define as propriedades de tamanho e localização da janela do jogo
+
+janela :: Display
+janela = InWindow "Immutable Towers" (1920, 1080) (0, 0)
