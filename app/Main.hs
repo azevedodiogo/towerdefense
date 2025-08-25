@@ -128,3 +128,7 @@ main = do
              fundo 
              fr 
              (MenuPrincipal [])
+             (desenhaJogo imagens) 
+             reageEventos 
+             reageTempo
+  
