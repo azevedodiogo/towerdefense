@@ -14,3 +14,7 @@ reageTempo :: Tempo -> ImmutableTowers -> ImmutableTowers
 reageTempo t (JogoRun jogo pos compra pz) | ganhouJogo jogo = Vitoria jogo pz
                                           | perdeuJogo jogo = Derrota jogo pz
                                           | otherwise = if validaJogo jogoAtualizado then JogoRun jogoAtualizado pos compra pz  -- verifica se o jogoAtualizado é valido, com a validaJogo da tarefa1
+                                                        else error "Estado inválido detectado após atualização de tempo."
+                                            
+                                          where jogoAtualizado = atualizaJogo t (jogo {inimigosJogo = atualizaTempoInimigos t (inimigosJogo jogo)})
+
