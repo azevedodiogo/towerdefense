@@ -26,3 +26,7 @@ reageTempo t (Vitoria jogo pz) = Vitoria jogo (pz ++ pz')
     where pz' = case nivelJogo jogo of  Um   -> [Nivel1Concluido]
                                         Dois -> [Nivel2Concluido]
                                         Tres -> [Nivel3Concluido]
+
+reageTempo _ it = it
+
+
