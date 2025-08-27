@@ -27,3 +27,7 @@ import System.Random (mkStdGen, randoms)
 
 -- | Tipo de terrenno do mapa.
 data Terreno
+  = -- | Torres constroem-se sobre o relvado do mapa.
+    Relva
+  | -- | A base e os portais constroem-se sobre caminhos de terra do mapa. Além disso, inimigos movem-se sobre estes terrenos.
+    Terra
