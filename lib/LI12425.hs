@@ -48,3 +48,7 @@ type Creditos = Int
 -- | Base de operações do jogador.
 data Base = Base
   { -- | Vida da base. Quando esta chega a zero, o jogador perde o jogo.
+    vidaBase :: Float,
+    -- | Posição da base no mapa. A base deve estar sobre um terreno de terra.
+    posicaoBase :: Posicao,
+    -- | Balanço de créditos do jogador.
