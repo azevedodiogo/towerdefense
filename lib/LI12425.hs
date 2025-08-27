@@ -19,3 +19,6 @@ module LI12425 (
     -- ** Jogo
     Jogo(..), Onda(..), Loja,
     -- * Funções auxiliares
+    geraAleatorios,
+    NivelJogo(..),
+    ) where
