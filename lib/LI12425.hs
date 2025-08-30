@@ -73,3 +73,8 @@ data Duracao
 -- | Torre que dispara projéteis contra inimigos.
 data Torre = Torre
   { -- | Posição da torre no mapa.
+    posicaoTorre :: Posicao,
+    -- | Redução de vida no inimigo pelo impacto do projétil.
+    danoTorre :: Float,
+    -- | Alcance circular da torre.
+    alcanceTorre :: Float,
