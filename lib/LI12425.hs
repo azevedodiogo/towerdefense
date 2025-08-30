@@ -86,3 +86,7 @@ data Torre = Torre
     tempoTorre :: Tempo,
     -- | Efeito secundário associado ao tipo de projétil da torre.
     projetilTorre :: Projetil
+  }
+  deriving (Eq, Show)
+
+-- | Loja de torres disponíveis para construir por uma quantidade de créditos.
