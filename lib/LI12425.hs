@@ -82,3 +82,7 @@ data Torre = Torre
     rajadaTorre :: Int,
     -- | Ciclo de tempo entre rajadas de tiros.
     cicloTorre :: Tempo,
+    -- | Tempo restante para a próxima rajada de tiros.
+    tempoTorre :: Tempo,
+    -- | Efeito secundário associado ao tipo de projétil da torre.
+    projetilTorre :: Projetil
