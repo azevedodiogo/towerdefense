@@ -61,3 +61,7 @@ type Distancia = Float
 
 -- | Tempo em segundos.
 type Tempo = Float
+
+-- | Representa uma duração em segundos
+data Duracao
+  = -- | Duração em segundos
