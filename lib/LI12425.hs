@@ -111,3 +111,7 @@ data Direcao
   | Sul
   | Este
   | Oeste
+  deriving (Eq, Show)
+
+-- | Inimigo que se move em direção à base do jogador.
+data Inimigo = Inimigo
