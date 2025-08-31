@@ -120,3 +120,7 @@ data Inimigo = Inimigo
     -- | Direção do último movimento do inimigo.
     direcaoInimigo :: Direcao,
     -- | Vida do inimigo.
+    vidaInimigo :: Float,
+    -- | Velocidade do inimigo.
+    velocidadeInimigo :: Float,
+    -- | Dano causado pelo inimigo na base do jogador.
