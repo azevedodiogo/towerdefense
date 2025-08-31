@@ -107,3 +107,7 @@ data Projetil = Projetil
 
 -- | Direção de movimento de uma entidade no jogo.
 data Direcao
+  = Norte
+  | Sul
+  | Este
+  | Oeste
