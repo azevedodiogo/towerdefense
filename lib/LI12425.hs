@@ -115,3 +115,8 @@ data Direcao
 
 -- | Inimigo que se move em direção à base do jogador.
 data Inimigo = Inimigo
+  { -- | Posição do inimigo no mapa.
+    posicaoInimigo :: Posicao,
+    -- | Direção do último movimento do inimigo.
+    direcaoInimigo :: Direcao,
+    -- | Vida do inimigo.
