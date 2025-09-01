@@ -162,3 +162,7 @@ data Portal = Portal
 data Jogo = Jogo
   { -- | Base de operações do jogador.
     baseJogo :: Base,
+    -- | Portais de entrada de inimigos no mapa.
+    portaisJogo :: [Portal],
+    -- | Torres construídas pelo jogador.
+    torresJogo :: [Torre],
