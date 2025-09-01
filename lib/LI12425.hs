@@ -132,3 +132,8 @@ data Inimigo = Inimigo
     -- | Posicao do portal
     posInicial :: Posicao,
     -- | Tempo (animação dos inimigos)
+    tempoInimigo :: Float
+  }
+  deriving (Eq, Show)
+
+-- | Onda de inimigos que saem de um portal.
