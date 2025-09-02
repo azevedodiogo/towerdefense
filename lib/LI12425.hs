@@ -186,3 +186,8 @@ type Semente = Int
 {-| Função que gera uma lista de números aleatórios a partir de uma 'Semente'.
 
 == Exemplos
+
+>>> geraAleatorios 2425 3
+[9108974057934916489,3509742222561512871,1534041518507426227]
+
+>>> geraAleatorios 10 1
