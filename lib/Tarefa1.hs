@@ -40,3 +40,8 @@ validaJogo j = verificaPortalNumero j &&
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- PORTAIS 
+
+{- | a função `verificaPortalNumero` verifica o número de portais existentes, neste caso, se existe pelo menos um. -}
+
+verificaPortalNumero :: Jogo -> Bool
+verificaPortalNumero jogo = length (portaisJogo jogo) > 0
