@@ -53,3 +53,6 @@ verificaPortalNumero jogo = length (portaisJogo jogo) > 0
 verificaPosiPortal :: Jogo -> Bool
 verificaPosiPortal j = let mapa = mapaJogo j
                        in all (verificaPosiPortal2 mapa) (portaisJogo j)
+
+
+{- | a função `verificaPosiPortal2` verifica se a posição de um Portal coincide com a posição de um terreno de Terra. -}
