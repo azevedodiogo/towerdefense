@@ -45,3 +45,7 @@ validaJogo j = verificaPortalNumero j &&
 
 verificaPortalNumero :: Jogo -> Bool
 verificaPortalNumero jogo = length (portaisJogo jogo) > 0
+
+
+
+{- | a função `verificaPosiPortal` verifica se as posições de todos os portais estão sobre Terra, utilizando a função `verificaPosiPortal2` (é a mesma lógica que a `verificaBaseTerra`, mas para os portais). -}
