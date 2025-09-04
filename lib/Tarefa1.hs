@@ -78,3 +78,8 @@ verificaPosiPortal2 mapa portal = let (coluna, linha) = posicaoPortal portal
  
 >>> verificaCaminhoTerra jogo 
 True
+
+-}
+
+verificaCaminhoTerra :: Jogo -> Bool
+verificaCaminhoTerra jogo = let mapa = mapaJogo jogo
