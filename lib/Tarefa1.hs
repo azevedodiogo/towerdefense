@@ -69,3 +69,8 @@ verificaPosiPortal2 mapa portal = let (coluna, linha) = posicaoPortal portal
 {- | a função `verificaCaminhoTerra` verifica se existe no jogo pelo menos um caminho de terra ligando um portal à base, utilizando a função `existeCaminho`.
 
 === Exemplo de Uso:
+
+* `jogo` = Jogo {baseJogo = base, portaisJogo = [portal], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+* `base` = Base {vidaBase = 0, posicaoBase = (5.3, 4.2), creditosBase = 50}
+* `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = []}
