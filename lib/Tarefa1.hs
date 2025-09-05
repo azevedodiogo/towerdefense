@@ -87,3 +87,8 @@ verificaCaminhoTerra jogo = let mapa = mapaJogo jogo
                                 portais = map arredondaPosicao (map posicaoPortal (portaisJogo jogo))
 
                             in existeCaminho portais mapa base
+
+
+{- | a função `arredondaPosicao` arredonda por defeito uma posicao para inteiros, utilizando o floor. -}
+
+arredondaPosicao :: Posicao -> (Int, Int)
