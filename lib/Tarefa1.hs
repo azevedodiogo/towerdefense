@@ -83,3 +83,7 @@ True
 
 verificaCaminhoTerra :: Jogo -> Bool
 verificaCaminhoTerra jogo = let mapa = mapaJogo jogo
+                                base = arredondaPosicao (posicaoBase (baseJogo jogo))
+                                portais = map arredondaPosicao (map posicaoPortal (portaisJogo jogo))
+
+                            in existeCaminho portais mapa base
