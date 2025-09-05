@@ -103,3 +103,9 @@ existeCaminho (portal:resto) mapa base = caminhoPortalBase portal base mapa || e
 
 
 {- | a função `caminhoPortalBase` verifica se existe um caminho de terra entre duas posições no mapa, utilizando a `procuraCaminho`. -}
+
+caminhoPortalBase :: (Int, Int) -> (Int, Int) -> Mapa -> Bool
+caminhoPortalBase portal = procuraCaminho [portal] []
+
+
+{- | a função `procuraCaminho` verifica se é possivel encontrar um caminho de terra. -}
