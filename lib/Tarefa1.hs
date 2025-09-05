@@ -109,3 +109,7 @@ caminhoPortalBase portal = procuraCaminho [portal] []
 
 
 {- | a função `procuraCaminho` verifica se é possivel encontrar um caminho de terra. -}
+
+procuraCaminho :: [(Int, Int)] -> [(Int, Int)] -> (Int, Int) -> Mapa -> Bool
+procuraCaminho [] _ _ _ = False
+procuraCaminho (pos:resto) visitados base mapa | pos == base = True
