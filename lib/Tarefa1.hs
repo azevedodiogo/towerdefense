@@ -151,3 +151,7 @@ existeTerra (x, y) mapa = x >= 0 && y >= 0 && y < length mapa && x < length (map
 {- | a função `removeVisitados` remove as posições já visitadas da lista de vizinhos. -}
 
 removeVisitados :: [(Int, Int)] -> [(Int, Int)] -> [(Int, Int)]
+removeVisitados [] _ = []
+removeVisitados (pos:resto) visitados | pos `elem` visitados = removeVisitados resto visitados
+                                      | otherwise = pos : removeVisitados resto visitados
+
