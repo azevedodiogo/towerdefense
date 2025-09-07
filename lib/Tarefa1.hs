@@ -121,3 +121,8 @@ procuraCaminho (pos:resto) visitados base mapa | pos == base = True
 {- | a função `encontraVizinhos` encontra os vizinhos de uma posição, considerando apenas as posições de Terra, utilizando a função `filtraTerras`. 
 
 === Exemplo de Uso:
+
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ] 
+
+>>> encontraVizinhos (1, 1) mapa
+[(1,2),(1,0)]
