@@ -126,3 +126,7 @@ procuraCaminho (pos:resto) visitados base mapa | pos == base = True
 
 >>> encontraVizinhos (1, 1) mapa
 [(1,2),(1,0)]
+
+-}
+
+encontraVizinhos :: (Int, Int) -> Mapa -> [(Int, Int)]
