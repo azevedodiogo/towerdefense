@@ -143,3 +143,6 @@ filtraTerras ((x, y):resto) mapa | existeTerra (x, y) mapa = (x, y) : filtraTerr
 
 
 {- | a função `existeTerra` verifica se uma posição é de Terra. -}
+
+existeTerra :: (Int, Int) -> Mapa -> Bool
+existeTerra (x, y) mapa = x >= 0 && y >= 0 && y < length mapa && x < length (mapa !! y) && (mapa !! y !! x == Terra)
