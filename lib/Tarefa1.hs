@@ -116,3 +116,8 @@ procuraCaminho (pos:resto) visitados base mapa | pos == base = True
                                                | otherwise = let vizinhos = encontraVizinhos pos mapa                                   -- Encontra os vizinhos de uma determinada posição.
                                                                  naoVisitados = removeVisitados vizinhos visitados                      -- Remove os vizinhos que já foram visitados.
                                                              in procuraCaminho (resto ++ naoVisitados) (pos : visitados) base mapa      
+
+
+{- | a função `encontraVizinhos` encontra os vizinhos de uma posição, considerando apenas as posições de Terra, utilizando a função `filtraTerras`. 
+
+=== Exemplo de Uso:
