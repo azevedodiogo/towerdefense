@@ -159,3 +159,8 @@ removeVisitados (pos:resto) visitados | pos `elem` visitados = removeVisitados r
 
 
 {- | a função `verificaPortalSobreposicao` verifica se nenhum portal está sobreposto à base ou a alguma torre definida no jogo (é a mesma lógica que a `verificaBaseSobreposicao`, mas para os portais). -}
+
+verificaPortalSobreposicao :: Jogo -> Bool
+verificaPortalSobreposicao j = all verificaPortalSobreposicao2 portais
+
+    where portais = map floorPosicao (map posicaoPortal (portaisJogo j))
