@@ -167,3 +167,9 @@ verificaPortalSobreposicao j = all verificaPortalSobreposicao2 portais
           base = floorPosicao (posicaoBase (baseJogo j))
           torres = map floorPosicao (map posicaoTorre (torresJogo j))
           floorPosicao (x, y) = (fromIntegral (floor x), fromIntegral (floor y))
+
+          verificaPortalSobreposicao2 portal = (portal /= base) && notElem portal torres
+
+
+
+{- | a função `existeOndaPortal` verifica se no máximo há uma onda ativa por portal no jogo. 
