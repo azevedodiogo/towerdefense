@@ -181,3 +181,8 @@ verificaPortalSobreposicao j = all verificaPortalSobreposicao2 portais
 * `onda1` = Onda {inimigosOnda = [], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
 * `onda2` = Onda {inimigosOnda = [], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
 * `onda3` = Onda {inimigosOnda = [], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
+
+* `jogo1` = Jogo {baseJogo = Base 100 (3,3) 50, torresJogo = [], portaisJogo = [portal1], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = Base 100 (3,3) 50, torresJogo = [], portaisJogo = [portal2], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+>>> verificaOndaPortal jogo1
