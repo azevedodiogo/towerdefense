@@ -164,3 +164,6 @@ verificaPortalSobreposicao :: Jogo -> Bool
 verificaPortalSobreposicao j = all verificaPortalSobreposicao2 portais
 
     where portais = map floorPosicao (map posicaoPortal (portaisJogo j))
+          base = floorPosicao (posicaoBase (baseJogo j))
+          torres = map floorPosicao (map posicaoTorre (torresJogo j))
+          floorPosicao (x, y) = (fromIntegral (floor x), fromIntegral (floor y))
