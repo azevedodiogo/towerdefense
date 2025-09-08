@@ -173,3 +173,7 @@ verificaPortalSobreposicao j = all verificaPortalSobreposicao2 portais
 
 
 {- | a função `existeOndaPortal` verifica se no máximo há uma onda ativa por portal no jogo. 
+
+=== Exemplos de uso:
+
+* `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1, onda2]}
