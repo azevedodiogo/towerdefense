@@ -177,3 +177,7 @@ verificaPortalSobreposicao j = all verificaPortalSobreposicao2 portais
 === Exemplos de uso:
 
 * `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1, onda2]}
+* `portal2` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda3, onda2]}
+* `onda1` = Onda {inimigosOnda = [], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+* `onda2` = Onda {inimigosOnda = [], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
+* `onda3` = Onda {inimigosOnda = [], cicloOnda = 5, tempoOnda = 0, entradaOnda = 0}
