@@ -186,3 +186,7 @@ verificaPortalSobreposicao j = all verificaPortalSobreposicao2 portais
 * `jogo2` = Jogo {baseJogo = Base 100 (3,3) 50, torresJogo = [], portaisJogo = [portal2], mapaJogo = [], inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
 
 >>> verificaOndaPortal jogo1
+True
+
+>>> verificaOndaPortal jogo2
+False
