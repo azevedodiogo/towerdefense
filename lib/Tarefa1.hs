@@ -155,3 +155,7 @@ removeVisitados [] _ = []
 removeVisitados (pos:resto) visitados | pos `elem` visitados = removeVisitados resto visitados
                                       | otherwise = pos : removeVisitados resto visitados
 
+
+
+
+{- | a função `verificaPortalSobreposicao` verifica se nenhum portal está sobreposto à base ou a alguma torre definida no jogo (é a mesma lógica que a `verificaBaseSobreposicao`, mas para os portais). -}
