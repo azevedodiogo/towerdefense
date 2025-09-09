@@ -202,3 +202,7 @@ verificaOndaPortal j = all verificaOndaPortal2 portais
 
           verificaOndasAtivasFiltro onda = entradaOnda onda <= 0
           verificaOndasAtivas = filter verificaOndasAtivasFiltro                                    -- devolve uma lista com as ondas ativas de um portall
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
