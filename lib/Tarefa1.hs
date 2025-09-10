@@ -244,3 +244,9 @@ verificaInimigosPorLancar :: Jogo -> Bool
 verificaInimigosPorLancar j = let portais = portaisJogo j
                               in all verificaPortal portais
 
+
+{- | a função `verificaPortal` verifica se todos os inimigos de um portal cumprem com as condições de serem lançados. -}
+
+verificaPortal :: Portal -> Bool
+verificaPortal portal = let posPortal = posicaoPortal portal
+                            ondas = ondasPortal portal
