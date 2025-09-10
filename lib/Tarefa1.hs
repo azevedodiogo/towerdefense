@@ -266,3 +266,8 @@ verificaInimigo :: Posicao -> Inimigo -> Bool
 verificaInimigo posPortal inimigo = posicaoInimigo inimigo == posPortal && vidaInimigo inimigo > 0 && length (projeteisInimigo inimigo) == 0
 
 
+
+
+{- | a função `verificaInimigosTerra` verifica se todos os inimigos estão sobre Terra no mapa, utilizando a função `verificaInimigosTerra2`. 
+
+=== Exemplo de Uso:
