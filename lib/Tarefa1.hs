@@ -233,3 +233,7 @@ verificaOndaPortal j = all verificaOndaPortal2 portais
 True
 
 >>> verificaInimigosPorLancar jogo2
+False
+
+>>> verificaInimigosPorLancar jogo3
+False
