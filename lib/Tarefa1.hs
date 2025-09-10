@@ -254,3 +254,7 @@ verificaPortal portal = let posPortal = posicaoPortal portal
 
 
 {- | a função `verificaOnda` verifica se todos os inimigos de uma onda cumprem com as condições de serem lançados.  -}
+
+verificaOnda :: Posicao -> Onda -> Bool
+verificaOnda posPortal onda = let inimigos = inimigosOnda onda
+                              in all (verificaInimigo posPortal) inimigos
