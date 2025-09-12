@@ -271,3 +271,6 @@ verificaInimigo posPortal inimigo = posicaoInimigo inimigo == posPortal && vidaI
 {- | a função `verificaInimigosTerra` verifica se todos os inimigos estão sobre Terra no mapa, utilizando a função `verificaInimigosTerra2`. 
 
 === Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [Inimigo (2,0) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [Inimigo (1, 1) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
