@@ -297,3 +297,6 @@ verificaInimigosTerra2 mapa inimigo = let (coluna, linha) = posicaoInimigo inimi
 
                                       in floor linha >= 0 && floor linha < length mapa && floor coluna >= 0 && floor coluna < length (mapa !! floor linha) && (mapa !! floor linha) !! floor coluna == Terra || 
                                          ceiling linha >= 0 && ceiling linha < length mapa && floor coluna >= 0 && floor coluna < length (mapa !! ceiling linha) && (mapa !! ceiling linha) !! floor coluna == Terra ||
+                                         floor linha >= 0 && floor linha < length mapa && ceiling coluna >= 0 && ceiling coluna < length (mapa !! floor linha) && (mapa !! floor linha) !! ceiling coluna == Terra || 
+                                         ceiling linha >= 0 && ceiling linha < length mapa && ceiling coluna >= 0 && ceiling coluna < length (mapa !! ceiling linha) && (mapa !! ceiling linha) !! ceiling coluna == Terra 
+
