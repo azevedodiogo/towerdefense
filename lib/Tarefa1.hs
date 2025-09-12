@@ -288,3 +288,6 @@ True
 verificaInimigosTerra :: Jogo -> Bool
 verificaInimigosTerra j = let mapa = mapaJogo j
                           in all (verificaInimigosTerra2 mapa) (inimigosJogo j)
+
+
+{- | a função `verificaInimigosTerra2` verifica se a posição de um inimigo está sobre Terra. -}
