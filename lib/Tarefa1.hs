@@ -284,3 +284,7 @@ False
 True
 
 -}
+
+verificaInimigosTerra :: Jogo -> Bool
+verificaInimigosTerra j = let mapa = mapaJogo j
+                          in all (verificaInimigosTerra2 mapa) (inimigosJogo j)
