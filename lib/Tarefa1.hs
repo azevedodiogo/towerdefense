@@ -300,3 +300,7 @@ verificaInimigosTerra2 mapa inimigo = let (coluna, linha) = posicaoInimigo inimi
                                          floor linha >= 0 && floor linha < length mapa && ceiling coluna >= 0 && ceiling coluna < length (mapa !! floor linha) && (mapa !! floor linha) !! ceiling coluna == Terra || 
                                          ceiling linha >= 0 && ceiling linha < length mapa && ceiling coluna >= 0 && ceiling coluna < length (mapa !! ceiling linha) && (mapa !! ceiling linha) !! ceiling coluna == Terra 
 
+
+{- | a função `verificaInimigosSobreposicao` verifica se todos os inimigos em jogo não estão sobrepostos a uma torre, utilizando a funcao `verificaInimigosSobreposicao2`. 
+
+=== Exemplo de Uso:
