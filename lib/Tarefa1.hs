@@ -304,3 +304,8 @@ verificaInimigosTerra2 mapa inimigo = let (coluna, linha) = posicaoInimigo inimi
 {- | a função `verificaInimigosSobreposicao` verifica se todos os inimigos em jogo não estão sobrepostos a uma torre, utilizando a funcao `verificaInimigosSobreposicao2`. 
 
 === Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (1, 1) 25 3 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = [], inimigosJogo = [Inimigo (2,0) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (1, 1) 25 3 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = [], inimigosJogo = [Inimigo (1, 1) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+
+>>> verificaInimigosTerra jogo1
