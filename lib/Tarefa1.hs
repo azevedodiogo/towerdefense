@@ -321,3 +321,9 @@ verificaInimigosSobreposicao j = let inimigos = map posicaoInimigo (inimigosJogo
                                      torres = map posicaoTorre (torresJogo j)
                                  in verificaInimigosSobreposicao2 inimigos torres
 
+
+{- | a função `verificaInimigosSobreposicao2` verifica se há sobreposição entre inimigos e torres. -}
+
+verificaInimigosSobreposicao2 :: [Posicao] -> [Posicao] -> Bool
+verificaInimigosSobreposicao2 [] _ = True
+verificaInimigosSobreposicao2 (i:is) torres | i `elem` torres = False                               -- Se o inimigo está em cima de uma torre há sobreposição.
