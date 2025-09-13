@@ -334,3 +334,8 @@ verificaInimigosSobreposicao2 (i:is) torres | i `elem` torres = False           
 
 {- | a função `verificaVelocidadeInimigo` verifica se a velocidade de todos os inimigos é maior ou igual a 0, utilizando a função `verificaVelocidadeInimigo2`. 
 
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = [], inimigosJogo = [Inimigo (2,0) Sul 80.0 (-2) 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+* `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = [], inimigosJogo = [Inimigo (1,1) Sul 80.0 1.5 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
