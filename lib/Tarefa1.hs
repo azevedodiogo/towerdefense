@@ -309,3 +309,7 @@ verificaInimigosTerra2 mapa inimigo = let (coluna, linha) = posicaoInimigo inimi
 * `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (1, 1) 25 3 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = [], inimigosJogo = [Inimigo (1, 1) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
 
 >>> verificaInimigosTerra jogo1
+True
+
+>>> verificaInimigosTerra jogo2
+False
