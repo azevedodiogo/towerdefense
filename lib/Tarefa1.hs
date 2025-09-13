@@ -318,3 +318,6 @@ False
 
 verificaInimigosSobreposicao :: Jogo -> Bool
 verificaInimigosSobreposicao j = let inimigos = map posicaoInimigo (inimigosJogo j)
+                                     torres = map posicaoTorre (torresJogo j)
+                                 in verificaInimigosSobreposicao2 inimigos torres
+
