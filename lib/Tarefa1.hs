@@ -313,3 +313,8 @@ True
 
 >>> verificaInimigosTerra jogo2
 False
+
+-}
+
+verificaInimigosSobreposicao :: Jogo -> Bool
+verificaInimigosSobreposicao j = let inimigos = map posicaoInimigo (inimigosJogo j)
