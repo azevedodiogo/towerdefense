@@ -327,3 +327,6 @@ verificaInimigosSobreposicao j = let inimigos = map posicaoInimigo (inimigosJogo
 verificaInimigosSobreposicao2 :: [Posicao] -> [Posicao] -> Bool
 verificaInimigosSobreposicao2 [] _ = True
 verificaInimigosSobreposicao2 (i:is) torres | i `elem` torres = False                               -- Se o inimigo está em cima de uma torre há sobreposição.
+                                            | otherwise = verificaInimigosSobreposicao2 is torres   -- Recursividade de modo a continuar a procurar possível sobreposição.
+
+
