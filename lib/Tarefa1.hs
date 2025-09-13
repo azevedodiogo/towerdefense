@@ -330,3 +330,7 @@ verificaInimigosSobreposicao2 (i:is) torres | i `elem` torres = False           
                                             | otherwise = verificaInimigosSobreposicao2 is torres   -- Recursividade de modo a continuar a procurar possível sobreposição.
 
 
+
+
+{- | a função `verificaVelocidadeInimigo` verifica se a velocidade de todos os inimigos é maior ou igual a 0, utilizando a função `verificaVelocidadeInimigo2`. 
+
