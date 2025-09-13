@@ -339,3 +339,8 @@ verificaInimigosSobreposicao2 (i:is) torres | i `elem` torres = False           
 
 * `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = [], inimigosJogo = [Inimigo (2,0) Sul 80.0 (-2) 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
 * `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = [], inimigosJogo = [Inimigo (1,1) Sul 80.0 1.5 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+
+>>> verificaInimigosTerra jogo1
+False
+
+>>> verificaInimigosTerra jogo2
