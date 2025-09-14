@@ -369,3 +369,8 @@ verificaProjeteisAtivos jogo = all verificaProjetilAtivos (inimigosJogo jogo)
 
 
 {- | a função `verificaProjetilAtivos` verifica se os projéteis de um inimigo estão normalizados. 
+
+=== Exemplo de Uso:
+
+>>> verificaProjetilAtivos (Inimigo (1, 0) Norte 100.0 1.0 10.0 20 [] (0, 0) 0)
+True
