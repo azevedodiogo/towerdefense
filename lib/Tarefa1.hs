@@ -361,3 +361,6 @@ verificaVelocidadeInimigo2 inimigo = velocidadeInimigo inimigo >= 0
 
 
 {- | a função `verificaProjeteisAtivos` verifica se os projéteis de todos os inimigos estão normalizados no jogo, utilizando as funcoes `verificaProjetilAtivos`, `verificaProjetil`, `verificaSemDuplicados`, `verificaSemIncompativeis`. -}
+
+verificaProjeteisAtivos :: Jogo -> Bool
+verificaProjeteisAtivos jogo = all verificaProjetilAtivos (inimigosJogo jogo)
