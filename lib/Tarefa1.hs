@@ -351,3 +351,8 @@ True
 verificaVelocidadeInimigo :: Jogo -> Bool
 verificaVelocidadeInimigo j =  all verificaVelocidadeInimigo2 (inimigosJogo j)
 
+
+{- | a função `verificaVelocidadeInimigo2` verifica se a velocidade de tde um inimigo é válida (>= 0). -}
+
+verificaVelocidadeInimigo2 :: Inimigo -> Bool
+verificaVelocidadeInimigo2 inimigo = velocidadeInimigo inimigo >= 0
