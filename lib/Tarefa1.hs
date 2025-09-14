@@ -374,3 +374,6 @@ verificaProjeteisAtivos jogo = all verificaProjetilAtivos (inimigosJogo jogo)
 
 >>> verificaProjetilAtivos (Inimigo (1, 0) Norte 100.0 1.0 10.0 20 [] (0, 0) 0)
 True
+
+>>> verificaProjetilAtivos (Inimigo (1, 0) Norte 100.0 1.0 10.0 20 [Projetil Fogo (Finita 5)] (0, 0) 0)
+True
