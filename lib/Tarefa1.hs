@@ -347,3 +347,7 @@ False
 True
 
 -}
+
+verificaVelocidadeInimigo :: Jogo -> Bool
+verificaVelocidadeInimigo j =  all verificaVelocidadeInimigo2 (inimigosJogo j)
+
