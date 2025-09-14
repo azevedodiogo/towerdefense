@@ -344,3 +344,6 @@ verificaInimigosSobreposicao2 (i:is) torres | i `elem` torres = False           
 False
 
 >>> verificaInimigosTerra jogo2
+True
+
+-}
