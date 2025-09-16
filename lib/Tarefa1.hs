@@ -382,3 +382,6 @@ True
 False
 
 -}
+
+verificaProjetilAtivos :: Inimigo -> Bool
+verificaProjetilAtivos inimigo = verificaProjetil (projeteisInimigo inimigo)
