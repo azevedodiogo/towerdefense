@@ -398,3 +398,7 @@ verificaProjetil projeteis =  let tiposAtuais = map tipoProjetil projeteis
 
 
 
+
+{- | a função `verificaSemDuplicados` verifica se não há projéteis duplicados. 
+
+=== Exemplo de Uso:
