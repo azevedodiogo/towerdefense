@@ -391,3 +391,7 @@ verificaProjetilAtivos inimigo = verificaProjetil (projeteisInimigo inimigo)
 
 verificaProjetil :: [Projetil] -> Bool
 verificaProjetil projeteis =  let tiposAtuais = map tipoProjetil projeteis
+                                  semDuplicados = verificaSemDuplicados tiposAtuais
+                                  semIncompativeis = verificaSemIncompativeis tiposAtuais
+
+                              in semDuplicados && semIncompativeis
