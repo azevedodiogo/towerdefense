@@ -395,3 +395,6 @@ verificaProjetil projeteis =  let tiposAtuais = map tipoProjetil projeteis
                                   semIncompativeis = verificaSemIncompativeis tiposAtuais
 
                               in semDuplicados && semIncompativeis
+
+
+
