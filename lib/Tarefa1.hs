@@ -408,3 +408,7 @@ False
 
 >>> verificaSemDuplicados [Fogo, Resina]   
 True 
+
+-}
+
+verificaSemDuplicados :: [TipoProjetil] -> Bool
