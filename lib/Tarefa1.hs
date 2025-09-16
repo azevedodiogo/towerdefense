@@ -412,3 +412,6 @@ True
 -}
 
 verificaSemDuplicados :: [TipoProjetil] -> Bool
+verificaSemDuplicados tipos = length tipos == length (nub tipos) -- 'nub' é uma função que faz parte da biblioteca 'Data.List' importada no ínicio que remove duplicados de uma lista.
+
+
