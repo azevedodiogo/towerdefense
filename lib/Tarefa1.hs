@@ -450,3 +450,7 @@ verificaSemIncompativeis tipos = not (elem Fogo tipos && elem Resina tipos) && n
 * `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
  
 >>> verificaProjetilAtivos jogo1
+True
+
+>>> verificaProjetilAtivos jogo2
+False
