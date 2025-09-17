@@ -438,3 +438,6 @@ verificaSemIncompativeis tipos = not (elem Fogo tipos && elem Resina tipos) && n
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
+
+{- | a função `verificaPosiTorre` verifica se as torres estão sobre a relva, utilizando a função `verificaPosiTorre2`. 
