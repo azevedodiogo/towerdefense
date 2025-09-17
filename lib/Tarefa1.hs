@@ -421,3 +421,7 @@ verificaSemDuplicados tipos = length tipos == length (nub tipos) -- 'nub' é uma
 === Exemplo de Uso:
 
 >>> verificaSemIncompativeis [Fogo, Gelo]       
+False
+
+>>> verificaSemIncompativeis [Fogo, Resina]    
+False
