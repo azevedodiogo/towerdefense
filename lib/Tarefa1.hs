@@ -425,3 +425,6 @@ False
 
 >>> verificaSemIncompativeis [Fogo, Resina]    
 False
+
+>>> verificaSemIncompativeis [Gelo, Resina]   
+True 
