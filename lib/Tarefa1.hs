@@ -489,3 +489,6 @@ False
 True
 
 -}
+
+verificaAlcanceTorre :: Jogo -> Bool
+verificaAlcanceTorre j = all verificaAlcanceTorre2 (torresJogo j)
