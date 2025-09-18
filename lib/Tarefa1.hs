@@ -459,3 +459,7 @@ False
 
 verificaPosiTorre :: Jogo -> Bool
 verificaPosiTorre j = let mapa = mapaJogo j
+                      in all (verificaPosiTorre2 mapa) (torresJogo j)
+
+
+{- | a função `verificaPosiTorre2` verifica se a posição de uma torre está dentro dos limites do mapa e se está sobre relva. -}
