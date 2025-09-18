@@ -479,3 +479,8 @@ verificaPosiTorre2 mapa torre = let (coluna, linha) = posicaoTorre torre
 
 * `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (2, 0) 25 (-3) 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = mapa, inimigosJogo = [Inimigo (2,0) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
 * `jogo2` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [Torre (0, 0) 25 3 3 2 0 (Projetil Fogo (Finita 7))], mapaJogo = mapa, inimigosJogo = [Inimigo (1, 1) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
+
+* `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
+ 
+>>> verificaAlcanceTorre jogo1
+False
