@@ -502,3 +502,6 @@ verificaAlcanceTorre j = all verificaAlcanceTorre2 (torresJogo j)
 
 verificaRajadaTorre :: Jogo -> Bool
 verificaRajadaTorre j = all verificaRajadaTorre2 (torresJogo j)
+
+    where verificaRajadaTorre2 :: Torre -> Bool
+          verificaRajadaTorre2 torre = rajadaTorre torre > 0
