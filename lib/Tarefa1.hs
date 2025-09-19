@@ -519,3 +519,7 @@ verificaCicloTorre j = all verificaCicloTorre2 (torresJogo j)
 
 
 {- | a função `verificaNotSobreposicaoTorre` verifica se não há sobreposição entre torres. Devolve True se não houver.
+
+=== Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [Inimigo (2,0) Sul 80.0 1.0 15.0 30 [] (0, 0) 0], lojaJogo = [], nivelJogo = Um}
