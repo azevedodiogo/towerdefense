@@ -510,3 +510,7 @@ verificaRajadaTorre j = all verificaRajadaTorre2 (torresJogo j)
 {- | a função `verificaCicloTorre` verifica se o valor do ciclo é maior ou igual a zero (utiliza a mesma lógica que a `verificaAlcanceTorre`). -}
 
 verificaCicloTorre :: Jogo -> Bool
+verificaCicloTorre j = all verificaCicloTorre2 (torresJogo j)
+
+    where verificaCicloTorre2 :: Torre -> Bool
+          verificaCicloTorre2 torre = cicloTorre torre >= 0
