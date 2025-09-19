@@ -496,3 +496,9 @@ verificaAlcanceTorre j = all verificaAlcanceTorre2 (torresJogo j)
     where verificaAlcanceTorre2 :: Torre -> Bool
           verificaAlcanceTorre2 torre = alcanceTorre torre > 0
 
+
+
+{- | a função `verificaRajadaTorre` verifica se o valor da rajada é maior que zero (utiliza a mesma lógica que a `verificaAlcanceTorre`). -}
+
+verificaRajadaTorre :: Jogo -> Bool
+verificaRajadaTorre j = all verificaRajadaTorre2 (torresJogo j)
