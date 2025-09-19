@@ -527,3 +527,8 @@ verificaCicloTorre j = all verificaCicloTorre2 (torresJogo j)
 
 * `mapa` = [ [t, t, r, a, a, a], [r, t, r, a, r, r], [r, t, r, a, r, t], [r, t, r, a, r, t], [r, t, t, t, t, t], [a, a, a, a, r, r] ]
  
+>>> verificaAlcanceTorre jogo1
+True
+
+>>> verificaAlcanceTorre jogo2
+False
