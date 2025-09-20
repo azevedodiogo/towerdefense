@@ -540,3 +540,6 @@ verificaNotSobreposicaoTorre :: Jogo -> Bool
 verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
 
     where verificaTorres [] = True
+          verificaTorres (t:ts) = notElem (posicaoTorre t) (map posicaoTorre ts) && verificaTorres ts
+
+
