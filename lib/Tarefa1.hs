@@ -565,3 +565,8 @@ True
 
 >>> verificaBaseTerra jogo2
 False
+
+-}
+
+
+verificaBaseTerra :: Jogo -> Bool
