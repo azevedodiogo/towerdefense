@@ -535,3 +535,8 @@ False
 
 -}
 
+
+verificaNotSobreposicaoTorre :: Jogo -> Bool
+verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
+
+    where verificaTorres [] = True
