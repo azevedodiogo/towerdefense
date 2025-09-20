@@ -543,3 +543,8 @@ verificaNotSobreposicaoTorre j = verificaTorres (torresJogo j)
           verificaTorres (t:ts) = notElem (posicaoTorre t) (map posicaoTorre ts) && verificaTorres ts
 
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- BASE
