@@ -573,3 +573,8 @@ verificaBaseTerra :: Jogo -> Bool
 verificaBaseTerra j = let colunaNova = floor (fst (posicaoBase (baseJogo j)))
                           linhaNova = floor (snd (posicaoBase (baseJogo j)))
                           mapa = mapaJogo j
+
+                      in ((linhaNova >= 0 && linhaNova < length mapa && colunaNova >= 0 && colunaNova < length (mapa !! linhaNova)) && ((mapa !! linhaNova) !! colunaNova == Terra))
+
+
+{- | a função `verificaBaseCredito` verifica se o credito da base é maior ou igual a 0 (utiliza a mesma lógica que a `verificaAlcanceTorre`, mas para a base). -}
