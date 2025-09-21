@@ -583,3 +583,7 @@ verificaBaseCredito :: Jogo -> Bool
 verificaBaseCredito j = verificaBaseCredito2 (baseJogo j)
 
     where verificaBaseCredito2 base = creditosBase base >= 0
+
+
+
+{- | a função `verificaBaseSobreposicao` verifica se a posição da base não está sobreposta a nenhum portal ou torre. 
