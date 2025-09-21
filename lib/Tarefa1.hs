@@ -570,3 +570,6 @@ False
 
 
 verificaBaseTerra :: Jogo -> Bool
+verificaBaseTerra j = let colunaNova = floor (fst (posicaoBase (baseJogo j)))
+                          linhaNova = floor (snd (posicaoBase (baseJogo j)))
+                          mapa = mapaJogo j
