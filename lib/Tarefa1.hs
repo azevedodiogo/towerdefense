@@ -578,3 +578,8 @@ verificaBaseTerra j = let colunaNova = floor (fst (posicaoBase (baseJogo j)))
 
 
 {- | a função `verificaBaseCredito` verifica se o credito da base é maior ou igual a 0 (utiliza a mesma lógica que a `verificaAlcanceTorre`, mas para a base). -}
+
+verificaBaseCredito :: Jogo -> Bool
+verificaBaseCredito j = verificaBaseCredito2 (baseJogo j)
+
+    where verificaBaseCredito2 base = creditosBase base >= 0
