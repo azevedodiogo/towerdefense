@@ -599,3 +599,8 @@ True
 
 >>> verificaBaseSobreposicao jogo
 False
+
+-}
+
+verificaBaseSobreposicao :: Jogo -> Bool
+verificaBaseSobreposicao j = let basePos = posicaoBase (baseJogo j)
