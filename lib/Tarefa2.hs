@@ -66,3 +66,6 @@ atingeInimigo t i = i
 junçaoProjetil :: Projetil -> [Projetil] -> [Projetil]
 junçaoProjetil p [] = [p]
 junçaoProjetil pnovo lpantigos = iguais lpconflitoTransformada
+
+    where lpconflitoTransformada = resolveConflito pnovo lpantigos
+
