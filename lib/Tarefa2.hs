@@ -44,3 +44,8 @@ inimigosNoAlcance t (i:li) | dist (posicaoTorre t) (posicaoInimigo i) <= alcance
 
 
 {- | a função `atingeInimigo` atualiza o estado de um inimigo sempre que este é atingido por um projétil. 
+
+=== Exemplos de Uso:
+
+* `inimigo` = Inimigo (3.0, 4.0) Norte 100 1 10 20 [Projetil Fogo (Finita 5)] (0,0) 0
+* `torre` = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
