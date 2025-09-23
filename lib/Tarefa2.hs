@@ -53,3 +53,8 @@ inimigosNoAlcance t (i:li) | dist (posicaoTorre t) (posicaoInimigo i) <= alcance
 >>> atingeInimigo torre inimigo 
 Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 75.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 12.0}], posInicial = (0.0,0.0), tempoInimigo = 0.0}
 -}
+
+atingeInimigo :: Torre -> Inimigo -> Inimigo
+atingeInimigo t i = i
+     {vidaInimigo = max 0 (vidaInimigo i - danoTorre t),                                -- o inimigo perde nível de vida conforme o dano da torre
+      projeteisInimigo = junçaoProjetil (projetilTorre t) (projeteisInimigo i)}         -- lista dos novos projeteis que atingiram o inimigo
