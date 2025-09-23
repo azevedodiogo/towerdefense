@@ -49,3 +49,7 @@ inimigosNoAlcance t (i:li) | dist (posicaoTorre t) (posicaoInimigo i) <= alcance
 
 * `inimigo` = Inimigo (3.0, 4.0) Norte 100 1 10 20 [Projetil Fogo (Finita 5)] (0,0) 0
 * `torre` = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
+
+>>> atingeInimigo torre inimigo 
+Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 75.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 12.0}], posInicial = (0.0,0.0), tempoInimigo = 0.0}
+-}
