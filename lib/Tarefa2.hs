@@ -58,3 +58,7 @@ atingeInimigo :: Torre -> Inimigo -> Inimigo
 atingeInimigo t i = i
      {vidaInimigo = max 0 (vidaInimigo i - danoTorre t),                                -- o inimigo perde nível de vida conforme o dano da torre
       projeteisInimigo = junçaoProjetil (projetilTorre t) (projeteisInimigo i)}         -- lista dos novos projeteis que atingiram o inimigo
+
+
+
+{- | a função `junçaoProjetil` junta os projeteis com base no seu tipo, utilizando as funções `iguais` e `resolveConflito`. -}
