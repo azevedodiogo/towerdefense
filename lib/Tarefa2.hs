@@ -95,3 +95,8 @@ iguais (pn:l:ls) | tipopn == tipol = pn {duracaoProjetil = somaduracao duracaopn
 
 
 {- | a função `somaduracao` soma as duracoes de dois projeteis. -}
+
+somaduracao :: Duracao -> Duracao -> Duracao
+somaduracao Infinita _ = Infinita
+somaduracao _ Infinita = Infinita
+somaduracao (Finita a) (Finita b) = Finita (a+b)
