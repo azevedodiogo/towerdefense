@@ -69,3 +69,8 @@ junçaoProjetil pnovo lpantigos = iguais lpconflitoTransformada
 
     where lpconflitoTransformada = resolveConflito pnovo lpantigos
 
+
+
+{- | a função `iguais` soma as suas duracoes, caso o tipo do projetil novo e um dos projeteis do inimigo sejam iguais. 
+
+=== Exemplos de Uso:
