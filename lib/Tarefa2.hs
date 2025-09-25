@@ -79,3 +79,7 @@ junçaoProjetil pnovo lpantigos = iguais lpconflitoTransformada
 
 >>> iguais projeteis
 [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 8.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
+
+-}
+
+iguais :: [Projetil] -> [Projetil]
