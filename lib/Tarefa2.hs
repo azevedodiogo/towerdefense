@@ -74,3 +74,8 @@ junçaoProjetil pnovo lpantigos = iguais lpconflitoTransformada
 {- | a função `iguais` soma as suas duracoes, caso o tipo do projetil novo e um dos projeteis do inimigo sejam iguais. 
 
 === Exemplos de Uso:
+
+* `projeteis` = [Projetil Gelo (Finita 3), Projetil Gelo (Finita 5), Projetil Resina Infinita]
+
+>>> iguais projeteis
+[Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 8.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
