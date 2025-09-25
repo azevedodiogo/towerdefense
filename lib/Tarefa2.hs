@@ -100,3 +100,8 @@ somaduracao :: Duracao -> Duracao -> Duracao
 somaduracao Infinita _ = Infinita
 somaduracao _ Infinita = Infinita
 somaduracao (Finita a) (Finita b) = Finita (a+b)
+
+
+{- | a função `resolveConflito` resolve conflitos entre projéteis: Fogo e Gelo cancelam-se mutuamente, Fogo e Resina dobra a duração do fogo.
+
+=== Exemplos de Uso:
