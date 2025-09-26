@@ -135,3 +135,7 @@ resolveConflito pn [x]  | tipoProjetil pn == Fogo && tipoProjetil x == Resina = 
 resolveConflito pn [x,y]  | tipoProjetil pn == Fogo && tipoProjetil x == Gelo  = [y]
                           | tipoProjetil pn == Fogo && tipoProjetil y == Gelo = [x]
                           | otherwise = pn:[x,y]
+
+
+
+{-| a funçao `tempo` extrai o tempo de uma duracao. -}
