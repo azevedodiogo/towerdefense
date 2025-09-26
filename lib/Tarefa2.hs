@@ -122,3 +122,7 @@ somaduracao (Finita a) (Finita b) = Finita (a+b)
 resolveConflito :: Projetil -> [Projetil] -> [Projetil]
 
 -- a lista de projeteis está vazia
+resolveConflito p [] = [p]
+
+-- a lista contem apenas um elemento
+resolveConflito pn [x]  | tipoProjetil pn == Fogo && tipoProjetil x == Resina = [pn {duracaoProjetil = Finita (tempo (duracaoProjetil pn)*2)}]
