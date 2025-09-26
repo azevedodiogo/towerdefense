@@ -113,3 +113,8 @@ somaduracao (Finita a) (Finita b) = Finita (a+b)
 >>> resolveConflito projetil3 [projetil1]
 []
 >>> resolveConflito projetil3 [projetil2]
+[Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 10.0}]
+>>> resolveConflito projetil3 [projetil1, projetil2]
+[Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
+
+-}
