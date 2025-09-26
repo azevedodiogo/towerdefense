@@ -126,3 +126,7 @@ resolveConflito p [] = [p]
 
 -- a lista contem apenas um elemento
 resolveConflito pn [x]  | tipoProjetil pn == Fogo && tipoProjetil x == Resina = [pn {duracaoProjetil = Finita (tempo (duracaoProjetil pn)*2)}]
+                        | tipoProjetil pn == Resina && tipoProjetil x == Fogo = [x {duracaoProjetil = Finita (tempo (duracaoProjetil x)*2)}]
+                        | tipoProjetil pn == Gelo && tipoProjetil x == Fogo = []
+                        | tipoProjetil pn == Fogo && tipoProjetil x == Gelo = []
+                        | otherwise = pn : [x]
