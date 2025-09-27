@@ -143,3 +143,7 @@ resolveConflito pn [x,y]  | tipoProjetil pn == Fogo && tipoProjetil x == Gelo  =
 tempo :: Duracao -> Float
 tempo (Finita n) = n
 tempo _ = 0
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
