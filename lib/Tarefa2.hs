@@ -178,3 +178,7 @@ ativaInimigo p li | length ondasp == 0 = (p,li)
           (proxi, novaonda) = removeInimigo primeiraonda
           novasOndas = if ondaVazia novaonda then tail ondasp else novaonda : tail ondasp
           novoportal = p {ondasPortal = novasOndas}
+
+
+
+{- | a função `podelançar` verifica se a onda está ativa e se ainda tem inimigos para lançar. 
