@@ -208,3 +208,7 @@ podelançar o = entradaOnda o <= 0 && length (inimigosOnda o) > 0 && tempoOnda o
 * `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
 
 >>> removeInimigo onda1
+(Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (2.0,2.0), tempoInimigo = 0.0},
+Onda {inimigosOnda = [Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (2.0,2.0), tempoInimigo = 0.0}], cicloOnda = 5.0, tempoOnda = 5.0, entradaOnda = 1.0})
+
+-}
