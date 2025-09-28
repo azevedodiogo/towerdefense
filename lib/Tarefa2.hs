@@ -198,3 +198,9 @@ False
 
 podelançar :: Onda -> Bool
 podelançar o = entradaOnda o <= 0 && length (inimigosOnda o) > 0 && tempoOnda o <= 0
+
+
+
+{- | a função `removeInimigo` remove o primeiro inimigo da onda ativa. 
+
+=== Exemplos de Uso:
