@@ -216,3 +216,7 @@ Onda {inimigosOnda = [Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul,
 removeInimigo :: Onda -> (Inimigo, Onda)
 removeInimigo o = let i = inimigosOnda o
                       primeiroi = head i
+                      ondaAtualizada = o {inimigosOnda = tail i,
+                                          tempoOnda = cicloOnda o}
+                  in (primeiroi, ondaAtualizada)
+
