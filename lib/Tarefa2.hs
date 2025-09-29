@@ -250,3 +250,7 @@ False
 True
 
 -}
+
+terminouJogo :: Jogo -> Bool
+terminouJogo j = ganhouJogo j || perdeuJogo j
+
