@@ -242,3 +242,6 @@ ondaVazia o = length (inimigosOnda o) == 0
 * `base2` = Base {vidaBase = 0, posicaoBase = (5.5, 2.5), creditosBase = 50}
 * `portal1` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda1]}
 * `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+
+>>> terminouJogo jogo1
+False
