@@ -229,3 +229,8 @@ ondaVazia o = length (inimigosOnda o) == 0
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+
+{- | a função `terminouJogo` verifica se o jogador ganhou ou perdeu o jogo. 
+
+=== Exemplo de Uso:
