@@ -245,3 +245,8 @@ ondaVazia o = length (inimigosOnda o) == 0
 
 >>> terminouJogo jogo1
 False
+
+>>> terminouJogo jogo2
+True
+
+-}
