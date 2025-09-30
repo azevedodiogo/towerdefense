@@ -267,3 +267,7 @@ terminouJogo j = ganhouJogo j || perdeuJogo j
 True
 
 -}
+
+perdeuJogo :: Jogo -> Bool
+perdeuJogo j = vidadaBase (baseJogo j) <= 0
+
