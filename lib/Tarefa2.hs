@@ -258,3 +258,9 @@ terminouJogo j = ganhouJogo j || perdeuJogo j
 {- | a função `perdeuJogo` verifica se o jogador perdeu o jogo. O jogador perde se a vida da base for menor ou igual a zero.
 
 === Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base1, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = [], nivelJogo = Um}
+
+* `base1` = Base {vidaBase = 0, posicaoBase = (5.5, 2.5), creditosBase = 50}
+
+>>> perdeuJogo jogo1
