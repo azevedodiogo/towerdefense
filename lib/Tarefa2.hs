@@ -277,3 +277,7 @@ perdeuJogo j = vidadaBase (baseJogo j) <= 0
 {- | a função `ganhouJogo` verifica se o jogador ganhou o jogo. O jogador vence se não houver mais inimigos no jogo e a vida da base for maior que zero.
 
 === Exemplo de Uso:
+
+* `jogo1` = Jogo {baseJogo = base2, portaisJogo = [], torresJogo = [], mapaJogo = mapa, inimigosJogo = [], lojaJogo = loja, nivelJogo = Um}
+
+* `base1` = Base {vidaBase = 2, posicaoBase = (5.5, 2.5), creditosBase = 50}
