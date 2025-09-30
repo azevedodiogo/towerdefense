@@ -284,3 +284,8 @@ perdeuJogo j = vidadaBase (baseJogo j) <= 0
 
 >>> ganhouJogo jogo1
 True
+
+-}
+
+ganhouJogo :: Jogo -> Bool
+ganhouJogo j = ausenciainimigos j && vidadaBase (baseJogo j) > 0
