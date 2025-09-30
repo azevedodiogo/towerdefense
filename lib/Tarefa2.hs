@@ -289,3 +289,7 @@ True
 
 ganhouJogo :: Jogo -> Bool
 ganhouJogo j = ausenciainimigos j && vidadaBase (baseJogo j) > 0
+
+
+
+{- | a função `vidadaBase` extrai a vida da base. -}
