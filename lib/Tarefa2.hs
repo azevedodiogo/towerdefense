@@ -328,3 +328,7 @@ ausenciainimigos j = null iemjogo && null iportais
 
 
 {- | a função `filtrainimigos` extrai todos os inimigos de todos os portais. 
+
+=== Exemplos de Uso:
+
+* `portal1` = Portal {posicaoPortal = (2.0, 2.0), ondasPortal = [onda1, onda2]}
