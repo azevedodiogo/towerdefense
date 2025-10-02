@@ -332,3 +332,8 @@ ausenciainimigos j = null iemjogo && null iportais
 === Exemplos de Uso:
 
 * `portal1` = Portal {posicaoPortal = (2.0, 2.0), ondasPortal = [onda1, onda2]}
+
+* `onda1` = Onda {inimigosOnda = [inimigo1, inimigo2], cicloOnda = 5, tempoOnda = 0, entradaOnda = 1}
+* `onda2` = Onda {inimigosOnda = [inimigo3], cicloOnda = 3, tempoOnda = 0, entradaOnda = 2}
+* `inimigo1` = Inimigo (3.0, 4.0) Norte 100.0 1.0 10.0 20 [] (2.0, 2.0) 0
+* `inimigo2` = Inimigo (7.0, 5.0) Sul 80.0 1.0 15.0 30 [] (2.0, 2.0) 0
