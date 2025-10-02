@@ -345,3 +345,7 @@ ausenciainimigos j = null iemjogo && null iportais
  Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (2.0, 2.0), tempoInimigo = 0.0}]
 
 -}
+
+filtrainimigos :: [Portal] -> [Inimigo]
+filtrainimigos [] = []
+filtrainimigos (p:ps) = concat (map inimigosOnda (ondasPortal p)) ++ filtrainimigos ps
