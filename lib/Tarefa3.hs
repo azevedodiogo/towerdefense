@@ -9,3 +9,8 @@ Módulo para a realização da Tarefa 3 de LI1 em 2024/25.
 -}
 
 module Tarefa3 where
+
+import Tarefa1
+import Tarefa2
+import LI12425
+import Data.List
