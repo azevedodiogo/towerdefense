@@ -53,3 +53,7 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
 
     let (portaisAtualizados, novosInimigos) = atualizaPortais t portais inimigos
         (baseAtualizada, inimigosAtualizados) = atualizaInimigos t mapa base novosInimigos
+        (torresAtualizadas, inimigosAtingidos) = atualizaTorres t torres inimigosAtualizados
+
+
+    in Jogo baseAtualizada portaisAtualizados torresAtualizadas mapa inimigosAtingidos loja n
