@@ -36,3 +36,7 @@ As atualizações são realizadas em três etapas principais:
 * `jogo` = Jogo base [portal] [torre] mapa [inimigo] [] Um
 
 >>>
+atualizaJogo 0.3 jogo
+Jogo {
+baseJogo = Base {vidaBase = 100.0, posicaoBase = (2.0,2.0), creditosBase = 50}, 
+portaisJogo = [Portal {posicaoPortal = (0.0,0.0), ondasPortal = []}], 
