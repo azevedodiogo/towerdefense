@@ -19,3 +19,7 @@ import Data.List
 
 
 {- | a função `atualizaJogo` simula a evolução de um jogo após um intervalo de tempo. 
+
+As atualizações são realizadas em três etapas principais:
+   
+1. Atualização dos portais, adicionando novos inimigos ao jogo.
