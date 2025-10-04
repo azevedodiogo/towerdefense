@@ -27,3 +27,8 @@ As atualizações são realizadas em três etapas principais:
 3. Atualização das torres e dos seus efeitos sobre os inimigos.
 
 === Exemplos de Uso:
+
+* `base` = Base {vidaBase = 100, posicaoBase = (2, 2), creditosBase = 50}
+* `portal` = Portal {posicaoPortal = (0, 0), ondasPortal = [Onda [] 5 0 0]}
+* `torre` = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
+* `mapa` = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
