@@ -82,3 +82,9 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
 [Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 75.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 7.0}, tempoInimigo = 0.0], posInicial = (3.0,4.0)},Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 55.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 7.0}], posInicial = (7.0,5.0), tempoInimigo = 0.0},Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (10.0,10.0), tempoInimigo = 0.0}])
 
 -}
+
+disparaTorre :: Tempo -> Torre -> [Inimigo] -> (Torre, [Inimigo])
+disparaTorre tempo torre inimigos
+
+            -- a torre ainda não pode disparar (cooldown)
+            | tempoTorre torre > 0 = (torre {tempoTorre = max 0 (tempoTorre torre - tempo)}, inimigos)
