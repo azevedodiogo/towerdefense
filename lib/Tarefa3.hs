@@ -57,3 +57,7 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
 
 
     in Jogo baseAtualizada portaisAtualizados torresAtualizadas mapa inimigosAtingidos loja n
+
+
+---------------------------------------------------------------------------------------------
+
