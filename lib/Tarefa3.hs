@@ -91,3 +91,8 @@ disparaTorre tempo torre inimigos
 
             -- sem inimigos no alcance
             | null (inimigosNoAlcance torre inimigos) = (torre, inimigos)                       -- utiliza a funcao 'inimigosNoAlcance' da tarefa2
+
+            -- a torre pode disparar e tem inimigos no alcance
+            | otherwise = let ini = geraID inimigos                                             -- lista dos inimigos com id
+                              iniIDalcance = iniNoAlcanceID torre ini                           -- seleciona os inimigos que estão ao alcance da torre
+                              iniRajada = take (rajadaTorre torre) iniIDalcance                 -- seleciona os inimigos que a torre consegue atacar de uma só vez
