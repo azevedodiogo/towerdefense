@@ -66,3 +66,7 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
 
 
 {- | A função `disparaTorre` faz a torre disparar projeteis contra os inimigos detetados. Utiliza funções auxiliares como a `inimigosNoAlcance` e a `atingeInimigo` da Tarefa 2.
+
+=== Exemplos de Uso:
+
+* `torre` = Torre (5, 5) 25 3 3 2 0 (Projetil Fogo (Finita 7))
