@@ -125,3 +125,8 @@ Assim, a nossa solução foi inventar uma identidade (atribuindo-lhes um número
 geraID :: [Inimigo] -> [(Int, Inimigo)]
 geraID = zip [0..]
 
+
+
+{- | a função `iniNoAlcanceID` faz o mesmo que a 'inimigosNoAlcance', mas atribuindo id aos inimigos. -}
+
+iniNoAlcanceID :: Torre -> [(Int, Inimigo)] -> [(Int, Inimigo)]
