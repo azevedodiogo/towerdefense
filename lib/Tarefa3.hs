@@ -142,3 +142,8 @@ iniNoAlcanceID t ((id, ini):l) | dist (posicaoTorre t) (posicaoInimigo ini) <= a
 atualizaInimigoID :: Torre -> [(Int, Inimigo)] -> [(Int, Inimigo)]
 atualizaInimigoID t = map (\(id, ini) -> (id, atingeInimigo t ini))
 
+
+
+{- | a função `filtraInimigoID` retira, da lista inicial, todos os inimigos que foram atingidos pela torre. 
+
+=== Exemplos de Uso:
