@@ -130,3 +130,8 @@ geraID = zip [0..]
 {- | a função `iniNoAlcanceID` faz o mesmo que a 'inimigosNoAlcance', mas atribuindo id aos inimigos. -}
 
 iniNoAlcanceID :: Torre -> [(Int, Inimigo)] -> [(Int, Inimigo)]
+iniNoAlcanceID _ [] = []
+iniNoAlcanceID t ((id, ini):l) | dist (posicaoTorre t) (posicaoInimigo ini) <= alcanceTorre t = (id,ini) : iniNoAlcanceID t l
+                               | otherwise = iniNoAlcanceID t l
+
+    where dist (x1,y1) (x2,y2) = sqrt $ (x1-x2)^2 + (y1-y2)^2
