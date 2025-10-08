@@ -138,3 +138,7 @@ iniNoAlcanceID t ((id, ini):l) | dist (posicaoTorre t) (posicaoInimigo ini) <= a
 
 
 {- | a função `atualizaInimigoID` faz o mesmo que a `atingeInimigo`, mas mantem id dos inimigos. -}
+
+atualizaInimigoID :: Torre -> [(Int, Inimigo)] -> [(Int, Inimigo)]
+atualizaInimigoID t = map (\(id, ini) -> (id, atingeInimigo t ini))
+
