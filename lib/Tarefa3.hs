@@ -194,3 +194,8 @@ atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre 
 
 >>> atualizaOnda 0.2 [onda2]
 []
+
+-}
+
+
+atualizaOnda :: Tempo -> [Onda] -> [Onda]
