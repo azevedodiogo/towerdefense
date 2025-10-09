@@ -199,3 +199,7 @@ atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre 
 
 
 atualizaOnda :: Tempo -> [Onda] -> [Onda]
+atualizaOnda _ [] = []
+atualizaOnda tempo (onda:rOndas)
+
+            -- atualiza a entrada da primeira onda, se ela estiver maior que zero
