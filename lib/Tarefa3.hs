@@ -203,3 +203,8 @@ atualizaOnda _ [] = []
 atualizaOnda tempo (onda:rOndas)
 
             -- atualiza a entrada da primeira onda, se ela estiver maior que zero
+            | entradaOnda onda > 0 = let ondaAtual = onda {entradaOnda = entradaOnda onda - tempo}
+                                     in ondaAtual : rOndas
+
+            -- remove a onda, se não tiver mais inimigos
+            | null (inimigosOnda onda) = atualizaOnda tempo rOndas
