@@ -181,3 +181,7 @@ atualizaTorres tempo (t:ts) inimigos = let (novaTorre, iniAtual) = disparaTorre 
 
 -- COMPORTAMENTO DOS PORTAIS 
 
+
+{- | a função `atualizaOnda` atualiza a primeira onda com inimigos. 
+
+=== Exemplos de Uso:
