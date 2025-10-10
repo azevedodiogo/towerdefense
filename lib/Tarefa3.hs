@@ -208,3 +208,7 @@ atualizaOnda tempo (onda:rOndas)
 
             -- remove a onda, se não tiver mais inimigos
             | null (inimigosOnda onda) = atualizaOnda tempo rOndas
+
+            -- atualiza o tempo para o próximo inimigo, 
+            | tempoOnda onda > 0 = let ondaAtualizada = onda {tempoOnda = tempoOnda onda - tempo}
+                                   in ondaAtualizada : rOndas
