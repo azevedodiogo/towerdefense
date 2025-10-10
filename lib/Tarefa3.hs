@@ -219,3 +219,9 @@ atualizaOnda tempo (onda:rOndas)
 
 
 {- | a função `atualizaPortal` atualiza o portal e a lista de inimigos ativos, utilizando a função `ativaInimigo` da Tarefa 2. 
+
+=== Exemplos de Uso:
+
+* `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda]}
+* `onda` = Onda {inimigosOnda = [inimigo], cicloOnda = 10, tempoOnda = 0, entradaOnda = 0}
+* `inimigo` = Inimigo (0.5, 0.5) Norte 100.0 1.0 10.0 20 [] (0.5, 0.5) 0
