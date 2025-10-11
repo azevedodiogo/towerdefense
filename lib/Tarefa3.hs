@@ -262,3 +262,9 @@ atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, n
 
 
 {- | a função `Caminho` devolve um caminho do portal à base. 
+
+=== Exemplos de Uso:
+
+* `portal` = Portal {posicaoPortal = (0.5, 0.5), ondasPortal = [onda]}
+* `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
+* `mapa` = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
