@@ -259,3 +259,6 @@ atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, n
 
 
 -- COMPORTAMENTO DOS INIMIGOS
+
+
+{- | a função `Caminho` devolve um caminho do portal à base. 
