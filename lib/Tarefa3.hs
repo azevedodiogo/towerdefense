@@ -271,3 +271,8 @@ atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, n
 
 >>> caminho (0, 0) (2, 2) mapa
 [(0,0),(0,1),(1,1),(2,1),(2,2)]
+
+-}
+
+caminho :: (Int, Int) -> (Int, Int) -> Mapa -> [(Int, Int)]
+caminho portal base mapa = auxCaminho portal [] base mapa
