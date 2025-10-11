@@ -246,3 +246,7 @@ atualizaPortal tempo portal iniAtivos =
 -- função principal
 
 {- | a função `atualizaPortais` faz o mesmo que a `atualizaPortal`, mas para todos os portais do jogo. -}
+
+atualizaPortais :: Tempo -> [Portal] -> [Inimigo] -> ([Portal], [Inimigo])
+atualizaPortais _ [] iniAtivos = ([], iniAtivos)
+atualizaPortais tempo (portal:restoPortais) iniAtivos = let (portalAtualizado, novosInimigos) = atualizaPortal tempo portal iniAtivos
