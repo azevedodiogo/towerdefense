@@ -285,3 +285,7 @@ auxCaminho posAtual visitados base mapa
 
      -- chegou à base
     | posAtual == base = [posAtual]
+
+    -- encontra a próxima posição do caminho e repete o processo até chegar à base                                           
+    | otherwise = let vizinhos = encontraVizinhos posAtual mapa                                            -- encontra os vizinhos válidos
+                      naoVisitados = removeVisitados vizinhos visitados                                    -- remove as posições já visitadas          
