@@ -292,3 +292,8 @@ auxCaminho posAtual visitados base mapa
 
                   in posAtual : auxCaminho (head naoVisitados) (posAtual : visitados) base mapa            -- gera o caminho 
 
+
+
+{- | a função `direcaoToOeste` atualiza a direção do inimigo conforme a sua posição e o mapa, caso o portal esteja à direita da base. 
+
+=== Exemplos de Uso:
