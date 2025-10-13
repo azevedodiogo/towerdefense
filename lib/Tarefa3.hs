@@ -297,3 +297,8 @@ auxCaminho posAtual visitados base mapa
 {- | a função `direcaoToOeste` atualiza a direção do inimigo conforme a sua posição e o mapa, caso o portal esteja à direita da base. 
 
 === Exemplos de Uso:
+
+>>> direcaoToOeste Norte (3, 2) [(3, 3), (4, 3)]
+Sul
+
+>>> direcaoToOeste Oeste (0.5, 1) [(0,1), (0,2)]
