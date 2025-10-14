@@ -345,3 +345,6 @@ direcaoToEste d pos p' = case d of
              else Sul
 
     Sul -> if (x, y+1) `elem` p' then Sul
+           else if (x+1, y) `elem` p' then Este
+           else if (x-1, y) `elem` p' then Oeste
+           else Norte
