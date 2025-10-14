@@ -318,3 +318,8 @@ direcaoToOeste d pos p' = case d of
            else if (z+1, y) `elem` p' then Este
            else if (z-1, y) `elem` p' then Oeste
            else Norte
+
+    Este -> if (z+1, y) `elem` p' then Este
+            else if (z, y-1) `elem` p' then Norte
+            else if (z, y+1) `elem` p' then Sul
+            else Oeste
