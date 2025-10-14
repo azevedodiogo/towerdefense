@@ -340,3 +340,8 @@ direcaoToEste :: Direcao -> Posicao -> [(Int, Int)] -> Direcao
 direcaoToEste d pos p' = case d of
 
     Norte -> if (x, w-1) `elem` p' then Norte
+             else if (x+1, w) `elem` p' then Este
+             else if (x-1, w) `elem` p' then Oeste
+             else Sul
+
+    Sul -> if (x, y+1) `elem` p' then Sul
