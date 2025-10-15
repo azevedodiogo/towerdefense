@@ -388,3 +388,6 @@ atualizaPosicao p d (x,y) t v = case d of
 {- | a função `atualizaProjetil` atualiza o estado dos projéteis com base no tempo e na duração de cada um. 
 
 === Exemplos de Uso:
+
+>>> atualizaProjetil 1.0 [Projetil Gelo (Finita 5.0), Projetil Resina Infinita]
+[Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 4.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
