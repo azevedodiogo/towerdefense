@@ -391,3 +391,8 @@ atualizaPosicao p d (x,y) t v = case d of
 
 >>> atualizaProjetil 1.0 [Projetil Gelo (Finita 5.0), Projetil Resina Infinita]
 [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 4.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}]
+
+-}
+
+atualizaProjetil :: Tempo -> [Projetil] -> [Projetil]
+atualizaProjetil _ [] = []
