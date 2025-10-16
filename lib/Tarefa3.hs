@@ -418,3 +418,6 @@ proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinhe
 
                 where posPortalInt = arredondaPosicao portal
                       posBaseInt = arredondaPosicao base
+                      isPortalesq = fst posPortalInt < fst posBaseInt
+
+
