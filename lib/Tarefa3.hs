@@ -421,3 +421,8 @@ proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinhe
                       isPortalesq = fst posPortalInt < fst posBaseInt
 
 
+
+{- | a função `atualizaEstadoInimigo` atualiza o estado do inimigo (vida, direcao, posicao, velocidade, projeteis) utilizando as funçoes `proxMovimento` e `atualizaProjetil`. 
+
+
+=== Efeitos dos Projéteis:
