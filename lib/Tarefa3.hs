@@ -400,3 +400,8 @@ atualizaProjetil t ((Projetil tipo duracao):ps) = case duracao of
 
     Finita d -> if d > t then Projetil tipo (Finita (d-t)) : atualizaProjetil t ps
                 else atualizaProjetil t ps
+    Infinita -> Projetil tipo Infinita : atualizaProjetil t ps
+
+
+
+{- | a função `proxMovimento` devolve o proximo movimento do inimigo, isto é, a sua direção e posicao, utilizando as funçoes `atualizaPosicao` e `direcaoToEste` / `direcaoToOeste`. -}
