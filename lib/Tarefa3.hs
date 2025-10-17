@@ -430,3 +430,8 @@ proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinhe
 1. **Gelo**: O inimigo fica parado durante o tempo em que está sob o efeito do gelo.
 2. **Fogo**: O inimigo perde 5 de vida por segundo enquanto está sob o efeito do fogo.
 3. **Resina**: O inimigo tem a velocidade reduzida 30% (até sair da lista de projeteisAtivos) -- efeito é produzido na `atualizaPosicao`.
+
+
+=== Exemplos de Uso:
+
+* `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
