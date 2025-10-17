@@ -465,3 +465,6 @@ atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidad
         [Projetil Resina _] -> proxMovimento t mapa posPortal basepos inimigo {projeteisInimigo = atualizaProjetil t projeteis}
 
         -- caso em que os projéteis são o gelo e a resina.
+        ps -> inimigo {projeteisInimigo = atualizaProjetil t projeteis}
+
+
