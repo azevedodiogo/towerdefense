@@ -435,3 +435,6 @@ proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinhe
 === Exemplos de Uso:
 
 * `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), creditosBase = 50}
+* `mapa` = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+* `inimigo1` = Inimigo (0.5, 1.0) Este 100 1.0 5 25 [Projetil Resina Infinita, Projetil Gelo (Finita 2)] (0.5, 0.5) 0
+* `inimigo2` = Inimigo (0.5, 1.0) Sul 100 1.0 5 25 [Projetil Resina Infinita] (0.5, 0.5) 0
