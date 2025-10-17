@@ -448,3 +448,7 @@ Inimigo {posicaoInimigo = (0.85,1.0), direcaoInimigo = Este, vidaInimigo = 100.0
 -}
 
 atualizaEstadoInimigo :: Tempo -> Mapa -> Posicao -> Inimigo -> Inimigo
+atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidade dano dinheiro projeteis posPortal tempo) =
+
+    case projeteis of
+        -- o inimigo não tem projéteis.
