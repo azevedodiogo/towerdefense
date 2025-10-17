@@ -452,3 +452,7 @@ atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidad
 
     case projeteis of
         -- o inimigo não tem projéteis.
+        [] -> proxMovimento t mapa posPortal basepos inimigo
+
+        -- caso em que o projétil é o gelo.
+        [Projetil Gelo _] -> inimigo {projeteisInimigo = atualizaProjetil t projeteis} -- fica parado devido ao gelo
