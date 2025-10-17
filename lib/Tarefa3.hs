@@ -456,3 +456,7 @@ atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidad
 
         -- caso em que o projétil é o gelo.
         [Projetil Gelo _] -> inimigo {projeteisInimigo = atualizaProjetil t projeteis} -- fica parado devido ao gelo
+
+        -- caso em que o projétil é o fogo.
+        [Projetil Fogo _] -> let novaVida = vida - (5 * t) -- perde 5 de vida por segundo devido ao fogo
+                             in proxMovimento t mapa posPortal basepos inimigo {vidaInimigo = novaVida, projeteisInimigo = atualizaProjetil t projeteis}
