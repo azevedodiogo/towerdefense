@@ -468,3 +468,7 @@ atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidad
         ps -> inimigo {projeteisInimigo = atualizaProjetil t projeteis}
 
 
+
+{- | a função `removeInimigoHitBase` elimina os inimigos que atingiram a base. 
+
+=== Exemplos de Uso:
