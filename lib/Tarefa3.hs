@@ -499,3 +499,7 @@ removeInimigoHitBase b (i:is)
 
 
 {- | a função `removeInimigosSemVida` elimina os inimigos que já não têm vida e adiciona o seu butim aos creditos da base. 
+
+=== Exemplos de Uso:
+
+* `base` = Base {vidaBase = 100, posicaoBase = (2.2, 2.2), creditosBase = 50}
