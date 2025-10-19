@@ -512,3 +512,6 @@ removeInimigoHitBase b (i:is)
 
 removeInimigosSemVida :: [Inimigo] -> Creditos -> ([Inimigo], Creditos)
 removeInimigosSemVida [] c = ([], c)
+removeInimigosSemVida (i:is) c | vida <= 0 = removeInimigosSemVida is (c+dinheiro)
+                               | otherwise = let (is',c') = removeInimigosSemVida is c
+                                             in (i : is', c')
