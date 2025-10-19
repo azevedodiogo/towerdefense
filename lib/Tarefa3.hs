@@ -519,3 +519,8 @@ removeInimigosSemVida (i:is) c | vida <= 0 = removeInimigosSemVida is (c+dinheir
         where vida = vidaInimigo i
               dinheiro = butimInimigo i
 
+
+
+-- função principal
+
+{- | a função `atualizaInimigos` atualiza todos os inimigos em jogo, utilizando as funções `removeInimigosSemVida`, `removeInimigoHitBase` e `atualizaEstadoInimigo`. 
