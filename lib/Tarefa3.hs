@@ -529,3 +529,6 @@ Adicionamos um parâmetro (posicão inicial) no datatype do Inimigo. Essa posiç
 e serve para saber a que portal (dos vários que podem haver no jogo) corresponde o inimigo, para que este siga o caminho desse portal à base.
 
 -}
+
+atualizaInimigos :: Tempo -> Mapa -> Base -> [Inimigo] -> (Base, [Inimigo])
+atualizaInimigos tempo mapa base inimigos = (baseAtualizada, inimigosAtualizados)
