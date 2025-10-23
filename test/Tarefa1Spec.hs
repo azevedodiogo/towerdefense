@@ -53,3 +53,8 @@ onda01 = Onda
 -- | Portal 1 para testes.
 portal01 :: Portal
 portal01 = Portal
+  { posicaoPortal = (0.0, 0.0),
+    ondasPortal = [onda01]
+  }
+
+-- | Mapa 1 para testes.
