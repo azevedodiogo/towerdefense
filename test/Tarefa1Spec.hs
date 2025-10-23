@@ -28,3 +28,7 @@ inimigo01 = Inimigo
     velocidadeInimigo = 1.0,
     ataqueInimigo = 10.0,
     butimInimigo = 20,
+    projeteisInimigo = [Projetil { tipoProjetil = Gelo, duracaoProjetil = Finita 2.0 }],
+    posInicial = (0.0, 0.0),
+    tempoInimigo = 0.0
+  }
