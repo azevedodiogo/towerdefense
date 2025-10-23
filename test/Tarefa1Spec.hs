@@ -23,3 +23,8 @@ torre01 = Torre
 inimigo01 :: Inimigo
 inimigo01 = Inimigo
   { posicaoInimigo = (1.0, 1.0),
+    direcaoInimigo = Sul,
+    vidaInimigo = 100.0,
+    velocidadeInimigo = 1.0,
+    ataqueInimigo = 10.0,
+    butimInimigo = 20,
