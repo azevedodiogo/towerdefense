@@ -75,3 +75,7 @@ loja01 = [(50, torre01), (30, torre01)]
 jogo01 :: Jogo
 jogo01 = Jogo
   { baseJogo = base01,
+    portaisJogo = [portal01],
+    torresJogo = [torre01],
+    mapaJogo = mapa01,
+    inimigosJogo = [inimigo01],
