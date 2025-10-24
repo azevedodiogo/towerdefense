@@ -70,3 +70,8 @@ mapa01 =
 -- | Loja 1 para testes.
 loja01 :: Loja
 loja01 = [(50, torre01), (30, torre01)]
+
+-- | Jogo 1 para testes.
+jogo01 :: Jogo
+jogo01 = Jogo
+  { baseJogo = base01,
