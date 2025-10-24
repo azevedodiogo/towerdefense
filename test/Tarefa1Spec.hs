@@ -62,3 +62,7 @@ mapa01 :: Mapa
 mapa01 = 
   [ [Terra, Terra, Terra, Terra, Relva],
     [Relva, Terra, Terra, Relva, Relva],
+    [Agua, Terra, Terra, Relva, Terra],
+    [Relva, Relva, Relva, Terra, Terra],
+    [Relva, Terra, Relva, Relva, Agua]
+  ]
