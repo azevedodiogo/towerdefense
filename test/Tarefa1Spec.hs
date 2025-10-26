@@ -165,3 +165,8 @@ testesTarefa1 =
   TestLabel "Testes Tarefa 1" $
     test
       [ TestLabel "Teste 1" testaTerrenoMapa,
+        TestLabel "Teste 2" testaPortaisJogo,
+        TestLabel "Teste 3" testaValidaJogo,
+        TestLabel "Teste 4" testaVerificaPosiPortal,
+        TestLabel "Teste 5" testaVerificaCaminhoTerra,
+        TestLabel "Teste 6" testaVerificaPortalSobreposicao,
