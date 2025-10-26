@@ -156,3 +156,8 @@ testaVerificaBaseTerra = "Teste 17" ~: True ~?= verificaBaseTerra jogo01
 -- | Testa se a verificação de sobreposição da base está correta
 testaVerificaBaseSobreposicao :: Test
 testaVerificaBaseSobreposicao = "Teste 18" ~: True ~?= verificaBaseSobreposicao jogo01
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+-- | Lista de testes da Tarefa 1
+testesTarefa1 :: Test
