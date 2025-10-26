@@ -174,3 +174,7 @@ testesTarefa1 =
         TestLabel "Teste 8" testaVerificaInimigosTerra,
         TestLabel "Teste 9" testaVerificaInimigosSobreposicao,
         TestLabel "Teste 10" testaVerificaVelocidadeInimigo,
+        TestLabel "Teste 11" testaVerificaProjeteisAtivos,
+        TestLabel "Teste 12" testaVerificaPosiTorre,
+        TestLabel "Teste 13" testaVerificaAlcanceTorre,
+        TestLabel "Teste 14" testaVerificaRajadaTorre,
