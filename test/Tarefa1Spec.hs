@@ -178,3 +178,8 @@ testesTarefa1 =
         TestLabel "Teste 12" testaVerificaPosiTorre,
         TestLabel "Teste 13" testaVerificaAlcanceTorre,
         TestLabel "Teste 14" testaVerificaRajadaTorre,
+        TestLabel "Teste 15" testaVerificaCicloTorre,
+        TestLabel "Teste 16" testaVerificaNotSobreposicaoTorre,
+        TestLabel "Teste 17" testaVerificaBaseTerra,
+        TestLabel "Teste 18" testaVerificaBaseSobreposicao
+      ]
