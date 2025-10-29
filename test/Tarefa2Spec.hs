@@ -102,3 +102,8 @@ base02 :: Base
 base02 = Base {vidaBase = 0, posicaoBase = (5.5, 2.5), creditosBase = 50}
 
 -- | Loja 1 para testes.
+loja01 :: Loja
+loja01 = [tFogo01, tGelo01, tResina01]
+
+-- | Torre de fogo 1 para testes.
+tFogo01 :: (Creditos,Torre)
