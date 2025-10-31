@@ -107,3 +107,7 @@ loja01 = [tFogo01, tGelo01, tResina01]
 
 -- | Torre de fogo 1 para testes.
 tFogo01 :: (Creditos,Torre)
+tFogo01 = (150, Torre {posicaoTorre = (0, 0), danoTorre = 10, alcanceTorre = 2.5, rajadaTorre = 1, cicloTorre = 3, 
+                tempoTorre = 2, projetilTorre = Projetil {tipoProjetil = Fogo, duracaoProjetil = Finita 2}})
+
+-- | Torre de gelo 1 para testes.
