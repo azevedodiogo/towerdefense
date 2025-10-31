@@ -119,3 +119,8 @@ tGelo01 = (140, Torre {posicaoTorre = (0, 0), danoTorre = 12, alcanceTorre = 3.5
 tResina01 :: (Creditos, Torre)
 tResina01 = (120, Torre {posicaoTorre = (0, 0), danoTorre = 8, alcanceTorre = 4, rajadaTorre = 2, cicloTorre = 4.5, 
                   tempoTorre = 3, projetilTorre = Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}})
+
+-- | Mapa 1 para testes.
+mapa01 :: Mapa
+mapa01 =
+   [  [r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r, r],
