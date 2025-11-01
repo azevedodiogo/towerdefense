@@ -163,3 +163,8 @@ testaIguais = "Teste 3" ~: [Projetil {tipoProjetil = Gelo, duracaoProjetil = Fin
 
 -- | Testa se a função resolve conflitos entre projéteis.
 testaResolveConflitoProjetil :: Test
+testaResolveConflitoProjetil = "Teste 4" ~: [] ~?= resolveConflito projetil03 [projetil01]
+
+
+-- | Testa se a função ativa o inimigo.
+testaAtivaInimigo :: Test
