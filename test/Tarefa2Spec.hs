@@ -202,3 +202,8 @@ testaFiltraInimigos = "Teste 10" ~: [Inimigo {posicaoInimigo = (3.0,4.0), direca
 -- | Testes da Tarefa 2.
 testesTarefa2 :: Test
 testesTarefa2 =
+  TestLabel "Testes Tarefa 2" $
+    test
+      [ TestLabel "Teste 1" testaInimigosAlcanceTorre,
+        TestLabel "Teste 2" testaAtingeInimigo,
+        TestLabel "Teste 3" testaIguais,
