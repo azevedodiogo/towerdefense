@@ -211,3 +211,7 @@ testesTarefa2 =
         TestLabel "Teste 5" testaAtivaInimigo,
         TestLabel "Teste 6" testaPodeLançar,
         TestLabel "Teste 7" testaRemoveInimigo,
+        TestLabel "Teste 8" testaTerminouJogo,
+        TestLabel "Teste 9" testaPerdeuJogo,
+        TestLabel "Teste 10" testaFiltraInimigos
+      ]
