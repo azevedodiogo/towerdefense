@@ -84,3 +84,7 @@ ondaAtualizaAtualiza :: Onda
 ondaAtualizaAtualiza = Onda {inimigosOnda = [inimigoAtualizaAtualiza], cicloOnda = 10, tempoOnda = 0, entradaOnda = 0}
 
 -- | Inimigo para teste da função atualizaPortal.
+inimigoAtualizaAtualiza :: Inimigo
+inimigoAtualizaAtualiza = Inimigo (0.5, 0.5) Norte 100.0 1.0 10.0 20 [] (0.5, 0.5) 0
+
+-- | Inimigo para teste da função atualizaPortal.
