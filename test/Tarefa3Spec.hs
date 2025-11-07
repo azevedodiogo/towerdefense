@@ -118,3 +118,7 @@ baseAtualizaEstadoInimigo = Base {vidaBase = 100, posicaoBase = (2.2, 2.5), cred
 -- | Mapa para teste da função atualizaEstadoInimigo.
 mapaAtualizaEstadoInimigo :: Mapa
 mapaAtualizaEstadoInimigo = [ [Terra, Relva, Agua, Relva, Terra], [Terra, Terra, Terra, Relva, Agua], [Agua, Relva, Terra, Relva, Relva] ]
+
+-- | Inimigo para teste da função atualizaEstadoInimigo.
+inimigo1AtualizaEstadoInimigo :: Inimigo
+inimigo1AtualizaEstadoInimigo = Inimigo (0.5, 1.0) Este 100.0 1.0 5.0 25 [Projetil Resina Infinita, Projetil Gelo (Finita 2)] (0.5, 0.5) 0
