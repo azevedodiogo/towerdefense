@@ -131,3 +131,7 @@ inimigo2AtualizaEstadoInimigo = Inimigo (0.5, 1.0) Sul 100.0 1.0 5.0 25 [Projeti
 
 -- | Base para teste da função removeInimigoHitBase.
 baseHitBase :: Base
+baseHitBase = Base {vidaBase = 80.0, posicaoBase = (2.2, 2.2), creditosBase = 50}
+
+-- | Lista de inimigos para teste da função removeInimigoHitBase.
+inimigosHitBase :: [Inimigo]
