@@ -160,3 +160,7 @@ testeDisparaTorre = "Teste 2" ~: (Torre {posicaoTorre = (5.0,5.0), danoTorre = 2
 -- | Teste da função geraID.
 testeGeraID :: Test
 testeGeraID = "Teste 3" ~: [(0,Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (3.0,4.0), tempoInimigo = 0.0}), (1,Inimigo {posicaoInimigo = (7.0,5.0), direcaoInimigo = Sul, vidaInimigo = 80.0, velocidadeInimigo = 1.0, ataqueInimigo = 15.0, butimInimigo = 30, projeteisInimigo = [], posInicial = (7.0,5.0), tempoInimigo = 0.0})] ~=? geraID listaInimigosID
+
+-- | Teste da função filtraInimigoID.
+testeFiltraID :: Test
+testeFiltraID = "Teste 4" ~: [(2,Inimigo {posicaoInimigo = (10.0,10.0), direcaoInimigo = Este, vidaInimigo = 50.0, velocidadeInimigo = 1.5, ataqueInimigo = 20.0, butimInimigo = 40, projeteisInimigo = [], posInicial = (10.0,10.0), tempoInimigo = 0.0})] ~=? filtraInimigoID listaInimigosFiltraID listaInimigosAtingidosFiltraID
