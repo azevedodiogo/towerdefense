@@ -187,3 +187,7 @@ testeAtualizaPosicao = "Teste 9" ~: (4.0, 2.0) ~=? atualizaPosicao [] Este (1.0,
 
 -- | Teste da função atualizaProjetil.
 testeAtualizaProjetil :: Test
+testeAtualizaProjetil = "Teste 10" ~: [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 4.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}] ~=? atualizaProjetil 1.0 [Projetil Gelo (Finita 5.0), Projetil Resina Infinita]
+
+-- | Teste da função atualizaEstadoInimigo.
+testeAtualizaEstadoInimigo :: Test
