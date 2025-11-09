@@ -182,3 +182,8 @@ testaDirecaoToOeste :: Test
 testaDirecaoToOeste = "Teste 8" ~: Sul ~=? direcaoToOeste Norte (3, 2) [(3, 3), (4, 3)]
 
 -- | Teste da função atualizaPosicao.
+testeAtualizaPosicao :: Test
+testeAtualizaPosicao = "Teste 9" ~: (4.0, 2.0) ~=? atualizaPosicao [] Este (1.0, 2.0) 2.0 1.5
+
+-- | Teste da função atualizaProjetil.
+testeAtualizaProjetil :: Test
