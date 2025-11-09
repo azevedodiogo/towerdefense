@@ -174,3 +174,7 @@ testeAtualizaPortal :: Test
 testeAtualizaPortal = "Teste 6" ~: (Portal {posicaoPortal = (0.5,0.5), ondasPortal = []}, [Inimigo {posicaoInimigo = (0.5,0.5), direcaoInimigo = Norte, vidaInimigo = 100.0, velocidadeInimigo = 1.0, ataqueInimigo = 10.0, butimInimigo = 20, projeteisInimigo = [], posInicial = (0.5, 0.5), tempoInimigo = 0.0}, Inimigo {posicaoInimigo = (2.5,3.0), direcaoInimigo = Oeste, vidaInimigo = 100.0, velocidadeInimigo = 4.0, ataqueInimigo = 30.0, butimInimigo = 23, projeteisInimigo = [Projetil {tipoProjetil = Gelo, duracaoProjetil = Finita 4.0},Projetil {tipoProjetil = Resina, duracaoProjetil = Infinita}], posInicial = (0.5,0.5), tempoInimigo = 0.0}]) ~=? atualizaPortal 0.2 portalAtualizaAtualiza inimigosAtualizaAtualiza
 
 -- | Teste da função caminho.
+testeCaminho :: Test
+testeCaminho = "Teste 7" ~: [(0,0),(0,1),(1,1),(2,1),(2,2)] ~=? caminho (0, 0) (2, 2) mapaCaminho
+
+-- | Teste da função direcaoToOeste.
