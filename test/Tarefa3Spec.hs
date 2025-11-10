@@ -208,3 +208,8 @@ testeRemoveInimigosSemVida = "Teste 13" ~: ([Inimigo {posicaoInimigo = (0.5,1.0)
 testesTarefa3 :: Test
 testesTarefa3 =
   TestLabel "Testes Tarefa 3" $
+    test
+      [ TestLabel "Teste 1" testeAtualizaJogo,
+        TestLabel "Teste 2" testeDisparaTorre,
+        TestLabel "Teste 3" testeGeraID,
+        TestLabel "Teste 4" testeFiltraID,
