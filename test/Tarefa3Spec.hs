@@ -217,3 +217,7 @@ testesTarefa3 =
         TestLabel "Teste 6" testeAtualizaPortal,
         TestLabel "Teste 7" testeCaminho,
         TestLabel "Teste 8" testaDirecaoToOeste,
+        TestLabel "Teste 9" testeAtualizaPosicao,
+        TestLabel "Teste 10" testeAtualizaProjetil,
+        TestLabel "Teste 11" testeAtualizaEstadoInimigo,
+        TestLabel "Teste 12" testeHitBase,
