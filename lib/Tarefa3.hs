@@ -86,20 +86,20 @@ atualizaJogo t (Jogo base portais torres mapa inimigos loja n) =
 disparaTorre :: Tempo -> Torre -> [Inimigo] -> (Torre, [Inimigo])
 disparaTorre tempo torre inimigos
 
-            -- a torre ainda não pode disparar (cooldown)
+            -- A torre ainda não pode disparar (cooldown).
             | tempoTorre torre > 0 = (torre {tempoTorre = max 0 (tempoTorre torre - tempo)}, inimigos)
 
-            -- sem inimigos no alcance
-            | null (inimigosNoAlcance torre inimigos) = (torre, inimigos)                       -- utiliza a funcao 'inimigosNoAlcance' da tarefa2
+            -- Sem inimigos no alcance.
+            | null (inimigosNoAlcance torre inimigos) = (torre, inimigos)                       -- Utiliza a funcao 'inimigosNoAlcance' da Tarefa2.
 
-            -- a torre pode disparar e tem inimigos no alcance
-            | otherwise = let ini = geraID inimigos                                             -- lista dos inimigos com id
-                              iniIDalcance = iniNoAlcanceID torre ini                           -- seleciona os inimigos que estão ao alcance da torre
-                              iniRajada = take (rajadaTorre torre) iniIDalcance                 -- seleciona os inimigos que a torre consegue atacar de uma só vez
-                              iniAtingidos = atualizaInimigoID torre iniRajada                  -- atualiza os inimigos atingidos, utilizando a funcao 'atingeInimigo' da tarefa2 
-                              iniRestantes = filtraInimigoID ini iniRajada                      -- retira os inimigos atingidos, ficando apenas os outros
-                              lista = iniAtingidos ++ iniRestantes                              -- lista atualizada com todos os inimigos em jogo e respetivas ids
-                              lordenada = sortBy (\(x, _) (y, _) -> compare x y) lista          -- lista por ordem
+            -- A torre pode disparar e tem inimigos no alcance.
+            | otherwise = let ini = geraID inimigos                                             -- Lista dos inimigos com ID.
+                              iniIDalcance = iniNoAlcanceID torre ini                           -- Seleciona os inimigos que estão ao alcance da torre.
+                              iniRajada = take (rajadaTorre torre) iniIDalcance                 -- Seleciona os inimigos que a torre consegue atacar de uma só vez.
+                              iniAtingidos = atualizaInimigoID torre iniRajada                  -- Atualiza os inimigos atingidos, utilizando a funcao 'atingeInimigo' da tarefa2.
+                              iniRestantes = filtraInimigoID ini iniRajada                      -- Retira os inimigos atingidos, ficando apenas os outros.
+                              lista = iniAtingidos ++ iniRestantes                              -- Lista atualizada com todos os inimigos em jogo e respetivas ids.
+                              lordenada = sortBy (\(x, _) (y, _) -> compare x y) lista          -- Lista por ordem.
 
 
                           in (torre {tempoTorre = cicloTorre torre}, map snd lordenada)
@@ -202,18 +202,18 @@ atualizaOnda :: Tempo -> [Onda] -> [Onda]
 atualizaOnda _ [] = []
 atualizaOnda tempo (onda:rOndas)
 
-            -- atualiza a entrada da primeira onda, se ela estiver maior que zero
+            -- Atualiza a entrada da primeira onda, se ela estiver maior que zero.
             | entradaOnda onda > 0 = let ondaAtual = onda {entradaOnda = entradaOnda onda - tempo}
                                      in ondaAtual : rOndas
 
-            -- remove a onda, se não tiver mais inimigos
+            -- Remove a onda, se não tiver mais inimigos.
             | null (inimigosOnda onda) = atualizaOnda tempo rOndas
 
-            -- atualiza o tempo para o próximo inimigo, 
+            -- Atualiza o tempo para o próximo inimigo. 
             | tempoOnda onda > 0 = let ondaAtualizada = onda {tempoOnda = tempoOnda onda - tempo}
                                    in ondaAtualizada : rOndas
 
-             -- mantém a onda como está
+             -- Mantém a onda como está.
             | otherwise = onda : rOndas
 
 
@@ -283,14 +283,14 @@ caminho portal base mapa = auxCaminho portal [] base mapa
 auxCaminho :: (Int, Int) -> [(Int, Int)] -> (Int, Int) -> Mapa -> [(Int, Int)]
 auxCaminho posAtual visitados base mapa
 
-     -- chegou à base
+    -- Chegou à base
     | posAtual == base = [posAtual]
 
-    -- encontra a próxima posição do caminho e repete o processo até chegar à base                                           
-    | otherwise = let vizinhos = encontraVizinhos posAtual mapa                                            -- encontra os vizinhos válidos
-                      naoVisitados = removeVisitados vizinhos visitados                                    -- remove as posições já visitadas          
+    -- Encontra a próxima posição do caminho e repete o processo até chegar à base.                                           
+    | otherwise = let vizinhos = encontraVizinhos posAtual mapa                                            -- Encontra os vizinhos válidos.
+                      naoVisitados = removeVisitados vizinhos visitados                                    -- Remove as posições já visitadas.          
 
-                  in posAtual : auxCaminho (head naoVisitados) (posAtual : visitados) base mapa            -- gera o caminho 
+                  in posAtual : auxCaminho (head naoVisitados) (posAtual : visitados) base mapa            -- Gera o caminho. 
 
 
 
@@ -329,8 +329,8 @@ direcaoToOeste d pos p' = case d of
              else if (z, y+1) `elem` p' then Sul
              else Este
 
-    where (x,y) = (floor (fst pos), floor (snd pos))            -- arredonda por defeito
-          (z,w) = (ceiling (fst pos), ceiling (snd pos))        -- arredonda por excesso
+    where (x,y) = (floor (fst pos), floor (snd pos))            -- Arredonda por defeito.
+          (z,w) = (ceiling (fst pos), ceiling (snd pos))        -- Arredonda por excesso.
 
 
 
@@ -409,10 +409,10 @@ atualizaProjetil t ((Projetil tipo duracao):ps) = case duracao of
 proxMovimento :: Tempo -> Mapa -> Posicao -> Posicao -> Inimigo -> Inimigo
 proxMovimento t mapa portal base (Inimigo pos direcao vida velocidade dano dinheiro projeteis posi tempo) =
 
-    let caminhoPortalBase = caminho posPortalInt posBaseInt mapa                               -- obtém o caminho do portal à base
+    let caminhoPortalBase = caminho posPortalInt posBaseInt mapa                               -- Obtém o caminho do portal à base.
         novaDirecao | isPortalesq = direcaoToEste direcao pos caminhoPortalBase
-                    | otherwise = direcaoToOeste direcao pos caminhoPortalBase                 -- nova direção do Inimigo, utilizando a 'atualizaDirecao'
-        novaPosicao = atualizaPosicao projeteis novaDirecao pos t velocidade                   -- nova posicao do Inimigo, utilizando a 'atualizaPosicao' e a nova direcao        
+                    | otherwise = direcaoToOeste direcao pos caminhoPortalBase                 -- Nova direção do Inimigo, utilizando a 'atualizaDirecao'.
+        novaPosicao = atualizaPosicao projeteis novaDirecao pos t velocidade                   -- Nova posicao do Inimigo, utilizando a 'atualizaPosicao' e a nova direção.        
 
     in Inimigo novaPosicao novaDirecao vida velocidade dano dinheiro projeteis posi tempo
 
@@ -451,20 +451,20 @@ atualizaEstadoInimigo :: Tempo -> Mapa -> Posicao -> Inimigo -> Inimigo
 atualizaEstadoInimigo t mapa basepos inimigo@(Inimigo pos direcao vida velocidade dano dinheiro projeteis posPortal tempo) =
 
     case projeteis of
-        -- o inimigo não tem projéteis.
+        -- O inimigo não tem projéteis.
         [] -> proxMovimento t mapa posPortal basepos inimigo
 
-        -- caso em que o projétil é o gelo.
-        [Projetil Gelo _] -> inimigo {projeteisInimigo = atualizaProjetil t projeteis} -- fica parado devido ao gelo
+        -- Caso em que o projétil é o gelo.
+        [Projetil Gelo _] -> inimigo {projeteisInimigo = atualizaProjetil t projeteis} -- Fica parado devido ao gelo.
 
-        -- caso em que o projétil é o fogo.
-        [Projetil Fogo _] -> let novaVida = vida - (5 * t) -- perde 5 de vida por segundo devido ao fogo
+        -- Caso em que o projétil é o fogo.
+        [Projetil Fogo _] -> let novaVida = vida - (5 * t) -- Perde 5 de vida por segundo devido ao fogo.
                              in proxMovimento t mapa posPortal basepos inimigo {vidaInimigo = novaVida, projeteisInimigo = atualizaProjetil t projeteis}
 
-        -- caso em que o projétil é a resina.
+        -- Caso em que o projétil é a resina.
         [Projetil Resina _] -> proxMovimento t mapa posPortal basepos inimigo {projeteisInimigo = atualizaProjetil t projeteis}
 
-        -- caso em que os projéteis são o gelo e a resina.
+        -- Caso em que os projéteis são o gelo e a resina.
         ps -> inimigo {projeteisInimigo = atualizaProjetil t projeteis}
 
 

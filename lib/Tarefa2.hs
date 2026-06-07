@@ -40,7 +40,7 @@ inimigosNoAlcance t (i:li) | dist (posicaoTorre t) (posicaoInimigo i) <= alcance
     where dist (x1,y1) (x2,y2) = sqrt $ (x1-x2)^2 + (y1-y2)^2
 
 
-----------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 
 {- | a função `atingeInimigo` atualiza o estado de um inimigo sempre que este é atingido por um projétil. 
@@ -56,8 +56,8 @@ Inimigo {posicaoInimigo = (3.0,4.0), direcaoInimigo = Norte, vidaInimigo = 75.0,
 
 atingeInimigo :: Torre -> Inimigo -> Inimigo
 atingeInimigo t i = i
-     {vidaInimigo = max 0 (vidaInimigo i - danoTorre t),                                -- o inimigo perde nível de vida conforme o dano da torre
-      projeteisInimigo = junçaoProjetil (projetilTorre t) (projeteisInimigo i)}         -- lista dos novos projeteis que atingiram o inimigo
+     {vidaInimigo = max 0 (vidaInimigo i - danoTorre t),                                -- O inimigo perde nível de vida conforme o dano da torre.
+      projeteisInimigo = junçaoProjetil (projetilTorre t) (projeteisInimigo i)}         -- Lista dos novos projeteis que atingiram o inimigo.
 
 
 
